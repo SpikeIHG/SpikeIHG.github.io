@@ -14,14 +14,14 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://spikeihg.github.io/2023/03/20/单调栈/"/>
+    <link rel="canonical" href="https://spikeihg.github.io/tags/al/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Hexo">
     <meta property="og:description" content="Hexo Theme Redefine">
-    <meta property="og:url" content="https://spikeihg.github.io2023/03/20/单调栈/">
+    <meta property="og:url" content="https://spikeihg.github.iotags/Al/index.html">
     
     <meta property="og:site_name" content="Winter&#39;s home">
     <meta name="twitter:card" content="summary_large_image">
@@ -36,6 +36,8 @@
     <!--- Page Info-->
     
     <title>
+        
+            Tag: Al -
         
         Winter&#39;s home
     </title>
@@ -262,6 +264,11 @@
                                         </a>
                                         </li>
                                     
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://redefine-docs.ohevan.com/docs/advanced/writing-tips">HELP
+                                        </a>
+                                        </li>
+                                    
                                     </ul>
                                 
                             </li>
@@ -416,6 +423,10 @@
                                 <a class="dropdown-item" target="_blank" rel="noopener" href="https://github.com/EbookFoundation/free-programming-books">EBOOKS_PRO</a>
                             </li>
                         
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://redefine-docs.ohevan.com/docs/advanced/writing-tips">HELP</a>
+                            </li>
+                        
                     
             
 
@@ -435,195 +446,39 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="post-page-container">
-        <div class="article-content-container">
-
-            
-            
-                <div class="article-title">
-                    <h1 class="article-title-regular"></h1>
-                </div>
-            
-                
-            
-
-            
-                <div class="article-header">
-                    <div class="avatar">
-                        <img src="/images/hi.png">
-                    </div>
-                    <div class="info">
-                        <div class="author">
-                            <span class="name">Winter</span>
-                            
-                                <span class="author-label">Lv1</span>
-                            
-                        </div>
-                        <div class="meta-info">
-                            <div class="article-meta-info">
-    <span class="article-date article-meta-item">
-        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-03-20 17:18:01</span>
-        <span class="mobile">2023-03-20 17:18</span>
-        <span class="hover-info">Created</span>
-    </span>
-    
-        <span class="article-date article-meta-item">
-            <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-03-20 17:17:51</span>
-            <span class="mobile">2023-03-20 17:17</span>
-            <span class="hover-info">Updated</span>
-        </span>
-    
-
-    
-    
-
-    
-    
-        <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>103 Words</span>
-        </span>
-    
-    
-        <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
-        </span>
-    
-    
-        <span class="article-pv article-meta-item">
-            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
-        </span>
-    
-</div>
-
-                        </div>
-                    </div>
-                </div>
-            
-
-            <div class="article-content markdown-body">
-                <div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">3000010</span>;</span><br><span class="line"><span class="type">int</span> a[N],f[N];</span><br><span class="line">stack&lt;<span class="type">int</span>&gt;s;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=n;i&gt;=<span class="number">1</span>;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(!s.<span class="built_in">empty</span>()&amp;&amp;a[s.<span class="built_in">top</span>()]&lt;=a[i])</span><br><span class="line">        s.<span class="built_in">pop</span>();</span><br><span class="line">        f[i]=s.<span class="built_in">empty</span>()?<span class="number">0</span>:s.<span class="built_in">top</span>();</span><br><span class="line">        s.<span class="built_in">push</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,f[i]);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-            </div>
-
-            
-                <div class="post-copyright-info">
-                    <div class="article-copyright-info-container">
-    <ul>
-        <li>Post title：</li>
-        <li>Post author：Winter</li>
-        <li>Create time：2023-03-20 17:18:01</li>
-        <li>
-            Post link：https://spikeihg.github.io/2023/03/20/单调栈/
-        </li>
-        <li>
-            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
-        </li>
-    </ul>
-</div>
-
-                </div>
-            
-
-            
-
-            
-
-            
-                <div class="article-nav">
-                    
-                    
-                        <div class="article-next">
-                            <a class="next"
-                            rel="next"
-                            href="/2023/03/20/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/"
-                            >
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item"></span>
-                                    <span class="post-nav-item">Next posts</span>
-                                </span>
-                                <span class="right arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    
-                </div>
-            
-
-
-            
-                <div class="comment-container">
-                    <div class="comments-container">
-    <div id="comment-anchor"></div>
-    <div class="comment-area-title">
-        <i class="fa-solid fa-comments"></i>&nbsp;Comments
-    </div>
-    
-
-        
-            
-    <div id="gitalk-container"></div>
-    <script data-pjax
-            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-    <script data-pjax>
-
-        function loadGitalk() {
-            let __gitalk__pathname = decodeURI(location.pathname);
-            const __gitalk__pathnameLength = __gitalk__pathname.length;
-            const __gitalk__pathnameMaxLength = 50;
-            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
-                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
-            }
-
-            try {
-                Gitalk && new Gitalk({
-                    clientID: '994e42334d60bd1f62f3',
-                    clientSecret: '695765f2080312a6c950d1ef05b710d5edbfc958',
-                    repo: 'Comments_from_hexo-',
-                    owner: 'SpikeIHG',
-                    admin: ['SpikeIHG'],
-                    id: __gitalk__pathname,
-                    language: 'en'
-                }).render('gitalk-container');
-
-            } catch (e) {
-                window.Gitalk = null;
-            }
-        }
-
-        if ('true') {
-            const loadGitalkTimeout = setTimeout(() => {
-                loadGitalk();
-                clearTimeout(loadGitalkTimeout);
-            }, 1000);
-        } else {
-            window.addEventListener('DOMContentLoaded', loadGitalk);
-        }
-    </script>
-
-
-
-        
-    
-</div>
-
-                </div>
-            
+    <div class="tag-container">
+        <div class="tag-name"><i class="fa-solid fa-tag"></i>&nbsp;Al
         </div>
-
-        
-            <div class="toc-content-container">
-                <div class="post-toc-wrap">
-    <div class="post-toc">
-        <div class="toc-title">On this page</div>
-        <div class="page-title"></div>
-        
-
-    </div>
-</div>
+        <div class="tag-post-list">
+            
+<div class="archive-list-container">
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2023</span>
+                <span class="archive-year-post-count">[1]</span>
             </div>
-        
+            <ul class="article-list">
+              
+              <li class="article-item" date-is='03-16'>
+                <a href="/2023/03/16/%E5%8D%95%E8%B0%83%E6%A0%88/">
+                  <span class="article-title">单调栈</span>
+                </a>
+              </li>
+              
+            </ul>
+        </section>
+    
+</div>
+
+        </div>
+    </div>
+
+    <div class="tag-paginator">
+        <div class="paginator">
+    <span class="page-number current">1</span>
+</div>
+
     </div>
 </div>
 
@@ -702,27 +557,6 @@
         </div>
     </div>
 
-    
-        <div class="post-tools">
-            <div class="post-tools-container">
-    <ul class="tools-list">
-        <!-- TOC aside toggle -->
-        
-            <li class="right-bottom-tools page-aside-toggle">
-                <i class="fa-regular fa-outdent"></i>
-            </li>
-        
-
-        <!-- go comment -->
-        
-            <li class="go-comment">
-                <i class="fa-regular fa-comments"></i>
-            </li>
-        
-    </ul>
-</div>
-
-        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -849,8 +683,6 @@
 
 
 <div class="post-scripts pjax">
-    
-        <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/tools/toc-toggle.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/libs/anime.min.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/layouts/toc.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/plugins/tabs.js"></script>
     
 </div>
 
