@@ -23,7 +23,7 @@
     <meta property="og:description" content="Hexo Theme Redefine">
     <meta property="og:url" content="https://spikeihg.github.io2023/03/16/单调栈/">
     
-    <meta property="og:site_name" content="Winter&#39;s home">
+    <meta property="og:site_name" content="Winter&#39;s">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="单调栈">
     <meta name="twitter:description" content="Hexo Theme Redefine">
@@ -39,7 +39,7 @@
         
             单调栈 -
         
-        Winter&#39;s home
+        Winter&#39;s
     </title>
     
 <link rel="stylesheet" href="/css/style.css">
@@ -106,7 +106,7 @@
             
             <a class="logo-title" href="/">
                 
-                Winter&#39;s home
+                Winter&#39;s
                 
             </a>
         </div>
@@ -461,7 +461,7 @@
             
                       
                 <div class="article-title">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmjYIGyxKGwuDl62bn-DOBpGfGOgxgxOtygA&amp;usqp=CAU" alt="单调栈" />
+                    <img src="/../images/1.jpg" alt="单调栈" />
                     <h1 class="article-title-cover">单调栈</h1>
                 </div>
             
@@ -491,8 +491,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-03-21 17:48:25</span>
-            <span class="mobile">2023-03-21 17:48</span>
+            <span class="pc">2023-03-22 19:25:52</span>
+            <span class="mobile">2023-03-22 19:25</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -504,7 +504,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/Al/">Al</a>&nbsp;
+                        <a href="/tags/C/">C++</a>&nbsp;
                     </li>
                 
             </ul>
@@ -514,7 +514,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>117 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>118 Words</span>
         </span>
     
     
@@ -535,7 +535,7 @@
             
 
             <div class="article-content markdown-body">
-                <h2 id="关于单调栈的一些东西-测试一下"><a href="#关于单调栈的一些东西-测试一下" class="headerlink" title="关于单调栈的一些东西 测试一下"></a>关于单调栈的一些东西 测试一下</h2><div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">3000010</span>;</span><br><span class="line"><span class="type">int</span> a[N],f[N];</span><br><span class="line">stack&lt;<span class="type">int</span>&gt;s;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=n;i&gt;=<span class="number">1</span>;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(!s.<span class="built_in">empty</span>()&amp;&amp;a[s.<span class="built_in">top</span>()]&lt;=a[i])</span><br><span class="line">        s.<span class="built_in">pop</span>();</span><br><span class="line">        f[i]=s.<span class="built_in">empty</span>()?<span class="number">0</span>:s.<span class="built_in">top</span>();</span><br><span class="line">        s.<span class="built_in">push</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,f[i]);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+                <h2 id="关于单调栈的一些东西"><a href="#关于单调栈的一些东西" class="headerlink" title="关于单调栈的一些东西"></a>关于单调栈的一些东西</h2><h3 id="单调栈模板"><a href="#单调栈模板" class="headerlink" title="单调栈模板"></a>单调栈模板</h3><div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">3000010</span>;</span><br><span class="line"><span class="type">int</span> a[N],f[N];</span><br><span class="line">stack&lt;<span class="type">int</span>&gt;s;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=n;i&gt;=<span class="number">1</span>;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(!s.<span class="built_in">empty</span>()&amp;&amp;a[s.<span class="built_in">top</span>()]&lt;=a[i])</span><br><span class="line">        s.<span class="built_in">pop</span>();</span><br><span class="line">        f[i]=s.<span class="built_in">empty</span>()?<span class="number">0</span>:s.<span class="built_in">top</span>();</span><br><span class="line">        s.<span class="built_in">push</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,f[i]);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
             </div>
 
             
@@ -561,7 +561,7 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/Al/">#Al</a>&nbsp;
+                            <a href="/tags/C/">#C++</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -673,7 +673,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">单调栈</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E5%8D%95%E8%B0%83%E6%A0%88%E7%9A%84%E4%B8%80%E4%BA%9B%E4%B8%9C%E8%A5%BF-%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B"><span class="nav-text">关于单调栈的一些东西 测试一下</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E5%8D%95%E8%B0%83%E6%A0%88%E7%9A%84%E4%B8%80%E4%BA%9B%E4%B8%9C%E8%A5%BF"><span class="nav-text">关于单调栈的一些东西</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E8%B0%83%E6%A0%88%E6%A8%A1%E6%9D%BF"><span class="nav-text">单调栈模板</span></a></li></ol></li></ol>
 
     </div>
 </div>
