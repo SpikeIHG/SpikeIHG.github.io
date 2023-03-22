@@ -6,7 +6,7 @@
   <link href="https://spikeihg.github.io/atom.xml" rel="self"/>
   
   <link href="https://spikeihg.github.io/"/>
-  <updated>2023-03-22T11:23:40.357Z</updated>
+  <updated>2023-03-22T14:08:42.998Z</updated>
   <id>https://spikeihg.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Scrape</title>
+    <link href="https://spikeihg.github.io/2023/03/22/Scrape/"/>
+    <id>https://spikeihg.github.io/2023/03/22/Scrape/</id>
+    <published>2023-03-22T13:13:13.000Z</published>
+    <updated>2023-03-22T14:08:42.998Z</updated>
+    
+    <content type="html"><![CDATA[<hr><blockquote><p>本文使用的颜色较多，开启夜间模式阅读效果更好</p></blockquote><hr><h2 id="本系列主要是对阅读了python网络编程相关的总结与回顾"><a href="#本系列主要是对阅读了python网络编程相关的总结与回顾" class="headerlink" title="本系列主要是对阅读了python网络编程相关的总结与回顾"></a>本系列主要是对阅读了python网络编程相关的总结与回顾</h2><ol><li><h3 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h3><ol><li><strong>http简介</strong><br>  <em><strong>url</strong></em> : 统一资源定位符  格式如下 []代表可省略<br> <font color=seablue>protocol :&#x2F;&#x2F;[username:password@] hostname[:port] &#x2F; path &#x2F; [;parameters][?query]#fragment  </font><br> <font color=yellow>protocol</font>  : 协议 主要有 http,https,ftp,sms,<br> <font color =red>username,password</font> : 主要ftp<br> <font color =green>hostname</font> ： 主机名也就是域名 也可以用DNS映射得到IP地址，有一级二级域名之分<br> <font color =brown>port</font> : 端口号 http默认是80 类似还有https 443 属于套接口<br> <font color='cayon'>path</font> : 路径 就是位于主机中的地址<br> <font color='purple'>parameters</font> : 附加信息 现在用的少了<br> <font color=gold>query</font>  : 查询，多个查询就用&amp;分开，GET请求参数里也有<br> <font color=#a34929>fragment</font> : 片段 资源的补充 似乎很少使用<br> <font style =background:seagreen>http基本转向https 基于SSL socket相关也是爬取的主要内容</font>  </li><li><strong>http请求过程</strong><br> <u>使用F12 Network 监听 Ctrl+R </u><br> <font color=seaf>Status</font>    : 状态码就是404 403 200 类似的<br> <font color=gold>Initiator</font> : 请求源 标记请求是由哪个进程或对象发起的<br> <font color=chocolate>Request</font>请求方法 请求头 请求体<br> <font color = aqua>Request Method</font> ： 请求方法GET POST居多 还有PUT DELETE 很多<br> <font color=azure></font><br> <font color=darkblue></font><br> <font color=coroflowerblue></font><br> <font color=blueviolet></font><br> <font color=coral></font><br> <font color=darkBlue></font></li></ol></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文使用的颜色较多，开启夜间模式阅读效果更好&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;本系列主要是对阅读了python网络编程相关的总结与回顾&quot;&gt;&lt;a href=&quot;#本系列主要是对阅读了python网络编程相关的总结</summary>
+      
+    
+    
+    
+    
+    <category term="SCRAPE" scheme="https://spikeihg.github.io/tags/SCRAPE/"/>
+    
+  </entry>
   
   <entry>
     <title>MARKDOWN</title>
