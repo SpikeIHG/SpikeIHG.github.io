@@ -233,4 +233,81 @@
         <tag>数据结构与算法</tag>
       </tags>
   </entry>
+  <entry>
+    <title>DNS</title>
+    <url>/2023/03/23/DNS/</url>
+    <content><![CDATA[<h2 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h2><ul>
+<li><h3 id="DNS-Domain-name-system"><a href="#DNS-Domain-name-system" class="headerlink" title="DNS(Domain name system)"></a>DNS(Domain name system)</h3><ul>
+<li><p>是DNS服务器实现的一个分布式数据库，同时也算是一个应用层协议运行在unix机器之上，端口号为53</p>
+</li>
+<li><p>http、smtp、ftp都是用了DNS将主机名转化为IP地址</p>
+</li>
+<li><p>原理如下</p>
+<p>1） 同一台用户主机上运行着DNS应用的客户端。</p>
+<p>2） 浏览器从上述URL中抽取岀主机名<a class="link"   href="http://www.baidu.com,并将这台主机名传给dns应用的客户端./" >www.baidu.com,并将这台主机名传给DNS应用的客户端。 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>3） DNS客户向DNS服务器发送一个包含主机名的请求。</p>
+<p>4） DNS客户最终会收到一份回答报文，其中含有对应于该主机名的IP地址。</p>
+<p>5） 一旦浏览器接收到来自DNS的该IP地址，它能够向位于该IP地址80端口的HTTP服务器进程发起一个TCP连接。		</p>
+</li>
+<li><p>规范主机名与主机别名，邮件系统别名联想自己的学校邮箱</p>
+</li>
+</ul>
+</li>
+<li><h3 id="DNS工作原理"><a href="#DNS工作原理" class="headerlink" title="DNS工作原理"></a>DNS工作原理</h3><ul>
+<li><p>主机例如web应用需要将主机名转换为IP地址时，调用DNS客户端，指明主机名，底层的unix实现是调用一个函数gethostbtname（）</p>
+</li>
+<li><h4 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h4><ul>
+<li><h5 id="分布式，层次"><a href="#分布式，层次" class="headerlink" title="分布式，层次"></a>分布式，层次</h5><p>根，顶级域(TLD，top-level domain),权威，三层。举个例子</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/DNS%E5%B1%82%E6%AC%A1.png"
+                      alt="DNS层次"
+                ></p>
+<p>国家，fr,jp,ca,也是自己国家维护的顶级域 权威顶级域就是因特网上能够被公共访问的服务器主机需要提供的一个可公共访问的DNS记录，例如大学，自己维护的DNS服务器</p>
+</li>
+<li><h5 id="本地DNS服务器与缓存"><a href="#本地DNS服务器与缓存" class="headerlink" title="本地DNS服务器与缓存"></a>本地DNS服务器与缓存</h5><p>通过本地公用来减少流量，缓存可以减少路径，尽量绕过根DNS</p>
+</li>
+</ul>
+</li>
+<li><h4 id="DNS记录与报文"><a href="#DNS记录与报文" class="headerlink" title="DNS记录与报文"></a>DNS记录与报文</h4><ul>
+<li><h5 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h5></li>
+</ul>
+<p>DNS服务器中提供了资源记录，包含四元组(Name, Value，Type，TTL) </p>
+<p>如果Type &#x3D; A,则Name是主机名，Value是该主机名对应的IP地址。因此，一条类型为A的资源记录提供了标准的主机名到IP地址的映射。例如(Tayl.bar. foo. com, 145. 37.93. 126, A)就是一条类型 A 记录。</p>
+<p>如果Type &#x3D; NS,则Name是个域(如foo. com),而Value是个知道如何获得该域中主机IP地址的权威DNS服务器的主机名。这个记录用于沿着查询链来路由DNS查询。例如(fgcom, cins.foo.com, NS)就是一条类型为NS的记录。</p>
+<p>如果Type&#x3D;CNAME，则 Value是别名为Name的主机对应的规范主机名。该记录能够向査询的主机提供一个主机名对应的规范主机名，例如(foo.com, relay1.bar. foo. com, CNAME)就是一条 CNAME 类型的记录。</p>
+<p>如果Type &#x3D; MX,则Value是个别名为Name的邮件服务器的规范主机名。举例来说，(foo.com, mail. bar. fo&lt;). com, MX)就是一条MX记录。MX记录允许邮件服务器主机名具有简单的别名。值得注意的是，通过使用MX记录，一个公司的邮件服务器和其他服务器(如它的Web服务器)可以使用相同的别名。为了获得邮件服务器的规范主机名，DNS客户应当请求一条MX记录；而为了获得其他服务器的规范主机名，DNS客户应当请求CNAME记录</p>
+<ul>
+<li><h5 id="报文"><a href="#报文" class="headerlink" title="报文"></a>报文</h5><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/DNS%E6%8A%A5%E6%96%87.png"
+                      alt="DNS报文" title="DNS报文"
+                ></li>
+</ul>
+<p>控制台键入nslookup 即可看权威DNS服务器与地址 dns.hust.edu.cn</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="P2P与BitTorrent"><a href="#P2P与BitTorrent" class="headerlink" title="P2P与BitTorrent"></a>P2P与BitTorrent</h2><p>​	之前都是采用客户-服务器体系结构，依赖于服务器，P2P则是最小或是没有依赖。成对间歇连接的主机直接相连，对等方。最广泛的是BitTorrent协议</p>
+<ul>
+<li><h3 id="P2P体系结构的拓展性"><a href="#P2P体系结构的拓展性" class="headerlink" title="P2P体系结构的拓展性"></a>P2P体系结构的拓展性</h3><p>在用户接受到后能够使用自己的能力进行一个上传。</p>
+</li>
+<li><h3 id="BitTorrent-协议"><a href="#BitTorrent-协议" class="headerlink" title="BitTorrent 协议"></a>BitTorrent 协议</h3><p>洪流，主机集合，可以一起向其他主机传输，用追踪器实现。传送时，遵循一定的最有算法。</p>
+</li>
+</ul>
+<h2 id="视频流"><a href="#视频流" class="headerlink" title="视频流"></a>视频流</h2><ul>
+<li><h3 id="http流与DASH"><a href="#http流与DASH" class="headerlink" title="http流与DASH"></a>http流与DASH</h3><p>http流中的视频就是一个普通的http下的文件具有一个url。初期，由于具有统一格式，提供单一视频的性质，现在，为经HTTP的动态适应性流(Dynamic AdaptiveStreaming over HTTP, DASH) ，编码不同版本，不同画质。</p>
+<ul>
+<li><h4 id="内容发布网"><a href="#内容发布网" class="headerlink" title="内容发布网"></a>内容发布网</h4>CDN，在传统的DNS访问中，最后得到的是一个CDN内容服务器IP地址，然后再CDN中处理</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
 </search>
