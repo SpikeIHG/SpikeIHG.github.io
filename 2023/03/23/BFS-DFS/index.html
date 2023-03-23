@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    <meta name="description" content="Hexo Theme Redefine">
+    <meta name="author" content="Winter">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://evan.beee.top" crossorigin>
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://spikeihg.github.io/2023/03/23/bfs-dfs/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="BFS&amp;DFS">
+    <meta property="og:description" content="Hexo Theme Redefine">
+    <meta property="og:url" content="https://spikeihg.github.io2023/03/23/BFS-DFS/">
+    
+    <meta property="og:site_name" content="Winter&#39;s">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BFS&amp;DFS">
+    <meta name="twitter:description" content="Hexo Theme Redefine">
+    <meta name="twitter:image" content="/images/yao.png">
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/yao.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/yao.png">
+    <meta name="theme-color" content="#9932CC">
+    <link rel="shortcut icon" href="/images/yao.png">
+    <!--- Page Info-->
+    
+    <title>
+        
+            BFS&amp;DFS -
+        
+        Winter&#39;s
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/assets/fonts.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    let REDEFINE = window.REDEFINE || {};
+    REDEFINE.hexo_config = {"hostname":"spikeihg.github.io","root":"/","language":"en","path":"search.xml"};
+    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#9932CC","avatar":"/images/hi.png","favicon":"/images/yao.png","og_image":{"enable":false,"image_url":null},"article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#6495ED","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"/images/she.png","dark":"/images/star.png"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"font_sizes":{"title":"2.8rem","subtitle":"1.5rem"},"line_height":1.2,"title":"Winter","subtitle":{"enable":true,"list":["Nature I love,and next to nature art..","Live long and prosper","明月清风供我，闲人三个，从他今古消磨"]},"custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_block":{"copy":true,"style":"mac","custom_font":{"enable":false,"font_family":null,"font_url":null}},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.2.3","friend_links":{"columns":2},"home_article":{"date_format":"MMM DD YYYY","category":{"enable":true,"limit":3},"tag":{"enable":true,"limit":3}},"plugins":{"aplayer":{"enable":true,"audio":[{"name":"想いの寄り方は不均一","artist":"加藤达也","url":"http://music.163.com/song/media/outer/url?id=441736.mp3","cover":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNLzBd8z03W80AqP8tiFvRrI37ydj5JSA2Pg&usqp=CAU"},{"name":"Soiree","artist":"Bill Evans","url":"http://music.163.com/song/media/outer/url?id=1083136.mp3","cover":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1I2Iy3GqeButDus07Oa68Cs30NNBN67fA8w&usqp=CAU"},{"name":"We're turning into regular people","artist":"the tumbled sea","url":"http://music.163.com/song/media/outer/url?id=4346315.mp3","cover":"http://p1.music.126.net/HU-oKS4YftUM26gwZ8puGA==/109951163403578122.jpg?param=130y130"},{"name":"Gymnopedies 1","artist":"Erik Satie","url":"http://music.163.com/song/media/outer/url?id=5299097.mp3","cover":"http://p2.music.126.net/xsgNlcCOjecDi5e8MB6l4g==/713583046433553.jpg?param=130y130"},{"name":"Wake Me up When September Ends","artist":"Green Day","url":"http://music.163.com/song/media/outer/url?id=18127334.mp3","cover":"http://p2.music.126.net/KodgktdYFYMm325EAS2Jfg==/109951163834151238.jpg?param=130y130"}]},"mermaid":{"enable":false,"version":"9.3.0"}}};
+    REDEFINE.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/fontawesome/regular.min.css">
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="menu-wrapper">
+    
+    <div class="menu-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/moons.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                Winter&#39;s
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/archives"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-archive"></i>
+                                        
+                                        ARCHIVES
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown" 
+                                    href="#" onClick="return false;">
+                                    
+                                        
+                                            <i class="fa-light fa-book"></i>
+                                        
+                                        DOCS&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                    
+                                        <li>
+                                        <a href="/tags">TAGS
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a href="/categories">CATEGORIES
+                                        </a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown" 
+                                    href="#" onClick="return false;">
+                                    
+                                        
+                                            <i class="fa-regular fa-user"></i>
+                                        
+                                        ABOUT&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                    
+                                        <li>
+                                        <a href="/about">ME
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://github.com/SpikeIHG/SpikeIHG.github.io">GITHUB
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a href="/essays">ESSAYS
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a href="/friends">FRIENDS
+                                        </a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown" 
+                                    href="#" onClick="return false;">
+                                    
+                                        
+                                            <i class="fa-regular fa-link"></i>
+                                        
+                                        LINKS&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://jing-peixin.gitee.io/my-spiritual-home/">MY SPIRITUAL HOME
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://scrape.center/">SCRAPE
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://oi-wiki.org/">OI WIKI
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://www.btnull.to/">BTNULL
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://www.edx.org/">EDX
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://github.com/SpikeIHG/Ebooks-for-math-cs">EBOOKS
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://github.com/EbookFoundation/free-programming-books">EBOOKS_PRO
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a href="/null">HELP
+                                        </a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="menu-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/archives"  >
+                             
+                                
+                                    <i class="fa-regular fa-archive"></i>
+                                
+                                ARCHIVES
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="has-dropdown" 
+                        href="#" onClick="return false;">
+                            
+                                
+                                    <i class="fa-light fa-book"></i>
+                                
+                                DOCS&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                              
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/tags">TAGS</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/categories">CATEGORIES</a>
+                            </li>
+                        
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="has-dropdown" 
+                        href="#" onClick="return false;">
+                            
+                                
+                                    <i class="fa-regular fa-user"></i>
+                                
+                                ABOUT&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                              
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/about">ME</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://github.com/SpikeIHG/SpikeIHG.github.io">GITHUB</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/essays">ESSAYS</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/friends">FRIENDS</a>
+                            </li>
+                        
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="has-dropdown" 
+                        href="#" onClick="return false;">
+                            
+                                
+                                    <i class="fa-regular fa-link"></i>
+                                
+                                LINKS&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                              
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://jing-peixin.gitee.io/my-spiritual-home/">MY SPIRITUAL HOME</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://scrape.center/">SCRAPE</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://oi-wiki.org/">OI WIKI</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.btnull.to/">BTNULL</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.edx.org/">EDX</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://github.com/SpikeIHG/Ebooks-for-math-cs">EBOOKS</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://github.com/EbookFoundation/free-programming-books">EBOOKS_PRO</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/null">HELP</a>
+                            </li>
+                        
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            
+                      
+                <div class="article-title">
+                    <img src="/../images/tt.png" alt="BFS&amp;DFS" />
+                    <h1 class="article-title-cover">BFS&amp;DFS</h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/hi.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Winter</span>
+                            
+                                <span class="author-label">Lv1</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="pc">2023-03-23 16:01:45</span>
+        <span class="mobile">2023-03-23 16:01</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="pc">2023-03-23 16:53:24</span>
+            <span class="mobile">2023-03-23 16:53</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.3k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>7 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h2 id="简单总结一下BFS与DFS在图中的实现"><a href="#简单总结一下BFS与DFS在图中的实现" class="headerlink" title="简单总结一下BFS与DFS在图中的实现"></a>简单总结一下BFS与DFS在图中的实现</h2><ul>
+<li><h3 id="BFS-amp-DFS-in-C"><a href="#BFS-amp-DFS-in-C" class="headerlink" title="BFS&amp;DFS in C++"></a><strong>BFS&amp;DFS in C++</strong></h3>  <font color=aqua><em><strong>由于对class不熟，没有写成类，但是单独写了头文件，作为一个标准例子吧</strong></em></font><h4 id="这是头文件"><a href="#这是头文件" class="headerlink" title="这是头文件"></a>这是头文件</h4>  <div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*****************************************************************/</span><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * \file   BFS.hpp</span></span><br><span class="line"><span class="comment"> * \brief  For Ms.Winter </span></span><br><span class="line"><span class="comment"> *  To demonstrate the BFS and DFS in graph </span></span><br><span class="line"><span class="comment"> * as well as wellas review the queue and graph</span></span><br><span class="line"><span class="comment"> * \author Winter</span></span><br><span class="line"><span class="comment"> * \date   March 2023</span></span><br><span class="line"><span class="comment"> *********************************************************************/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> once		<span class="comment">/* Two lines just in case */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> _BFS_H_</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> _BFS_H_</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span>	</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">// Macro </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OK	1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> BAD	0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OVERFLOW	-1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> INFEASIBLE	-2</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MVNum	50	<span class="comment">// Maximum number of vertices</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXSIZE	100</span></span><br><span class="line"><span class="comment">//ADT</span></span><br><span class="line"><span class="keyword">using</span> Status = <span class="type">int</span>;</span><br><span class="line"><span class="keyword">using</span> Len = <span class="type">int</span>;		<span class="comment">//C++ version</span></span><br><span class="line"><span class="comment">// ALGraph</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">char</span> VertexType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> ArcType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> OtherInfo;	<span class="comment">//Maybe the weight</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="title class_">anode</span> &#123;</span><br><span class="line">	<span class="type">int</span> adjvex;		<span class="comment">//the index of this node</span></span><br><span class="line">	OtherInfo info;</span><br><span class="line">	<span class="keyword">struct</span> <span class="title class_">anode</span>* next;</span><br><span class="line">&#125;Arcnode;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="title class_">vnode</span> &#123;</span><br><span class="line">	VertexType data;</span><br><span class="line">	<span class="keyword">struct</span> <span class="title class_">Arcnode</span>* firstarc;</span><br><span class="line">	<span class="comment">// struct Arcnode*antifirst;	the out degree</span></span><br><span class="line">&#125;Vnode;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> Vnode AdjList[MVNum];	</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</span><br><span class="line">	AdjList vertices;</span><br><span class="line">	<span class="type">int</span> vernum&#123; <span class="number">0</span> &#125;;</span><br><span class="line">	<span class="type">int</span> arcnum&#123; <span class="number">0</span> &#125;;</span><br><span class="line">&#125;ALGraph;</span><br><span class="line"></span><br><span class="line"><span class="comment">//AMGraph</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</span><br><span class="line">	VertexType vertices[MVNum];</span><br><span class="line">	ArcType arcs[MVNum][MVNum];</span><br><span class="line">	<span class="type">int</span> vernum&#123; <span class="number">0</span> &#125;;</span><br><span class="line">	<span class="type">int</span> arcnum&#123; <span class="number">0</span> &#125;;</span><br><span class="line">&#125;AMGraph;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Queue the Squeue and list queue</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> ElemType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</span><br><span class="line">	ElemType* data;</span><br><span class="line">	<span class="type">int</span> front;</span><br><span class="line">	<span class="type">int</span> rear;</span><br><span class="line">&#125;SQueue;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="title class_">qnode</span> &#123;</span><br><span class="line">	ElemType data;</span><br><span class="line">	<span class="keyword">struct</span> <span class="title class_">qnode</span>* next;</span><br><span class="line">&#125;Qnode;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</span><br><span class="line">	Qnode* front;</span><br><span class="line">	Qnode* rear;</span><br><span class="line">&#125;Queue;</span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// the external value we will use in the main.cpp</span></span><br><span class="line">Arcnode* static_ = <span class="literal">nullptr</span>;</span><br><span class="line"><span class="type">bool</span> visited[MVNum];		<span class="comment">//BFS</span></span><br><span class="line"><span class="type">bool</span> Visited[MAXSIZE];		<span class="comment">//DFS</span></span><br><span class="line"><span class="comment">//static funcion </span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span>	<span class="title">FirstAdjVex</span><span class="params">(<span class="type">const</span> ALGraph G, <span class="type">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (!static_)</span><br><span class="line">		static_ = G.vertices[v].firstarc;</span><br><span class="line">	<span class="keyword">return</span> G.vertices[v].firstarc-&gt;adjvex;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">NextAdjVex</span><span class="params">(<span class="type">const</span> ALGraph G, <span class="type">int</span> v, <span class="type">int</span> w)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (!static_)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	static_ = static_-&gt;next;</span><br><span class="line">	<span class="keyword">if</span> (static_)</span><br><span class="line">		<span class="keyword">return</span> static_-&gt;adjvex;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Func</span></span><br><span class="line"><span class="function">Status <span class="title">InitQueue_S</span><span class="params">(SQueue&amp; Q)</span></span>;</span><br><span class="line"><span class="function">Status <span class="title">QueueIsEmpty_S</span><span class="params">(<span class="type">const</span> SQueue&amp; Q)</span></span>;</span><br><span class="line"><span class="function">Status <span class="title">DestroyQueue_S</span><span class="params">(SQueue&amp; Q)</span></span>;</span><br><span class="line"><span class="function">Status <span class="title">EnQueue_S</span><span class="params">(SQueue&amp; Q, ElemType add)</span></span>;</span><br><span class="line"><span class="function">Status <span class="title">DeQueue_S</span><span class="params">(SQueue&amp; Q, ElemType&amp; del)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">InitQueue</span><span class="params">(Queue&amp; Q)</span></span>;</span><br><span class="line"><span class="function">Status <span class="title">QueueIsEmpty</span><span class="params">(<span class="type">const</span> Queue&amp; Q)</span></span>;</span><br><span class="line"><span class="function">Status <span class="title">DestroyQueue</span><span class="params">(Queue&amp; Q)</span></span>;</span><br><span class="line"><span class="function">Status <span class="title">EnQueue</span><span class="params">(Queue&amp; Q, ElemType add)</span></span>;</span><br><span class="line"><span class="function">Status <span class="title">DeQueue</span><span class="params">(Queue&amp; Q, ElemType&amp;del)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">BFS</span><span class="params">(<span class="type">const</span> ALGraph&amp; G, <span class="type">int</span> v)</span></span>;	</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">DFS</span><span class="params">(<span class="type">const</span> AMGraph&amp; G, <span class="type">int</span> v)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<h4 id="这是cpp文件"><a href="#这是cpp文件" class="headerlink" title="这是cpp文件"></a>这是cpp文件</h4>  <div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*****************************************************************/</span><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * \file   BFS.cpp</span></span><br><span class="line"><span class="comment"> * \brief  For Ms.Winter</span></span><br><span class="line"><span class="comment"> *  21/3/2023</span></span><br><span class="line"><span class="comment"> * \author 86158</span></span><br><span class="line"><span class="comment"> * \date   March 2023</span></span><br><span class="line"><span class="comment"> *********************************************************************/</span></span><br><span class="line"><span class="comment">// ?Here we come the BFS</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&quot;BFS.hpp&quot;</span></span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="function">Status <span class="title">InitQueue_S</span><span class="params">(SQueue&amp; Q)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Q.data = (ElemType*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(ElemType) * MVNum);</span><br><span class="line">	<span class="keyword">if</span> (!Q.data)</span><br><span class="line">		<span class="built_in">exit</span>(EXIT_FAILURE);</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">DestroyQueue_S</span><span class="params">(SQueue&amp; Q)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">free</span>(Q.data);</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">QueueIsEmpty_S</span><span class="params">(<span class="type">const</span> SQueue&amp; Q)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> Q.front == Q.rear;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">EnQueue_S</span><span class="params">(SQueue&amp;Q,ElemType add)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> ((Q.rear + <span class="number">1</span>) % MVNum == Q.front)</span><br><span class="line">		<span class="keyword">return</span> BAD;</span><br><span class="line">	Q.data[Q.rear] = add;</span><br><span class="line">	Q.rear = (Q.rear + <span class="number">1</span>) % MVNum;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">DeQueue_S</span><span class="params">(SQueue&amp; Q, <span class="type">int</span>&amp; del)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (Q.front == Q.rear)</span><br><span class="line">		<span class="keyword">return</span> BAD;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">InitQueue</span><span class="params">(Queue&amp; Q)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Qnode*pnew = (Qnode*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(Qnode));</span><br><span class="line">	<span class="keyword">if</span> (!pnew)</span><br><span class="line">		<span class="built_in">exit</span>(EXIT_FAILURE);</span><br><span class="line">	Q.front = Q.rear = pnew;</span><br><span class="line">	Q.front-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">QueueIsEmpty</span><span class="params">(<span class="type">const</span> Queue&amp; Q)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> Q.front == Q.rear;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">DestroyQueue</span><span class="params">(Queue&amp; Q)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Q.rear = Q.front;</span><br><span class="line">	<span class="keyword">while</span> (Q.front)</span><br><span class="line">	&#123;</span><br><span class="line">		Q.rear = Q.front-&gt;next;</span><br><span class="line">		<span class="built_in">free</span>(Q.front);</span><br><span class="line">		Q.front = Q.rear;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">EnQueue</span><span class="params">(Queue&amp; Q, ElemType add)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Qnode* pnew = (Qnode*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(Qnode));</span><br><span class="line">	pnew-&gt;data = add;</span><br><span class="line">	pnew-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">	Q.rear-&gt;next = pnew;</span><br><span class="line">	Q.rear = pnew;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">DeQueue</span><span class="params">(Queue&amp; Q, ElemType&amp; del)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (Q.front == Q.rear)</span><br><span class="line">		<span class="keyword">return</span> BAD;</span><br><span class="line">	Qnode* psave = Q.front-&gt;next;</span><br><span class="line">	del = psave-&gt;data;</span><br><span class="line">	Q.front-&gt;next = psave-&gt;next;</span><br><span class="line">	<span class="keyword">if</span> (Q.rear == psave)</span><br><span class="line">		Q.rear = Q.front;</span><br><span class="line">	<span class="built_in">free</span>(psave);</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">BFS</span><span class="params">(<span class="type">const</span> ALGraph&amp; G, <span class="type">int</span> v)</span>	<span class="comment">//? v the start of the BFS</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Queue vessel;</span><br><span class="line">	<span class="built_in">InitQueue</span>(vessel);</span><br><span class="line">	cout &lt;&lt; G.vertices[v].data;</span><br><span class="line">	visited[v] = <span class="literal">true</span>;</span><br><span class="line">	<span class="built_in">EnQueue</span>(vessel, v);</span><br><span class="line">	<span class="type">int</span> u&#123; <span class="number">0</span> &#125;;</span><br><span class="line">	<span class="keyword">while</span> (!<span class="built_in">QueueIsEmpty</span>(vessel))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">DeQueue</span>(vessel, u);</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> w = <span class="built_in">FirstAdjVex</span>(G, u); w &gt;= <span class="number">0</span>; w = <span class="built_in">NextAdjVex</span>(G, u, w))</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (!visited[w])</span><br><span class="line">			&#123;</span><br><span class="line">				visited[w] = <span class="literal">true</span>;</span><br><span class="line">				cout &lt;&lt; G.vertices[w].data;</span><br><span class="line">				<span class="built_in">EnQueue</span>(vessel, w);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">DFS</span><span class="params">(<span class="type">const</span> AMGraph&amp; G, <span class="type">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (v &lt; <span class="number">0</span> || v &gt;= G.vernum)</span><br><span class="line">		<span class="built_in">exit</span>(EXIT_FAILURE);</span><br><span class="line">	cout &lt;&lt; G.vertices[v];</span><br><span class="line">	Visited[v] = <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> w = <span class="number">0</span>; w &lt; G.vernum; ++w)</span><br><span class="line">		<span class="keyword">if</span> (G.arcs[v][w] &amp;&amp; !Visited[w])</span><br><span class="line">			<span class="built_in">DFS</span>(G, w);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//inline int FirstAdjvex(const ALGraph&amp; G, int v)</span></span><br><span class="line"><span class="comment">//&#123;</span></span><br><span class="line"><span class="comment">//	if (!static_)</span></span><br><span class="line"><span class="comment">//		static_ = G.vertices[v].firstarc;</span></span><br><span class="line"><span class="comment">//	return G.vertices[v].firstarc-&gt;adjvex;</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//inline int NextAdjvex(const ALGraph&amp; G, int v, int u)</span></span><br><span class="line"><span class="comment">//&#123;</span></span><br><span class="line"><span class="comment">//	ArcNode* scan;</span></span><br><span class="line"><span class="comment">//	for (scan = G.vertices[v].firstarc; scan-&gt;adjvex != u &amp;&amp; !scan-&gt;next; scan = scan-&gt;next)</span></span><br><span class="line"><span class="comment">//		continue;</span></span><br><span class="line"><span class="comment">//	if (u == scan-&gt;adjvex &amp;&amp; !scan-&gt;next)</span></span><br><span class="line"><span class="comment">//		return scan-&gt;next-&gt;adjvex;</span></span><br><span class="line"><span class="comment">//	return -1;</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"><span class="comment">//// ?May I create the new writing</span></span><br><span class="line"><span class="comment">//inline int NextNeighbor(const ALGraph&amp; G,int v)</span></span><br><span class="line"><span class="comment">//&#123;</span></span><br><span class="line"><span class="comment">//	if (!static_||!static_-&gt;next)</span></span><br><span class="line"><span class="comment">//		return -1;</span></span><br><span class="line"><span class="comment">//	static_=static_-&gt;next;</span></span><br><span class="line"><span class="comment">//	return static_-&gt;adjvex;</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Macro</span></span><br><span class="line"><span class="comment">//#define MVNum	50</span></span><br><span class="line"><span class="comment">//#define OK	1</span></span><br><span class="line"><span class="comment">//#define BAD	0</span></span><br><span class="line"><span class="comment">////</span></span><br><span class="line"><span class="comment">//using Status = int;</span></span><br><span class="line"><span class="comment">//using VertexType = char;</span></span><br><span class="line"><span class="comment">//using ArcType = int;</span></span><br><span class="line"><span class="comment">//using Len = int;</span></span><br><span class="line"><span class="comment">//// the adjency list</span></span><br><span class="line"><span class="comment">//typedef struct anode&#123;</span></span><br><span class="line"><span class="comment">//	int adjvex;</span></span><br><span class="line"><span class="comment">//	ArcType info;</span></span><br><span class="line"><span class="comment">//	struct anode* next;</span></span><br><span class="line"><span class="comment">//&#125;ArcNode;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//typedef struct vnode &#123;</span></span><br><span class="line"><span class="comment">//	VertexType data&#123; 0 &#125;;</span></span><br><span class="line"><span class="comment">//	ArcNode* firstarc;	//?there we don&#x27;t care the out degree</span></span><br><span class="line"><span class="comment">//&#125;Vnode;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//typedef Vnode AdjList[MVNum];	// ? Very special !!!</span></span><br><span class="line"><span class="comment">//typedef struct &#123;</span></span><br><span class="line"><span class="comment">//	AdjList vertices;</span></span><br><span class="line"><span class="comment">//	int vertexnum&#123; 0 &#125;;</span></span><br><span class="line"><span class="comment">//	int arcnum&#123; 0 &#125;;</span></span><br><span class="line"><span class="comment">//&#125;ALGraph;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">////? we just can handle the adjlist like list and insert </span></span><br><span class="line"><span class="comment">//// ? from the head of the list!!!</span></span><br><span class="line"><span class="comment">////we will use the queue</span></span><br><span class="line"><span class="comment">//typedef int ElemType;		// just to store the index of the vex</span></span><br><span class="line"><span class="comment">//typedef struct &#123;</span></span><br><span class="line"><span class="comment">//	ElemType* data;</span></span><br><span class="line"><span class="comment">//	int front&#123; 0 &#125;;</span></span><br><span class="line"><span class="comment">//	int rear&#123; 0 &#125;;</span></span><br><span class="line"><span class="comment">//&#125;SQueue;</span></span><br><span class="line"><span class="comment">//// the loop queue</span></span><br></pre></td></tr></table></figure></div></li>
+<li><h3 id="BFS-in-Python"><a href="#BFS-in-Python" class="headerlink" title="BFS in Python"></a>BFS in Python</h3></li>
+</ul>
+<p>		<br> 然后写了一个在python中BFS实现 主要用python可以省略一些细节而着重于思想理解</p>
+  <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#BFS in python</span></span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> deque   <span class="comment"># double queue</span></span><br><span class="line">graph=&#123;&#125;</span><br><span class="line">graph[<span class="string">&quot;you&quot;</span>] = [<span class="string">&quot;alice&quot;</span>, <span class="string">&quot;bob&quot;</span>, <span class="string">&quot;claire&quot;</span>] </span><br><span class="line">graph[<span class="string">&quot;bob&quot;</span>] = [<span class="string">&quot;anuj&quot;</span>, <span class="string">&quot;peggy&quot;</span>] </span><br><span class="line">graph[<span class="string">&quot;alice&quot;</span>] = [<span class="string">&quot;peggy&quot;</span>] </span><br><span class="line">graph[<span class="string">&quot;claire&quot;</span>] = [<span class="string">&quot;thom&quot;</span>, <span class="string">&quot;jonny&quot;</span>] </span><br><span class="line">graph[<span class="string">&quot;anuj&quot;</span>] = [] </span><br><span class="line">graph[<span class="string">&quot;peggy&quot;</span>] = [] </span><br><span class="line">graph[<span class="string">&quot;thom&quot;</span>] = [] </span><br><span class="line">graph[<span class="string">&quot;jonny&quot;</span>] = []</span><br><span class="line"></span><br><span class="line"><span class="comment">#function</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">person_is_seller</span>(<span class="params">name</span>):</span><br><span class="line">    <span class="keyword">return</span> name[-<span class="number">1</span>]==<span class="string">&#x27;m&#x27;</span>        <span class="comment">#just give an example</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">search</span>(<span class="params">graph,name</span>):       <span class="comment">#we start from this guy</span></span><br><span class="line">    search_queue=deque()</span><br><span class="line">    search_queue+=graph[name]</span><br><span class="line">    searched=[]</span><br><span class="line">    <span class="keyword">while</span> search_queue:     <span class="comment">#not null</span></span><br><span class="line">        person=search_queue.popleft()</span><br><span class="line">        <span class="keyword">if</span> person <span class="keyword">not</span> <span class="keyword">in</span> searched:</span><br><span class="line">            <span class="keyword">if</span> person_is_seller(person):</span><br><span class="line">                <span class="built_in">print</span>(person+<span class="string">&#x27; is a wolfman&#x27;</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                search_queue+=graph[person]</span><br><span class="line">                search.append(person)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><h2 id="总结思路"><a href="#总结思路" class="headerlink" title="总结思路"></a>总结思路</h2></li>
+</ul>
+<p><strong><font color=seagreen>BFS主要应用了队列的思想 DFS主要运用了递归的思想 最终图的表示使用了离散数学的邻接矩阵于邻接表  Done!</font></strong></p>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：BFS&amp;DFS</li>
+        <li>Post author：Winter</li>
+        <li>Create time：2023-03-23 16:01:45</li>
+        <li>
+            Post link：https://spikeihg.github.io/2023/03/23/BFS-DFS/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">#数据结构与算法</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/03/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">计算机网络</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+                <div class="comment-container">
+                    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+    <div id="gitalk-container"></div>
+    <script data-pjax
+            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script data-pjax>
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: '994e42334d60bd1f62f3',
+                    clientSecret: '695765f2080312a6c950d1ef05b710d5edbfc958',
+                    repo: 'Comments_from_hexo-',
+                    owner: 'SpikeIHG',
+                    admin: ['SpikeIHG'],
+                    id: __gitalk__pathname,
+                    language: 'en'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('true') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">BFS&amp;DFS</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8BBFS%E4%B8%8EDFS%E5%9C%A8%E5%9B%BE%E4%B8%AD%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="nav-text">简单总结一下BFS与DFS在图中的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#BFS-amp-DFS-in-C"><span class="nav-text">BFS&amp;DFS in C++</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%99%E6%98%AF%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="nav-text">这是头文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%99%E6%98%AFcpp%E6%96%87%E4%BB%B6"><span class="nav-text">这是cpp文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BFS-in-Python"><span class="nav-text">BFS in Python</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%E6%80%9D%E8%B7%AF"><span class="nav-text">总结思路</span></a></li></ol>
+
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+
+
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Winter</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv" class="busuanzi_container_site_uv">
+                        VISITOR COUNT&nbsp;<span id="busuanzi_value_site_uv" class="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="busuanzi_container_site_pv">
+                        TOTAL PAGE VIEWS&nbsp;<span id="busuanzi_value_site_pv" class="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <span class="powered-by-container">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a></span>
+                <br> 
+            <span class="theme-version-container">THEME&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v1.2.3</a>
+        </div>
+        
+        
+        
+            <div id="start_time_div" style="display:none">
+                2023/3/20 20:20:00
+            </div>
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+        
+            <script async data-pjax>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="unfolded-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="right-bottom-tools rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                <i class="fa-regular fa-rss"></i>
+                </a>
+            </li>
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="folded-tools-list">
+        <li class="right-bottom-tools tool-toggle-show flex-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+
+</main>
+
+
+
+<script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/utils.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/main.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/layouts/menu-shrink.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/tools/go-top-bottom.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/tools/dark-light-toggle.js"></script>
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/tools/local-search.js"></script>
+
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/tools/code-block.js"></script>
+
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/layouts/lazyload.js"></script>
+
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/tools/runtime.js"></script>
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/layouts/odometer.min.js"></script>
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/libs/Typed.min.js"></script>
+  <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/plugins/typed.js"></script>
+
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/tools/toc-toggle.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/libs/anime.min.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/layouts/toc.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/plugins/tabs.js"></script>
+    
+</div>
+
+
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            REDEFINE.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            REDEFINE.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            REDEFINE.refresh();
+        });
+    });
+</script>
+
+
+
+
+    <div id="aplayer"></div>
+<script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/libs/APlayer.min.js"></script>
+<script src="//evan.beee.top/projects/hexo-theme-redefine/v1.2.3/source/js/plugins/aplayer.js"></script>
+
+</body>
+</html>
