@@ -21,6 +21,14 @@
       </tags>
   </entry>
   <entry>
+    <title>Winter&#39;s blog</title>
+    <url>/2023/03/16/Winter-s-blog/</url>
+    <content><![CDATA[<h2 id="For-Ms-Winter"><a href="#For-Ms-Winter" class="headerlink" title="For Ms.Winter"></a>For Ms.Winter</h2><h3 id="先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功"><a href="#先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功" class="headerlink" title="先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功"></a>先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功</h3>]]></content>
+      <tags>
+        <tag>Elements</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>DNS</title>
     <url>/2023/03/23/DNS/</url>
     <content><![CDATA[<h2 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h2><ul>
@@ -89,6 +97,218 @@
 <li><h3 id="http流与DASH"><a href="#http流与DASH" class="headerlink" title="http流与DASH"></a>http流与DASH</h3><p>http流中的视频就是一个普通的http下的文件具有一个url。初期，由于具有统一格式，提供单一视频的性质，现在，为经HTTP的动态适应性流(Dynamic AdaptiveStreaming over HTTP, DASH) ，编码不同版本，不同画质。</p>
 <ul>
 <li><h4 id="内容发布网"><a href="#内容发布网" class="headerlink" title="内容发布网"></a>内容发布网</h4>CDN，在传统的DNS访问中，最后得到的是一个CDN内容服务器IP地址，然后再CDN中处理</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo搭建指南</title>
+    <url>/2023/03/25/hexo%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<h2 id="零基础搭建静态网页（基于hexo与github-page"><a href="#零基础搭建静态网页（基于hexo与github-page" class="headerlink" title="零基础搭建静态网页（基于hexo与github page)"></a>零基础搭建静态网页（基于hexo与github page)</h2><h3 id="提要"><a href="#提要" class="headerlink" title="提要"></a>提要</h3><p>在网络发达的时代，如果吗想要拥有你自己的空间，同时又烦恼于腾讯qq空间的多种限制，何不自己动手，搭建属于自己的网页，这里，我将简单提供几个博客，和网站就hexo搭建网页（静态网页）作一个介绍</p>
+<h3 id="你所要会的"><a href="#你所要会的" class="headerlink" title="你所要会的"></a>你所要会的</h3><p><font color=red>几乎是零基础，唯一需要的就是一个代理，如果你没有，实在找不到，我可以分享给你，虽然需要十元钱，但是它有个bug</font></p>
+<h3 id="传送门"><a href="#传送门" class="headerlink" title="传送门"></a>传送门</h3><p>我这里就先后顺序给出网址，并作简要说明；</p>
+<blockquote>
+<p>可以同时看一下我下面的问题解决，如果你在操作中出现问题的话，如果实在无法解决，可以评论。</p>
+</blockquote>
+<ul>
+<li><h4 id="总体流程"><a href="#总体流程" class="headerlink" title="总体流程"></a><a href="https://zhuanlan.zhihu.com/p/370635512"><font color= seablue>总体流程</font></a></h4></li>
+</ul>
+<p>其实这一个基本就可以完成搭建了，不过这里补充几个可能用到 的</p>
+<ul>
+<li><h4 id="模板来源"><a href="#模板来源" class="headerlink" title="模板来源"></a><a href="https://hexo.io/"><font color=seablue>模板来源</font></a></h4></li>
+<li><h4 id="博客中的TAG使用"><a href="#博客中的TAG使用" class="headerlink" title="博客中的TAG使用"></a><a href="https://zhuanlan.zhihu.com/p/348131730"><font color= seablue>博客中的TAG使用</font></a></h4></li>
+</ul>
+<p>对于有tag和categories的网页的用法介绍</p>
+<ul>
+<li><h4 id="在线音乐获取"><a href="#在线音乐获取" class="headerlink" title="在线音乐获取"></a>在线音乐获取</h4><p>——<strong>暂时等待</strong> <font color=gold>我正打算写一个可以直接下载英语的web，由于要用django，可能比较久，如果不成功，我尽量提供一个源代码，到时候，大家只要可以运行应该就可以输入获取。</font></p>
+</li>
+<li><h4 id="一个找高清图片的网站"><a href="#一个找高清图片的网站" class="headerlink" title="一个找高清图片的网站"></a><a href="https://wallhaven.cc/"><font color= seablue>一个找高清图片的网站</font></a></h4></li>
+<li><h4 id="CSS资源网站"><a href="#CSS资源网站" class="headerlink" title="CSS资源网站"></a><a href="https://www.w3cschool.cn/css3/css3-animation.html"><font color= seablue>CSS资源网站</font></a></h4><p>这个网站属于大家如果有自己改写代码的需要，可以参考，当然我自己不甚了解CSS和js</p>
+</li>
+<li><h4 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a><font color= seablue>markdown</font></h4><p>至于mark逗我呢使用方法可以参考我列举的一些关于markdown的用法。更完整的就是<a href="https://www.markdownguide.org/"><font color=seablue>Markdown官方文档</font></a></p>
+</li>
+</ul>
+<p>推荐几个颜色 <font color=aqua>Aqua</font>  <font color=seablue>seablue</font>  <font color=chocolate>Chocolate</font>  <font color=azure>Azure</font></p>
+<ul>
+<li><h4 id="如果真的很感兴趣可以考虑学习JS"><a href="#如果真的很感兴趣可以考虑学习JS" class="headerlink" title="如果真的很感兴趣可以考虑学习JS"></a>如果真的很感兴趣可以考虑学习JS</h4></li>
+</ul>
+<h3 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><p>列举一些我在操作中遇到的问题</p>
+<ul>
+<li><h4 id="github仓库"><a href="#github仓库" class="headerlink" title="github仓库"></a>github仓库</h4><p>注意命名时，必须是自己的用户名.io 这是github的要求</p>
+</li>
+<li><h4 id="创建博客文章"><a href="#创建博客文章" class="headerlink" title="创建博客文章"></a>创建博客文章</h4><p>尽量直接hexo new “标题”</p>
+</li>
+<li><h4 id="具体搭建指南"><a href="#具体搭建指南" class="headerlink" title="具体搭建指南"></a>具体搭建指南</h4><p>基本每一个框架都有说明，一般在对应的github仓库的README.md文件中</p>
+</li>
+<li><h4 id="获取网络图片"><a href="#获取网络图片" class="headerlink" title="获取网络图片"></a>获取网络图片</h4><p>先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功</p>
+</li>
+</ul>
+<h2 id="Continuing"><a href="#Continuing" class="headerlink" title="Continuing"></a>Continuing</h2><p>暂时就写到这吧，欢迎交流，多请批评指教！</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/lic.jpg"
+                     
+                ></p>
+]]></content>
+      <tags>
+        <tag>Elements</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Scrape</title>
+    <url>/2023/03/22/Scrape/</url>
+    <content><![CDATA[<hr>
+<blockquote>
+<p>本文使用的颜色较多，开启夜间模式阅读效果更好</p>
+</blockquote>
+<hr>
+<h2 id="本系列主要是对阅读了python网络编程相关的总结与回顾"><a href="#本系列主要是对阅读了python网络编程相关的总结与回顾" class="headerlink" title="本系列主要是对阅读了python网络编程相关的总结与回顾"></a>本系列主要是对阅读了python网络编程相关的总结与回顾</h2><ol>
+<li><h3 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h3><ol>
+<li><h4 id="http简介"><a href="#http简介" class="headerlink" title="http简介"></a><strong>http简介</strong></h4>  <em><strong>url</strong></em> : 统一资源定位符  格式如下 []代表可省略<br> <font color=seablue>protocol :&#x2F;&#x2F;[username:password@] hostname[:port] &#x2F; path &#x2F; [;parameters][?query]#fragment  </font><br> <font color=yellow>protocol</font>  : 协议 主要有 http,https,ftp,sms,<br> <font color =red>username,password</font> : 主要ftp<br> <font color =green>hostname</font> ： 主机名也就是域名 也可以用DNS映射得到IP地址，有一级二级域名之分<br> <font color =brown>port</font> : 端口号 http默认是80 类似还有https 443 属于套接口<br> <font color='cayon'>path</font> : 路径 就是位于主机中的地址<br> <font color='purple'>parameters</font> : 附加信息 现在用的少了<br> <font color=gold>query</font>  : 查询，多个查询就用&amp;分开，GET请求参数里也有<br> <font color=#a34929>fragment</font> : 片段 资源的补充 似乎很少使用<br> <font style =background:seagreen>http基本转向https 基于SSL socket相关也是爬取的主要内容</font>  </li>
+<li><h4 id="http请求过程"><a href="#http请求过程" class="headerlink" title="http请求过程"></a><strong>http请求过程</strong></h4> <u>使用F12 Network 监听 Ctrl+R </u><br> <font color=seaf>Status</font>    : 状态码就是404 403 200 类似的<br> <font color=gold>Initiator</font> : 请求源 标记请求是由哪个进程或对象发起的<br> <font color=chocolate>Request</font>请求方法 请求头 请求体<br> <font color = aqua>Request Method</font> ： 请求方法GET POST居多 还有PUT DELETE 很多<br> <font color=azure></font><br> <font color=darkblue></font><br> <font color=coroflowerblue></font><br> <font color=blueviolet></font><br> <font color=coral></font><br> <font color=darkBlue></font></li>
+</ol>
+</li>
+</ol>
+<p>​        </p>
+]]></content>
+      <tags>
+        <tag>SCRAPE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Prim</title>
+    <url>/2023/03/24/Prim/</url>
+    <content><![CDATA[<h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p><font color=Aqua>加入你遇到这样一个问题，在一个表示了很多村庄的交通图中，其中有每两个村庄之间的交通开销。我们怎么才能够将所有的村庄都相连，并且没有回路，即离散数学里的极小连通图。我们的Prim算法给出了一种经典的解决方法。</font></p>
+<h2 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h2><h3 id="数学抽象"><a href="#数学抽象" class="headerlink" title="数学抽象"></a>数学抽象</h3><p>我们运用离散数学中的图来简化模型，将村庄视作点，边视作连线，然后赋予对应的一个权值。</p>
+<h3 id="关键思路分析"><a href="#关键思路分析" class="headerlink" title="关键思路分析"></a>关键思路分析</h3><ul>
+<li><h4 id="以点为中心"><a href="#以点为中心" class="headerlink" title="以点为中心"></a>以点为中心</h4><p>因为最终生成的路径一定要包含所有的顶点，所以我们可以从点的角度考虑。任取一个点，找到与其邻接的所有顶点，然后找到最小的权值对应的顶点，把该点放入我们的点集合里，然后然后重复上面的步骤就可以了。</p>
+</li>
+<li><h4 id="更新权值"><a href="#更新权值" class="headerlink" title="更新权值"></a>更新权值</h4><p>一个比较关键的地方就是要不断检查权值，然后对应进行更新。</p>
+<blockquote>
+<p>其实思路总体还是比较清晰，简单，不过在代码里面有很多巧妙的地方</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="代码设计"><a href="#代码设计" class="headerlink" title="代码设计"></a>代码设计</h3><ul>
+<li><h4 id="如何存储点的信息"><a href="#如何存储点的信息" class="headerlink" title="如何存储点的信息"></a>如何存储点的信息</h4><p>我们定义一个Prim特有的数据结构来进行存储</p>
+<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 这个就是Prim算法的特殊数据结构，就是你使用这个算法就必须要想起的一个结构</span></span><br><span class="line"><span class="comment">//  </span></span><br><span class="line"><span class="comment">// ADT</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="title class_">closeedge</span> &#123;</span><br><span class="line">	<span class="type">int</span> adjvex;</span><br><span class="line">	<span class="type">int</span> lowcast;	<span class="comment">//?  low cast </span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
+
+<p>思路很妙，lowcast记录该点的最小开销，而adjvex对应最小开销的对应的边。不过我们还有一个问题，那就是我们会发现，怎么检查一个点是否已经在我们的已经考虑过的集合里，然后又怎么决定两条边是否相连，我们分别对下面 的问题进行解决。   </p>
+<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> OK	1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> BAD	0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MVNum	100</span></span><br><span class="line"><span class="comment">// ? love favorite </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> INF 0x3F3F3F3F</span></span><br><span class="line"><span class="keyword">using</span> Status = <span class="type">int</span>;</span><br><span class="line"><span class="keyword">using</span> VerTexType = <span class="type">char</span>;</span><br><span class="line"><span class="keyword">using</span> ArcType = <span class="type">int</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</span><br><span class="line">	VerTexType vertices[MVNum];</span><br><span class="line">	ArcType arcs[MVNum][MVNum];</span><br><span class="line">	<span class="type">int</span> vertexnum&#123;MVNum&#125;;</span><br><span class="line">	<span class="type">int</span> arcnum&#123; <span class="number">0</span> &#125;;		<span class="comment">//? Low cost</span></span><br><span class="line">&#125;AMGraph;</span><br></pre></td></tr></table></figure></div>
+
+<p>我们使用边集数组的数据结构来表示，（这就是数据结构的魅力），然后我们在初始化的时候将对角线初始化为0，以lowcast&#x3D;0来代表不能建路径，以INF一个极大值来检查是否连通。这就是算法中的关键思路</p>
+</li>
+<li><h4 id="判断条件（如上）"><a href="#判断条件（如上）" class="headerlink" title="判断条件（如上）"></a>判断条件（如上）</h4></li>
+</ul>
+<h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*****************************************************************/</span><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * \file   MTS.cpp</span></span><br><span class="line"><span class="comment"> * \brief  For Ms.Winter</span></span><br><span class="line"><span class="comment"> *  3/24/2023</span></span><br><span class="line"><span class="comment"> * \author 86158</span></span><br><span class="line"><span class="comment"> * \date   March 2023</span></span><br><span class="line"><span class="comment"> *********************************************************************/</span></span><br><span class="line"><span class="comment">// Now we come to the MTS</span></span><br><span class="line"><span class="comment">//? Most Cost Spannig Tree </span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">// Macro </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OK	1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> BAD	0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MVNum	100</span></span><br><span class="line"><span class="comment">// ? love favorite </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> INF 0x3F3F3F3F</span></span><br><span class="line"><span class="keyword">using</span> Status = <span class="type">int</span>;</span><br><span class="line"><span class="keyword">using</span> VerTexType = <span class="type">char</span>;</span><br><span class="line"><span class="keyword">using</span> ArcType = <span class="type">int</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</span><br><span class="line">	VerTexType vertices[MVNum];</span><br><span class="line">	ArcType arcs[MVNum][MVNum];</span><br><span class="line">	<span class="type">int</span> vertexnum&#123;MVNum&#125;;</span><br><span class="line">	<span class="type">int</span> arcnum&#123; <span class="number">0</span> &#125;;		<span class="comment">//? Low cost</span></span><br><span class="line">&#125;AMGraph;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">locate</span><span class="params">(<span class="type">const</span> AMGraph&amp; G, <span class="type">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; G.vertexnum; i++)</span><br><span class="line">		<span class="keyword">if</span> (v == G.vertices[i])</span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">Status <span class="title">CreateUDN</span><span class="params">(AMGraph&amp; G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">memset</span>(G.arcs, INF, <span class="built_in">sizeof</span>(G.arcs));</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; G.vertexnum; i++)</span><br><span class="line">		G.arcs[i][i] = <span class="number">0</span>;		<span class="comment">// It must been done !</span></span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;first please input the arcnum and vernum of the graph&quot;</span>;</span><br><span class="line">	cin &gt;&gt; G.vertexnum &gt;&gt; G.arcnum;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;Now please enter the vertices first&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; G.vertexnum; i++)</span><br><span class="line">		cin &gt;&gt; G.vertices[i];</span><br><span class="line">	VerTexType v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">	ArcType weight&#123; <span class="number">-1</span> &#125;;</span><br><span class="line">	<span class="type">int</span> i&#123; <span class="number">0</span> &#125;, j&#123; <span class="number">0</span> &#125;;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;Now please enter all the arcs and weight&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; G.arcnum; j++)</span><br><span class="line">	&#123;</span><br><span class="line">		cin &gt;&gt; v1 &gt;&gt; v2 &gt;&gt; weight;</span><br><span class="line">		i = <span class="built_in">locate</span>(G, v1);</span><br><span class="line">		j = <span class="built_in">locate</span>(G, v2);</span><br><span class="line">		G.arcs[i][j] = weight;			<span class="comment">// UDN</span></span><br><span class="line">		G.arcs[j][i] = weight;			<span class="comment">// UDN</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 这个就是Prim算法的特殊数据结构，就是你使用这个算法就必须要想起的一个结构</span></span><br><span class="line"><span class="comment">//  </span></span><br><span class="line"><span class="comment">// ADT</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="title class_">closeedge</span> &#123;</span><br><span class="line">	<span class="type">int</span> adjvex;</span><br><span class="line">	<span class="type">int</span> lowcast;	<span class="comment">//?  low cast </span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 关键思路的分析 ，就是把点作为一个集合，从所有与这个集合相连的点中挑选</span></span><br><span class="line"><span class="comment">// 运用一个数组存储对应的顶点的最小开销，与此同时，再使用一个数组来记录对应的边的</span></span><br><span class="line"><span class="comment">// 另一个顶点 然后 为了判定一个点是否已经在集合内，我们将其cast 设置为0</span></span><br><span class="line"><span class="comment">// 并且最开始的时候我们的矩阵里使用的是一个INF 数据设计很巧妙</span></span><br><span class="line"><span class="comment">// The prim from a blogger </span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Prim</span><span class="params">(AMGraph&amp; G, <span class="type">int</span> v)</span>	<span class="comment">//? We choose a start point v0</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">// First we use the closeedge</span></span><br><span class="line">	closeedge C[MVNum];		<span class="comment">// Special data struct</span></span><br><span class="line">	<span class="comment">// Init it with the v point</span></span><br><span class="line">	<span class="type">int</span> min_casts = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; G.vertexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		C[i].adjvex = v;</span><br><span class="line">		C[i].lowcast = G.arcs[v][i];</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;对应的边是&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; G.vertexnum; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> temp = <span class="number">0</span>;</span><br><span class="line">		<span class="type">int</span> min_cast = INF;	<span class="comment">// Just the case</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; G.vertexnum; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (C[j].lowcast != <span class="number">0</span> &amp;&amp; C[j].lowcast &lt; min_cast)</span><br><span class="line">			&#123;</span><br><span class="line">				temp = j;</span><br><span class="line">				min_cast = C[j].lowcast;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot; ( &quot;</span> &lt;&lt; temp &lt;&lt; <span class="string">&quot;,&quot;</span> &lt;&lt; C[temp].adjvex &lt;&lt; <span class="string">&quot; )&quot;</span>;</span><br><span class="line">		min_casts += min_cast;</span><br><span class="line">		C[temp].lowcast = <span class="number">0</span>;	<span class="comment">// You&#x27;ve seen what the use just to see if used!!!</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">0</span>; k &lt; G.vertexnum; k++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (C[k].lowcast != <span class="number">0</span> &amp;&amp; G.arcs[temp][k] &lt; C[k].lowcast)</span><br><span class="line">			&#123;</span><br><span class="line">				C[k].lowcast = G.arcs[temp][k];</span><br><span class="line">				C[k].adjvex = k;		<span class="comment">// Now you see what the adjvex mean</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;All casts are &quot;</span> &lt;&lt; min_casts &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// we could see the o(n^2)</span></span><br><span class="line"><span class="comment">// We could also use the KrustalAL other method</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//? Krustal 算法的实现</span></span><br><span class="line"><span class="comment">// 对应的我们KRUSTAL 算法也有对应的特有的数据结构 就是我们的边集数组</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</span><br><span class="line">	<span class="type">int</span> begin, end;</span><br><span class="line">	ArcType weight;		<span class="comment">// ? the begin mean the point of the arcs</span></span><br><span class="line">&#125;Edge;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 并且我们也要用到并查集的知识 感觉非常巧妙</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><font color=coral>之前很少细想算法设计的思路，自己的思维没有得到锻炼，其中的数学简化思想与代码设计很巧妙与优美，完</font></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Rei.jpg"
+                      alt="hh" title="绫波"
+                ></p>
+]]></content>
+      <tags>
+        <tag>数据结构与算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>单调栈</title>
+    <url>/2023/03/16/%E5%8D%95%E8%B0%83%E6%A0%88/</url>
+    <content><![CDATA[<h2 id="关于单调栈的一些东西"><a href="#关于单调栈的一些东西" class="headerlink" title="关于单调栈的一些东西"></a>关于单调栈的一些东西</h2><h3 id="单调栈模板"><a href="#单调栈模板" class="headerlink" title="单调栈模板"></a>单调栈模板</h3><div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">3000010</span>;</span><br><span class="line"><span class="type">int</span> a[N],f[N];</span><br><span class="line">stack&lt;<span class="type">int</span>&gt;s;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=n;i&gt;=<span class="number">1</span>;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(!s.<span class="built_in">empty</span>()&amp;&amp;a[s.<span class="built_in">top</span>()]&lt;=a[i])</span><br><span class="line">        s.<span class="built_in">pop</span>();</span><br><span class="line">        f[i]=s.<span class="built_in">empty</span>()?<span class="number">0</span>:s.<span class="built_in">top</span>();</span><br><span class="line">        s.<span class="built_in">push</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,f[i]);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基础汇编指令</title>
+    <url>/2023/03/23/%E5%9F%BA%E7%A1%80%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="概念补充"><a href="#概念补充" class="headerlink" title="概念补充"></a>概念补充</h3><ul>
+<li><h4 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h4><p>一个标准的c语言程序在编译过程中，首先是经过翻译，成汇编语言，也就是Linux命令行中的-s选项，然后转为二进制的机器代码，然后通过连接器，与库相连，并且附上一些地址与起始终止信息。</p>
+</li>
+<li><h4 id="汇编语言与机器代码"><a href="#汇编语言与机器代码" class="headerlink" title="汇编语言与机器代码"></a>汇编语言与机器代码</h4><p>机器是二进制字节，电脑可读的指令，汇编语言就是助记符。可以编写</p>
+</li>
+<li><h4 id="指令集架构"><a href="#指令集架构" class="headerlink" title="指令集架构"></a>指令集架构</h4><p>不同机器，处理器的指令集架构不一样，但是高级抽象语言却能够通用，只要选用适合机器的编译器即可。</p>
+</li>
+<li><h4 id="x86"><a href="#x86" class="headerlink" title="x86"></a>x86</h4><p>因为英特尔前期处理器都是某某86所以简称x86，x86-64即64位拓展</p>
+</li>
+<li><h4 id="O优化"><a href="#O优化" class="headerlink" title="O优化"></a>O优化</h4><p>其实就是命令行的一个选型，高度优化可能使代码的汇编代码逻辑改变较大。</p>
+</li>
+<li><h4 id="寄存器"><a href="#寄存器" class="headerlink" title="寄存器"></a>寄存器</h4><ul>
+<li><h5 id="程序寄存器"><a href="#程序寄存器" class="headerlink" title="程序寄存器"></a>程序寄存器</h5><p>用于专门存储指令的地址 %rip</p>
+</li>
+<li><h5 id="一组十六个整数寄存器"><a href="#一组十六个整数寄存器" class="headerlink" title="一组十六个整数寄存器"></a>一组十六个整数寄存器</h5><p>用于系列操作</p>
+</li>
+<li><h5 id="条件码寄存器"><a href="#条件码寄存器" class="headerlink" title="条件码寄存器"></a>条件码寄存器</h5><p>存储维护条件码实现逻辑控制</p>
+</li>
+<li><h5 id="向量寄存器"><a href="#向量寄存器" class="headerlink" title="向量寄存器"></a>向量寄存器</h5><p>实现浮点数操作</p>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>“CSAPP”</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>正则表达式</title>
+    <url>/2023/03/25/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    <content><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><ul>
+<li><p><font color =chocolate>从前我们学习了KMP算法文本匹配，但是现在我们的这个正则表达式，提供一种单独的语法解决，但是KMP算法仍有很多局限且消耗算力，为了解决网络中的大量匹配问题，引入伟大的正则表达式，用于匹配与替换。</font></p>
+</li>
+<li><p><font color=blue violet>编程语言中我们使用的转义字符等有一定出处，正则表达式最初来自我们的unix机器</font> </p>
+</li>
+<li><h3 id="简单的语法"><a href="#简单的语法" class="headerlink" title="简单的语法"></a>简单的语法</h3><ul>
+<li><h4 id="纯文本匹配"><a href="#纯文本匹配" class="headerlink" title="纯文本匹配"></a>纯文本匹配</h4><p>直接匹配文本，区分大小写，通常只返回第一个，可以编程语言中选择返回所有的数组。 </p>
+</li>
+<li><h4 id="号-匹配"><a href="#号-匹配" class="headerlink" title="**.号**匹配"></a>**<font color=red>.号</font>**匹配</h4><p>. 可以指代包括.在内的所有符号  匹配本身时引入了伟大的<em><strong>转义符号 \</strong></em>  </p>
+</li>
+<li><h4 id="匹配想要中的字符"><a href="#匹配想要中的字符" class="headerlink" title="匹配想要中的字符"></a>匹配想要中的字符</h4><p><font color = coral>使用[]，[]中的只要满足一个就算是匹配</font> 常常用在不区分大小写的表示  [Cc][Aa][Tt].eg	事实上我们的markdown都有转义字符</p>
+<ul>
+<li><h5 id="集合表示"><a href="#集合表示" class="headerlink" title="集合表示"></a>集合表示</h5><blockquote>
+<p>一个自然的过渡，如果，集合中元素很多时，且连续，使用[A-Z] 遵循阿斯克码</p>
+</blockquote>
+</li>
+<li><p><font color=seagreen>\ 与-都是元字符 -不需转义</font></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>SCRAPE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机网络</title>
+    <url>/2023/03/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</url>
+    <content><![CDATA[<blockquote>
+<p>本来想要有条理一点，但是实在太多，所以就列举名词，作为条理了</p>
+</blockquote>
+<hr>
+<h2 id="计算机网络常识"><a href="#计算机网络常识" class="headerlink" title="计算机网络常识"></a>计算机网络常识</h2><ul>
+<li>名字解释  <ul>
+<li>通信链路：指的就是些通信的物理媒介 同轴电缆 铜线 无线电频谱 光纤</li>
+<li>分组交换机 packet switch 就是路由器 与链路层交换机</li>
+<li>ISP 因特网服务提供商</li>
+<li>TCP&#x2F;IP 主要协议</li>
+<li>RFC 请求评论</li>
+<li>网络边缘 高速宽带 数字用户线 电缆基础上使用的</li>
+<li>上行下行速度</li>
+<li>光纤到户</li>
+<li>LAN局域网 无线局域网 基于IEEE 802. 11技术的无<br>线LAN接入,更通俗地称为WiFi</li>
+<li>蜂窝移动网络</li>
+<li>报文message</li>
 </ul>
 </li>
 </ul>
@@ -243,226 +463,6 @@
 ]]></content>
       <tags>
         <tag>MARKDOWN</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Prim</title>
-    <url>/2023/03/24/Prim/</url>
-    <content><![CDATA[<h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p><font color=Aqua>加入你遇到这样一个问题，在一个表示了很多村庄的交通图中，其中有每两个村庄之间的交通开销。我们怎么才能够将所有的村庄都相连，并且没有回路，即离散数学里的极小连通图。我们的Prim算法给出了一种经典的解决方法。</font></p>
-<h2 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h2><h3 id="数学抽象"><a href="#数学抽象" class="headerlink" title="数学抽象"></a>数学抽象</h3><p>我们运用离散数学中的图来简化模型，将村庄视作点，边视作连线，然后赋予对应的一个权值。</p>
-<h3 id="关键思路分析"><a href="#关键思路分析" class="headerlink" title="关键思路分析"></a>关键思路分析</h3><ul>
-<li><h4 id="以点为中心"><a href="#以点为中心" class="headerlink" title="以点为中心"></a>以点为中心</h4><p>因为最终生成的路径一定要包含所有的顶点，所以我们可以从点的角度考虑。任取一个点，找到与其邻接的所有顶点，然后找到最小的权值对应的顶点，把该点放入我们的点集合里，然后然后重复上面的步骤就可以了。</p>
-</li>
-<li><h4 id="更新权值"><a href="#更新权值" class="headerlink" title="更新权值"></a>更新权值</h4><p>一个比较关键的地方就是要不断检查权值，然后对应进行更新。</p>
-<blockquote>
-<p>其实思路总体还是比较清晰，简单，不过在代码里面有很多巧妙的地方</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="代码设计"><a href="#代码设计" class="headerlink" title="代码设计"></a>代码设计</h3><ul>
-<li><h4 id="如何存储点的信息"><a href="#如何存储点的信息" class="headerlink" title="如何存储点的信息"></a>如何存储点的信息</h4><p>我们定义一个Prim特有的数据结构来进行存储</p>
-<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 这个就是Prim算法的特殊数据结构，就是你使用这个算法就必须要想起的一个结构</span></span><br><span class="line"><span class="comment">//  </span></span><br><span class="line"><span class="comment">// ADT</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="title class_">closeedge</span> &#123;</span><br><span class="line">	<span class="type">int</span> adjvex;</span><br><span class="line">	<span class="type">int</span> lowcast;	<span class="comment">//?  low cast </span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
-
-<p>思路很妙，lowcast记录该点的最小开销，而adjvex对应最小开销的对应的边。不过我们还有一个问题，那就是我们会发现，怎么检查一个点是否已经在我们的已经考虑过的集合里，然后又怎么决定两条边是否相连，我们分别对下面 的问题进行解决。   </p>
-<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> OK	1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> BAD	0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MVNum	100</span></span><br><span class="line"><span class="comment">// ? love favorite </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> INF 0x3F3F3F3F</span></span><br><span class="line"><span class="keyword">using</span> Status = <span class="type">int</span>;</span><br><span class="line"><span class="keyword">using</span> VerTexType = <span class="type">char</span>;</span><br><span class="line"><span class="keyword">using</span> ArcType = <span class="type">int</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</span><br><span class="line">	VerTexType vertices[MVNum];</span><br><span class="line">	ArcType arcs[MVNum][MVNum];</span><br><span class="line">	<span class="type">int</span> vertexnum&#123;MVNum&#125;;</span><br><span class="line">	<span class="type">int</span> arcnum&#123; <span class="number">0</span> &#125;;		<span class="comment">//? Low cost</span></span><br><span class="line">&#125;AMGraph;</span><br></pre></td></tr></table></figure></div>
-
-<p>我们使用边集数组的数据结构来表示，（这就是数据结构的魅力），然后我们在初始化的时候将对角线初始化为0，以lowcast&#x3D;0来代表不能建路径，以INF一个极大值来检查是否连通。这就是算法中的关键思路</p>
-</li>
-<li><h4 id="判断条件（如上）"><a href="#判断条件（如上）" class="headerlink" title="判断条件（如上）"></a>判断条件（如上）</h4></li>
-</ul>
-<h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*****************************************************************/</span><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * \file   MTS.cpp</span></span><br><span class="line"><span class="comment"> * \brief  For Ms.Winter</span></span><br><span class="line"><span class="comment"> *  3/24/2023</span></span><br><span class="line"><span class="comment"> * \author 86158</span></span><br><span class="line"><span class="comment"> * \date   March 2023</span></span><br><span class="line"><span class="comment"> *********************************************************************/</span></span><br><span class="line"><span class="comment">// Now we come to the MTS</span></span><br><span class="line"><span class="comment">//? Most Cost Spannig Tree </span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">// Macro </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OK	1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> BAD	0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MVNum	100</span></span><br><span class="line"><span class="comment">// ? love favorite </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> INF 0x3F3F3F3F</span></span><br><span class="line"><span class="keyword">using</span> Status = <span class="type">int</span>;</span><br><span class="line"><span class="keyword">using</span> VerTexType = <span class="type">char</span>;</span><br><span class="line"><span class="keyword">using</span> ArcType = <span class="type">int</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</span><br><span class="line">	VerTexType vertices[MVNum];</span><br><span class="line">	ArcType arcs[MVNum][MVNum];</span><br><span class="line">	<span class="type">int</span> vertexnum&#123;MVNum&#125;;</span><br><span class="line">	<span class="type">int</span> arcnum&#123; <span class="number">0</span> &#125;;		<span class="comment">//? Low cost</span></span><br><span class="line">&#125;AMGraph;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">locate</span><span class="params">(<span class="type">const</span> AMGraph&amp; G, <span class="type">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; G.vertexnum; i++)</span><br><span class="line">		<span class="keyword">if</span> (v == G.vertices[i])</span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">Status <span class="title">CreateUDN</span><span class="params">(AMGraph&amp; G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">memset</span>(G.arcs, INF, <span class="built_in">sizeof</span>(G.arcs));</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; G.vertexnum; i++)</span><br><span class="line">		G.arcs[i][i] = <span class="number">0</span>;		<span class="comment">// It must been done !</span></span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;first please input the arcnum and vernum of the graph&quot;</span>;</span><br><span class="line">	cin &gt;&gt; G.vertexnum &gt;&gt; G.arcnum;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;Now please enter the vertices first&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; G.vertexnum; i++)</span><br><span class="line">		cin &gt;&gt; G.vertices[i];</span><br><span class="line">	VerTexType v1 = <span class="number">0</span>, v2 = <span class="number">0</span>;</span><br><span class="line">	ArcType weight&#123; <span class="number">-1</span> &#125;;</span><br><span class="line">	<span class="type">int</span> i&#123; <span class="number">0</span> &#125;, j&#123; <span class="number">0</span> &#125;;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;Now please enter all the arcs and weight&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; G.arcnum; j++)</span><br><span class="line">	&#123;</span><br><span class="line">		cin &gt;&gt; v1 &gt;&gt; v2 &gt;&gt; weight;</span><br><span class="line">		i = <span class="built_in">locate</span>(G, v1);</span><br><span class="line">		j = <span class="built_in">locate</span>(G, v2);</span><br><span class="line">		G.arcs[i][j] = weight;			<span class="comment">// UDN</span></span><br><span class="line">		G.arcs[j][i] = weight;			<span class="comment">// UDN</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 这个就是Prim算法的特殊数据结构，就是你使用这个算法就必须要想起的一个结构</span></span><br><span class="line"><span class="comment">//  </span></span><br><span class="line"><span class="comment">// ADT</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="title class_">closeedge</span> &#123;</span><br><span class="line">	<span class="type">int</span> adjvex;</span><br><span class="line">	<span class="type">int</span> lowcast;	<span class="comment">//?  low cast </span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 关键思路的分析 ，就是把点作为一个集合，从所有与这个集合相连的点中挑选</span></span><br><span class="line"><span class="comment">// 运用一个数组存储对应的顶点的最小开销，与此同时，再使用一个数组来记录对应的边的</span></span><br><span class="line"><span class="comment">// 另一个顶点 然后 为了判定一个点是否已经在集合内，我们将其cast 设置为0</span></span><br><span class="line"><span class="comment">// 并且最开始的时候我们的矩阵里使用的是一个INF 数据设计很巧妙</span></span><br><span class="line"><span class="comment">// The prim from a blogger </span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Prim</span><span class="params">(AMGraph&amp; G, <span class="type">int</span> v)</span>	<span class="comment">//? We choose a start point v0</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">// First we use the closeedge</span></span><br><span class="line">	closeedge C[MVNum];		<span class="comment">// Special data struct</span></span><br><span class="line">	<span class="comment">// Init it with the v point</span></span><br><span class="line">	<span class="type">int</span> min_casts = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; G.vertexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		C[i].adjvex = v;</span><br><span class="line">		C[i].lowcast = G.arcs[v][i];</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;对应的边是&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; G.vertexnum; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> temp = <span class="number">0</span>;</span><br><span class="line">		<span class="type">int</span> min_cast = INF;	<span class="comment">// Just the case</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; G.vertexnum; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (C[j].lowcast != <span class="number">0</span> &amp;&amp; C[j].lowcast &lt; min_cast)</span><br><span class="line">			&#123;</span><br><span class="line">				temp = j;</span><br><span class="line">				min_cast = C[j].lowcast;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot; ( &quot;</span> &lt;&lt; temp &lt;&lt; <span class="string">&quot;,&quot;</span> &lt;&lt; C[temp].adjvex &lt;&lt; <span class="string">&quot; )&quot;</span>;</span><br><span class="line">		min_casts += min_cast;</span><br><span class="line">		C[temp].lowcast = <span class="number">0</span>;	<span class="comment">// You&#x27;ve seen what the use just to see if used!!!</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">0</span>; k &lt; G.vertexnum; k++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (C[k].lowcast != <span class="number">0</span> &amp;&amp; G.arcs[temp][k] &lt; C[k].lowcast)</span><br><span class="line">			&#123;</span><br><span class="line">				C[k].lowcast = G.arcs[temp][k];</span><br><span class="line">				C[k].adjvex = k;		<span class="comment">// Now you see what the adjvex mean</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;All casts are &quot;</span> &lt;&lt; min_casts &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// we could see the o(n^2)</span></span><br><span class="line"><span class="comment">// We could also use the KrustalAL other method</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//? Krustal 算法的实现</span></span><br><span class="line"><span class="comment">// 对应的我们KRUSTAL 算法也有对应的特有的数据结构 就是我们的边集数组</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</span><br><span class="line">	<span class="type">int</span> begin, end;</span><br><span class="line">	ArcType weight;		<span class="comment">// ? the begin mean the point of the arcs</span></span><br><span class="line">&#125;Edge;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 并且我们也要用到并查集的知识 感觉非常巧妙</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><font color=coral>之前很少细想算法设计的思路，自己的思维没有得到锻炼，其中的数学简化思想与代码设计很巧妙与优美，完</font></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Rei.jpg"
-                      alt="hh" title="绫波"
-                ></p>
-]]></content>
-      <tags>
-        <tag>数据结构与算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Scrape</title>
-    <url>/2023/03/22/Scrape/</url>
-    <content><![CDATA[<hr>
-<blockquote>
-<p>本文使用的颜色较多，开启夜间模式阅读效果更好</p>
-</blockquote>
-<hr>
-<h2 id="本系列主要是对阅读了python网络编程相关的总结与回顾"><a href="#本系列主要是对阅读了python网络编程相关的总结与回顾" class="headerlink" title="本系列主要是对阅读了python网络编程相关的总结与回顾"></a>本系列主要是对阅读了python网络编程相关的总结与回顾</h2><ol>
-<li><h3 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h3><ol>
-<li><h4 id="http简介"><a href="#http简介" class="headerlink" title="http简介"></a><strong>http简介</strong></h4>  <em><strong>url</strong></em> : 统一资源定位符  格式如下 []代表可省略<br> <font color=seablue>protocol :&#x2F;&#x2F;[username:password@] hostname[:port] &#x2F; path &#x2F; [;parameters][?query]#fragment  </font><br> <font color=yellow>protocol</font>  : 协议 主要有 http,https,ftp,sms,<br> <font color =red>username,password</font> : 主要ftp<br> <font color =green>hostname</font> ： 主机名也就是域名 也可以用DNS映射得到IP地址，有一级二级域名之分<br> <font color =brown>port</font> : 端口号 http默认是80 类似还有https 443 属于套接口<br> <font color='cayon'>path</font> : 路径 就是位于主机中的地址<br> <font color='purple'>parameters</font> : 附加信息 现在用的少了<br> <font color=gold>query</font>  : 查询，多个查询就用&amp;分开，GET请求参数里也有<br> <font color=#a34929>fragment</font> : 片段 资源的补充 似乎很少使用<br> <font style =background:seagreen>http基本转向https 基于SSL socket相关也是爬取的主要内容</font>  </li>
-<li><h4 id="http请求过程"><a href="#http请求过程" class="headerlink" title="http请求过程"></a><strong>http请求过程</strong></h4> <u>使用F12 Network 监听 Ctrl+R </u><br> <font color=seaf>Status</font>    : 状态码就是404 403 200 类似的<br> <font color=gold>Initiator</font> : 请求源 标记请求是由哪个进程或对象发起的<br> <font color=chocolate>Request</font>请求方法 请求头 请求体<br> <font color = aqua>Request Method</font> ： 请求方法GET POST居多 还有PUT DELETE 很多<br> <font color=azure></font><br> <font color=darkblue></font><br> <font color=coroflowerblue></font><br> <font color=blueviolet></font><br> <font color=coral></font><br> <font color=darkBlue></font></li>
-</ol>
-</li>
-</ol>
-<p>​        </p>
-]]></content>
-      <tags>
-        <tag>SCRAPE</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo搭建指南</title>
-    <url>/2023/03/25/hexo%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</url>
-    <content><![CDATA[<h2 id="零基础搭建静态网页（基于hexo与github-page"><a href="#零基础搭建静态网页（基于hexo与github-page" class="headerlink" title="零基础搭建静态网页（基于hexo与github page)"></a>零基础搭建静态网页（基于hexo与github page)</h2><h3 id="提要"><a href="#提要" class="headerlink" title="提要"></a>提要</h3><p>在网络发达的时代，如果吗想要拥有你自己的空间，同时又烦恼于腾讯qq空间的多种限制，何不自己动手，搭建属于自己的网页，这里，我将简单提供几个博客，和网站就hexo搭建网页（静态网页）作一个介绍</p>
-<h3 id="你所要会的"><a href="#你所要会的" class="headerlink" title="你所要会的"></a>你所要会的</h3><p><font color=red>几乎是零基础，唯一需要的就是一个代理，如果你没有，实在找不到，我可以分享给你，虽然需要十元钱，但是它有个bug</font></p>
-<h3 id="传送门"><a href="#传送门" class="headerlink" title="传送门"></a>传送门</h3><p>我这里就先后顺序给出网址，并作简要说明；</p>
-<blockquote>
-<p>可以同时看一下我下面的问题解决，如果你在操作中出现问题的话，如果实在无法解决，可以评论。</p>
-</blockquote>
-<ul>
-<li><h4 id="总体流程"><a href="#总体流程" class="headerlink" title="总体流程"></a><a href="https://zhuanlan.zhihu.com/p/370635512"><font color= seablue>总体流程</font></a></h4></li>
-</ul>
-<p>其实这一个基本就可以完成搭建了，不过这里补充几个可能用到 的</p>
-<ul>
-<li><h4 id="模板来源"><a href="#模板来源" class="headerlink" title="模板来源"></a><a href="https://hexo.io/"><font color=seablue>模板来源</font></a></h4></li>
-<li><h4 id="博客中的TAG使用"><a href="#博客中的TAG使用" class="headerlink" title="博客中的TAG使用"></a><a href="https://zhuanlan.zhihu.com/p/348131730"><font color= seablue>博客中的TAG使用</font></a></h4></li>
-</ul>
-<p>对于有tag和categories的网页的用法介绍</p>
-<ul>
-<li><h4 id="在线音乐获取"><a href="#在线音乐获取" class="headerlink" title="在线音乐获取"></a>在线音乐获取</h4><p>——<strong>暂时等待</strong> <font color=gold>我正打算写一个可以直接下载英语的web，由于要用django，可能比较久，如果不成功，我尽量提供一个源代码，到时候，大家只要可以运行应该就可以输入获取。</font></p>
-</li>
-<li><h4 id="一个找高清图片的网站"><a href="#一个找高清图片的网站" class="headerlink" title="一个找高清图片的网站"></a><a href="https://wallhaven.cc/"><font color= seablue>一个找高清图片的网站</font></a></h4></li>
-<li><h4 id="CSS资源网站"><a href="#CSS资源网站" class="headerlink" title="CSS资源网站"></a><a href="https://www.w3cschool.cn/css3/css3-animation.html"><font color= seablue>CSS资源网站</font></a></h4><p>这个网站属于大家如果有自己改写代码的需要，可以参考，当然我自己不甚了解CSS和js</p>
-</li>
-<li><h4 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a><font color= seablue>markdown</font></h4><p>至于mark逗我呢使用方法可以参考我列举的一些关于markdown的用法。更完整的就是<a href="https://www.markdownguide.org/"><font color=seablue>Markdown官方文档</font></a></p>
-</li>
-</ul>
-<p>推荐几个颜色 <font color=aqua>Aqua</font>  <font color=seablue>seablue</font>  <font color=chocolate>Chocolate</font>  <font color=azure>Azure</font></p>
-<ul>
-<li><h4 id="如果真的很感兴趣可以考虑学习JS"><a href="#如果真的很感兴趣可以考虑学习JS" class="headerlink" title="如果真的很感兴趣可以考虑学习JS"></a>如果真的很感兴趣可以考虑学习JS</h4></li>
-</ul>
-<h3 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><p>列举一些我在操作中遇到的问题</p>
-<ul>
-<li><h4 id="github仓库"><a href="#github仓库" class="headerlink" title="github仓库"></a>github仓库</h4><p>注意命名时，必须是自己的用户名.io 这是github的要求</p>
-</li>
-<li><h4 id="创建博客文章"><a href="#创建博客文章" class="headerlink" title="创建博客文章"></a>创建博客文章</h4><p>尽量直接hexo new “标题”</p>
-</li>
-<li><h4 id="具体搭建指南"><a href="#具体搭建指南" class="headerlink" title="具体搭建指南"></a>具体搭建指南</h4><p>基本每一个框架都有说明，一般在对应的github仓库的README.md文件中</p>
-</li>
-<li><h4 id="获取网络图片"><a href="#获取网络图片" class="headerlink" title="获取网络图片"></a>获取网络图片</h4><p>先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功</p>
-</li>
-</ul>
-<h2 id="Continuing"><a href="#Continuing" class="headerlink" title="Continuing"></a>Continuing</h2><p>暂时就写到这吧，欢迎交流，多请批评指教！</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/lic.jpg"
-                     
-                ></p>
-]]></content>
-      <tags>
-        <tag>Elements</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>单调栈</title>
-    <url>/2023/03/16/%E5%8D%95%E8%B0%83%E6%A0%88/</url>
-    <content><![CDATA[<h2 id="关于单调栈的一些东西"><a href="#关于单调栈的一些东西" class="headerlink" title="关于单调栈的一些东西"></a>关于单调栈的一些东西</h2><h3 id="单调栈模板"><a href="#单调栈模板" class="headerlink" title="单调栈模板"></a>单调栈模板</h3><div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">3000010</span>;</span><br><span class="line"><span class="type">int</span> a[N],f[N];</span><br><span class="line">stack&lt;<span class="type">int</span>&gt;s;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=n;i&gt;=<span class="number">1</span>;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(!s.<span class="built_in">empty</span>()&amp;&amp;a[s.<span class="built_in">top</span>()]&lt;=a[i])</span><br><span class="line">        s.<span class="built_in">pop</span>();</span><br><span class="line">        f[i]=s.<span class="built_in">empty</span>()?<span class="number">0</span>:s.<span class="built_in">top</span>();</span><br><span class="line">        s.<span class="built_in">push</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,f[i]);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Winter&#39;s blog</title>
-    <url>/2023/03/16/Winter-s-blog/</url>
-    <content><![CDATA[<h2 id="For-Ms-Winter"><a href="#For-Ms-Winter" class="headerlink" title="For Ms.Winter"></a>For Ms.Winter</h2><h3 id="先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功"><a href="#先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功" class="headerlink" title="先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功"></a>先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功</h3>]]></content>
-      <tags>
-        <tag>Elements</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>基础汇编指令</title>
-    <url>/2023/03/23/%E5%9F%BA%E7%A1%80%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="概念补充"><a href="#概念补充" class="headerlink" title="概念补充"></a>概念补充</h3><ul>
-<li><h4 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h4><p>一个标准的c语言程序在编译过程中，首先是经过翻译，成汇编语言，也就是Linux命令行中的-s选项，然后转为二进制的机器代码，然后通过连接器，与库相连，并且附上一些地址与起始终止信息。</p>
-</li>
-<li><h4 id="汇编语言与机器代码"><a href="#汇编语言与机器代码" class="headerlink" title="汇编语言与机器代码"></a>汇编语言与机器代码</h4><p>机器是二进制字节，电脑可读的指令，汇编语言就是助记符。可以编写</p>
-</li>
-<li><h4 id="指令集架构"><a href="#指令集架构" class="headerlink" title="指令集架构"></a>指令集架构</h4><p>不同机器，处理器的指令集架构不一样，但是高级抽象语言却能够通用，只要选用适合机器的编译器即可。</p>
-</li>
-<li><h4 id="x86"><a href="#x86" class="headerlink" title="x86"></a>x86</h4><p>因为英特尔前期处理器都是某某86所以简称x86，x86-64即64位拓展</p>
-</li>
-<li><h4 id="O优化"><a href="#O优化" class="headerlink" title="O优化"></a>O优化</h4><p>其实就是命令行的一个选型，高度优化可能使代码的汇编代码逻辑改变较大。</p>
-</li>
-<li><h4 id="寄存器"><a href="#寄存器" class="headerlink" title="寄存器"></a>寄存器</h4><ul>
-<li><h5 id="程序寄存器"><a href="#程序寄存器" class="headerlink" title="程序寄存器"></a>程序寄存器</h5><p>用于专门存储指令的地址 %rip</p>
-</li>
-<li><h5 id="一组十六个整数寄存器"><a href="#一组十六个整数寄存器" class="headerlink" title="一组十六个整数寄存器"></a>一组十六个整数寄存器</h5><p>用于系列操作</p>
-</li>
-<li><h5 id="条件码寄存器"><a href="#条件码寄存器" class="headerlink" title="条件码寄存器"></a>条件码寄存器</h5><p>存储维护条件码实现逻辑控制</p>
-</li>
-<li><h5 id="向量寄存器"><a href="#向量寄存器" class="headerlink" title="向量寄存器"></a>向量寄存器</h5><p>实现浮点数操作</p>
-</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>“CSAPP”</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>正则表达式</title>
-    <url>/2023/03/25/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
-    <content><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><ul>
-<li><p><font color =chocolate>从前我们学习了KMP算法文本匹配，但是现在我们的这个正则表达式，提供一种单独的语法解决，但是KMP算法仍有很多局限且消耗算力，为了解决网络中的大量匹配问题，引入伟大的正则表达式，用于匹配与替换。</font></p>
-</li>
-<li><p><font color=blue violet>编程语言中我们使用的转义字符等有一定出处，正则表达式最初来自我们的unix机器</font> </p>
-</li>
-<li><h3 id="简单的语法"><a href="#简单的语法" class="headerlink" title="简单的语法"></a>简单的语法</h3><ul>
-<li><h4 id="纯文本匹配"><a href="#纯文本匹配" class="headerlink" title="纯文本匹配"></a>纯文本匹配</h4><p>直接匹配文本，区分大小写，通常只返回第一个，可以编程语言中选择返回所有的数组。 </p>
-</li>
-<li><h4 id="号-匹配"><a href="#号-匹配" class="headerlink" title="**.号**匹配"></a>**<font color=red>.号</font>**匹配</h4><p>. 可以指代包括.在内的所有符号  匹配本身时引入了伟大的<em><strong>转义符号 \</strong></em>  </p>
-</li>
-<li><h4 id="匹配想要中的字符"><a href="#匹配想要中的字符" class="headerlink" title="匹配想要中的字符"></a>匹配想要中的字符</h4><p><font color = coral>使用[]，[]中的只要满足一个就算是匹配</font> 常常用在不区分大小写的表示  [Cc][Aa][Tt].eg	事实上我们的markdown都有转义字符</p>
-<ul>
-<li><h5 id="集合表示"><a href="#集合表示" class="headerlink" title="集合表示"></a>集合表示</h5><blockquote>
-<p>一个自然的过渡，如果，集合中元素很多时，且连续，使用[A-Z] 遵循阿斯克码</p>
-</blockquote>
-</li>
-<li><p><font color=seagreen>\ 与-都是元字符 -不需转义</font></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>SCRAPE</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机网络</title>
-    <url>/2023/03/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</url>
-    <content><![CDATA[<blockquote>
-<p>本来想要有条理一点，但是实在太多，所以就列举名词，作为条理了</p>
-</blockquote>
-<hr>
-<h2 id="计算机网络常识"><a href="#计算机网络常识" class="headerlink" title="计算机网络常识"></a>计算机网络常识</h2><ul>
-<li>名字解释  <ul>
-<li>通信链路：指的就是些通信的物理媒介 同轴电缆 铜线 无线电频谱 光纤</li>
-<li>分组交换机 packet switch 就是路由器 与链路层交换机</li>
-<li>ISP 因特网服务提供商</li>
-<li>TCP&#x2F;IP 主要协议</li>
-<li>RFC 请求评论</li>
-<li>网络边缘 高速宽带 数字用户线 电缆基础上使用的</li>
-<li>上行下行速度</li>
-<li>光纤到户</li>
-<li>LAN局域网 无线局域网 基于IEEE 802. 11技术的无<br>线LAN接入,更通俗地称为WiFi</li>
-<li>蜂窝移动网络</li>
-<li>报文message</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>计算机网络</tag>
       </tags>
   </entry>
 </search>

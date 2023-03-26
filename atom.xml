@@ -227,28 +227,6 @@
   </entry>
   
   <entry>
-    <title>单调栈</title>
-    <link href="https://spikeihg.github.io/2023/03/16/%E5%8D%95%E8%B0%83%E6%A0%88/"/>
-    <id>https://spikeihg.github.io/2023/03/16/%E5%8D%95%E8%B0%83%E6%A0%88/</id>
-    <published>2023-03-16T11:09:14.000Z</published>
-    <updated>2023-03-22T11:25:52.917Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="关于单调栈的一些东西"><a href="#关于单调栈的一些东西" class="headerlink" title="关于单调栈的一些东西"></a>关于单调栈的一些东西</h2><h3 id="单调栈模板"><a href="#单调栈模板" class="headerlink" title="单调栈模板"></a>单调栈模板</h3><div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">3000010</span>;</span><br><span class="line"><span class="type">int</span> a[N],f[N];</span><br><span class="line">stack&lt;<span class="type">int</span>&gt;s;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=n;i&gt;=<span class="number">1</span>;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(!s.<span class="built_in">empty</span>()&amp;&amp;a[s.<span class="built_in">top</span>()]&lt;=a[i])</span><br><span class="line">        s.<span class="built_in">pop</span>();</span><br><span class="line">        f[i]=s.<span class="built_in">empty</span>()?<span class="number">0</span>:s.<span class="built_in">top</span>();</span><br><span class="line">        s.<span class="built_in">push</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,f[i]);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;关于单调栈的一些东西&quot;&gt;&lt;a href=&quot;#关于单调栈的一些东西&quot; class=&quot;headerlink&quot; title=&quot;关于单调栈的一些东西&quot;&gt;&lt;/a&gt;关于单调栈的一些东西&lt;/h2&gt;&lt;h3 id=&quot;单调栈模板&quot;&gt;&lt;a href=&quot;#单调栈模板&quot; class=&quot;he</summary>
-      
-    
-    
-    
-    
-    <category term="C++" scheme="https://spikeihg.github.io/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Winter&#39;s blog</title>
     <link href="https://spikeihg.github.io/2023/03/16/Winter-s-blog/"/>
     <id>https://spikeihg.github.io/2023/03/16/Winter-s-blog/</id>
@@ -267,6 +245,28 @@
     
     
     <category term="Elements" scheme="https://spikeihg.github.io/tags/Elements/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>单调栈</title>
+    <link href="https://spikeihg.github.io/2023/03/16/%E5%8D%95%E8%B0%83%E6%A0%88/"/>
+    <id>https://spikeihg.github.io/2023/03/16/%E5%8D%95%E8%B0%83%E6%A0%88/</id>
+    <published>2023-03-16T11:09:14.000Z</published>
+    <updated>2023-03-22T11:25:52.917Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="关于单调栈的一些东西"><a href="#关于单调栈的一些东西" class="headerlink" title="关于单调栈的一些东西"></a>关于单调栈的一些东西</h2><h3 id="单调栈模板"><a href="#单调栈模板" class="headerlink" title="单调栈模板"></a>单调栈模板</h3><div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">3000010</span>;</span><br><span class="line"><span class="type">int</span> a[N],f[N];</span><br><span class="line">stack&lt;<span class="type">int</span>&gt;s;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=n;i&gt;=<span class="number">1</span>;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(!s.<span class="built_in">empty</span>()&amp;&amp;a[s.<span class="built_in">top</span>()]&lt;=a[i])</span><br><span class="line">        s.<span class="built_in">pop</span>();</span><br><span class="line">        f[i]=s.<span class="built_in">empty</span>()?<span class="number">0</span>:s.<span class="built_in">top</span>();</span><br><span class="line">        s.<span class="built_in">push</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,f[i]);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;关于单调栈的一些东西&quot;&gt;&lt;a href=&quot;#关于单调栈的一些东西&quot; class=&quot;headerlink&quot; title=&quot;关于单调栈的一些东西&quot;&gt;&lt;/a&gt;关于单调栈的一些东西&lt;/h2&gt;&lt;h3 id=&quot;单调栈模板&quot;&gt;&lt;a href=&quot;#单调栈模板&quot; class=&quot;he</summary>
+      
+    
+    
+    
+    
+    <category term="C++" scheme="https://spikeihg.github.io/tags/C/"/>
     
   </entry>
   
