@@ -731,10 +731,10 @@
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/03/16/Winter-s-blog/"
+                            href="/2023/03/16/%E5%8D%95%E8%B0%83%E6%A0%88/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">Winter&#39;s blog</span>
+                                    <span class="post-nav-title-item">单调栈</span>
                                     <span class="post-nav-item">Next posts</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -758,43 +758,30 @@
 
         
             
-    <div id="gitalk-container"></div>
-    <script data-pjax
-            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-    <script data-pjax>
+ 
+    <div id="waline"></div>
+    <script type="module"  data-pjax>
+        import { init } from 'https://evan.beee.top/js/waline.mjs';
 
-        function loadGitalk() {
-            let __gitalk__pathname = decodeURI(location.pathname);
-            const __gitalk__pathnameLength = __gitalk__pathname.length;
-            const __gitalk__pathnameMaxLength = 50;
-            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
-                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
-            }
-
-            try {
-                Gitalk && new Gitalk({
-                    clientID: '994e42334d60bd1f62f3',
-                    clientSecret: '695765f2080312a6c950d1ef05b710d5edbfc958',
-                    repo: 'Comments_from_hexo-',
-                    owner: 'SpikeIHG',
-                    admin: ['SpikeIHG'],
-                    id: __gitalk__pathname,
-                    language: 'en'
-                }).render('gitalk-container');
-
-            } catch (e) {
-                window.Gitalk = null;
-            }
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://new-waline-comments.vercel.app/',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
         }
 
         if ('true') {
-            const loadGitalkTimeout = setTimeout(() => {
-                loadGitalk();
-                clearTimeout(loadGitalkTimeout);
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
             }, 1000);
         } else {
-            window.addEventListener('DOMContentLoaded', loadGitalk);
+            window.addEventListener('DOMContentLoaded', loadWaline);
         }
+        
     </script>
 
 
