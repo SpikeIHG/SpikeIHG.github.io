@@ -14,18 +14,18 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://SpikeIHG.github.io/2023/03/16/winter-s-blog/"/>
+    <link rel="canonical" href="https://SpikeIHG.github.io/2023/03/27/floyd/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Winter&#39;s blog">
+    <meta property="og:title" content="Floyd">
     <meta property="og:description" content="Hexo Theme Redefine">
-    <meta property="og:url" content="https://SpikeIHG.github.io2023/03/16/Winter-s-blog/">
+    <meta property="og:url" content="https://SpikeIHG.github.io2023/03/27/Floyd/">
     
     <meta property="og:site_name" content="Winter&#39;s">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Winter&#39;s blog">
+    <meta name="twitter:title" content="Floyd">
     <meta name="twitter:description" content="Hexo Theme Redefine">
     <meta name="twitter:image" content="/images/yao.png">
     <!--- Icon Part-->
@@ -37,7 +37,7 @@
     
     <title>
         
-            Winter&#39;s blog -
+            Floyd -
         
         Winter&#39;s
     </title>
@@ -492,8 +492,8 @@
             
                       
                 <div class="article-title">
-                    <img src="/../images/earthrise.jpg" alt="Winter&#39;s blog" />
-                    <h1 class="article-title-cover">Winter&#39;s blog</h1>
+                    <img src="/../images/ly.jpg" alt="Floyd" />
+                    <h1 class="article-title-cover">Floyd</h1>
                 </div>
             
                 
@@ -515,15 +515,15 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-03-16 19:09:14</span>
-        <span class="mobile">2023-03-16 19:09</span>
+        <span class="pc">2023-03-27 22:35:37</span>
+        <span class="mobile">2023-03-27 22:35</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-03-23 17:01:51</span>
-            <span class="mobile">2023-03-23 17:01</span>
+            <span class="pc">2023-03-29 23:34</span>
+            <span class="mobile">2023-03-29 23:34</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -535,7 +535,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/Elements/">Elements</a>&nbsp;
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>&nbsp;
                     </li>
                 
             </ul>
@@ -545,12 +545,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>45 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>570 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 Mins</span>
         </span>
     
     
@@ -566,18 +566,31 @@
             
 
             <div class="article-content markdown-body">
-                <h2 id="For-Ms-Winter"><a href="#For-Ms-Winter" class="headerlink" title="For Ms.Winter"></a>For Ms.Winter</h2><h3 id="先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功"><a href="#先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功" class="headerlink" title="先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功"></a>先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功</h3>
+                <h2 id="Floyd算法"><a href="#Floyd算法" class="headerlink" title="Floyd算法"></a>Floyd算法</h2><ul>
+<li><h3 id="算法思想"><a href="#算法思想" class="headerlink" title="算法思想"></a>算法思想</h3><ul>
+<li><h4 id="一次解决全图"><a href="#一次解决全图" class="headerlink" title="一次解决全图"></a>一次解决全图</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> AMGraph = <span class="keyword">struct</span> &#123;</span><br><span class="line">	<span class="type">int</span> arcnum&#123; <span class="number">0</span> &#125;;</span><br><span class="line">	<span class="type">int</span> vexnum&#123; <span class="number">0</span> &#125;;</span><br><span class="line">	VerTexType vertices[MVNum];</span><br><span class="line">	ArcType arcs[MVNum][MVNum];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h4 id="插点的循环"><a href="#插点的循环" class="headerlink" title="插点的循环"></a>插点的循环</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; G.vexnum; k++)	<span class="comment">// 第一个</span></span><br><span class="line">		<span class="keyword">for</span>(v=<span class="number">0</span>;v&lt;G.vexnum;v++)</span><br><span class="line">			<span class="keyword">for</span>(w=<span class="number">0</span>;w&lt;G.vexnum;w++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (C[v][w] &gt;C[v][k] +C[k][w])</span><br><span class="line">				&#123;</span><br><span class="line">					C[v][w] = C[v][k] +C[k][w];</span><br><span class="line">					P[v][w] = P[v][k];		<span class="comment">//相当于就是在里面加点 最后一个我们读取矩阵</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><h3 id="代码细节"><a href="#代码细节" class="headerlink" title="代码细节"></a>代码细节</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*****************************************************************/</span><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * \file   Floyd.cpp</span></span><br><span class="line"><span class="comment"> * \brief  For Ms.Winter</span></span><br><span class="line"><span class="comment"> *  3/27/2023</span></span><br><span class="line"><span class="comment"> * \author 86158</span></span><br><span class="line"><span class="comment"> * \date   March 2023</span></span><br><span class="line"><span class="comment"> *********************************************************************/</span></span><br><span class="line"><span class="comment">// Floyd</span></span><br><span class="line"><span class="comment">//关键思想就是不断的插入点来分析 </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OK	1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> BAD	0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MVNum	50</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> Path = <span class="type">int</span>[MVNum][MVNum];		</span><br><span class="line"><span class="keyword">using</span> ShortPathTable = <span class="type">int</span>[MVNum][MVNum];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 最精妙的思想 一次求完所有的点 所以这是一个n^3复杂度</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 同样使用邻接矩阵</span></span><br><span class="line"><span class="keyword">using</span> VerTexType = <span class="type">char</span>;</span><br><span class="line"><span class="keyword">using</span> ArcType = <span class="type">int</span>;</span><br><span class="line"><span class="keyword">using</span> AMGraph = <span class="keyword">struct</span> &#123;</span><br><span class="line">	<span class="type">int</span> arcnum&#123; <span class="number">0</span> &#125;;</span><br><span class="line">	<span class="type">int</span> vexnum&#123; <span class="number">0</span> &#125;;</span><br><span class="line">	VerTexType vertices[MVNum];</span><br><span class="line">	ArcType arcs[MVNum][MVNum];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Floyd</span><span class="params">(<span class="type">const</span> AMGraph&amp; G,Path P,ShortPathTable C)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> v, w, k;</span><br><span class="line">	<span class="keyword">for</span>(v=<span class="number">0</span>;v&lt;G.vexnum;v++)</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> w = <span class="number">0</span>; w &lt; G.vexnum; w++)</span><br><span class="line">		&#123;</span><br><span class="line">			C[v][w] = G.arcs[v][w];</span><br><span class="line">			P[v][w] = w;	<span class="comment">// 注意这个初始化</span></span><br><span class="line">		&#125;</span><br><span class="line">	<span class="comment">// 非常巧妙的循环也是关键</span></span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; G.vexnum; k++)	<span class="comment">// 第一个</span></span><br><span class="line">		<span class="keyword">for</span>(v=<span class="number">0</span>;v&lt;G.vexnum;v++)</span><br><span class="line">			<span class="keyword">for</span>(w=<span class="number">0</span>;w&lt;G.vexnum;w++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (C[v][w] &gt;C[v][k] +C[k][w])</span><br><span class="line">				&#123;</span><br><span class="line">					C[v][w] = C[v][k] +C[k][w];</span><br><span class="line">					P[v][w] = P[v][k];		<span class="comment">//相当于就是在里面加点 最后一个我们读取矩阵</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 注意我们的这个路径矩阵 与迪杰斯特拉一样 然后是列来读取</span></span><br><span class="line"><span class="comment">// 数值 横着读取</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Dispath</span><span class="params">(<span class="type">const</span> AMGraph&amp; G, Path P, ShortPathTable C)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> k = <span class="number">0</span>;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;各点的最短路径如下\n&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> v = <span class="number">0</span>; v &lt; G.vexnum<span class="number">-1</span>; v++)</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> w = v + <span class="number">1</span>; w &lt; G.vexnum; w++)		<span class="comment">// 只读取一般矩阵 也很好哦</span></span><br><span class="line">		&#123;</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;v&quot;</span> &lt;&lt; v &lt;&lt; <span class="string">&quot;-v&quot;</span> &lt;&lt; w &lt;&lt; <span class="string">&quot; weight: &quot;</span> &lt;&lt; C[v][w];</span><br><span class="line">			k = P[v][w];</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot; Path: &quot;</span> &lt;&lt; v;</span><br><span class="line">			<span class="keyword">while</span> (k != w)</span><br><span class="line">			&#123;</span><br><span class="line">				k = P[k][w];</span><br><span class="line">				cout &lt;&lt; <span class="string">&quot;-&gt;&quot;</span> &lt;&lt; k;</span><br><span class="line">			&#125;</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;-&gt;&quot;</span> &lt;&lt; w &lt;&lt; endl;</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
+<p>最后其实就是这种插点的思想</p>
+</blockquote>
+<p><img src="/../images/ly.jpg" alt="hh"></p>
+
             </div>
 
             
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：Winter&#39;s blog</li>
+        <li>Post title：Floyd</li>
         <li>Post author：Winter</li>
-        <li>Create time：2023-03-16 19:09:14</li>
+        <li>Create time：2023-03-27 22:35:37</li>
         <li>
-            Post link：https://spikeihg.github.io/2023/03/16/Winter-s-blog/
+            Post link：https://spikeihg.github.io/2023/03/27/Floyd/
         </li>
         <li>
             Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
@@ -592,7 +605,7 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/Elements/">#Elements</a>&nbsp;
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">#数据结构与算法</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -603,29 +616,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/03/22/MARKDOWN-0/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">MARKDOWN</span>
-                                    <span class="post-nav-item">Prev posts</span>
-                                </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/03/16/%E5%8D%95%E8%B0%83%E6%A0%88/"
+                            href="/2023/03/27/Dijkstra/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">单调栈</span>
+                                    <span class="post-nav-title-item">Dijkstra</span>
                                     <span class="post-nav-item">Next posts</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -690,8 +688,8 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">Winter&#39;s blog</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#For-Ms-Winter"><span class="nav-text">For Ms.Winter</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%88%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%89%BE%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80%E7%9A%84%E5%A5%BD%E5%9C%B0%E6%96%B9-%E8%BF%9B%E5%85%A5NASA%E5%AE%98%E7%BD%91%E7%9B%B4%E6%8E%A5copy-image-address-%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%9C%A8google%E9%87%8C%E9%9D%A2%E4%BD%BF%E7%94%A8-%E4%BD%86%E6%98%AF%E5%8F%AF%E8%83%BD%E6%97%A0%E6%B3%95%E6%88%90%E5%8A%9F"><span class="nav-text">先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功</span></a></li></ol></li></ol>
+        <div class="page-title">Floyd</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Floyd%E7%AE%97%E6%B3%95"><span class="nav-text">Floyd算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3"><span class="nav-text">算法思想</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E6%AC%A1%E8%A7%A3%E5%86%B3%E5%85%A8%E5%9B%BE"><span class="nav-text">一次解决全图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%92%E7%82%B9%E7%9A%84%E5%BE%AA%E7%8E%AF"><span class="nav-text">插点的循环</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%BB%86%E8%8A%82"><span class="nav-text">代码细节</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol>
 
     </div>
 </div>

@@ -14,14 +14,14 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://spikeihg.github.io/2023/03/25/正则表达式/"/>
+    <link rel="canonical" href="https://SpikeIHG.github.io/2023/03/25/正则表达式/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     <meta property="og:type" content="article">
     <meta property="og:title" content="正则表达式">
     <meta property="og:description" content="Hexo Theme Redefine">
-    <meta property="og:url" content="https://spikeihg.github.io2023/03/25/正则表达式/">
+    <meta property="og:url" content="https://SpikeIHG.github.io2023/03/25/正则表达式/">
     
     <meta property="og:site_name" content="Winter&#39;s">
     <meta name="twitter:card" content="summary_large_image">
@@ -69,7 +69,7 @@
     
     
     
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Winter's" type="application/atom+xml">
 </head>
 
 
@@ -522,8 +522,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-03-25 20:38:11</span>
-            <span class="mobile">2023-03-25 20:38</span>
+            <span class="pc">2023-03-28 00:06:38</span>
+            <span class="mobile">2023-03-28 00:06</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -545,12 +545,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>296 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>680 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 Mins</span>
         </span>
     
     
@@ -584,6 +584,55 @@
 </li>
 <li><p><font color=seagreen>\ 与-都是元字符 -不需转义</font></p>
 </li>
+<li><h5 id="多个集合匹配"><a href="#多个集合匹配" class="headerlink" title="多个集合匹配"></a>多个集合匹配</h5><blockquote>
+<p>举个例子[A-Za-z0-9]就是有三个集合 网页的十六进制颜色表示就是一种应用 [0-9A-Fa-f]</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><h4 id="取非匹配"><a href="#取非匹配" class="headerlink" title="取非匹配"></a>取非匹配</h4><ul>
+<li>使用元字符^ 且作用于集合</li>
+</ul>
+</li>
+<li><h4 id="元字符匹配"><a href="#元字符匹配" class="headerlink" title="元字符匹配"></a>元字符匹配</h4><ul>
+<li><p>使用转义字符匹配 </p>
+</li>
+<li><p>[] - ^ \ . +</p>
+</li>
+<li><h6 id="特殊的元字符"><a href="#特殊的元字符" class="headerlink" title="特殊的元字符"></a>特殊的元字符</h6><ul>
+<li>\f 换页符 \n换行符 \r回车符 \t制表符 \v垂直制表符 [\b]backspace</li>
+<li>举个例子 处理 CSV文件 , 变成空格</li>
+<li>windows 中 \r\n 表示换行 linux  \r可选 \n 必选</li>
+</ul>
+</li>
+<li><h6 id="对集合的简化"><a href="#对集合的简化" class="headerlink" title="对集合的简化"></a>对集合的简化</h6><ul>
+<li>\d 所有的数字&#x3D;[0-9] \D&#x3D;[^0-9]</li>
+<li>\w 所有字母大小写与数字 \W 所有的非</li>
+<li>\s 任何一个空字符 \f\n\r\v\t  \S </li>
+<li>十六进制与八进制 \0x \0  \c 控制字符</li>
+<li>POSIX字符的支持 格式[: 英文描述:]</li>
+</ul>
+</li>
+<li><h6 id="重复匹配"><a href="#重复匹配" class="headerlink" title="重复匹配"></a>重复匹配</h6><ul>
+<li>元字符 [0-9]+ 0-9中的数字的一个以上 不能0个</li>
+<li>举个例子 关于邮箱地址的匹配 <ul>
+<li>\w@\w\.\w 升级</li>
+<li>\w+@\w+\.\w+</li>
+<li>升级\[\w.]+@\[\w\.]+\.[\w.]+ 注意这个例子可以看出我们的在[]里所有的元字符都可以看作是普通字符 但是转义了也没有错误</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h4 id="元字符"><a href="#元字符" class="headerlink" title="*元字符"></a>*元字符</h4><ul>
+<li>可以匹配0次与任意次 相当于 + 的升级版</li>
+<li>\w+[\w.]*@[\w.]+\.\w+  可以把* 看作可选项  实质理解</li>
+</ul>
+</li>
+<li><h4 id="？元字符"><a href="#？元字符" class="headerlink" title="？元字符"></a>？元字符</h4><ul>
+<li>匹配一次或零次 http:&#x2F;&#x2F; 与 https:&#x2F;&#x2F; 不能用s*  httpsss 所以使用？</li>
+<li>[\r]? 与我们的\r? 本质是一样的 但是为了清晰直观 我们通常直接[\r]</li>
 </ul>
 </li>
 </ul>
@@ -672,43 +721,30 @@
 
         
             
-    <div id="gitalk-container"></div>
-    <script data-pjax
-            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-    <script data-pjax>
+ 
+    <div id="waline"></div>
+    <script type="module"  data-pjax>
+        import { init } from 'https://evan.beee.top/js/waline.mjs';
 
-        function loadGitalk() {
-            let __gitalk__pathname = decodeURI(location.pathname);
-            const __gitalk__pathnameLength = __gitalk__pathname.length;
-            const __gitalk__pathnameMaxLength = 50;
-            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
-                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
-            }
-
-            try {
-                Gitalk && new Gitalk({
-                    clientID: '994e42334d60bd1f62f3',
-                    clientSecret: '695765f2080312a6c950d1ef05b710d5edbfc958',
-                    repo: 'Comments_from_hexo-',
-                    owner: 'SpikeIHG',
-                    admin: ['SpikeIHG'],
-                    id: __gitalk__pathname,
-                    language: 'en'
-                }).render('gitalk-container');
-
-            } catch (e) {
-                window.Gitalk = null;
-            }
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://new-waline-comments-9d83i0l0o-spikeihg.vercel.app/',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
         }
 
         if ('true') {
-            const loadGitalkTimeout = setTimeout(() => {
-                loadGitalk();
-                clearTimeout(loadGitalkTimeout);
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
             }, 1000);
         } else {
-            window.addEventListener('DOMContentLoaded', loadGitalk);
+            window.addEventListener('DOMContentLoaded', loadWaline);
         }
+        
     </script>
 
 
@@ -727,7 +763,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">正则表达式</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-text">引言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="nav-text">简单的语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BA%AF%E6%96%87%E6%9C%AC%E5%8C%B9%E9%85%8D"><span class="nav-text">纯文本匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%B7-%E5%8C%B9%E9%85%8D"><span class="nav-text">**.号**匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8C%B9%E9%85%8D%E6%83%B3%E8%A6%81%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6"><span class="nav-text">匹配想要中的字符</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E8%A1%A8%E7%A4%BA"><span class="nav-text">集合表示</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-text">引言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="nav-text">简单的语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BA%AF%E6%96%87%E6%9C%AC%E5%8C%B9%E9%85%8D"><span class="nav-text">纯文本匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%B7-%E5%8C%B9%E9%85%8D"><span class="nav-text">**.号**匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8C%B9%E9%85%8D%E6%83%B3%E8%A6%81%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6"><span class="nav-text">匹配想要中的字符</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E8%A1%A8%E7%A4%BA"><span class="nav-text">集合表示</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%9A%E4%B8%AA%E9%9B%86%E5%90%88%E5%8C%B9%E9%85%8D"><span class="nav-text">多个集合匹配</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%96%E9%9D%9E%E5%8C%B9%E9%85%8D"><span class="nav-text">取非匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%83%E5%AD%97%E7%AC%A6%E5%8C%B9%E9%85%8D"><span class="nav-text">元字符匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%9A%84%E5%85%83%E5%AD%97%E7%AC%A6"><span class="nav-text">特殊的元字符</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%AF%B9%E9%9B%86%E5%90%88%E7%9A%84%E7%AE%80%E5%8C%96"><span class="nav-text">对集合的简化</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%87%8D%E5%A4%8D%E5%8C%B9%E9%85%8D"><span class="nav-text">重复匹配</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%83%E5%AD%97%E7%AC%A6"><span class="nav-text">*元字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%9F%E5%85%83%E5%AD%97%E7%AC%A6"><span class="nav-text">？元字符</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>

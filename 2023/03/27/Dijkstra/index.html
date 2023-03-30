@@ -14,18 +14,18 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://SpikeIHG.github.io/2023/03/16/winter-s-blog/"/>
+    <link rel="canonical" href="https://SpikeIHG.github.io/2023/03/27/dijkstra/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Winter&#39;s blog">
+    <meta property="og:title" content="Dijkstra">
     <meta property="og:description" content="Hexo Theme Redefine">
-    <meta property="og:url" content="https://SpikeIHG.github.io2023/03/16/Winter-s-blog/">
+    <meta property="og:url" content="https://SpikeIHG.github.io2023/03/27/Dijkstra/">
     
     <meta property="og:site_name" content="Winter&#39;s">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Winter&#39;s blog">
+    <meta name="twitter:title" content="Dijkstra">
     <meta name="twitter:description" content="Hexo Theme Redefine">
     <meta name="twitter:image" content="/images/yao.png">
     <!--- Icon Part-->
@@ -37,7 +37,7 @@
     
     <title>
         
-            Winter&#39;s blog -
+            Dijkstra -
         
         Winter&#39;s
     </title>
@@ -492,8 +492,8 @@
             
                       
                 <div class="article-title">
-                    <img src="/../images/earthrise.jpg" alt="Winter&#39;s blog" />
-                    <h1 class="article-title-cover">Winter&#39;s blog</h1>
+                    <img src="/../images/fc.jpg" alt="Dijkstra" />
+                    <h1 class="article-title-cover">Dijkstra</h1>
                 </div>
             
                 
@@ -515,15 +515,15 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-03-16 19:09:14</span>
-        <span class="mobile">2023-03-16 19:09</span>
+        <span class="pc">2023-03-27 21:36:16</span>
+        <span class="mobile">2023-03-27 21:36</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-03-23 17:01:51</span>
-            <span class="mobile">2023-03-23 17:01</span>
+            <span class="pc">2023-03-27 21:53:55</span>
+            <span class="mobile">2023-03-27 21:53</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -535,7 +535,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/Elements/">Elements</a>&nbsp;
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>&nbsp;
                     </li>
                 
             </ul>
@@ -545,12 +545,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>45 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>750 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>3 Mins</span>
         </span>
     
     
@@ -566,18 +566,47 @@
             
 
             <div class="article-content markdown-body">
-                <h2 id="For-Ms-Winter"><a href="#For-Ms-Winter" class="headerlink" title="For Ms.Winter"></a>For Ms.Winter</h2><h3 id="先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功"><a href="#先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功" class="headerlink" title="先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功"></a>先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功</h3>
+                <h2 id="Dijkstra算法"><a href="#Dijkstra算法" class="headerlink" title="Dijkstra算法"></a>Dijkstra算法</h2><ul>
+<li><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>在一个图中，怎样找到一个点，到其余任何一个点的权值最小的路径，这个就是最短路径问题。</p>
+</li>
+<li><h3 id="算法思想"><a href="#算法思想" class="headerlink" title="算法思想"></a>算法思想</h3><ul>
+<li><h4 id="从点入手"><a href="#从点入手" class="headerlink" title="从点入手"></a>从点入手</h4><p>我们从点的角度考虑，每次选择最短的路径，然后将新的端点家啊如考虑的集合。</p>
+</li>
+<li><h4 id="更新判断"><a href="#更新判断" class="headerlink" title="更新判断"></a>更新判断</h4><p>我们会遇到一个问题就是，如果新的点构成一条更短的路径，所以每加入一个点，就进行一个检查</p>
+</li>
+<li><h4 id="INF"><a href="#INF" class="headerlink" title="INF"></a>INF</h4><p>INF来建立，已判断是否相连</p>
+</li>
+</ul>
+</li>
+<li><h3 id="代码设计"><a href="#代码设计" class="headerlink" title="代码设计"></a>代码设计</h3><ul>
+<li><h4 id="final数组"><a href="#final数组" class="headerlink" title="final数组"></a>final数组</h4><p>final数组来判断是否已经有最短路径</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span>[i] = <span class="number">0</span>;	<span class="comment">// 0代表没有找到</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><h4 id="Path数组"><a href="#Path数组" class="headerlink" title="Path数组"></a>Path数组</h4><p>Path来记录到达每一个对应的顶点的上一个前驱结点</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Patharc[MVNum];		<span class="comment">//存储最短路径的下标的数组</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> ShortPathTable[MVNum];	<span class="comment">//存储各点的最小路径的权值和</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><h4 id="判断"><a href="#判断" class="headerlink" title="判断"></a>判断</h4><p>记住更新判断</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (v = <span class="number">1</span>; v &lt; G.vexnum; v++)</span><br><span class="line">	&#123;</span><br><span class="line">		min = INF;</span><br><span class="line">		<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; w++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (!<span class="keyword">final</span>[w] &amp;&amp; C[w] &lt; min)</span><br><span class="line">			&#123;</span><br><span class="line">				min = C[w];	<span class="comment">//不用考略的原因在于final</span></span><br><span class="line">				k = w;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">final</span>[w] = <span class="number">1</span>;	<span class="comment">//找到了就先标记一个然后开始更新检查</span></span><br><span class="line">		<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; w++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (!<span class="keyword">final</span>[w] &amp;&amp; min + G.arcs[k][w] &lt; C[w])</span><br><span class="line">			&#123;</span><br><span class="line">				P[w] = k;		<span class="comment">// 保证了找到到每一个点的最短路径</span></span><br><span class="line">				C[w] = min + G.arcs[k][w];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><h3 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">// Macro</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MVNum	50</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXEDGE	50</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> INF	0x3F3F3F3F</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OK	1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> BAD	0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXSIZE	100</span></span><br><span class="line"><span class="comment">// 迪杰斯特拉算法本质是一种贪心算法</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// AMGraph</span></span><br><span class="line"><span class="keyword">using</span> VerTexType = <span class="type">char</span>;</span><br><span class="line"><span class="keyword">using</span> ArcType = <span class="type">int</span>;</span><br><span class="line"><span class="keyword">using</span> AMGraph = <span class="keyword">struct</span> &#123;</span><br><span class="line">	<span class="type">int</span> vexnum;</span><br><span class="line">	<span class="type">int</span> arcnum;</span><br><span class="line">	VerTexType vertices[MVNum];</span><br><span class="line">	ArcType arcs[MVNum][MVNum];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Patharc[MVNum];		<span class="comment">//存储最短路径的下标的数组</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> ShortPathTable[MVNum];	<span class="comment">//存储各点的最小路径的权值和</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Dijkstra</span><span class="params">(<span class="type">const</span> AMGraph&amp; G, <span class="type">int</span> v0,Patharc P, ShortPathTable C)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> v, w, k, min;	<span class="comment">//以前的一种习惯</span></span><br><span class="line">	<span class="type">int</span> <span class="keyword">final</span>[MVNum];	<span class="comment">// 这个数组用来判断 一个点是否已经找到了最短路径</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; G.vexnum; i++)<span class="comment">//初始化</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">final</span>[i] = <span class="number">0</span>;	<span class="comment">// 0代表没有找到</span></span><br><span class="line">		P[i] = v0;<span class="comment">//假设每个都设为v0</span></span><br><span class="line">		C[i] = G.arcs[v0][i];	<span class="comment">//	同理为到v0 的距离 第一次一定满足</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">final</span>[v0] = <span class="number">1</span>;</span><br><span class="line">	<span class="comment">//P[v0] = v0;  目前似乎可以不用</span></span><br><span class="line">	C[v0] = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (v = <span class="number">1</span>; v &lt; G.vexnum; v++)</span><br><span class="line">	&#123;</span><br><span class="line">		min = INF;</span><br><span class="line">		<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; w++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (!<span class="keyword">final</span>[w] &amp;&amp; C[w] &lt; min)</span><br><span class="line">			&#123;</span><br><span class="line">				min = C[w];	<span class="comment">//不用考略的原因在于final</span></span><br><span class="line">				k = w;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">final</span>[w] = <span class="number">1</span>;	<span class="comment">//找到了就先标记一个然后开始更新检查</span></span><br><span class="line">		<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; w++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (!<span class="keyword">final</span>[w] &amp;&amp; min + G.arcs[k][w] &lt; C[w])</span><br><span class="line">			&#123;</span><br><span class="line">				P[w] = k;		<span class="comment">// 保证了找到到每一个点的最短路径</span></span><br><span class="line">				C[w] = min + G.arcs[k][w];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
+<p>贪心思想，每次选择最优解，妙处在这个记录路径的数据结构，以及判断的选择，标记的思想。</p>
+</blockquote>
+<p><img src="/../images/to.jpg"></p>
+
             </div>
 
             
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：Winter&#39;s blog</li>
+        <li>Post title：Dijkstra</li>
         <li>Post author：Winter</li>
-        <li>Create time：2023-03-16 19:09:14</li>
+        <li>Create time：2023-03-27 21:36:16</li>
         <li>
-            Post link：https://spikeihg.github.io/2023/03/16/Winter-s-blog/
+            Post link：https://spikeihg.github.io/2023/03/27/Dijkstra/
         </li>
         <li>
             Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
@@ -592,7 +621,7 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/Elements/">#Elements</a>&nbsp;
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">#数据结构与算法</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -606,13 +635,13 @@
                         <div class="article-prev">
                             <a class="prev"
                             rel="prev"
-                            href="/2023/03/22/MARKDOWN-0/"
+                            href="/2023/03/27/Floyd/"
                             >
                                 <span class="left arrow-icon flex-center">
                                     <i class="fa-solid fa-chevron-left"></i>
                                 </span>
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">MARKDOWN</span>
+                                    <span class="post-nav-title-item">Floyd</span>
                                     <span class="post-nav-item">Prev posts</span>
                                 </span>
                             </a>
@@ -622,10 +651,10 @@
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/03/16/%E5%8D%95%E8%B0%83%E6%A0%88/"
+                            href="/2023/03/27/Kruskal/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">单调栈</span>
+                                    <span class="post-nav-title-item">Kruskal</span>
                                     <span class="post-nav-item">Next posts</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -690,8 +719,8 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">Winter&#39;s blog</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#For-Ms-Winter"><span class="nav-text">For Ms.Winter</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%88%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%89%BE%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80%E7%9A%84%E5%A5%BD%E5%9C%B0%E6%96%B9-%E8%BF%9B%E5%85%A5NASA%E5%AE%98%E7%BD%91%E7%9B%B4%E6%8E%A5copy-image-address-%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%9C%A8google%E9%87%8C%E9%9D%A2%E4%BD%BF%E7%94%A8-%E4%BD%86%E6%98%AF%E5%8F%AF%E8%83%BD%E6%97%A0%E6%B3%95%E6%88%90%E5%8A%9F"><span class="nav-text">先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功</span></a></li></ol></li></ol>
+        <div class="page-title">Dijkstra</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dijkstra%E7%AE%97%E6%B3%95"><span class="nav-text">Dijkstra算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3"><span class="nav-text">算法思想</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%8E%E7%82%B9%E5%85%A5%E6%89%8B"><span class="nav-text">从点入手</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E5%88%A4%E6%96%AD"><span class="nav-text">更新判断</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#INF"><span class="nav-text">INF</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E8%AE%BE%E8%AE%A1"><span class="nav-text">代码设计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#final%E6%95%B0%E7%BB%84"><span class="nav-text">final数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Path%E6%95%B0%E7%BB%84"><span class="nav-text">Path数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A4%E6%96%AD"><span class="nav-text">判断</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81"><span class="nav-text">完整代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol>
 
     </div>
 </div>

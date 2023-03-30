@@ -14,18 +14,18 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://SpikeIHG.github.io/2023/03/16/winter-s-blog/"/>
+    <link rel="canonical" href="https://SpikeIHG.github.io/2023/03/27/kruskal/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Winter&#39;s blog">
+    <meta property="og:title" content="Kruskal">
     <meta property="og:description" content="Hexo Theme Redefine">
-    <meta property="og:url" content="https://SpikeIHG.github.io2023/03/16/Winter-s-blog/">
+    <meta property="og:url" content="https://SpikeIHG.github.io2023/03/27/Kruskal/">
     
     <meta property="og:site_name" content="Winter&#39;s">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Winter&#39;s blog">
+    <meta name="twitter:title" content="Kruskal">
     <meta name="twitter:description" content="Hexo Theme Redefine">
     <meta name="twitter:image" content="/images/yao.png">
     <!--- Icon Part-->
@@ -37,7 +37,7 @@
     
     <title>
         
-            Winter&#39;s blog -
+            Kruskal -
         
         Winter&#39;s
     </title>
@@ -492,8 +492,8 @@
             
                       
                 <div class="article-title">
-                    <img src="/../images/earthrise.jpg" alt="Winter&#39;s blog" />
-                    <h1 class="article-title-cover">Winter&#39;s blog</h1>
+                    <img src="/../images/cli.jpg" alt="Kruskal" />
+                    <h1 class="article-title-cover">Kruskal</h1>
                 </div>
             
                 
@@ -515,15 +515,15 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-03-16 19:09:14</span>
-        <span class="mobile">2023-03-16 19:09</span>
+        <span class="pc">2023-03-27 17:25:13</span>
+        <span class="mobile">2023-03-27 17:25</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-03-23 17:01:51</span>
-            <span class="mobile">2023-03-23 17:01</span>
+            <span class="pc">2023-03-27 21:09:35</span>
+            <span class="mobile">2023-03-27 21:09</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -535,7 +535,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/Elements/">Elements</a>&nbsp;
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>&nbsp;
                     </li>
                 
             </ul>
@@ -545,12 +545,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>45 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>835 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>3 Mins</span>
         </span>
     
     
@@ -566,18 +566,42 @@
             
 
             <div class="article-content markdown-body">
-                <h2 id="For-Ms-Winter"><a href="#For-Ms-Winter" class="headerlink" title="For Ms.Winter"></a>For Ms.Winter</h2><h3 id="先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功"><a href="#先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功" class="headerlink" title="先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功"></a>先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功</h3>
+                <h2 id="Kruskal算法与并查集"><a href="#Kruskal算法与并查集" class="headerlink" title="Kruskal算法与并查集"></a>Kruskal算法与并查集</h2><h3 id="算法思路"><a href="#算法思路" class="headerlink" title="算法思路"></a>算法思路</h3><ul>
+<li><h4 id="以边入手"><a href="#以边入手" class="headerlink" title="以边入手"></a>以边入手</h4></li>
+</ul>
+<p>从边入手，将边按照权递增排序，所以我们需要使用边集数组。</p>
+<ul>
+<li><h4 id="并查集判断"><a href="#并查集判断" class="headerlink" title="并查集判断"></a>并查集判断</h4>由于使用了边，但是我们要判断是否会形成回路。所以使用查集。</li>
+</ul>
+<h3 id="代码细节"><a href="#代码细节" class="headerlink" title="代码细节"></a>代码细节</h3><ul>
+<li><h4 id="边集数组"><a href="#边集数组" class="headerlink" title="边集数组"></a>边集数组</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</span><br><span class="line">	<span class="type">int</span> begin, end;</span><br><span class="line">	ArcType weight;		<span class="comment">// ? the begin mean the point of the arcs</span></span><br><span class="line">&#125;Edge;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 并且我们也要用到并查集的知识 感觉非常巧妙</span></span><br><span class="line"><span class="comment">//算法的是现实思想 这个就是使用的边集数组 对应的特有的数据结构</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><h4 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">/先理解我们并查集的思想吧</span><br><span class="line"><span class="comment">// 实现所需要具有的数据结构 一个整数数组 两个函数 find and join</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N&#123; <span class="number">1000</span> &#125;;</span><br><span class="line"><span class="type">int</span> pre[N];</span><br><span class="line"><span class="type">int</span> Rank[N];		<span class="comment">// find 函数优化时所需要使用的一个标记数组</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		pre[i] = i;		<span class="comment">// 起始的时候全部为自己代表自己全部时分开的</span></span><br><span class="line">		Rank[i] = <span class="number">1</span>;	<span class="comment">// 深度全是1	0 也可以</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span>		<span class="comment">// 查找 x 的根结点 还是一个树形结构</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (x == pre[x])</span><br><span class="line">		<span class="keyword">return</span> x;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">find</span>(pre[x]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find_pro</span><span class="params">(<span class="type">int</span> x)</span>	<span class="comment">// 查找的时候顺便完成一个路径压缩</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (x == pre[x])</span><br><span class="line">		<span class="keyword">return</span> x;</span><br><span class="line">	<span class="keyword">return</span> pre[x] = <span class="built_in">find_pro</span>(pre[x]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find_</span><span class="params">(<span class="type">int</span> x)</span>	<span class="comment">// 因为是一个尾递归所以可以写成以一个循环</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (x != pre[x])</span><br><span class="line">		x = pre[x];</span><br><span class="line">	<span class="keyword">return</span> x;</span><br><span class="line">&#125;	<span class="comment">// 我们使用的 </span></span><br><span class="line"><span class="comment">// 并查集 还有一个方法就是 并join()</span></span><br><span class="line"><span class="comment">// pro的非递归写法</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find_pro_</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> temp;</span><br><span class="line">	<span class="type">int</span> r = x;</span><br><span class="line">	<span class="keyword">while</span> (pre[r] != r)</span><br><span class="line">	&#123;</span><br><span class="line">		r = pre[r];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span> (x != r)</span><br><span class="line">	&#123;</span><br><span class="line">		temp = pre[x];</span><br><span class="line">		pre[x] = r;</span><br><span class="line">		x = temp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> r;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">issame</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">find</span>(x) == <span class="built_in">find</span>(y);		<span class="comment">// 优雅</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">join</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	x = <span class="built_in">find</span>(x);</span><br><span class="line">	y = <span class="built_in">find</span>(y);</span><br><span class="line">	<span class="keyword">if</span> (x == y)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">if</span> (Rank[x] &lt; Rank[y])</span><br><span class="line">		pre[x] = y;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (Rank[x] == Rank[y])</span><br><span class="line">			Rank[x]++;</span><br><span class="line">		pre[y] = x;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// OKay so far 我们写我们要使用的函数 Find</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">Find</span><span class="params">(<span class="type">int</span>* parent, <span class="type">int</span> f)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (parent[f]&gt;<span class="number">0</span>)</span><br><span class="line">		f = parent[f];</span><br><span class="line">	<span class="keyword">return</span> f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 排序的时候可以用 qsort 也可以自己写</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>思路整理 ，首先运用一个整数数组来存每个元素的前驱，然后设定一个代表元，通过不断向上访问得到代表元。所以并查集本质任然是一个树形结构，研究连通的关系。</p>
+<ul>
+<li><h4 id="将邻接矩阵转换为一个边集数组"><a href="#将邻接矩阵转换为一个边集数组" class="headerlink" title="将邻接矩阵转换为一个边集数组"></a>将邻接矩阵转换为一个边集数组</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">edgecpy</span><span class="params">(<span class="type">const</span> AMGraph&amp; G, Edge* e)</span>	<span class="comment">//</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> k = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;G.vertexnum<span class="number">-1</span>;i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=i+<span class="number">1</span>;j&lt;G.vertexnum;j++)</span><br><span class="line">			<span class="keyword">if</span> (G.arcs[i][j] &lt; INF)</span><br><span class="line">			&#123;</span><br><span class="line">				e[k].begin = i;</span><br><span class="line">				e[k].end = j;</span><br><span class="line">				e[k].weight = G.arcs[i][j];</span><br><span class="line">				++k;</span><br><span class="line">			&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>然后我们基本就得到了全部了</p>
+<p>附上完整代码</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Status  <span class="title">cmp_</span><span class="params">(<span class="type">void</span> <span class="type">const</span>* e1, <span class="type">void</span> <span class="type">const</span>* e2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (((Edge*)e1)-&gt;weight &gt; ((Edge*)e2)-&gt;weight);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">MST_Kruskal</span><span class="params">(<span class="type">const</span> AMGraph&amp; G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Edge* edges = <span class="keyword">new</span> Edge[MVNum];	<span class="comment">//	创建一个边集数组</span></span><br><span class="line">	<span class="type">int</span>* parent = <span class="keyword">new</span> <span class="type">int</span>[G.vertexnum];</span><br><span class="line">	<span class="type">int</span> m = <span class="number">0</span>, n = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> min_casts = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">memset</span>(parent, <span class="number">0</span>, <span class="built_in">sizeof</span>(parent));</span><br><span class="line">	<span class="built_in">edgecpy</span>(G, edges);</span><br><span class="line">	<span class="built_in">qsort</span>(edges,G.arcnum, <span class="built_in">sizeof</span>(Edge), cmp_);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.arcnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		m = <span class="built_in">Find</span>(parent, edges[i].begin);</span><br><span class="line">		n = <span class="built_in">Find</span>(parent, edges[i].end);</span><br><span class="line">		<span class="keyword">if</span> (m != n)</span><br><span class="line">		&#123;</span><br><span class="line">			parent[m] = n;</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;( &quot;</span> &lt;&lt; edges[i].begin &lt;&lt; <span class="string">&quot;,&quot;</span> &lt;&lt; edges[i].end &lt;&lt; <span class="string">&quot; )\n&quot;</span>;</span><br><span class="line">			min_casts += edges[i].weight;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><blockquote>
+<p>从边出发，并查集的思想很重要</p>
+</blockquote>
+<p><img src="/../images/tian.jpg"></p>
+
             </div>
 
             
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：Winter&#39;s blog</li>
+        <li>Post title：Kruskal</li>
         <li>Post author：Winter</li>
-        <li>Create time：2023-03-16 19:09:14</li>
+        <li>Create time：2023-03-27 17:25:13</li>
         <li>
-            Post link：https://spikeihg.github.io/2023/03/16/Winter-s-blog/
+            Post link：https://spikeihg.github.io/2023/03/27/Kruskal/
         </li>
         <li>
             Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
@@ -592,7 +616,7 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/Elements/">#Elements</a>&nbsp;
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">#数据结构与算法</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -606,13 +630,13 @@
                         <div class="article-prev">
                             <a class="prev"
                             rel="prev"
-                            href="/2023/03/22/MARKDOWN-0/"
+                            href="/2023/03/27/Dijkstra/"
                             >
                                 <span class="left arrow-icon flex-center">
                                     <i class="fa-solid fa-chevron-left"></i>
                                 </span>
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">MARKDOWN</span>
+                                    <span class="post-nav-title-item">Dijkstra</span>
                                     <span class="post-nav-item">Prev posts</span>
                                 </span>
                             </a>
@@ -622,10 +646,10 @@
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/03/16/%E5%8D%95%E8%B0%83%E6%A0%88/"
+                            href="/2023/03/25/hexo%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">单调栈</span>
+                                    <span class="post-nav-title-item">hexo搭建指南</span>
                                     <span class="post-nav-item">Next posts</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -690,8 +714,8 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">Winter&#39;s blog</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#For-Ms-Winter"><span class="nav-text">For Ms.Winter</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%88%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%89%BE%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80%E7%9A%84%E5%A5%BD%E5%9C%B0%E6%96%B9-%E8%BF%9B%E5%85%A5NASA%E5%AE%98%E7%BD%91%E7%9B%B4%E6%8E%A5copy-image-address-%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%9C%A8google%E9%87%8C%E9%9D%A2%E4%BD%BF%E7%94%A8-%E4%BD%86%E6%98%AF%E5%8F%AF%E8%83%BD%E6%97%A0%E6%B3%95%E6%88%90%E5%8A%9F"><span class="nav-text">先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功</span></a></li></ol></li></ol>
+        <div class="page-title">Kruskal</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Kruskal%E7%AE%97%E6%B3%95%E4%B8%8E%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="nav-text">Kruskal算法与并查集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF"><span class="nav-text">算法思路</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A5%E8%BE%B9%E5%85%A5%E6%89%8B"><span class="nav-text">以边入手</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B9%B6%E6%9F%A5%E9%9B%86%E5%88%A4%E6%96%AD"><span class="nav-text">并查集判断</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%BB%86%E8%8A%82"><span class="nav-text">代码细节</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%B9%E9%9B%86%E6%95%B0%E7%BB%84"><span class="nav-text">边集数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="nav-text">并查集</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B0%86%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%B8%80%E4%B8%AA%E8%BE%B9%E9%9B%86%E6%95%B0%E7%BB%84"><span class="nav-text">将邻接矩阵转换为一个边集数组</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-text">结语</span></a></li></ol>
 
     </div>
 </div>

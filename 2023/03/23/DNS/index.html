@@ -14,14 +14,14 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://spikeihg.github.io/2023/03/23/dns/"/>
+    <link rel="canonical" href="https://SpikeIHG.github.io/2023/03/23/dns/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     <meta property="og:type" content="article">
     <meta property="og:title" content="DNS">
     <meta property="og:description" content="Hexo Theme Redefine">
-    <meta property="og:url" content="https://spikeihg.github.io2023/03/23/DNS/">
+    <meta property="og:url" content="https://SpikeIHG.github.io2023/03/23/DNS/">
     
     <meta property="og:site_name" content="Winter&#39;s">
     <meta name="twitter:card" content="summary_large_image">
@@ -69,7 +69,7 @@
     
     
     
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Winter's" type="application/atom+xml">
 </head>
 
 
@@ -574,7 +574,7 @@
 </li>
 <li><p>原理如下</p>
 <p>1） 同一台用户主机上运行着DNS应用的客户端。</p>
-<p>2） 浏览器从上述URL中抽取岀主机名<a class="link"   target="_blank" rel="noopener" href="http://www.baidu.com,并将这台主机名传给dns应用的客户端./" >www.baidu.com,并将这台主机名传给DNS应用的客户端。 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>2） 浏览器从上述URL中抽取岀主机名<a target="_blank" rel="noopener" href="http://www.baidu.com,并将这台主机名传给dns应用的客户端./">www.baidu.com,并将这台主机名传给DNS应用的客户端。</a></p>
 <p>3） DNS客户向DNS服务器发送一个包含主机名的请求。</p>
 <p>4） DNS客户最终会收到一份回答报文，其中含有对应于该主机名的IP地址。</p>
 <p>5） 一旦浏览器接收到来自DNS的该IP地址，它能够向位于该IP地址80端口的HTTP服务器进程发起一个TCP连接。		</p>
@@ -588,12 +588,7 @@
 </li>
 <li><h4 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h4><ul>
 <li><h5 id="分布式，层次"><a href="#分布式，层次" class="headerlink" title="分布式，层次"></a>分布式，层次</h5><p>根，顶级域(TLD，top-level domain),权威，三层。举个例子</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/DNS%E5%B1%82%E6%AC%A1.png"
-                      alt="DNS层次"
-                ></p>
+<p><img src="/../images/DNS%E5%B1%82%E6%AC%A1.png" alt="DNS层次"></p>
 <p>国家，fr,jp,ca,也是自己国家维护的顶级域 权威顶级域就是因特网上能够被公共访问的服务器主机需要提供的一个可公共访问的DNS记录，例如大学，自己维护的DNS服务器</p>
 </li>
 <li><h5 id="本地DNS服务器与缓存"><a href="#本地DNS服务器与缓存" class="headerlink" title="本地DNS服务器与缓存"></a>本地DNS服务器与缓存</h5><p>通过本地公用来减少流量，缓存可以减少路径，尽量绕过根DNS</p>
@@ -609,12 +604,7 @@
 <p>如果Type&#x3D;CNAME，则 Value是别名为Name的主机对应的规范主机名。该记录能够向査询的主机提供一个主机名对应的规范主机名，例如(foo.com, relay1.bar. foo. com, CNAME)就是一条 CNAME 类型的记录。</p>
 <p>如果Type &#x3D; MX,则Value是个别名为Name的邮件服务器的规范主机名。举例来说，(foo.com, mail. bar. fo&lt;). com, MX)就是一条MX记录。MX记录允许邮件服务器主机名具有简单的别名。值得注意的是，通过使用MX记录，一个公司的邮件服务器和其他服务器(如它的Web服务器)可以使用相同的别名。为了获得邮件服务器的规范主机名，DNS客户应当请求一条MX记录；而为了获得其他服务器的规范主机名，DNS客户应当请求CNAME记录</p>
 <ul>
-<li><h5 id="报文"><a href="#报文" class="headerlink" title="报文"></a>报文</h5><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/DNS%E6%8A%A5%E6%96%87.png"
-                      alt="DNS报文" title="DNS报文"
-                ></li>
+<li><h5 id="报文"><a href="#报文" class="headerlink" title="报文"></a>报文</h5><img src="/../images/DNS%E6%8A%A5%E6%96%87.png" alt="DNS报文" title="DNS报文"></li>
 </ul>
 <p>控制台键入nslookup 即可看权威DNS服务器与地址 dns.hust.edu.cn</p>
 </li>
@@ -718,43 +708,30 @@
 
         
             
-    <div id="gitalk-container"></div>
-    <script data-pjax
-            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-    <script data-pjax>
+ 
+    <div id="waline"></div>
+    <script type="module"  data-pjax>
+        import { init } from 'https://evan.beee.top/js/waline.mjs';
 
-        function loadGitalk() {
-            let __gitalk__pathname = decodeURI(location.pathname);
-            const __gitalk__pathnameLength = __gitalk__pathname.length;
-            const __gitalk__pathnameMaxLength = 50;
-            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
-                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
-            }
-
-            try {
-                Gitalk && new Gitalk({
-                    clientID: '994e42334d60bd1f62f3',
-                    clientSecret: '695765f2080312a6c950d1ef05b710d5edbfc958',
-                    repo: 'Comments_from_hexo-',
-                    owner: 'SpikeIHG',
-                    admin: ['SpikeIHG'],
-                    id: __gitalk__pathname,
-                    language: 'en'
-                }).render('gitalk-container');
-
-            } catch (e) {
-                window.Gitalk = null;
-            }
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://new-waline-comments-9d83i0l0o-spikeihg.vercel.app/',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
         }
 
         if ('true') {
-            const loadGitalkTimeout = setTimeout(() => {
-                loadGitalk();
-                clearTimeout(loadGitalkTimeout);
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
             }, 1000);
         } else {
-            window.addEventListener('DOMContentLoaded', loadGitalk);
+            window.addEventListener('DOMContentLoaded', loadWaline);
         }
+        
     </script>
 
 
