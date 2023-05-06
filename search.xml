@@ -434,7 +434,7 @@
 </ul>
 </li>
 <li><h4 id="取非匹配"><a href="#取非匹配" class="headerlink" title="取非匹配"></a>取非匹配</h4><ul>
-<li>使用元字符^ 且作用于集合</li>
+<li>使用元字符^ 且作用于集合 注意是在集合的内部 求非 代表一个[^]因为具有多义性</li>
 </ul>
 </li>
 <li><h4 id="元字符匹配"><a href="#元字符匹配" class="headerlink" title="元字符匹配"></a>元字符匹配</h4><ul>
@@ -476,6 +476,27 @@
 <li><h4 id="？元字符"><a href="#？元字符" class="headerlink" title="？元字符"></a>？元字符</h4><ul>
 <li>匹配一次或零次 http:&#x2F;&#x2F; 与 https:&#x2F;&#x2F; 不能用s*  httpsss 所以使用？</li>
 <li>[\r]? 与我们的\r? 本质是一样的 但是为了清晰直观 我们通常直接[\r]</li>
+</ul>
+</li>
+<li><h4 id="匹配次数"><a href="#匹配次数" class="headerlink" title="匹配次数"></a>匹配次数</h4><ul>
+<li>{}也是元字符 举个例子就是之前的RGB #[0-9A-Fa-f]写六遍可以使用{6}</li>
+<li>也可以设置一个区间{2.4}</li>
+<li>[]中间是的元字符都是为普通字符，最好写一个\</li>
+<li>匹配至少多少次 {3,}类似python</li>
+</ul>
+</li>
+<li><h4 id="防止过度匹配"><a href="#防止过度匹配" class="headerlink" title="防止过度匹配"></a>防止过度匹配</h4><ul>
+<li><p>使用懒惰版本，进行匹配，前面的匹配都是一个贪婪匹配，例如 * + {n，}   对应的懒惰版本就是加上一个? 例如 * 与 *？ 还有 + +? {n,} {n,}?</p>
+<p>这里的懒惰可以理解成就是 尽量的再匹配到第一个的时候就停下来 ，而贪婪就是匹配到最后一个再停下来</p>
+</li>
+</ul>
+</li>
+<li><h4 id="位置匹配"><a href="#位置匹配" class="headerlink" title="位置匹配"></a>位置匹配</h4><ul>
+<li>指定匹配发生的位置</li>
+<li>\b  一个标记，用来标记一个单词的开头或者是结尾  理解\b 的实质，实质就是匹配一个可以\w 与一个非字母或者是数字的位置\W 之间的一个位置  b代表boundary 注意我们的这个 \b 只是匹配一个位置 ，而不是匹配一个字符  所以 \bcat\b 得到的字符 还是 3个字符 而非5个</li>
+<li>同理 的 \B 来匹配一个你想要的边界 就是 eg night-color  \B-\B 可以匹配 但是我们的 color - color 就是无法匹配</li>
+<li>^ 这里来再次出现 用作 标记字符串的开始位置 $ 用于标记字符串的结尾</li>
+<li>举个例子 匹配一个 XML 文件  因为必须要求 这个声明位于一个文档的最开始 所以我们需要进行 字符串的一个声明 例如 这个 ^\s*&lt;?xml.*?&gt;</li>
 </ul>
 </li>
 </ul>
@@ -572,6 +593,88 @@
 ]]></content>
       <tags>
         <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TLCL</title>
+    <url>/2023/05/06/TLCL/</url>
+    <content><![CDATA[<h1 id="TLCL"><a href="#TLCL" class="headerlink" title="TLCL"></a>TLCL</h1><ul>
+<li><h2 id="Why-Linux？"><a href="#Why-Linux？" class="headerlink" title="Why Linux？"></a><strong>Why Linux？</strong></h2><ul>
+<li><h3 id="linux-人们会发现只有键盘才是计算机的一个灵魂，使用命令行不是为了看起来高深莫测，而是为解决复杂问题提供一个简化的可能！"><a href="#linux-人们会发现只有键盘才是计算机的一个灵魂，使用命令行不是为了看起来高深莫测，而是为解决复杂问题提供一个简化的可能！" class="headerlink" title="linux 人们会发现只有键盘才是计算机的一个灵魂，使用命令行不是为了看起来高深莫测，而是为解决复杂问题提供一个简化的可能！"></a>linux 人们会发现只有键盘才是计算机的一个灵魂，使用命令行不是为了看起来高深莫测，而是为解决复杂问题提供一个简化的可能！</h3></li>
+</ul>
+</li>
+<li><h2 id="command"><a href="#command" class="headerlink" title="command"></a>command</h2><ul>
+<li><h4 id="shift-ctrl-6-切出wsl"><a href="#shift-ctrl-6-切出wsl" class="headerlink" title="shift+ctrl+6 切出wsl"></a>shift+ctrl+6 切出wsl</h4></li>
+<li><h4 id="winter——主机名，SPIKE——用户名"><a href="#winter——主机名，SPIKE——用户名" class="headerlink" title="winter——主机名，SPIKE——用户名"></a>winter——主机名，SPIKE——用户名</h4></li>
+<li><h4 id="date-时间-cal-日历"><a href="#date-时间-cal-日历" class="headerlink" title="date 时间 cal 日历"></a>date 时间 cal 日历</h4></li>
+<li><h4 id="dr-磁盘空间情况-free-内存空间情况"><a href="#dr-磁盘空间情况-free-内存空间情况" class="headerlink" title="dr 磁盘空间情况 free 内存空间情况"></a>dr 磁盘空间情况 free 内存空间情况</h4></li>
+<li><h4 id="exit-退出程序"><a href="#exit-退出程序" class="headerlink" title="exit 退出程序"></a>exit 退出程序</h4></li>
+<li><h4 id="用户-superuser-rootuser"><a href="#用户-superuser-rootuser" class="headerlink" title="$ 用户     # superuser rootuser"></a>$ 用户     # superuser rootuser</h4></li>
+<li><h4 id="file-navigation·"><a href="#file-navigation·" class="headerlink" title="file navigation·"></a>file navigation·</h4><ul>
+<li><h5 id="pwd-print-name-of-workplace-directory"><a href="#pwd-print-name-of-workplace-directory" class="headerlink" title="pwd print name of workplace directory"></a>pwd print name of workplace directory</h5></li>
+<li><h5 id="cd-change-directory"><a href="#cd-change-directory" class="headerlink" title="cd  change directory"></a>cd  change directory</h5></li>
+<li><h5 id="ls-list-contents"><a href="#ls-list-contents" class="headerlink" title="ls list contents"></a>ls list contents</h5></li>
+<li><h5 id="我们都处于-文件中间-home-通常初始-时-文件树-只有一棵-对于普通用户只有-user里具有写权限-其余需要-root"><a href="#我们都处于-文件中间-home-通常初始-时-文件树-只有一棵-对于普通用户只有-user里具有写权限-其余需要-root" class="headerlink" title="我们都处于 文件中间 home 通常初始 时 文件树 只有一棵 对于普通用户只有 user里具有写权限 其余需要 root"></a>我们都处于 文件中间 home 通常初始 时 文件树 只有一棵 对于普通用户只有 user里具有写权限 其余需要 root</h5></li>
+<li><h5 id="absolute-pathname-relative-pathname"><a href="#absolute-pathname-relative-pathname" class="headerlink" title="absolute pathname relative pathname"></a>absolute pathname relative pathname</h5><ul>
+<li>&#x2F; 根目录     .. &#x2F; 父目录 	.&#x2F;	当前工作目录 通常默认有这</li>
+</ul>
+<p>	</p>
+</li>
+<li><h4 id="cd-pathname"><a href="#cd-pathname" class="headerlink" title="cd + pathname"></a>cd + pathname</h4><ul>
+<li>cd   或者是 cd ~默认进入用户文件夹</li>
+<li>cd ~user_name 进入对应名字 的用户文件夹</li>
+<li>cd - 回到先前 的文件夹</li>
+</ul>
+</li>
+<li><h4 id="开头的文件夹-通常是不显示的-隐藏的-注入configuration-类的文件"><a href="#开头的文件夹-通常是不显示的-隐藏的-注入configuration-类的文件" class="headerlink" title=". 开头的文件夹 通常是不显示的 隐藏的 注入configuration 类的文件"></a>. 开头的文件夹 通常是不显示的 隐藏的 注入configuration 类的文件</h4></li>
+</ul>
+</li>
+<li><h4 id="用-代替文件名-中的空格"><a href="#用-代替文件名-中的空格" class="headerlink" title="用 . _ - 代替文件名 中的空格"></a>用 . _ - 代替文件名 中的空格</h4></li>
+<li><h4 id="支持-鼠标中间-paste-双击-copy-或者-选择-copy"><a href="#支持-鼠标中间-paste-双击-copy-或者-选择-copy" class="headerlink" title="支持 鼠标中间 paste 双击 copy 或者 选择 copy"></a>支持 鼠标中间 paste 双击 copy 或者 选择 copy</h4></li>
+<li><h4 id="上下键-寻找历史命令最大500个"><a href="#上下键-寻找历史命令最大500个" class="headerlink" title="上下键 寻找历史命令最大500个"></a>上下键 寻找历史命令最大500个</h4></li>
+<li><h4 id="ls指令再探dd"><a href="#ls指令再探dd" class="headerlink" title="ls指令再探dd"></a>ls指令再探dd</h4><ul>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/lin.png"
+                     
+                ></p>
+</li>
+<li><h5 id="short-option-l-一个字母-可以组合-lt"><a href="#short-option-l-一个字母-可以组合-lt" class="headerlink" title="short option  -l 一个字母 可以组合 -lt"></a>short option  -l 一个字母 可以组合 -lt</h5></li>
+<li><h5 id="long-option-–reverse-全称"><a href="#long-option-–reverse-全称" class="headerlink" title="long option –reverse  全称"></a>long option –reverse  全称</h5></li>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/_1.png"
+                     
+                ></p>
+</li>
+</ul>
+</li>
+<li><h3 id="其实无论怎样都可以-command-–help-查看更多"><a href="#其实无论怎样都可以-command-–help-查看更多" class="headerlink" title="其实无论怎样都可以 command –help 查看更多"></a><font color=gold>其实无论怎样都可以 command –help 查看更多</font></h3></li>
+<li><h3 id="file"><a href="#file" class="headerlink" title="file"></a>file</h3><ul>
+<li>查询文件 类型 file + filename</li>
+</ul>
+</li>
+<li><h4 id="Less"><a href="#Less" class="headerlink" title="Less"></a>Less</h4><ul>
+<li><h4 id="less-查看文本文件-everything-is-file"><a href="#less-查看文本文件-everything-is-file" class="headerlink" title="less 查看文本文件 everything is file"></a>less 查看文本文件 everything is file</h4></li>
+<li><h4 id="ascII-as-key"><a href="#ascII-as-key" class="headerlink" title="ascII as-key"></a>ascII as-key</h4></li>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/less.png"
+                     
+                ></p>
+</li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>LINUX</tag>
       </tags>
   </entry>
 </search>

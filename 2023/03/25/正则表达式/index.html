@@ -522,8 +522,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-03-28 00:06:38</span>
-            <span class="mobile">2023-03-28 00:06</span>
+            <span class="pc">2023-04-08 00:11:51</span>
+            <span class="mobile">2023-04-08 00:11</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -545,12 +545,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>680 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.1k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>4 Mins</span>
         </span>
     
     
@@ -591,7 +591,7 @@
 </ul>
 </li>
 <li><h4 id="取非匹配"><a href="#取非匹配" class="headerlink" title="取非匹配"></a>取非匹配</h4><ul>
-<li>使用元字符^ 且作用于集合</li>
+<li>使用元字符^ 且作用于集合 注意是在集合的内部 求非 代表一个[^]因为具有多义性</li>
 </ul>
 </li>
 <li><h4 id="元字符匹配"><a href="#元字符匹配" class="headerlink" title="元字符匹配"></a>元字符匹配</h4><ul>
@@ -633,6 +633,27 @@
 <li><h4 id="？元字符"><a href="#？元字符" class="headerlink" title="？元字符"></a>？元字符</h4><ul>
 <li>匹配一次或零次 http:&#x2F;&#x2F; 与 https:&#x2F;&#x2F; 不能用s*  httpsss 所以使用？</li>
 <li>[\r]? 与我们的\r? 本质是一样的 但是为了清晰直观 我们通常直接[\r]</li>
+</ul>
+</li>
+<li><h4 id="匹配次数"><a href="#匹配次数" class="headerlink" title="匹配次数"></a>匹配次数</h4><ul>
+<li>{}也是元字符 举个例子就是之前的RGB #[0-9A-Fa-f]写六遍可以使用{6}</li>
+<li>也可以设置一个区间{2.4}</li>
+<li>[]中间是的元字符都是为普通字符，最好写一个\</li>
+<li>匹配至少多少次 {3,}类似python</li>
+</ul>
+</li>
+<li><h4 id="防止过度匹配"><a href="#防止过度匹配" class="headerlink" title="防止过度匹配"></a>防止过度匹配</h4><ul>
+<li><p>使用懒惰版本，进行匹配，前面的匹配都是一个贪婪匹配，例如 * + {n，}   对应的懒惰版本就是加上一个? 例如 * 与 *？ 还有 + +? {n,} {n,}?</p>
+<p>这里的懒惰可以理解成就是 尽量的再匹配到第一个的时候就停下来 ，而贪婪就是匹配到最后一个再停下来</p>
+</li>
+</ul>
+</li>
+<li><h4 id="位置匹配"><a href="#位置匹配" class="headerlink" title="位置匹配"></a>位置匹配</h4><ul>
+<li>指定匹配发生的位置</li>
+<li>\b  一个标记，用来标记一个单词的开头或者是结尾  理解\b 的实质，实质就是匹配一个可以\w 与一个非字母或者是数字的位置\W 之间的一个位置  b代表boundary 注意我们的这个 \b 只是匹配一个位置 ，而不是匹配一个字符  所以 \bcat\b 得到的字符 还是 3个字符 而非5个</li>
+<li>同理 的 \B 来匹配一个你想要的边界 就是 eg night-color  \B-\B 可以匹配 但是我们的 color - color 就是无法匹配</li>
+<li>^ 这里来再次出现 用作 标记字符串的开始位置 $ 用于标记字符串的结尾</li>
+<li>举个例子 匹配一个 XML 文件  因为必须要求 这个声明位于一个文档的最开始 所以我们需要进行 字符串的一个声明 例如 这个 ^\s*&lt;?xml.*?&gt;</li>
 </ul>
 </li>
 </ul>
@@ -721,30 +742,43 @@
 
         
             
- 
-    <div id="waline"></div>
-    <script type="module"  data-pjax>
-        import { init } from 'https://evan.beee.top/js/waline.mjs';
+    <div id="gitalk-container"></div>
+    <script data-pjax
+            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script data-pjax>
 
-        function loadWaline() {
-            init({
-                el: '#waline',
-                serverURL: 'https://new-waline-comments-9d83i0l0o-spikeihg.vercel.app/',
-                lang: 'zh-CN',
-                dark: 'body[class~="dark-mode"]',
-                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
-            });
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: '994e42334d60bd1f62f3',
+                    clientSecret: '695765f2080312a6c950d1ef05b710d5edbfc958',
+                    repo: 'Comments_from_hexo-',
+                    owner: 'SpikeIHG',
+                    admin: ['SpikeIHG'],
+                    id: __gitalk__pathname,
+                    language: 'en'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
         }
 
         if ('true') {
-            const loadWalineTimeout = setTimeout(() => {
-                loadWaline();
-                clearTimeout(loadWalineTimeout);
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
             }, 1000);
         } else {
-            window.addEventListener('DOMContentLoaded', loadWaline);
+            window.addEventListener('DOMContentLoaded', loadGitalk);
         }
-        
     </script>
 
 
@@ -763,7 +797,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">正则表达式</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-text">引言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="nav-text">简单的语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BA%AF%E6%96%87%E6%9C%AC%E5%8C%B9%E9%85%8D"><span class="nav-text">纯文本匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%B7-%E5%8C%B9%E9%85%8D"><span class="nav-text">**.号**匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8C%B9%E9%85%8D%E6%83%B3%E8%A6%81%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6"><span class="nav-text">匹配想要中的字符</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E8%A1%A8%E7%A4%BA"><span class="nav-text">集合表示</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%9A%E4%B8%AA%E9%9B%86%E5%90%88%E5%8C%B9%E9%85%8D"><span class="nav-text">多个集合匹配</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%96%E9%9D%9E%E5%8C%B9%E9%85%8D"><span class="nav-text">取非匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%83%E5%AD%97%E7%AC%A6%E5%8C%B9%E9%85%8D"><span class="nav-text">元字符匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%9A%84%E5%85%83%E5%AD%97%E7%AC%A6"><span class="nav-text">特殊的元字符</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%AF%B9%E9%9B%86%E5%90%88%E7%9A%84%E7%AE%80%E5%8C%96"><span class="nav-text">对集合的简化</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%87%8D%E5%A4%8D%E5%8C%B9%E9%85%8D"><span class="nav-text">重复匹配</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%83%E5%AD%97%E7%AC%A6"><span class="nav-text">*元字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%9F%E5%85%83%E5%AD%97%E7%AC%A6"><span class="nav-text">？元字符</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-text">引言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="nav-text">简单的语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BA%AF%E6%96%87%E6%9C%AC%E5%8C%B9%E9%85%8D"><span class="nav-text">纯文本匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%B7-%E5%8C%B9%E9%85%8D"><span class="nav-text">**.号**匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8C%B9%E9%85%8D%E6%83%B3%E8%A6%81%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6"><span class="nav-text">匹配想要中的字符</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E8%A1%A8%E7%A4%BA"><span class="nav-text">集合表示</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%9A%E4%B8%AA%E9%9B%86%E5%90%88%E5%8C%B9%E9%85%8D"><span class="nav-text">多个集合匹配</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%96%E9%9D%9E%E5%8C%B9%E9%85%8D"><span class="nav-text">取非匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%83%E5%AD%97%E7%AC%A6%E5%8C%B9%E9%85%8D"><span class="nav-text">元字符匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%9A%84%E5%85%83%E5%AD%97%E7%AC%A6"><span class="nav-text">特殊的元字符</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%AF%B9%E9%9B%86%E5%90%88%E7%9A%84%E7%AE%80%E5%8C%96"><span class="nav-text">对集合的简化</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%87%8D%E5%A4%8D%E5%8C%B9%E9%85%8D"><span class="nav-text">重复匹配</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%83%E5%AD%97%E7%AC%A6"><span class="nav-text">*元字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%9F%E5%85%83%E5%AD%97%E7%AC%A6"><span class="nav-text">？元字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8C%B9%E9%85%8D%E6%AC%A1%E6%95%B0"><span class="nav-text">匹配次数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%B2%E6%AD%A2%E8%BF%87%E5%BA%A6%E5%8C%B9%E9%85%8D"><span class="nav-text">防止过度匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%8D%E7%BD%AE%E5%8C%B9%E9%85%8D"><span class="nav-text">位置匹配</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>
