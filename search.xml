@@ -603,6 +603,8 @@
 <li><h3 id="linux-人们会发现只有键盘才是计算机的一个灵魂，使用命令行不是为了看起来高深莫测，而是为解决复杂问题提供一个简化的可能！"><a href="#linux-人们会发现只有键盘才是计算机的一个灵魂，使用命令行不是为了看起来高深莫测，而是为解决复杂问题提供一个简化的可能！" class="headerlink" title="linux 人们会发现只有键盘才是计算机的一个灵魂，使用命令行不是为了看起来高深莫测，而是为解决复杂问题提供一个简化的可能！"></a>linux 人们会发现只有键盘才是计算机的一个灵魂，使用命令行不是为了看起来高深莫测，而是为解决复杂问题提供一个简化的可能！</h3></li>
 </ul>
 </li>
+<li><p>贴个网址 <a class="link"   href="http://billie66.github.io/TLCL/book/index.html" >TLCL <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</li>
 <li><h2 id="command"><a href="#command" class="headerlink" title="command"></a>command</h2><ul>
 <li><h4 id="shift-ctrl-6-切出wsl"><a href="#shift-ctrl-6-切出wsl" class="headerlink" title="shift+ctrl+6 切出wsl"></a>shift+ctrl+6 切出wsl</h4></li>
 <li><h4 id="winter——主机名，SPIKE——用户名"><a href="#winter——主机名，SPIKE——用户名" class="headerlink" title="winter——主机名，SPIKE——用户名"></a>winter——主机名，SPIKE——用户名</h4></li>
@@ -666,6 +668,39 @@
                      
                 ></p>
 </li>
+</ul>
+</li>
+<li><h4 id="键盘高级操作"><a href="#键盘高级操作" class="headerlink" title="键盘高级操作"></a>键盘高级操作</h4><ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/cl.png"
+                     
+                ></li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/cl1.png"
+                     
+                ></li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/cl2.png"
+                     
+                ></li>
+</ul>
+</li>
+<li><h4 id="自动补全"><a href="#自动补全" class="headerlink" title="自动补全"></a>自动补全</h4><ul>
+<li>tab  单击</li>
+<li>Alt + ? 显示可能的补全列表</li>
+<li>Alt + * 插入所有可能的补全操作</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/his.png"
+                     
+                ></li>
 <li></li>
 </ul>
 </li>
