@@ -712,4 +712,16 @@
         <tag>LINUX</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Cmake</title>
+    <url>/2023/09/12/Cmake/</url>
+    <content><![CDATA[<h2 id="可以开始了解CMake"><a href="#可以开始了解CMake" class="headerlink" title="可以开始了解CMake"></a>可以开始了解CMake</h2><p><em><strong>只是简单得贴一个网址</strong></em></p>
+<p><em><strong>[CMAKE](<a class="link"   href="https://cmake.org/cmake/help/latest/guide/tutorial/index.html" >CMake Tutorial — CMake 3.27.4 Documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>)</strong></em></p>
+<p><em><strong><a class="link"   href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/naming/" >CPPformal <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></em></p>
+<p><a class="link"   href="https://github.com/nlohmann/json" >json <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+      <tags>
+        <tag>Cmake</tag>
+      </tags>
+  </entry>
 </search>

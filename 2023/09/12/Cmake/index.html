@@ -14,18 +14,18 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://SpikeIHG.github.io/2023/03/25/正则表达式/"/>
+    <link rel="canonical" href="https://SpikeIHG.github.io/2023/09/12/cmake/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="正则表达式">
+    <meta property="og:title" content="Cmake">
     <meta property="og:description" content="Hexo Theme Redefine">
-    <meta property="og:url" content="https://SpikeIHG.github.io2023/03/25/正则表达式/">
+    <meta property="og:url" content="https://SpikeIHG.github.io2023/09/12/Cmake/">
     
     <meta property="og:site_name" content="Winter&#39;s">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="正则表达式">
+    <meta name="twitter:title" content="Cmake">
     <meta name="twitter:description" content="Hexo Theme Redefine">
     <meta name="twitter:image" content="/images/yao.png">
     <!--- Icon Part-->
@@ -37,7 +37,7 @@
     
     <title>
         
-            正则表达式 -
+            Cmake -
         
         Winter&#39;s
     </title>
@@ -492,8 +492,8 @@
             
                       
                 <div class="article-title">
-                    <img src="/../images/%E6%99%9A.jpg" alt="正则表达式" />
-                    <h1 class="article-title-cover">正则表达式</h1>
+                    <img src="/../images/iceberg.png" alt="Cmake" />
+                    <h1 class="article-title-cover">Cmake</h1>
                 </div>
             
                 
@@ -515,15 +515,15 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-03-25 20:37:20</span>
-        <span class="mobile">2023-03-25 20:37</span>
+        <span class="pc">2023-09-12 17:11:06</span>
+        <span class="mobile">2023-09-12 17:11</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-04-08 00:11:51</span>
-            <span class="mobile">2023-04-08 00:11</span>
+            <span class="pc">2023-09-12 17:19:19</span>
+            <span class="mobile">2023-09-12 17:19</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -535,7 +535,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/SCRAPE/">SCRAPE</a>&nbsp;
+                        <a href="/tags/Cmake/">Cmake</a>&nbsp;
                     </li>
                 
             </ul>
@@ -545,12 +545,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.1k Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>27 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>4 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
         </span>
     
     
@@ -566,99 +566,10 @@
             
 
             <div class="article-content markdown-body">
-                <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><ul>
-<li><p><font color =chocolate>从前我们学习了KMP算法文本匹配，但是现在我们的这个正则表达式，提供一种单独的语法解决，但是KMP算法仍有很多局限且消耗算力，为了解决网络中的大量匹配问题，引入伟大的正则表达式，用于匹配与替换。</font></p>
-</li>
-<li><p><font color=blue violet>编程语言中我们使用的转义字符等有一定出处，正则表达式最初来自我们的unix机器</font> </p>
-</li>
-<li><h3 id="简单的语法"><a href="#简单的语法" class="headerlink" title="简单的语法"></a>简单的语法</h3><ul>
-<li><h4 id="纯文本匹配"><a href="#纯文本匹配" class="headerlink" title="纯文本匹配"></a>纯文本匹配</h4><p>直接匹配文本，区分大小写，通常只返回第一个，可以编程语言中选择返回所有的数组。 </p>
-</li>
-<li><h4 id="号-匹配"><a href="#号-匹配" class="headerlink" title="**.号**匹配"></a>**<font color=red>.号</font>**匹配</h4><p>. 可以指代包括.在内的所有符号  匹配本身时引入了伟大的<em><strong>转义符号 \</strong></em>  </p>
-</li>
-<li><h4 id="匹配想要中的字符"><a href="#匹配想要中的字符" class="headerlink" title="匹配想要中的字符"></a>匹配想要中的字符</h4><p><font color = coral>使用[]，[]中的只要满足一个就算是匹配</font> 常常用在不区分大小写的表示  [Cc][Aa][Tt].eg	事实上我们的markdown都有转义字符</p>
-<ul>
-<li><h5 id="集合表示"><a href="#集合表示" class="headerlink" title="集合表示"></a>集合表示</h5><blockquote>
-<p>一个自然的过渡，如果，集合中元素很多时，且连续，使用[A-Z] 遵循阿斯克码</p>
-</blockquote>
-</li>
-<li><p><font color=seagreen>\ 与-都是元字符 -不需转义</font></p>
-</li>
-<li><h5 id="多个集合匹配"><a href="#多个集合匹配" class="headerlink" title="多个集合匹配"></a>多个集合匹配</h5><blockquote>
-<p>举个例子[A-Za-z0-9]就是有三个集合 网页的十六进制颜色表示就是一种应用 [0-9A-Fa-f]</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><h4 id="取非匹配"><a href="#取非匹配" class="headerlink" title="取非匹配"></a>取非匹配</h4><ul>
-<li>使用元字符^ 且作用于集合 注意是在集合的内部 求非 代表一个[^]因为具有多义性</li>
-</ul>
-</li>
-<li><h4 id="元字符匹配"><a href="#元字符匹配" class="headerlink" title="元字符匹配"></a>元字符匹配</h4><ul>
-<li><p>使用转义字符匹配 </p>
-</li>
-<li><p>[] - ^ \ . +</p>
-</li>
-<li><h6 id="特殊的元字符"><a href="#特殊的元字符" class="headerlink" title="特殊的元字符"></a>特殊的元字符</h6><ul>
-<li>\f 换页符 \n换行符 \r回车符 \t制表符 \v垂直制表符 [\b]backspace</li>
-<li>举个例子 处理 CSV文件 , 变成空格</li>
-<li>windows 中 \r\n 表示换行 linux  \r可选 \n 必选</li>
-</ul>
-</li>
-<li><h6 id="对集合的简化"><a href="#对集合的简化" class="headerlink" title="对集合的简化"></a>对集合的简化</h6><ul>
-<li>\d 所有的数字&#x3D;[0-9] \D&#x3D;[^0-9]</li>
-<li>\w 所有字母大小写与数字 \W 所有的非</li>
-<li>\s 任何一个空字符 \f\n\r\v\t  \S </li>
-<li>十六进制与八进制 \0x \0  \c 控制字符</li>
-<li>POSIX字符的支持 格式[: 英文描述:]</li>
-</ul>
-</li>
-<li><h6 id="重复匹配"><a href="#重复匹配" class="headerlink" title="重复匹配"></a>重复匹配</h6><ul>
-<li>元字符 [0-9]+ 0-9中的数字的一个以上 不能0个</li>
-<li>举个例子 关于邮箱地址的匹配 <ul>
-<li>\w@\w\.\w 升级</li>
-<li>\w+@\w+\.\w+</li>
-<li>升级\[\w.]+@\[\w\.]+\.[\w.]+ 注意这个例子可以看出我们的在[]里所有的元字符都可以看作是普通字符 但是转义了也没有错误</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><h4 id="元字符"><a href="#元字符" class="headerlink" title="*元字符"></a>*元字符</h4><ul>
-<li>可以匹配0次与任意次 相当于 + 的升级版</li>
-<li>\w+[\w.]*@[\w.]+\.\w+  可以把* 看作可选项  实质理解</li>
-</ul>
-</li>
-<li><h4 id="？元字符"><a href="#？元字符" class="headerlink" title="？元字符"></a>？元字符</h4><ul>
-<li>匹配一次或零次 http:&#x2F;&#x2F; 与 https:&#x2F;&#x2F; 不能用s*  httpsss 所以使用？</li>
-<li>[\r]? 与我们的\r? 本质是一样的 但是为了清晰直观 我们通常直接[\r]</li>
-</ul>
-</li>
-<li><h4 id="匹配次数"><a href="#匹配次数" class="headerlink" title="匹配次数"></a>匹配次数</h4><ul>
-<li>{}也是元字符 举个例子就是之前的RGB #[0-9A-Fa-f]写六遍可以使用{6}</li>
-<li>也可以设置一个区间{2.4}</li>
-<li>[]中间是的元字符都是为普通字符，最好写一个\</li>
-<li>匹配至少多少次 {3,}类似python</li>
-</ul>
-</li>
-<li><h4 id="防止过度匹配"><a href="#防止过度匹配" class="headerlink" title="防止过度匹配"></a>防止过度匹配</h4><ul>
-<li><p>使用懒惰版本，进行匹配，前面的匹配都是一个贪婪匹配，例如 * + {n，}   对应的懒惰版本就是加上一个? 例如 * 与 *？ 还有 + +? {n,} {n,}?</p>
-<p>这里的懒惰可以理解成就是 尽量的再匹配到第一个的时候就停下来 ，而贪婪就是匹配到最后一个再停下来</p>
-</li>
-</ul>
-</li>
-<li><h4 id="位置匹配"><a href="#位置匹配" class="headerlink" title="位置匹配"></a>位置匹配</h4><ul>
-<li>指定匹配发生的位置</li>
-<li>\b  一个标记，用来标记一个单词的开头或者是结尾  理解\b 的实质，实质就是匹配一个可以\w 与一个非字母或者是数字的位置\W 之间的一个位置  b代表boundary 注意我们的这个 \b 只是匹配一个位置 ，而不是匹配一个字符  所以 \bcat\b 得到的字符 还是 3个字符 而非5个</li>
-<li>同理 的 \B 来匹配一个你想要的边界 就是 eg night-color  \B-\B 可以匹配 但是我们的 color - color 就是无法匹配</li>
-<li>^ 这里来再次出现 用作 标记字符串的开始位置 $ 用于标记字符串的结尾</li>
-<li>举个例子 匹配一个 XML 文件  因为必须要求 这个声明位于一个文档的最开始 所以我们需要进行 字符串的一个声明 例如 这个 ^\s*&lt;?xml.*?&gt;</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+                <h2 id="可以开始了解CMake"><a href="#可以开始了解CMake" class="headerlink" title="可以开始了解CMake"></a>可以开始了解CMake</h2><p><em><strong>只是简单得贴一个网址</strong></em></p>
+<p><em><strong>[CMAKE](<a class="link"   target="_blank" rel="noopener" href="https://cmake.org/cmake/help/latest/guide/tutorial/index.html" >CMake Tutorial — CMake 3.27.4 Documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>)</strong></em></p>
+<p><em><strong><a class="link"   target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/naming/" >CPPformal <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></em></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://github.com/nlohmann/json" >json <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 
             </div>
 
@@ -666,11 +577,11 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：正则表达式</li>
+        <li>Post title：Cmake</li>
         <li>Post author：Winter</li>
-        <li>Create time：2023-03-25 20:37:20</li>
+        <li>Create time：2023-09-12 17:11:06</li>
         <li>
-            Post link：https://spikeihg.github.io/2023/03/25/正则表达式/
+            Post link：https://spikeihg.github.io/2023/09/12/Cmake/
         </li>
         <li>
             Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
@@ -685,7 +596,7 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/SCRAPE/">#SCRAPE</a>&nbsp;
+                            <a href="/tags/Cmake/">#Cmake</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -696,29 +607,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/03/25/hexo%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">hexo搭建指南</span>
-                                    <span class="post-nav-item">Prev posts</span>
-                                </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/03/24/Prim/"
+                            href="/2023/05/06/TLCL/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">Prim</span>
+                                    <span class="post-nav-title-item">TLCL</span>
                                     <span class="post-nav-item">Next posts</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -796,8 +692,8 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">正则表达式</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-text">引言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="nav-text">简单的语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BA%AF%E6%96%87%E6%9C%AC%E5%8C%B9%E9%85%8D"><span class="nav-text">纯文本匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%B7-%E5%8C%B9%E9%85%8D"><span class="nav-text">**.号**匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8C%B9%E9%85%8D%E6%83%B3%E8%A6%81%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6"><span class="nav-text">匹配想要中的字符</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E8%A1%A8%E7%A4%BA"><span class="nav-text">集合表示</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%9A%E4%B8%AA%E9%9B%86%E5%90%88%E5%8C%B9%E9%85%8D"><span class="nav-text">多个集合匹配</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%96%E9%9D%9E%E5%8C%B9%E9%85%8D"><span class="nav-text">取非匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%83%E5%AD%97%E7%AC%A6%E5%8C%B9%E9%85%8D"><span class="nav-text">元字符匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%9A%84%E5%85%83%E5%AD%97%E7%AC%A6"><span class="nav-text">特殊的元字符</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%AF%B9%E9%9B%86%E5%90%88%E7%9A%84%E7%AE%80%E5%8C%96"><span class="nav-text">对集合的简化</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%87%8D%E5%A4%8D%E5%8C%B9%E9%85%8D"><span class="nav-text">重复匹配</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%83%E5%AD%97%E7%AC%A6"><span class="nav-text">*元字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%9F%E5%85%83%E5%AD%97%E7%AC%A6"><span class="nav-text">？元字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8C%B9%E9%85%8D%E6%AC%A1%E6%95%B0"><span class="nav-text">匹配次数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%B2%E6%AD%A2%E8%BF%87%E5%BA%A6%E5%8C%B9%E9%85%8D"><span class="nav-text">防止过度匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%8D%E7%BD%AE%E5%8C%B9%E9%85%8D"><span class="nav-text">位置匹配</span></a></li></ol></li></ol></li></ol>
+        <div class="page-title">Cmake</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E4%BB%A5%E5%BC%80%E5%A7%8B%E4%BA%86%E8%A7%A3CMake"><span class="nav-text">可以开始了解CMake</span></a></li></ol>
 
     </div>
 </div>
