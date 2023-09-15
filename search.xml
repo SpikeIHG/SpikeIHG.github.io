@@ -601,6 +601,7 @@
     <content><![CDATA[<h1 id="TLCL"><a href="#TLCL" class="headerlink" title="TLCL"></a>TLCL</h1><ul>
 <li><h2 id="Why-Linux？"><a href="#Why-Linux？" class="headerlink" title="Why Linux？"></a><strong>Why Linux？</strong></h2><ul>
 <li><h3 id="linux-人们会发现只有键盘才是计算机的一个灵魂，使用命令行不是为了看起来高深莫测，而是为解决复杂问题提供一个简化的可能！"><a href="#linux-人们会发现只有键盘才是计算机的一个灵魂，使用命令行不是为了看起来高深莫测，而是为解决复杂问题提供一个简化的可能！" class="headerlink" title="linux 人们会发现只有键盘才是计算机的一个灵魂，使用命令行不是为了看起来高深莫测，而是为解决复杂问题提供一个简化的可能！"></a>linux 人们会发现只有键盘才是计算机的一个灵魂，使用命令行不是为了看起来高深莫测，而是为解决复杂问题提供一个简化的可能！</h3></li>
+<li><h3 id="shell-解释-是kernel-outermost-layer-os向用户提供的一个interface有两种类型的，一种是CLS-cmdline形式的-而对应的有相关的scriped-language-例如bash-还有就是xwindows-驱动的GUI"><a href="#shell-解释-是kernel-outermost-layer-os向用户提供的一个interface有两种类型的，一种是CLS-cmdline形式的-而对应的有相关的scriped-language-例如bash-还有就是xwindows-驱动的GUI" class="headerlink" title="shell 解释 是kernel outermost layer os向用户提供的一个interface有两种类型的，一种是CLS cmdline形式的 而对应的有相关的scriped language 例如bash 还有就是xwindows 驱动的GUI"></a>shell 解释 是kernel outermost layer os向用户提供的一个interface有两种类型的，一种是CLS cmdline形式的 而对应的有相关的scriped language 例如bash 还有就是xwindows 驱动的GUI</h3></li>
 </ul>
 </li>
 <li><p>贴个网址 <a class="link"   href="http://billie66.github.io/TLCL/book/index.html" >TLCL <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
@@ -608,9 +609,21 @@
 <li><h2 id="command"><a href="#command" class="headerlink" title="command"></a>command</h2><ul>
 <li><h4 id="shift-ctrl-6-切出wsl"><a href="#shift-ctrl-6-切出wsl" class="headerlink" title="shift+ctrl+6 切出wsl"></a>shift+ctrl+6 切出wsl</h4></li>
 <li><h4 id="winter——主机名，SPIKE——用户名"><a href="#winter——主机名，SPIKE——用户名" class="headerlink" title="winter——主机名，SPIKE——用户名"></a>winter——主机名，SPIKE——用户名</h4></li>
-<li><h4 id="date-时间-cal-日历"><a href="#date-时间-cal-日历" class="headerlink" title="date 时间 cal 日历"></a>date 时间 cal 日历</h4></li>
+<li><h4 id="date-时间-calendar-日历"><a href="#date-时间-calendar-日历" class="headerlink" title="date 时间 calendar 日历"></a>date 时间 calendar 日历</h4></li>
+<li><h4 id="ls-symbolized-stand-for-the-user-directory-ls-could-specify-the-dr-you-wanna-check"><a href="#ls-symbolized-stand-for-the-user-directory-ls-could-specify-the-dr-you-wanna-check" class="headerlink" title="ls ~ ~ symbolized stand for the user directory ls could specify the dr you wanna check."></a>ls ~ ~ symbolized stand for the user directory ls could specify the dr you wanna check.</h4></li>
+<li><h4 id="we-could-add-some-format-cmd-to-reveal-more-details-ls-l"><a href="#we-could-add-some-format-cmd-to-reveal-more-details-ls-l" class="headerlink" title="we could add some format cmd to reveal more details ls -l"></a>we could add some format cmd to reveal more details ls -l</h4></li>
+<li><h4 id="the-meaning-of-the-long-format-indicate-the-file-type-and-then-the-next-three-letters-indicates-the-access-rights-and-then"><a href="#the-meaning-of-the-long-format-indicate-the-file-type-and-then-the-next-three-letters-indicates-the-access-rights-and-then" class="headerlink" title="the meaning of the long format - indicate the file type and  then the next three letters indicates the access rights and then"></a>the meaning of the long format - indicate the file type and  then the next three letters indicates the access rights and then</h4></li>
+<li><h4 id="f11-keystroke-could-full-screenize-the-console"><a href="#f11-keystroke-could-full-screenize-the-console" class="headerlink" title="f11 keystroke could full-screenize the console"></a>f11 keystroke could full-screenize the console</h4></li>
+<li><h4 id="file-check-the-brief-info-of-a-file"><a href="#file-check-the-brief-info-of-a-file" class="headerlink" title="file check the brief info of a file"></a>file check the brief info of a file</h4></li>
+<li><h4 id="everything-is-file-and-mostly-the-text-file-only-contain-ascii-code"><a href="#everything-is-file-and-mostly-the-text-file-only-contain-ascii-code" class="headerlink" title="everything is file and mostly the text file only contain ascii code"></a>everything is file and mostly the text file only contain ascii code</h4></li>
+<li><h4 id="configuration-file-or-the-actually-source-file-most-stored-in-text-file-format"><a href="#configuration-file-or-the-actually-source-file-most-stored-in-text-file-format" class="headerlink" title="configuration file or the actually source file most stored in text file format"></a>configuration file or the actually source file most stored in text file format</h4></li>
+<li><h4 id="less-less-is-more-and-the-up-down-arrow-q-h-n-some-key-cmd-you-should-know"><a href="#less-less-is-more-and-the-up-down-arrow-q-h-n-some-key-cmd-you-should-know" class="headerlink" title="less less is more and the up down arrow q h n some key cmd you should know"></a>less less is more and the up down arrow q h n some key cmd you should know</h4></li>
+<li><h4 id="there-are-some-standard-pathname-in-unix-like-system-just-feel-free-to-explore-and-dont-mind-we-could-hardly-mess-up-for-the-administrator-keep-everything-in-order"><a href="#there-are-some-standard-pathname-in-unix-like-system-just-feel-free-to-explore-and-dont-mind-we-could-hardly-mess-up-for-the-administrator-keep-everything-in-order" class="headerlink" title="there are some standard pathname in unix-like system just feel free to explore , and dont mind ,we could hardly mess up for the administrator keep everything in order"></a>there are some standard pathname in unix-like system just feel free to explore , and dont mind ,we could hardly mess up for the administrator keep everything in order</h4></li>
+<li></li>
+<li><h4 id="代表的是父文件-代表当前的工作文件"><a href="#代表的是父文件-代表当前的工作文件" class="headerlink" title=".. 代表的是父文件 . 代表当前的工作文件"></a>.. 代表的是父文件 . 代表当前的工作文件</h4></li>
 <li><h4 id="dr-磁盘空间情况-free-内存空间情况"><a href="#dr-磁盘空间情况-free-内存空间情况" class="headerlink" title="dr 磁盘空间情况 free 内存空间情况"></a>dr 磁盘空间情况 free 内存空间情况</h4></li>
 <li><h4 id="exit-退出程序"><a href="#exit-退出程序" class="headerlink" title="exit 退出程序"></a>exit 退出程序</h4></li>
+<li><h4 id="ls-most-used-cmd-in-shell"><a href="#ls-most-used-cmd-in-shell" class="headerlink" title="ls most used cmd in shell"></a>ls most used cmd in shell</h4></li>
 <li><h4 id="用户-superuser-rootuser"><a href="#用户-superuser-rootuser" class="headerlink" title="$ 用户     # superuser rootuser"></a>$ 用户     # superuser rootuser</h4></li>
 <li><h4 id="file-navigation·"><a href="#file-navigation·" class="headerlink" title="file navigation·"></a>file navigation·</h4><ul>
 <li><h5 id="pwd-print-name-of-workplace-directory"><a href="#pwd-print-name-of-workplace-directory" class="headerlink" title="pwd print name of workplace directory"></a>pwd print name of workplace directory</h5></li>
@@ -624,15 +637,22 @@
 </li>
 <li><h4 id="cd-pathname"><a href="#cd-pathname" class="headerlink" title="cd + pathname"></a>cd + pathname</h4><ul>
 <li>cd   或者是 cd ~默认进入用户文件夹</li>
-<li>cd ~user_name 进入对应名字 的用户文件夹</li>
+</ul>
+</li>
+<li><p>cd ~user_name 进入对应名字 的用户文件夹</p>
+<ul>
 <li>cd - 回到先前 的文件夹</li>
+</ul>
+</li>
+<li><p>cd .. 回到父文件</p>
+</li>
 </ul>
 </li>
 <li><h4 id="开头的文件夹-通常是不显示的-隐藏的-注入configuration-类的文件"><a href="#开头的文件夹-通常是不显示的-隐藏的-注入configuration-类的文件" class="headerlink" title=". 开头的文件夹 通常是不显示的 隐藏的 注入configuration 类的文件"></a>. 开头的文件夹 通常是不显示的 隐藏的 注入configuration 类的文件</h4></li>
 </ul>
 </li>
 <li><h4 id="用-代替文件名-中的空格"><a href="#用-代替文件名-中的空格" class="headerlink" title="用 . _ - 代替文件名 中的空格"></a>用 . _ - 代替文件名 中的空格</h4></li>
-<li><h4 id="支持-鼠标中间-paste-双击-copy-或者-选择-copy"><a href="#支持-鼠标中间-paste-双击-copy-或者-选择-copy" class="headerlink" title="支持 鼠标中间 paste 双击 copy 或者 选择 copy"></a>支持 鼠标中间 paste 双击 copy 或者 选择 copy</h4></li>
+<li><h4 id="支持-鼠标中间-paste-双击-copy-或者-选择-copy"><a href="#支持-鼠标中间-paste-双击-copy-或者-选择-copy" class="headerlink" title="支持 鼠标中间 paste 双击 copy 或者 选择 copy"></a>支持 鼠标中间 paste 双击 copy 或者 选择 copy</h4><ul>
 <li><h4 id="上下键-寻找历史命令最大500个"><a href="#上下键-寻找历史命令最大500个" class="headerlink" title="上下键 寻找历史命令最大500个"></a>上下键 寻找历史命令最大500个</h4></li>
 <li><h4 id="ls指令再探dd"><a href="#ls指令再探dd" class="headerlink" title="ls指令再探dd"></a>ls指令再探dd</h4><ul>
 <li><p><img  
@@ -643,6 +663,8 @@
                 ></p>
 </li>
 <li><h5 id="short-option-l-一个字母-可以组合-lt"><a href="#short-option-l-一个字母-可以组合-lt" class="headerlink" title="short option  -l 一个字母 可以组合 -lt"></a>short option  -l 一个字母 可以组合 -lt</h5></li>
+</ul>
+</li>
 <li><h5 id="long-option-–reverse-全称"><a href="#long-option-–reverse-全称" class="headerlink" title="long option –reverse  全称"></a>long option –reverse  全称</h5></li>
 <li><p><img  
                      lazyload
@@ -660,23 +682,25 @@
 </li>
 <li><h4 id="Less"><a href="#Less" class="headerlink" title="Less"></a>Less</h4><ul>
 <li><h4 id="less-查看文本文件-everything-is-file"><a href="#less-查看文本文件-everything-is-file" class="headerlink" title="less 查看文本文件 everything is file"></a>less 查看文本文件 everything is file</h4></li>
-<li><h4 id="ascII-as-key"><a href="#ascII-as-key" class="headerlink" title="ascII as-key"></a>ascII as-key</h4></li>
-<li><p><img  
+<li><h4 id="ascII-as-key"><a href="#ascII-as-key" class="headerlink" title="ascII as-key"></a>ascII as-key</h4><ul>
+<li><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="/../images/less.png"
                      
-                ></p>
+                ></li>
+</ul>
 </li>
 </ul>
 </li>
 <li><h4 id="键盘高级操作"><a href="#键盘高级操作" class="headerlink" title="键盘高级操作"></a>键盘高级操作</h4><ul>
-<li><img  
+<li><p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="/../images/cl.png"
                      
-                ></li>
+                ></p>
+<ul>
 <li><img  
                      lazyload
                      src="/images/loading.svg"
