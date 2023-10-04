@@ -6,7 +6,7 @@
   <link href="https://spikeihg.github.io/atom.xml" rel="self"/>
   
   <link href="https://spikeihg.github.io/"/>
-  <updated>2023-10-03T03:03:01.048Z</updated>
+  <updated>2023-10-04T12:31:32.135Z</updated>
   <id>https://spikeihg.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TLCL@3</title>
+    <link href="https://spikeihg.github.io/2023/10/04/TLCL-3/"/>
+    <id>https://spikeihg.github.io/2023/10/04/TLCL-3/</id>
+    <published>2023-10-04T09:48:31.000Z</published>
+    <updated>2023-10-04T12:31:32.135Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="TLCL-chapter-3"><a href="#TLCL-chapter-3" class="headerlink" title="TLCL chapter 3"></a>TLCL chapter 3</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;TLCL-chapter-3&quot;&gt;&lt;a href=&quot;#TLCL-chapter-3&quot; class=&quot;headerlink&quot; title=&quot;TLCL chapter 3&quot;&gt;&lt;/a&gt;TLCL chapter 3&lt;/h2&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="LINUX" scheme="https://spikeihg.github.io/tags/LINUX/"/>
+    
+  </entry>
   
   <entry>
     <title>signature</title>
@@ -389,7 +411,7 @@
     <link href="https://spikeihg.github.io/2023/03/22/Scrape/"/>
     <id>https://spikeihg.github.io/2023/03/22/Scrape/</id>
     <published>2023-03-22T13:13:13.000Z</published>
-    <updated>2023-10-02T12:45:51.911Z</updated>
+    <updated>2023-10-04T12:32:23.659Z</updated>
     
     <content type="html"><![CDATA[<hr><blockquote><p>本文使用的颜色较多，开启夜间模式阅读效果更好</p></blockquote><hr><h2 id="本系列主要是对阅读了python网络编程相关的总结与回顾"><a href="#本系列主要是对阅读了python网络编程相关的总结与回顾" class="headerlink" title="本系列主要是对阅读了python网络编程相关的总结与回顾"></a>本系列主要是对阅读了python网络编程相关的总结与回顾</h2><ol><li><h3 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h3><ol><li><h4 id="http简介"><a href="#http简介" class="headerlink" title="http简介"></a><strong>http简介</strong></h4>  <em><strong>url</strong></em> : 统一资源定位符  格式如下 []代表可省略<br> <font color=seablue>protocol :&#x2F;&#x2F;[username:password@] hostname[:port] &#x2F; path &#x2F; [;parameters][?query]#fragment  </font><br> <font color=yellow>protocol</font>  : 协议 主要有 http,https,ftp,sms,<br> <font color =red>username,password</font> : 主要ftp<br> <font color =green>hostname</font> ： 主机名也就是域名 也可以用DNS映射得到IP地址，有一级二级域名之分<br> <font color =brown>port</font> : 端口号 http默认是80 类似还有https 443 属于套接口<br> <font color='cayon'>path</font> : 路径 就是位于主机中的地址<br> <font color='purple'>parameters</font> : 附加信息 现在用的少了<br> <font color=gold>query</font>  : 查询，多个查询就用&amp;分开，GET请求参数里也有<br> <font color=#a34929>fragment</font> : 片段 资源的补充 似乎很少使用<br> <font style =background:seagreen>http基本转向https 基于SSL socket相关也是爬取的主要内容</font>  </li><li><h4 id="http请求过程"><a href="#http请求过程" class="headerlink" title="http请求过程"></a><strong>http请求过程</strong></h4> <u>使用F12 Network 监听 Ctrl+R </u><br> <font color=seaf>Status</font>    : 状态码就是404 403 200 类似的<br> <font color=gold>Initiator</font> : 请求源 标记请求是由哪个进程或对象发起的<br> <font color=chocolate>Request</font>请求方法 请求头 请求体<br> <font color = aqua>Request Method</font> ： 请求方法GET POST居多 还有PUT DELETE 很多<br> <font color=azure></font><br> <font color=darkblue></font><br> <font color=coroflowerblue></font><br> <font color=blueviolet></font><br> <font color=coral></font><br> <font color=darkBlue></font></li></ol></li></ol><p>​        </p>]]></content>
     
@@ -452,28 +474,6 @@
     
     
     <category term="Elements" scheme="https://spikeihg.github.io/tags/Elements/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>单调栈</title>
-    <link href="https://spikeihg.github.io/2023/03/16/%E5%8D%95%E8%B0%83%E6%A0%88/"/>
-    <id>https://spikeihg.github.io/2023/03/16/%E5%8D%95%E8%B0%83%E6%A0%88/</id>
-    <published>2023-03-16T11:09:14.000Z</published>
-    <updated>2023-03-22T11:25:52.917Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="关于单调栈的一些东西"><a href="#关于单调栈的一些东西" class="headerlink" title="关于单调栈的一些东西"></a>关于单调栈的一些东西</h2><h3 id="单调栈模板"><a href="#单调栈模板" class="headerlink" title="单调栈模板"></a>单调栈模板</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">3000010</span>;</span><br><span class="line"><span class="type">int</span> a[N],f[N];</span><br><span class="line">stack&lt;<span class="type">int</span>&gt;s;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=n;i&gt;=<span class="number">1</span>;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(!s.<span class="built_in">empty</span>()&amp;&amp;a[s.<span class="built_in">top</span>()]&lt;=a[i])</span><br><span class="line">        s.<span class="built_in">pop</span>();</span><br><span class="line">        f[i]=s.<span class="built_in">empty</span>()?<span class="number">0</span>:s.<span class="built_in">top</span>();</span><br><span class="line">        s.<span class="built_in">push</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,f[i]);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;关于单调栈的一些东西&quot;&gt;&lt;a href=&quot;#关于单调栈的一些东西&quot; class=&quot;headerlink&quot; title=&quot;关于单调栈的一些东西&quot;&gt;&lt;/a&gt;关于单调栈的一些东西&lt;/h2&gt;&lt;h3 id=&quot;单调栈模板&quot;&gt;&lt;a href=&quot;#单调栈模板&quot; class=&quot;he</summary>
-      
-    
-    
-    
-    
-    <category term="C++" scheme="https://spikeihg.github.io/tags/C/"/>
     
   </entry>
   
