@@ -6,7 +6,7 @@
   <link href="https://spikeihg.github.io/atom.xml" rel="self"/>
   
   <link href="https://spikeihg.github.io/"/>
-  <updated>2023-10-04T12:31:32.135Z</updated>
+  <updated>2023-10-04T14:29:05.159Z</updated>
   <id>https://spikeihg.github.io/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="https://spikeihg.github.io/2023/10/04/TLCL-3/"/>
     <id>https://spikeihg.github.io/2023/10/04/TLCL-3/</id>
     <published>2023-10-04T09:48:31.000Z</published>
-    <updated>2023-10-04T12:31:32.135Z</updated>
+    <updated>2023-10-04T14:29:05.159Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="TLCL-chapter-3"><a href="#TLCL-chapter-3" class="headerlink" title="TLCL chapter 3"></a>TLCL chapter 3</h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="TLCL-chapter-3"><a href="#TLCL-chapter-3" class="headerlink" title="TLCL chapter 3"></a>TLCL chapter 3</h2><h3 id="GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf"><a href="#GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf" class="headerlink" title="GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)"></a><font color=pink>GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)</font></h3>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;TLCL-chapter-3&quot;&gt;&lt;a href=&quot;#TLCL-chapter-3&quot; class=&quot;headerlink&quot; title=&quot;TLCL chapter 3&quot;&gt;&lt;/a&gt;TLCL chapter 3&lt;/h2&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;TLCL-chapter-3&quot;&gt;&lt;a href=&quot;#TLCL-chapter-3&quot; class=&quot;headerlink&quot; title=&quot;TLCL chapter 3&quot;&gt;&lt;/a&gt;TLCL chapter 3&lt;/h2&gt;&lt;h3 id=&quot;GOOOOOOOOOOOOOOD-</summary>
       
     
     
@@ -113,9 +113,9 @@
     <link href="https://spikeihg.github.io/2023/09/16/CSAPP/"/>
     <id>https://spikeihg.github.io/2023/09/16/CSAPP/</id>
     <published>2023-09-16T07:59:01.000Z</published>
-    <updated>2023-10-04T14:00:40.431Z</updated>
+    <updated>2023-10-04T14:27:22.986Z</updated>
     
-    <content type="html"><![CDATA[<ul><li><h2 id="CSAPP"><a href="#CSAPP" class="headerlink" title="CSAPP"></a>CSAPP</h2><ul><li><h3 id="terms-colletion"><a href="#terms-colletion" class="headerlink" title="terms colletion"></a>terms colletion</h3><ul><li>snippet re-useble code part maybe name the directory</li></ul></li><li><h3 id="tldr"><a href="#tldr" class="headerlink" title="tldr"></a>tldr</h3><ul><li>to long didn’t read and a linux simplified manual cm</li></ul></li><li><p><a href="../images/file/normal.pdf">Try</a></p></li><li></li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<ul><li><h2 id="CSAPP"><a href="#CSAPP" class="headerlink" title="CSAPP"></a>CSAPP</h2><ul><li><h3 id="terms-colletion"><a href="#terms-colletion" class="headerlink" title="terms colletion"></a>terms colletion</h3><ul><li>snippet re-useble code part maybe name the directory</li></ul></li><li><h3 id="tldr"><a href="#tldr" class="headerlink" title="tldr"></a>tldr</h3><ul><li>to long didn’t read and a linux simplified manual cm</li></ul></li><li><p><a href="/../images/file/normal.pdf">Try</a></p></li><li><p><a class="link"   href="file:///" >try <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></li></ul></li></ul>]]></content>
     
     
       

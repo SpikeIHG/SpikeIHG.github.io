@@ -830,9 +830,10 @@
 <li>to long didn’t read and a linux simplified manual cm</li>
 </ul>
 </li>
-<li><p><a href="../images/file/normal.pdf">Try</a></p>
+<li><p><a href="/../images/file/normal.pdf">Try</a></p>
 </li>
-<li></li>
+<li><p><a class="link"   href="file:///" >try <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</li>
 </ul>
 </li>
 </ul>
@@ -930,7 +931,7 @@
   <entry>
     <title>TLCL@3</title>
     <url>/2023/10/04/TLCL-3/</url>
-    <content><![CDATA[<h2 id="TLCL-chapter-3"><a href="#TLCL-chapter-3" class="headerlink" title="TLCL chapter 3"></a>TLCL chapter 3</h2>]]></content>
+    <content><![CDATA[<h2 id="TLCL-chapter-3"><a href="#TLCL-chapter-3" class="headerlink" title="TLCL chapter 3"></a>TLCL chapter 3</h2><h3 id="GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf"><a href="#GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf" class="headerlink" title="GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)"></a><font color=pink>GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)</font></h3>]]></content>
       <tags>
         <tag>LINUX</tag>
       </tags>
