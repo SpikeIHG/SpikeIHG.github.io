@@ -830,9 +830,7 @@
 <li>to long didn’t read and a linux simplified manual cm</li>
 </ul>
 </li>
-<li><p><a href="/../images/file/normal.pdf">Try</a></p>
-</li>
-<li><p><a class="link"   href="file:///" >try <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<li><p><a href="/doc/normal.pdf">Try</a></p>
 </li>
 </ul>
 </li>
@@ -931,7 +929,17 @@
   <entry>
     <title>TLCL@3</title>
     <url>/2023/10/04/TLCL-3/</url>
-    <content><![CDATA[<h2 id="TLCL-chapter-3"><a href="#TLCL-chapter-3" class="headerlink" title="TLCL chapter 3"></a>TLCL chapter 3</h2><h3 id="GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf"><a href="#GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf" class="headerlink" title="GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)"></a><font color=pink>GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)</font></h3>]]></content>
+    <content><![CDATA[<h2 id="TLCL-chapter-3"><a href="#TLCL-chapter-3" class="headerlink" title="TLCL chapter 3"></a>TLCL chapter 3</h2><h3 id="GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf"><a href="#GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf" class="headerlink" title="GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)"></a><font color=pink>GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)</font></h3><ul>
+<li><h3 id="文件操作here"><a href="#文件操作here" class="headerlink" title="文件操作here"></a>文件操作<a class="link"   href="http://billie66.github.io/TLCL/book/chap16.html" >here <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h3><ul>
+<li>设计很多底层硬件，由于wsl与虚拟机文件差别较大暂时skip read</li>
+</ul>
+</li>
+<li><h3 id="网络葵花宝典下载"><a href="#网络葵花宝典下载" class="headerlink" title="网络葵花宝典下载"></a>网络<a href="/doc/%E8%91%B5%E8%8A%B1%E5%AE%9D%E5%85%B8.pdf">葵花宝典下载</a></h3><ul>
+<li></li>
+</ul>
+</li>
+</ul>
+]]></content>
       <tags>
         <tag>LINUX</tag>
       </tags>
