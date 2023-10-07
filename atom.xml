@@ -6,7 +6,7 @@
   <link href="https://spikeihg.github.io/atom.xml" rel="self"/>
   
   <link href="https://spikeihg.github.io/"/>
-  <updated>2023-10-05T05:44:57.203Z</updated>
+  <updated>2023-10-07T14:22:38.615Z</updated>
   <id>https://spikeihg.github.io/</id>
   
   <author>
@@ -17,13 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>BombLab</title>
+    <link href="https://spikeihg.github.io/2023/10/07/BombLab/"/>
+    <id>https://spikeihg.github.io/2023/10/07/BombLab/</id>
+    <published>2023-10-07T11:36:16.000Z</published>
+    <updated>2023-10-07T14:22:38.615Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="血淋淋的教训啊-关bash的时候一起关了-直接没保存-全部没了-😫"><a href="#血淋淋的教训啊-关bash的时候一起关了-直接没保存-全部没了-😫" class="headerlink" title="血淋淋的教训啊 关bash的时候一起关了 直接没保存 全部没了 😫"></a><font color=pink>血淋淋的教训啊 关bash的时候一起关了 直接没保存 全部没了 😫</font></h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;血淋淋的教训啊-关bash的时候一起关了-直接没保存-全部没了-😫&quot;&gt;&lt;a href=&quot;#血淋淋的教训啊-关bash的时候一起关了-直接没保存-全部没了-😫&quot; class=&quot;headerlink&quot; title=&quot;血淋淋的教训啊 关bash的时候一起关了 直接没</summary>
+      
+    
+    
+    
+    
+    <category term="Linux" scheme="https://spikeihg.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>TLCL@3</title>
     <link href="https://spikeihg.github.io/2023/10/04/TLCL-3/"/>
     <id>https://spikeihg.github.io/2023/10/04/TLCL-3/</id>
     <published>2023-10-04T09:48:31.000Z</published>
-    <updated>2023-10-05T05:44:57.203Z</updated>
+    <updated>2023-10-06T12:13:21.783Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="TLCL-chapter-3"><a href="#TLCL-chapter-3" class="headerlink" title="TLCL chapter 3"></a>TLCL chapter 3</h2><h3 id="GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf"><a href="#GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf" class="headerlink" title="GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)"></a><font color=pink>GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)</font></h3><ul><li><h3 id="文件操作here"><a href="#文件操作here" class="headerlink" title="文件操作here"></a>文件操作<a class="link"   href="http://billie66.github.io/TLCL/book/chap16.html" >here <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h3><ul><li>设计很多底层硬件，由于wsl与虚拟机文件差别较大暂时skip read</li></ul></li><li><h3 id="网络葵花宝典下载"><a href="#网络葵花宝典下载" class="headerlink" title="网络葵花宝典下载"></a>网络<a href="/doc/%E8%91%B5%E8%8A%B1%E5%AE%9D%E5%85%B8.pdf">葵花宝典下载</a></h3><ul><li></li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="TLCL-chapter-3"><a href="#TLCL-chapter-3" class="headerlink" title="TLCL chapter 3"></a>TLCL chapter 3</h2><h3 id="GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf"><a href="#GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf" class="headerlink" title="GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)"></a><font color=pink>GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)</font></h3><ul><li><h3 id="发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记"><a href="#发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记" class="headerlink" title="发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记"></a><font color=aqua>发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记</font></h3></li><li><h3 id="文件操作here"><a href="#文件操作here" class="headerlink" title="文件操作here"></a>文件操作<a class="link"   href="http://billie66.github.io/TLCL/book/chap16.html" >here <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h3><ul><li>设计很多底层硬件，由于wsl与虚拟机文件差别较大暂时skip read</li></ul></li><li><h3 id="网络葵花宝典下载"><a href="#网络葵花宝典下载" class="headerlink" title="网络葵花宝典下载"></a>网络<a href="/doc/%E8%91%B5%E8%8A%B1%E5%AE%9D%E5%85%B8.pdf">葵花宝典下载</a></h3><ul><li></li></ul></li></ul>]]></content>
     
     
       
@@ -272,7 +294,7 @@
     <link href="https://spikeihg.github.io/2023/03/25/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     <id>https://spikeihg.github.io/2023/03/25/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
     <published>2023-03-25T12:37:20.000Z</published>
-    <updated>2023-04-07T16:11:51.048Z</updated>
+    <updated>2023-10-05T16:04:54.896Z</updated>
     
     <content type="html"><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><ul><li><p><font color =chocolate>从前我们学习了KMP算法文本匹配，但是现在我们的这个正则表达式，提供一种单独的语法解决，但是KMP算法仍有很多局限且消耗算力，为了解决网络中的大量匹配问题，引入伟大的正则表达式，用于匹配与替换。</font></p></li><li><p><font color=blue violet>编程语言中我们使用的转义字符等有一定出处，正则表达式最初来自我们的unix机器</font> </p></li><li><h3 id="简单的语法"><a href="#简单的语法" class="headerlink" title="简单的语法"></a>简单的语法</h3><ul><li><h4 id="纯文本匹配"><a href="#纯文本匹配" class="headerlink" title="纯文本匹配"></a>纯文本匹配</h4><p>直接匹配文本，区分大小写，通常只返回第一个，可以编程语言中选择返回所有的数组。 </p></li><li><h4 id="号-匹配"><a href="#号-匹配" class="headerlink" title="**.号**匹配"></a>**<font color=red>.号</font>**匹配</h4><p>. 可以指代包括.在内的所有符号  匹配本身时引入了伟大的<em><strong>转义符号 \</strong></em>  </p></li><li><h4 id="匹配想要中的字符"><a href="#匹配想要中的字符" class="headerlink" title="匹配想要中的字符"></a>匹配想要中的字符</h4><p><font color = coral>使用[]，[]中的只要满足一个就算是匹配</font> 常常用在不区分大小写的表示  [Cc][Aa][Tt].eg事实上我们的markdown都有转义字符</p><ul><li><h5 id="集合表示"><a href="#集合表示" class="headerlink" title="集合表示"></a>集合表示</h5><blockquote><p>一个自然的过渡，如果，集合中元素很多时，且连续，使用[A-Z] 遵循阿斯克码</p></blockquote></li><li><p><font color=seagreen>\ 与-都是元字符 -不需转义</font></p></li><li><h5 id="多个集合匹配"><a href="#多个集合匹配" class="headerlink" title="多个集合匹配"></a>多个集合匹配</h5><blockquote><p>举个例子[A-Za-z0-9]就是有三个集合 网页的十六进制颜色表示就是一种应用 [0-9A-Fa-f]</p></blockquote></li></ul></li><li><h4 id="取非匹配"><a href="#取非匹配" class="headerlink" title="取非匹配"></a>取非匹配</h4><ul><li>使用元字符^ 且作用于集合 注意是在集合的内部 求非 代表一个[^]因为具有多义性</li></ul></li><li><h4 id="元字符匹配"><a href="#元字符匹配" class="headerlink" title="元字符匹配"></a>元字符匹配</h4><ul><li><p>使用转义字符匹配 </p></li><li><p>[] - ^ \ . +</p></li><li><h6 id="特殊的元字符"><a href="#特殊的元字符" class="headerlink" title="特殊的元字符"></a>特殊的元字符</h6><ul><li>\f 换页符 \n换行符 \r回车符 \t制表符 \v垂直制表符 [\b]backspace</li><li>举个例子 处理 CSV文件 , 变成空格</li><li>windows 中 \r\n 表示换行 linux  \r可选 \n 必选</li></ul></li><li><h6 id="对集合的简化"><a href="#对集合的简化" class="headerlink" title="对集合的简化"></a>对集合的简化</h6><ul><li>\d 所有的数字&#x3D;[0-9] \D&#x3D;[^0-9]</li><li>\w 所有字母大小写与数字 \W 所有的非</li><li>\s 任何一个空字符 \f\n\r\v\t  \S </li><li>十六进制与八进制 \0x \0  \c 控制字符</li><li>POSIX字符的支持 格式[: 英文描述:]</li></ul></li><li><h6 id="重复匹配"><a href="#重复匹配" class="headerlink" title="重复匹配"></a>重复匹配</h6><ul><li>元字符 [0-9]+ 0-9中的数字的一个以上 不能0个</li><li>举个例子 关于邮箱地址的匹配 <ul><li>\w@\w\.\w 升级</li><li>\w+@\w+\.\w+</li><li>升级\[\w.]+@\[\w\.]+\.[\w.]+ 注意这个例子可以看出我们的在[]里所有的元字符都可以看作是普通字符 但是转义了也没有错误</li></ul></li></ul></li></ul></li><li><h4 id="元字符"><a href="#元字符" class="headerlink" title="*元字符"></a>*元字符</h4><ul><li>可以匹配0次与任意次 相当于 + 的升级版</li><li>\w+[\w.]*@[\w.]+\.\w+  可以把* 看作可选项  实质理解</li></ul></li><li><h4 id="？元字符"><a href="#？元字符" class="headerlink" title="？元字符"></a>？元字符</h4><ul><li>匹配一次或零次 http:&#x2F;&#x2F; 与 https:&#x2F;&#x2F; 不能用s*  httpsss 所以使用？</li><li>[\r]? 与我们的\r? 本质是一样的 但是为了清晰直观 我们通常直接[\r]</li></ul></li><li><h4 id="匹配次数"><a href="#匹配次数" class="headerlink" title="匹配次数"></a>匹配次数</h4><ul><li>{}也是元字符 举个例子就是之前的RGB #[0-9A-Fa-f]写六遍可以使用{6}</li><li>也可以设置一个区间{2.4}</li><li>[]中间是的元字符都是为普通字符，最好写一个\</li><li>匹配至少多少次 {3,}类似python</li></ul></li><li><h4 id="防止过度匹配"><a href="#防止过度匹配" class="headerlink" title="防止过度匹配"></a>防止过度匹配</h4><ul><li><p>使用懒惰版本，进行匹配，前面的匹配都是一个贪婪匹配，例如 * + {n，}   对应的懒惰版本就是加上一个? 例如 * 与 *？ 还有 + +? {n,} {n,}?</p><p>这里的懒惰可以理解成就是 尽量的再匹配到第一个的时候就停下来 ，而贪婪就是匹配到最后一个再停下来</p></li></ul></li><li><h4 id="位置匹配"><a href="#位置匹配" class="headerlink" title="位置匹配"></a>位置匹配</h4><ul><li>指定匹配发生的位置</li><li>\b  一个标记，用来标记一个单词的开头或者是结尾  理解\b 的实质，实质就是匹配一个可以\w 与一个非字母或者是数字的位置\W 之间的一个位置  b代表boundary 注意我们的这个 \b 只是匹配一个位置 ，而不是匹配一个字符  所以 \bcat\b 得到的字符 还是 3个字符 而非5个</li><li>同理 的 \B 来匹配一个你想要的边界 就是 eg night-color  \B-\B 可以匹配 但是我们的 color - color 就是无法匹配</li><li>^ 这里来再次出现 用作 标记字符串的开始位置 $ 用于标记字符串的结尾</li><li>举个例子 匹配一个 XML 文件  因为必须要求 这个声明位于一个文档的最开始 所以我们需要进行 字符串的一个声明 例如 这个 ^\s*&lt;?xml.*?&gt;</li></ul></li></ul></li></ul>]]></content>
     
@@ -452,28 +474,6 @@
     
     
     <category term="MARKDOWN" scheme="https://spikeihg.github.io/tags/MARKDOWN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Winter&#39;s blog</title>
-    <link href="https://spikeihg.github.io/2023/03/16/Winter-s-blog/"/>
-    <id>https://spikeihg.github.io/2023/03/16/Winter-s-blog/</id>
-    <published>2023-03-16T11:09:14.000Z</published>
-    <updated>2023-03-23T09:01:51.340Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="For-Ms-Winter"><a href="#For-Ms-Winter" class="headerlink" title="For Ms.Winter"></a>For Ms.Winter</h2><h3 id="先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功"><a href="#先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功" class="headerlink" title="先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功"></a>先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功</h3>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;For-Ms-Winter&quot;&gt;&lt;a href=&quot;#For-Ms-Winter&quot; class=&quot;headerlink&quot; title=&quot;For Ms.Winter&quot;&gt;&lt;/a&gt;For Ms.Winter&lt;/h2&gt;&lt;h3 id=&quot;先记录一下一个找图片地址的好地方-进入NA</summary>
-      
-    
-    
-    
-    
-    <category term="Elements" scheme="https://spikeihg.github.io/tags/Elements/"/>
     
   </entry>
   

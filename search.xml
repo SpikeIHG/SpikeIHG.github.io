@@ -961,6 +961,7 @@
     <title>TLCL@3</title>
     <url>/2023/10/04/TLCL-3/</url>
     <content><![CDATA[<h2 id="TLCL-chapter-3"><a href="#TLCL-chapter-3" class="headerlink" title="TLCL chapter 3"></a>TLCL chapter 3</h2><h3 id="GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf"><a href="#GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf" class="headerlink" title="GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)"></a><font color=pink>GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)</font></h3><ul>
+<li><h3 id="发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记"><a href="#发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记" class="headerlink" title="发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记"></a><font color=aqua>发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记</font></h3></li>
 <li><h3 id="文件操作here"><a href="#文件操作here" class="headerlink" title="文件操作here"></a>文件操作<a class="link"   href="http://billie66.github.io/TLCL/book/chap16.html" >here <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h3><ul>
 <li>设计很多底层硬件，由于wsl与虚拟机文件差别较大暂时skip read</li>
 </ul>
@@ -973,6 +974,14 @@
 ]]></content>
       <tags>
         <tag>LINUX</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>BombLab</title>
+    <url>/2023/10/07/BombLab/</url>
+    <content><![CDATA[<h3 id="血淋淋的教训啊-关bash的时候一起关了-直接没保存-全部没了-😫"><a href="#血淋淋的教训啊-关bash的时候一起关了-直接没保存-全部没了-😫" class="headerlink" title="血淋淋的教训啊 关bash的时候一起关了 直接没保存 全部没了 😫"></a><font color=pink>血淋淋的教训啊 关bash的时候一起关了 直接没保存 全部没了 😫</font></h3>]]></content>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
 </search>
