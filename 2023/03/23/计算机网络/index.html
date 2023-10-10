@@ -522,8 +522,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-10-05 20:29:59</span>
-            <span class="mobile">2023-10-05 20:29</span>
+            <span class="pc">2023-10-10 19:44:58</span>
+            <span class="mobile">2023-10-10 19:44</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -545,12 +545,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>595 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.2k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>4 Mins</span>
         </span>
     
     
@@ -613,10 +613,72 @@
 </li>
 <li><h3 id="各种物理媒介本质上是模电-数字信号的问题-设计的都是些调解器问题-上行下行-共享-共有的一些特征就是仍然是网络-各种各样的网络"><a href="#各种物理媒介本质上是模电-数字信号的问题-设计的都是些调解器问题-上行下行-共享-共有的一些特征就是仍然是网络-各种各样的网络" class="headerlink" title="各种物理媒介本质上是模电 数字信号的问题 设计的都是些调解器问题 上行下行 共享 共有的一些特征就是仍然是网络 各种各样的网络"></a>各种物理媒介本质上是模电 数字信号的问题 设计的都是些调解器问题 上行下行 共享 共有的一些特征就是仍然是网络 各种各样的网络</h3><ul>
 <li>目前家庭多是宽带（电话线复用或者是电缆实现媒介是双绞铜线）光纤是新兴的还有两者混合的使用 企业多是LAN 和 WLAN  其中以太网是最流行的局域网技术 而wifi是无线接入技术</li>
-<li>现在再底层一点看看物理原因</li>
+<li>现在再底层一点看看物理原因双绞铜线的制作材料费用很低</li>
+</ul>
+</li>
+<li><p><font color=pink>上次又没有保存 全部都没有了┭┮﹏┭┮</font></p>
+</li>
+<li><h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><ul>
+<li>套接字是一种协议软 ，</li>
+<li>主机ip地址以及端口号 port number</li>
+<li>SSL安全套接字层 加密属性</li>
+</ul>
+</li>
+<li><h3 id="Web-与-HTTP-协议"><a href="#Web-与-HTTP-协议" class="headerlink" title="Web 与 HTTP 协议"></a>Web 与 HTTP 协议</h3><ul>
+<li><p>web的应用层协议就是http协议web是应用</p>
+</li>
+<li><p>通信严格上讲是进程间的通信</p>
+</li>
+<li><p>web browser就是客户端 服务器就是服务器端 存放web对象即web页面，通过url引用。url主要两个部分主机名和文件存储路径</p>
+</li>
+<li><p>http使用tcp运算协议</p>
+</li>
+<li><p>http无状态协议 不会保存客户端的状态，同时服务器总是打开的 ，固有的ip地址</p>
+</li>
+<li><p>RRT round-trip time 往返时间</p>
+</li>
+<li><p>请求报文格式</p>
+<ul>
+<li>GET POST HEAD PUT DELETE方法 GET最常见</li>
+<li>格式  请求行 方法名+url+版本收不行就是主机 连接种类 代理 接受语言等视情况 一些额外的字段信息可能存在与 url中间</li>
+</ul>
+</li>
+<li><p>what we can do with telnet </p>
+<ul>
+<li><em><strong><font color=pink>telnet 是一个协议 我们可以用telnet命令来模拟请求报文</font></strong></em></li>
+</ul>
+</li>
+<li><p><em><strong>cookie</strong></em></p>
+<ul>
+<li>基本原理就是四个组件的协调 首先请求报文中有一个cookie首部行 然后相应报文也有 然后服务求后端数据库管理cookie条目 然后浏览器维护一组cookie文件</li>
+<li>服务求端set cookie并将其唯一关联用户之后的行为与信息 每次交互时都附加一个cookie首部行</li>
+</ul>
+</li>
+<li><h3 id="web-cache-也就是代理服务器"><a href="#web-cache-也就是代理服务器" class="headerlink" title="web cache 也就是代理服务器"></a>web cache 也就是代理服务器</h3><ul>
+<li>作为缓存 既面向用户浏览器作为服务端 也向原始服务器请求作为客户端</li>
+<li>大大减低相应时间 的一种方案</li>
+<li>not modified 报文段 解决更新问题</li>
+</ul>
+</li>
+<li><h3 id="DNS-域名解析系统"><a href="#DNS-域名解析系统" class="headerlink" title="DNS 域名解析系统"></a><font color=pink>DNS 域名解析系统</font></h3><ul>
+<li>应用层协议 也是一个分布式数据库 53 端口号</li>
+<li>大致工作情景就是当我使用浏览器请求文件时 浏览器从请求报文中url抽取主机名传送给我们的主机上运行的dns客户端 最后经过服务端传来一个回答报文</li>
 </ul>
 </li>
 </ul>
+</li>
+<li><p><em><strong><font color=pink>之前困扰我的一个问题 为什么有时候有www 有时候域名又没有www <a class="link"   target="_blank" rel="noopener" href="https://www.nexcess.net/blog/is-there-any-reason-to-use-www-in-your-domain/" >here <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></font></strong></em></p>
+</li>
+<li><p><em><strong>还有就是域名和主机名是不一样的</strong></em></p>
+<ul>
+<li>一般来说域名就是一个裸的</li>
+<li>而主机名会在域名加一些前缀 能够唯一标识一台对应功能的机器</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>目前所需差不多就是这样 现在暂时结束 10.10</p>
+</blockquote>
 
             </div>
 
@@ -742,7 +804,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">计算机网络</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%AF%86"><span class="nav-text">计算机网络常识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%8D%E6%AC%A1%E6%B8%A9%E4%B9%A0-%E8%BF%99%E6%AC%A1%E9%81%B5%E4%BB%8E%E5%89%8D%E5%90%8E%E5%AD%A6%E4%B9%A0%E7%9A%84%E9%80%BB%E8%BE%91%E8%BF%9B%E8%A1%8C%E5%90%8D%E8%AF%8D%E6%95%B4%E7%90%86"><span class="nav-text">再次温习 这次遵从前后学习的逻辑进行名词整理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%84%E7%A7%8D%E7%89%A9%E7%90%86%E5%AA%92%E4%BB%8B%E6%9C%AC%E8%B4%A8%E4%B8%8A%E6%98%AF%E6%A8%A1%E7%94%B5-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%97%AE%E9%A2%98-%E8%AE%BE%E8%AE%A1%E7%9A%84%E9%83%BD%E6%98%AF%E4%BA%9B%E8%B0%83%E8%A7%A3%E5%99%A8%E9%97%AE%E9%A2%98-%E4%B8%8A%E8%A1%8C%E4%B8%8B%E8%A1%8C-%E5%85%B1%E4%BA%AB-%E5%85%B1%E6%9C%89%E7%9A%84%E4%B8%80%E4%BA%9B%E7%89%B9%E5%BE%81%E5%B0%B1%E6%98%AF%E4%BB%8D%E7%84%B6%E6%98%AF%E7%BD%91%E7%BB%9C-%E5%90%84%E7%A7%8D%E5%90%84%E6%A0%B7%E7%9A%84%E7%BD%91%E7%BB%9C"><span class="nav-text">各种物理媒介本质上是模电 数字信号的问题 设计的都是些调解器问题 上行下行 共享 共有的一些特征就是仍然是网络 各种各样的网络</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%AF%86"><span class="nav-text">计算机网络常识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%8D%E6%AC%A1%E6%B8%A9%E4%B9%A0-%E8%BF%99%E6%AC%A1%E9%81%B5%E4%BB%8E%E5%89%8D%E5%90%8E%E5%AD%A6%E4%B9%A0%E7%9A%84%E9%80%BB%E8%BE%91%E8%BF%9B%E8%A1%8C%E5%90%8D%E8%AF%8D%E6%95%B4%E7%90%86"><span class="nav-text">再次温习 这次遵从前后学习的逻辑进行名词整理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%84%E7%A7%8D%E7%89%A9%E7%90%86%E5%AA%92%E4%BB%8B%E6%9C%AC%E8%B4%A8%E4%B8%8A%E6%98%AF%E6%A8%A1%E7%94%B5-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%97%AE%E9%A2%98-%E8%AE%BE%E8%AE%A1%E7%9A%84%E9%83%BD%E6%98%AF%E4%BA%9B%E8%B0%83%E8%A7%A3%E5%99%A8%E9%97%AE%E9%A2%98-%E4%B8%8A%E8%A1%8C%E4%B8%8B%E8%A1%8C-%E5%85%B1%E4%BA%AB-%E5%85%B1%E6%9C%89%E7%9A%84%E4%B8%80%E4%BA%9B%E7%89%B9%E5%BE%81%E5%B0%B1%E6%98%AF%E4%BB%8D%E7%84%B6%E6%98%AF%E7%BD%91%E7%BB%9C-%E5%90%84%E7%A7%8D%E5%90%84%E6%A0%B7%E7%9A%84%E7%BD%91%E7%BB%9C"><span class="nav-text">各种物理媒介本质上是模电 数字信号的问题 设计的都是些调解器问题 上行下行 共享 共有的一些特征就是仍然是网络 各种各样的网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%B1%82"><span class="nav-text">应用层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web-%E4%B8%8E-HTTP-%E5%8D%8F%E8%AE%AE"><span class="nav-text">Web 与 HTTP 协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#web-cache-%E4%B9%9F%E5%B0%B1%E6%98%AF%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-text">web cache 也就是代理服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS-%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E7%B3%BB%E7%BB%9F"><span class="nav-text">DNS 域名解析系统</span></a></li></ol></li></ol>
 
     </div>
 </div>
