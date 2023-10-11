@@ -1039,6 +1039,9 @@
 <li><h3 id="SSH-secure-shell"><a href="#SSH-secure-shell" class="headerlink" title="SSH secure shell"></a>SSH secure shell</h3><ul>
 <li><strong>这是一个协议 port number22</strong></li>
 <li><strong><a class="link"   href="https://phoenixnap.com/kb/ssh-to-connect-to-remote-server-linux-or-windows#:~:text=Open%20the%20terminal%20on%20the,ssh%20localhost%20and%20hit%20enter." >一个sshlocalhost教程 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></li>
+</ul>
+</li>
+<li><h3 id="locate-amp-find"><a href="#locate-amp-find" class="headerlink" title="locate &amp; find"></a>locate &amp; find</h3><ul>
 <li></li>
 </ul>
 </li>
@@ -1054,6 +1057,14 @@
     <content><![CDATA[<h3 id="血淋淋的教训啊-关bash的时候一起关了-直接没保存-全部没了-😫"><a href="#血淋淋的教训啊-关bash的时候一起关了-直接没保存-全部没了-😫" class="headerlink" title="血淋淋的教训啊 关bash的时候一起关了 直接没保存 全部没了 😫"></a><font color=pink>血淋淋的教训啊 关bash的时候一起关了 直接没保存 全部没了 😫</font></h3>]]></content>
       <tags>
         <tag>LINUX</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>逻辑电路</title>
+    <url>/2023/10/11/%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF/</url>
+    <content><![CDATA[<h3 id="大爱逻辑电路，简洁是美的灵魂"><a href="#大爱逻辑电路，简洁是美的灵魂" class="headerlink" title="大爱逻辑电路，简洁是美的灵魂"></a><font color=pink>大爱逻辑电路，简洁是美的灵魂</font></h3>]]></content>
+      <tags>
+        <tag>计算机组成原理</tag>
       </tags>
   </entry>
 </search>
