@@ -1061,6 +1061,41 @@
 <li><strong>注意可以进行执行自己的操作 -exec cmd ‘{}’ ‘;’ 注意 {} ； 必不可少 {} 代表的是当前路径 ； 代表命令的结束 要引用起来 因为都是特殊涵义的字符 可以用+ 这样就是全部执行 而不是每次都执行一次 同时可以用-ok 指令代替我们的-exec 这样每次都会进行一下询问 ！！！！</strong></li>
 <li><strong><font color=green>压缩文件</font></strong><ul>
 <li><em><strong>gzip and gunzip</strong></em></li>
+<li><em><strong>gzip + file 注意没有中间选项 此时是原始文件 但是可以对一压缩的文件进行选项查看</strong></em></li>
+<li><em><strong>gunzip -c file.gz 查看压缩文件的内容</strong></em></li>
+<li><em><strong>bzip2 也是一个类似于 gzip的命令 压缩程度更高 gzip -d 就相当于解压缩了</strong></em></li>
+</ul>
+</li>
+<li><strong><font color=blue>归档文件 archiving !!!!</font></strong><ul>
+<li><strong>tar tape archive 备份归档 一组独立的文件或者几个目录 或者两者兼有 通常后缀 为.tar h或者 .tgz 表示 gzip压缩过的归档包</strong></li>
+<li><strong>四个模式 注意先写模式 再写选项</strong></li>
+<li><strong>cf czf 都是创建 tvf 列举查看 xf xvf 就是复原 注意路径名格式</strong></li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/tar.png"
+                     
+                ></li>
+<li><em><strong>zip unzip 与tar和gzip的结合  类似 但是更多用于 与windows交互</strong></em></li>
+</ul>
+</li>
+<li><em><strong>同步<a class="link"   href="http://billie66.github.io/TLCL/book/chap19.html" >可以看看但是似乎目前用的不多 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></em></li>
+<li><em><strong><font color=pink>中间暂时跳过了文本处理和正则来个比较重要的make</font></strong></em><ul>
+<li>脚本语言不需要编译 而是直接执行 例如 shell脚本 python PHP perl ruby</li>
+<li>tar tzvf tarfile | head — 检查指令</li>
+<li>通过这个可以看到一些标准版本源代码的组织形式 其中有一些大写的如README INSTALL 等介绍文件 同时 还有configure文件用于 配置的 同时就是各种头文件和源文件</li>
+<li><em><strong><font color=red>系统的源码通常维护再&#x2F;usr&#x2F;src 中 供多个用户试用的源码通常再&#x2F;usr&#x2F;local&#x2F;src 中</font></strong></em></li>
+<li>构建通常两步 .&#x2F;configure make</li>
+<li>.&#x2F;configure 主要配置相关的需要的环境和依赖项同时创建makefile</li>
+<li>sudo make install 对于一些包装良好的库 可以直接执行此命令安装成功</li>
+</ul>
+</li>
+<li><em><strong><font color=pink>LINUX小子第二步——Shell脚本</font></strong></em><ul>
+<li>编写脚本三步</li>
+<li><em><strong>写一个脚本</strong></em></li>
+<li><em><strong>让其可执行 chomod 755 file 对所有人都可执行 700只有拥有者可以执行</strong></em></li>
+<li><em><strong>放在一个shell能找到的位置 配置PATH 这个原理就是对于可执行文件 如果直接输入名字 shell会在环境变量的path路径中寻找 因此对于通常自己的没有位于相关路径的脚本是找不到的所以需要文件路径通常我们使用相对路径 .&#x2F;prog</strong></em></li>
+<li></li>
 </ul>
 </li>
 </ul>
