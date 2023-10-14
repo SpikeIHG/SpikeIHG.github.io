@@ -6,7 +6,7 @@
   <link href="https://spikeihg.github.io/atom.xml" rel="self"/>
   
   <link href="https://spikeihg.github.io/"/>
-  <updated>2023-10-11T12:24:15.660Z</updated>
+  <updated>2023-10-12T09:14:47.552Z</updated>
   <id>https://spikeihg.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Parallel-Programming</title>
+    <link href="https://spikeihg.github.io/2023/10/12/Parallel-Programming/"/>
+    <id>https://spikeihg.github.io/2023/10/12/Parallel-Programming/</id>
+    <published>2023-10-12T09:07:24.000Z</published>
+    <updated>2023-10-12T09:14:47.552Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="HPC-Parallel-Programming"><a href="#HPC-Parallel-Programming" class="headerlink" title="HPC - Parallel-Programming"></a>HPC - Parallel-Programming</h3><ol><li><h3 id="并行程序设计入门开始"><a href="#并行程序设计入门开始" class="headerlink" title="并行程序设计入门开始"></a><font color=seablue>并行程序设计入门开始</font></h3><ol><li><strong><a class="link"   href="https://heptagonhust.github.io/HPC-roadmap/" >RoadMap <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>来自七边形</strong></li><li></li></ol></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;HPC-Parallel-Programming&quot;&gt;&lt;a href=&quot;#HPC-Parallel-Programming&quot; class=&quot;headerlink&quot; title=&quot;HPC - Parallel-Programming&quot;&gt;&lt;/a&gt;HPC - Parall</summary>
+      
+    
+    
+    
+    
+    <category term="HPC" scheme="https://spikeihg.github.io/tags/HPC/"/>
+    
+  </entry>
   
   <entry>
     <title>逻辑电路</title>
@@ -65,9 +87,9 @@
     <link href="https://spikeihg.github.io/2023/10/04/TLCL-3/"/>
     <id>https://spikeihg.github.io/2023/10/04/TLCL-3/</id>
     <published>2023-10-04T09:48:31.000Z</published>
-    <updated>2023-10-11T12:15:27.136Z</updated>
+    <updated>2023-10-13T15:18:47.335Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="TLCL-chapter-3"><a href="#TLCL-chapter-3" class="headerlink" title="TLCL chapter 3"></a>TLCL chapter 3</h2><h3 id="GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf"><a href="#GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf" class="headerlink" title="GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)"></a><font color=pink>GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)</font></h3><ul><li><h3 id="发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记"><a href="#发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记" class="headerlink" title="发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记"></a><font color=aqua>发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记</font></h3></li><li><h3 id="文件操作here"><a href="#文件操作here" class="headerlink" title="文件操作here"></a>文件操作<a class="link"   href="http://billie66.github.io/TLCL/book/chap16.html" >here <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h3><ul><li>设计很多底层硬件，由于wsl与虚拟机文件差别较大暂时skip read</li></ul></li><li><h3 id="网络葵花宝典下载"><a href="#网络葵花宝典下载" class="headerlink" title="网络葵花宝典下载"></a>网络<a href="/doc/%E8%91%B5%E8%8A%B1%E5%AE%9D%E5%85%B8.pdf">葵花宝典下载</a></h3><ul><li>netstat 指令</li><li>ftp指令</li><li>telnet指令 都是可以直接使用相关协议</li><li>ftp lftp都可以下载文件</li><li><em><strong><font color=pink>wget指令直接下载界面 可行男泵</font></strong></em></li></ul></li><li><h3 id="SSH-secure-shell"><a href="#SSH-secure-shell" class="headerlink" title="SSH secure shell"></a>SSH secure shell</h3><ul><li><strong>这是一个协议 port number22</strong></li><li><strong><a class="link"   href="https://phoenixnap.com/kb/ssh-to-connect-to-remote-server-linux-or-windows#:~:text=Open%20the%20terminal%20on%20the,ssh%20localhost%20and%20hit%20enter." >一个sshlocalhost教程 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></li></ul></li><li><h3 id="locate-amp-find"><a href="#locate-amp-find" class="headerlink" title="locate &amp; find"></a>locate &amp; find</h3><ul><li></li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="TLCL-chapter-3"><a href="#TLCL-chapter-3" class="headerlink" title="TLCL chapter 3"></a>TLCL chapter 3</h2><h3 id="GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf"><a href="#GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf" class="headerlink" title="GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)"></a><font color=pink>GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)</font></h3><ul><li><h3 id="发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记"><a href="#发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记" class="headerlink" title="发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记"></a><font color=aqua>发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记</font></h3></li><li><h3 id="文件操作here"><a href="#文件操作here" class="headerlink" title="文件操作here"></a>文件操作<a class="link"   href="http://billie66.github.io/TLCL/book/chap16.html" >here <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h3><ul><li>设计很多底层硬件，由于wsl与虚拟机文件差别较大暂时skip read</li></ul></li><li><h3 id="网络葵花宝典下载"><a href="#网络葵花宝典下载" class="headerlink" title="网络葵花宝典下载"></a>网络<a href="/doc/%E8%91%B5%E8%8A%B1%E5%AE%9D%E5%85%B8.pdf">葵花宝典下载</a></h3><ul><li>netstat 指令</li><li>ftp指令</li><li>telnet指令 都是可以直接使用相关协议</li><li>ftp lftp都可以下载文件</li><li><em><strong><font color=pink>wget指令直接下载界面 可行男泵</font></strong></em></li></ul></li><li><h3 id="SSH-secure-shell"><a href="#SSH-secure-shell" class="headerlink" title="SSH secure shell"></a>SSH secure shell</h3><ul><li><strong>这是一个协议 port number22</strong></li><li><strong><a class="link"   href="https://phoenixnap.com/kb/ssh-to-connect-to-remote-server-linux-or-windows#:~:text=Open%20the%20terminal%20on%20the,ssh%20localhost%20and%20hit%20enter." >一个sshlocalhost教程 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></li></ul></li><li><h3 id="locate-amp-find"><a href="#locate-amp-find" class="headerlink" title="locate &amp; find"></a>locate &amp; find</h3><ul><li><em><strong><font color=pink>我是真的有病，又一次忘记保存全部没了</font></strong></em></li><li><img                       lazyload                     src="/images/loading.svg"                     data-src="D:\github.1.0\My_blog_hexo\source\images\tests.png"                                     ></li></ul></li><li><p><img                       lazyload                     src="/images/loading.svg"                     data-src="D:\github.1.0\My_blog_hexo\source\images\lo.png"                                     ></p><ul><li><strong>注意可以进行执行自己的操作 -exec cmd ‘{}’ ‘;’ 注意 {} ； 必不可少 {} 代表的是当前路径 ； 代表命令的结束 要引用起来 因为都是特殊涵义的字符 可以用+ 这样就是全部执行 而不是每次都执行一次 同时可以用-ok 指令代替我们的-exec 这样每次都会进行一下询问 ！！！！</strong></li><li><strong><font color=green>压缩文件</font></strong><ul><li><em><strong>gzip and gunzip</strong></em></li></ul></li></ul></li></ul>]]></content>
     
     
       
@@ -447,33 +469,6 @@
     
     
     <category term="计算机网络" scheme="https://spikeihg.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Scrape</title>
-    <link href="https://spikeihg.github.io/2023/03/22/Scrape/"/>
-    <id>https://spikeihg.github.io/2023/03/22/Scrape/</id>
-    <published>2023-03-22T13:13:13.000Z</published>
-    <updated>2023-10-04T12:32:23.659Z</updated>
-    
-    <content type="html"><![CDATA[<hr><blockquote><p>本文使用的颜色较多，开启夜间模式阅读效果更好</p></blockquote><hr><h2 id="本系列主要是对阅读了python网络编程相关的总结与回顾"><a href="#本系列主要是对阅读了python网络编程相关的总结与回顾" class="headerlink" title="本系列主要是对阅读了python网络编程相关的总结与回顾"></a>本系列主要是对阅读了python网络编程相关的总结与回顾</h2><ol><li><h3 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h3><ol><li><h4 id="http简介"><a href="#http简介" class="headerlink" title="http简介"></a><strong>http简介</strong></h4>  <em><strong>url</strong></em> : 统一资源定位符  格式如下 []代表可省略<br> <font color=seablue>protocol :&#x2F;&#x2F;[username:password@] hostname[:port] &#x2F; path &#x2F; [;parameters][?query]#fragment  </font><br> <font color=yellow>protocol</font>  : 协议 主要有 http,https,ftp,sms,<br> <font color =red>username,password</font> : 主要ftp<br> <font color =green>hostname</font> ： 主机名也就是域名 也可以用DNS映射得到IP地址，有一级二级域名之分<br> <font color =brown>port</font> : 端口号 http默认是80 类似还有https 443 属于套接口<br> <font color='cayon'>path</font> : 路径 就是位于主机中的地址<br> <font color='purple'>parameters</font> : 附加信息 现在用的少了<br> <font color=gold>query</font>  : 查询，多个查询就用&amp;分开，GET请求参数里也有<br> <font color=#a34929>fragment</font> : 片段 资源的补充 似乎很少使用<br> <font style =background:seagreen>http基本转向https 基于SSL socket相关也是爬取的主要内容</font>  </li><li><h4 id="http请求过程"><a href="#http请求过程" class="headerlink" title="http请求过程"></a><strong>http请求过程</strong></h4> <u>使用F12 Network 监听 Ctrl+R </u><br> <font color=seaf>Status</font>    : 状态码就是404 403 200 类似的<br> <font color=gold>Initiator</font> : 请求源 标记请求是由哪个进程或对象发起的<br> <font color=chocolate>Request</font>请求方法 请求头 请求体<br> <font color = aqua>Request Method</font> ： 请求方法GET POST居多 还有PUT DELETE 很多<br> <font color=azure></font><br> <font color=darkblue></font><br> <font color=coroflowerblue></font><br> <font color=blueviolet></font><br> <font color=coral></font><br> <font color=darkBlue></font></li></ol></li></ol><p>​        </p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;本文使用的颜色较多，开启夜间模式阅读效果更好&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;本系列主要是对阅读了python网络编程相关的总结与回顾&quot;&gt;&lt;a href=&quot;#本系列主要是对阅读了python网络编程相关的总结</summary>
-      
-    
-    
-    
-    
-    <category term="SCRAPE" scheme="https://spikeihg.github.io/tags/SCRAPE/"/>
     
   </entry>
   
