@@ -1095,6 +1095,9 @@
 <li><em><strong>写一个脚本</strong></em></li>
 <li><em><strong>让其可执行 chomod 755 file 对所有人都可执行 700只有拥有者可以执行</strong></em></li>
 <li><em><strong>放在一个shell能找到的位置 配置PATH 这个原理就是对于可执行文件 如果直接输入名字 shell会在环境变量的path路径中寻找 因此对于通常自己的没有位于相关路径的脚本是找不到的所以需要文件路径通常我们使用相对路径 .&#x2F;prog</strong></em></li>
+</ul>
+</li>
+<li><em><strong><font color=green>安装chrome成功 还得是微软教程但是有乱码的问题同时除了搜索以为ia其他时候都很慢</font></strong></em><ul>
 <li></li>
 </ul>
 </li>
@@ -1135,6 +1138,19 @@
 ]]></content>
       <tags>
         <tag>HPC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Begin_Again</title>
+    <url>/2023/10/15/Begin-Again/</url>
+    <content><![CDATA[<h3 id="计算机科学中的自然原理"><a href="#计算机科学中的自然原理" class="headerlink" title="计算机科学中的自然原理"></a>计算机科学中的自然原理</h3><ul>
+<li><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong><font color =green>感谢过去一年中给予我启发的诸多事物，无论是一本书如CSAPP，一堂课如数字电路，或者一个人如Prof.Strang，所有这些人事都是促使我更加严肃地审视计算机科学与其背后丰富而美丽的思想。所以，我希望继承那些前辈，那群充满热情与想象力的先驱的工作，在这里对CSAPP中的美妙理论进行简答而又深刻的阐释（有点自大哈哈哈哈），希望在有限的时间与文字中，探寻科学与自然的美。</font></strong></p>
+</li>
+<li><h2 id=""><a href="#" class="headerlink" title=""></a></h2></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>自然</tag>
       </tags>
   </entry>
 </search>
