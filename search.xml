@@ -1058,15 +1058,18 @@
                      
                 ></p>
 <ul>
-<li><strong>注意可以进行执行自己的操作 -exec cmd ‘{}’ ‘;’ 注意 {} ； 必不可少 {} 代表的是当前路径 ； 代表命令的结束 要引用起来 因为都是特殊涵义的字符 可以用+ 这样就是全部执行 而不是每次都执行一次 同时可以用-ok 指令代替我们的-exec 这样每次都会进行一下询问 ！！！！</strong></li>
-<li><strong><font color=green>压缩文件</font></strong><ul>
+<li><p><strong>注意可以进行执行自己的操作 -exec cmd ‘{}’ ‘;’ 注意 {} ； 必不可少 {} 代表的是当前路径 ； 代表命令的结束 要引用起来 因为都是特殊涵义的字符 可以用+ 这样就是全部执行 而不是每次都执行一次 同时可以用-ok 指令代替我们的-exec 这样每次都会进行一下询问 ！！！！</strong></p>
+</li>
+<li><p><strong><font color=green>压缩文件</font></strong></p>
+<ul>
 <li><em><strong>gzip and gunzip</strong></em></li>
 <li><em><strong>gzip + file 注意没有中间选项 此时是原始文件 但是可以对一压缩的文件进行选项查看</strong></em></li>
 <li><em><strong>gunzip -c file.gz 查看压缩文件的内容</strong></em></li>
 <li><em><strong>bzip2 也是一个类似于 gzip的命令 压缩程度更高 gzip -d 就相当于解压缩了</strong></em></li>
 </ul>
 </li>
-<li><strong><font color=blue>归档文件 archiving !!!!</font></strong><ul>
+<li><p><strong><font color=blue>归档文件 archiving !!!!</font></strong></p>
+<ul>
 <li><strong>tar tape archive 备份归档 一组独立的文件或者几个目录 或者两者兼有 通常后缀 为.tar h或者 .tgz 表示 gzip压缩过的归档包</strong></li>
 <li><strong>四个模式 注意先写模式 再写选项</strong></li>
 <li><strong>cf czf 都是创建 tvf 列举查看 xf xvf 就是复原 注意路径名格式</strong></li>
@@ -1079,8 +1082,10 @@
 <li><em><strong>zip unzip 与tar和gzip的结合  类似 但是更多用于 与windows交互</strong></em></li>
 </ul>
 </li>
-<li><em><strong>同步<a class="link"   href="http://billie66.github.io/TLCL/book/chap19.html" >可以看看但是似乎目前用的不多 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></em></li>
-<li><em><strong><font color=pink>中间暂时跳过了文本处理和正则来个比较重要的make</font></strong></em><ul>
+<li><p><em><strong>同步<a class="link"   href="http://billie66.github.io/TLCL/book/chap19.html" >可以看看但是似乎目前用的不多 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></em></p>
+</li>
+<li><p><em><strong><font color=pink>中间暂时跳过了文本处理和正则来个比较重要的make</font></strong></em></p>
+<ul>
 <li>脚本语言不需要编译 而是直接执行 例如 shell脚本 python PHP perl ruby</li>
 <li>tar tzvf tarfile | head — 检查指令</li>
 <li>通过这个可以看到一些标准版本源代码的组织形式 其中有一些大写的如README INSTALL 等介绍文件 同时 还有configure文件用于 配置的 同时就是各种头文件和源文件</li>
@@ -1090,15 +1095,48 @@
 <li>sudo make install 对于一些包装良好的库 可以直接执行此命令安装成功</li>
 </ul>
 </li>
-<li><em><strong><font color=pink>LINUX小子第二步——Shell脚本</font></strong></em><ul>
+<li><p><em><strong><font color=pink>LINUX小子第二步——Shell脚本</font></strong></em></p>
+<ul>
 <li>编写脚本三步</li>
 <li><em><strong>写一个脚本</strong></em></li>
 <li><em><strong>让其可执行 chomod 755 file 对所有人都可执行 700只有拥有者可以执行</strong></em></li>
 <li><em><strong>放在一个shell能找到的位置 配置PATH 这个原理就是对于可执行文件 如果直接输入名字 shell会在环境变量的path路径中寻找 因此对于通常自己的没有位于相关路径的脚本是找不到的所以需要文件路径通常我们使用相对路径 .&#x2F;prog</strong></em></li>
 </ul>
 </li>
-<li><em><strong><font color=green>安装chrome成功 还得是微软教程但是有乱码的问题同时除了搜索以为ia其他时候都很慢</font></strong></em><ul>
+<li><p><em><strong><font color=green>安装chrome成功 还得是微软教程但是有乱码的问题同时除了搜索以为ia其他时候都很慢</font></strong></em></p>
+</li>
+<li><p><em><strong><font color=green>Good 现在查看html文件就直接google-chrome + 文件路径</font></strong></em></p>
+</li>
+<li><h3 id="脚本编写"><a href="#脚本编写" class="headerlink" title="脚本编写"></a><font color=blue>脚本编写</font></h3><ul>
+<li><em><strong>注意通常而言在脚本里面 全大写代表常量 小写代表变量</strong></em></li>
+<li><em><strong>一定要正确的书写变量名 在命令行内也可以直接进行变量使用 不需要提前声明 declare -r TITLE 强制命令常量</strong></em></li>
+<li><em><strong>变量名展开的几种形式</strong></em></li>
+<li><img src="/../images/vara.png" alt="../images/vara.png"></li>
+<li><em><strong><font color =red>还有一种高级的操作叫作 here document <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/here.png"
+                     
+                ></font></strong></em></li>
+<li><em><strong>shell函数</strong></em><ul>
+<li>function name{} &#x2F; name(){}两种</li>
+<li>先定义在使用 return语句控制权</li>
+<li>局部变量在内部</li>
+<li>定义方式 local var eg local foo foo&#x3D;0 外部不存在</li>
+<li>完全可以用脚本函数 直接写道 .bashrc中 来代替别名</li>
+</ul>
+</li>
+<li><strong>分支控制</strong><ul>
+<li>$? 检测最近的一个指令执行退出情况 0为成功</li>
+<li>上述的这个正是if控制实现的底层原理</li>
+<li>格式就是if cmd;the cmd; fi 可以借[elif]<ul>
+<li>还有各种文件比较操作<a class="link"   href="http://billie66.github.io/TLCL/book/chap28.html" >逆天 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li>通常是if [expression]</li>
 <li></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1128,7 +1166,7 @@
   <entry>
     <title>Parallel-Programming</title>
     <url>/2023/10/12/Parallel-Programming/</url>
-    <content><![CDATA[<h3 id="HPC-Parallel-Programming"><a href="#HPC-Parallel-Programming" class="headerlink" title="HPC - Parallel-Programming"></a>HPC - Parallel-Programming</h3><ol>
+    <content><![CDATA[<h3 id="HPC-Parallel-Programming、"><a href="#HPC-Parallel-Programming、" class="headerlink" title="HPC - Parallel-Programming、"></a>HPC - Parallel-Programming、</h3><h3 id="重大发现就是我们的这个触摸板-可以做到切换-多个手指同时下滑-就可以显示桌面-左右滑动就可以实现-alt-的切换功能-然后还有就是-f11-对于我们的网页-也可以进行全屏显示-f12-进行监测-同时-还可以触摸屏左右两指滑动进行返回前进历史返回-发现一个巨大的新东西就是我们使用两个手指左右滑动是历史前进后退-使用三个手指是alt功能-使用四个手指是windows桌面切换"><a href="#重大发现就是我们的这个触摸板-可以做到切换-多个手指同时下滑-就可以显示桌面-左右滑动就可以实现-alt-的切换功能-然后还有就是-f11-对于我们的网页-也可以进行全屏显示-f12-进行监测-同时-还可以触摸屏左右两指滑动进行返回前进历史返回-发现一个巨大的新东西就是我们使用两个手指左右滑动是历史前进后退-使用三个手指是alt功能-使用四个手指是windows桌面切换" class="headerlink" title="重大发现就是我们的这个触摸板 可以做到切换 多个手指同时下滑 就可以显示桌面 左右滑动就可以实现 alt 的切换功能 然后还有就是 f11 对于我们的网页 也可以进行全屏显示 f12 进行监测 同时 还可以触摸屏左右两指滑动进行返回前进历史返回 发现一个巨大的新东西就是我们使用两个手指左右滑动是历史前进后退 使用三个手指是alt功能 使用四个手指是windows桌面切换"></a><font color=pink>重大发现就是我们的这个触摸板 可以做到切换 多个手指同时下滑 就可以显示桌面 左右滑动就可以实现 alt 的切换功能 然后还有就是 f11 对于我们的网页 也可以进行全屏显示 f12 进行监测 同时 还可以触摸屏左右两指滑动进行返回前进历史返回 发现一个巨大的新东西就是我们使用两个手指左右滑动是历史前进后退 使用三个手指是alt功能 使用四个手指是windows桌面切换</font></h3><ol>
 <li><h3 id="并行程序设计入门开始"><a href="#并行程序设计入门开始" class="headerlink" title="并行程序设计入门开始"></a><font color=seablue>并行程序设计入门开始</font></h3><ol>
 <li><strong><a class="link"   href="https://heptagonhust.github.io/HPC-roadmap/" >RoadMap <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>来自七边形</strong></li>
 <li></li>
