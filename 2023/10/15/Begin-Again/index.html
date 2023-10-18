@@ -522,8 +522,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-10-18 20:35:10</span>
-            <span class="mobile">2023-10-18 20:35</span>
+            <span class="pc">2023-10-18 20:51:40</span>
+            <span class="mobile">2023-10-18 20:51</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -545,7 +545,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>907 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.1k Words</span>
         </span>
     
     
@@ -581,7 +581,12 @@
 <li><h2 id="数据表示"><a href="#数据表示" class="headerlink" title="数据表示"></a>数据表示</h2><ul>
 <li><font color=brown>浮点数与整数两种格式，拥有不同的表示方法，所以进行类型转换时要注意。整型通过补码表示。公式是唯一的-2^n + 源码的二进制。浮点数是一中近似的表示，对于太多小数位，进行加减时可能出现差。还有就是有符号与无符号的区别以及对应的溢出问题，截断问题。最后就是其实很多函数%d 并不关心真正的类型也不会检查，这只是告诉函数将以一个整型的方式进行内存寻找。</font></li>
 <li><font color=cyan>big-end &amp;&amp; small -end 大小端 注意只存在于多个字节的数据的问题 例如0x12345678 小端机就是 78 56 34 12 就是地位在小地址，注意在网络编程获取主机名于端口时可能有影响，需要调用相应修改转换函数。</font></li>
-<li><font color =red></font></li>
+<li><font color =Orchid>计算机处理加法乘法都远远快于除法。同时可以尽量写位运算，当然编译器可能也帮你优化。数字的表示与实现都很精妙 前辈的只会佩服。</font></li>
+</ul>
+</li>
+<li><h2 id="汇编简介"><a href="#汇编简介" class="headerlink" title="汇编简介"></a><font color=PowderBlue>汇编简介</font></h2><ul>
+<li><font color=Orchid>首先我们要知道，计算机只认识01，01 构成了整个世界，在数字电路的学习中我们也能有这样的体会。事实上，我们所写的程序最终会转换成01的机器代码，所有的文件不论是文本视频图片文件最终都是01串。而汇编代码就是位于机器代码的一种助记符</font></li>
+<li></li>
 </ul>
 </li>
 </ul>
@@ -695,7 +700,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">Begin_Again</div>
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E8%87%AA%E7%84%B6%E5%8E%9F%E7%90%86"><span class="nav-text">计算机科学中的自然原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%A0%E5%A5%BD%EF%BC%81%E4%B8%96%E7%95%8C"><span class="nav-text">你好！世界</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA"><span class="nav-text">数据表示</span></a>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E8%87%AA%E7%84%B6%E5%8E%9F%E7%90%86"><span class="nav-text">计算机科学中的自然原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%A0%E5%A5%BD%EF%BC%81%E4%B8%96%E7%95%8C"><span class="nav-text">你好！世界</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA"><span class="nav-text">数据表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B1%87%E7%BC%96%E7%AE%80%E4%BB%8B"><span class="nav-text">汇编简介</span></a>
 
     </div>
 </div>
