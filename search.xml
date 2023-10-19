@@ -1169,6 +1169,10 @@
     <content><![CDATA[<h3 id="HPC-Parallel-Programming、"><a href="#HPC-Parallel-Programming、" class="headerlink" title="HPC - Parallel-Programming、"></a>HPC - Parallel-Programming、</h3><h3 id="重大发现就是我们的这个触摸板-可以做到切换-多个手指同时下滑-就可以显示桌面-左右滑动就可以实现-alt-的切换功能-然后还有就是-f11-对于我们的网页-也可以进行全屏显示-f12-进行监测-同时-还可以触摸屏左右两指滑动进行返回前进历史返回-发现一个巨大的新东西就是我们使用两个手指左右滑动是历史前进后退-使用三个手指是alt功能-使用四个手指是windows桌面切换"><a href="#重大发现就是我们的这个触摸板-可以做到切换-多个手指同时下滑-就可以显示桌面-左右滑动就可以实现-alt-的切换功能-然后还有就是-f11-对于我们的网页-也可以进行全屏显示-f12-进行监测-同时-还可以触摸屏左右两指滑动进行返回前进历史返回-发现一个巨大的新东西就是我们使用两个手指左右滑动是历史前进后退-使用三个手指是alt功能-使用四个手指是windows桌面切换" class="headerlink" title="重大发现就是我们的这个触摸板 可以做到切换 多个手指同时下滑 就可以显示桌面 左右滑动就可以实现 alt 的切换功能 然后还有就是 f11 对于我们的网页 也可以进行全屏显示 f12 进行监测 同时 还可以触摸屏左右两指滑动进行返回前进历史返回 发现一个巨大的新东西就是我们使用两个手指左右滑动是历史前进后退 使用三个手指是alt功能 使用四个手指是windows桌面切换"></a><font color=pink>重大发现就是我们的这个触摸板 可以做到切换 多个手指同时下滑 就可以显示桌面 左右滑动就可以实现 alt 的切换功能 然后还有就是 f11 对于我们的网页 也可以进行全屏显示 f12 进行监测 同时 还可以触摸屏左右两指滑动进行返回前进历史返回 发现一个巨大的新东西就是我们使用两个手指左右滑动是历史前进后退 使用三个手指是alt功能 使用四个手指是windows桌面切换</font></h3><ol>
 <li><h3 id="并行程序设计入门开始"><a href="#并行程序设计入门开始" class="headerlink" title="并行程序设计入门开始"></a><font color=seablue>并行程序设计入门开始</font></h3><ol>
 <li><strong><a class="link"   href="https://heptagonhust.github.io/HPC-roadmap/" >RoadMap <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>来自七边形</strong></li>
+<li><em><strong>这里文件<a href="/doc/%E5%B9%B6%E8%A1%8C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AF%BC%E8%AE%BA.pdf">并行设计</a></strong></em></li>
+<li><strong><a class="link"   href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html" >Nvidia cuda guidance <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></li>
+<li><em><strong>MPI<a class="link"   href="https://www.netlib.org/utk/papers/mpi-book/mpi-book.html" >tutorial <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></em></li>
+<li>MPI<a class="link"   href="https://mpitutorial.com/tutorials/mpi-introduction/" >manual <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
 <li><em><strong>这里保存几个markdown的颜色</strong></em></li>
 </ol>
 <p><img  
