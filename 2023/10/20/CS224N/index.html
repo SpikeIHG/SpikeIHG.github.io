@@ -490,9 +490,10 @@
         <div class="article-content-container">
 
             
-            
+                      
                 <div class="article-title">
-                    <h1 class="article-title-regular">CS224N</h1>
+                    <img src="/../images/dusk.jpg" alt="CS224N" />
+                    <h1 class="article-title-cover">CS224N</h1>
                 </div>
             
                 
@@ -521,8 +522,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-10-20 14:35:17</span>
-            <span class="mobile">2023-10-20 14:35</span>
+            <span class="pc">2023-10-21 22:01:11</span>
+            <span class="mobile">2023-10-21 22:01</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -544,7 +545,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>5 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>566 Words</span>
         </span>
     
     
@@ -566,7 +567,43 @@
 
             <div class="article-content markdown-body">
                 <h1 id="CS224N"><a href="#CS224N" class="headerlink" title="CS224N"></a><font color=velvet>CS224N</font></h1><ul>
-<li><h2 id="lt-font-color-x3D"><a href="#lt-font-color-x3D" class="headerlink" title="&lt;font color&#x3D;"></a>&lt;font color&#x3D;</h2></li>
+<li><h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a><font color=MediumSpringGreen>前置知识</font></h2><ul>
+<li><h3 id="什么是机器学习"><a href="#什么是机器学习" class="headerlink" title="什么是机器学习"></a><font color=chocolate>什么是机器学习</font></h3><ul>
+<li>机器学习我的理解就是在一定条件下完成一定任务，其中任务的完成由程序本身实现。</li>
+<li>监督学习 类似回归问题和分类问题</li>
+<li>无监督学习类似聚类算法，没有提前的正确规则，让机器找规律</li>
+</ul>
+</li>
+<li><h3 id="梯度下降算法"><a href="#梯度下降算法" class="headerlink" title="梯度下降算法"></a><font color=pink>梯度下降算法</font></h3><ul>
+<li>同步更新所有变量 </li>
+<li>出发点是想要拟合一段数据 然后我们想让整个数据组的误差最小。因此我们求导。可以理解为山坡上寻找下降路线。由于公式会随着接近局部最小点而自己缩小前进距离这是一个学习。</li>
+</ul>
+</li>
+<li><h3 id="极大似然估计"><a href="#极大似然估计" class="headerlink" title="极大似然估计"></a><font color =violet>极大似然估计</font></h3><ul>
+<li>就是我们依照描述的事件写出这个事件发生的概率表达式，这个表达式由一个变量（涉及概率密度）决定。我们想求这个变量使得改概率函数取一个最大值。</li>
+</ul>
+</li>
+<li><h3 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a><font color=Maroon>代价函数</font></h3><ul>
+<li>感觉与目标函数类似，一般与误差函数具有相同或者相反的单调性，然后通过一些数学技巧进行改写，以简化计算。</li>
+</ul>
+</li>
+<li><h3 id="Batch-Gradient-Descent"><a href="#Batch-Gradient-Descent" class="headerlink" title="Batch Gradient Descent"></a><font color=Teal>Batch Gradient Descent</font></h3><ul>
+<li>这个就是传统的梯度下降，每一次前进时都要求遍历整个数据集来更新计算代价函数然后求偏导，计算量是非常巨大与难以实现的。具体原因我们会发现，偏导数求得的公式与每一个样本都有联系，例如差平方求和之类的。</li>
+</ul>
+</li>
+<li><h3 id="Linear-Algebra"><a href="#Linear-Algebra" class="headerlink" title="Linear Algebra"></a><font color=Aqua>Linear Algebra</font></h3><ul>
+<li>在此再次向Pro.Strang致以最崇高的敬意。</li>
+</ul>
+</li>
+<li><h3 id="注意点——向量拓展的梯度下降以及向量函数"><a href="#注意点——向量拓展的梯度下降以及向量函数" class="headerlink" title="注意点——向量拓展的梯度下降以及向量函数"></a><font color=gold>注意点——向量拓展的梯度下降以及向量函数</font></h3><ul>
+<li>注意函数变量的两个层面，一个是输入样本的维度，即样本向量的每一个维度，另一个是拟合函数中的变量即θ。h(x)(假设函数)&#x3D;θ0<em>1+θ1</em>x1 + θ2*x2+…… .eg 最后写成矩阵点积 多元线性回归</li>
+<li>通常向量n+1 个 第0个是1为了简化表达 其余都是一个特征维度</li>
+<li>根据上述结论重写表达式就是将θ化成对应n+1维向量然后求偏导时乘以一个xj^(i)的值。</li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             </div>
@@ -678,7 +715,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">CS224N</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CS224N"><span class="nav-text">CS224N</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-font-color-x3D"><span class="nav-text">&lt;font color&#x3D;</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CS224N"><span class="nav-text">CS224N</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86"><span class="nav-text">前置知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="nav-text">什么是机器学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95"><span class="nav-text">梯度下降算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1"><span class="nav-text">极大似然估计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0"><span class="nav-text">代价函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Batch-Gradient-Descent"><span class="nav-text">Batch Gradient Descent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linear-Algebra"><span class="nav-text">Linear Algebra</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E7%82%B9%E2%80%94%E2%80%94%E5%90%91%E9%87%8F%E6%8B%93%E5%B1%95%E7%9A%84%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E4%BB%A5%E5%8F%8A%E5%90%91%E9%87%8F%E5%87%BD%E6%95%B0"><span class="nav-text">注意点——向量拓展的梯度下降以及向量函数</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>
