@@ -522,8 +522,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-10-18 20:51:40</span>
-            <span class="mobile">2023-10-18 20:51</span>
+            <span class="pc">2023-10-21 18:08:35</span>
+            <span class="mobile">2023-10-21 18:08</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -545,12 +545,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.1k Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>2.4k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>3 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>8 Mins</span>
         </span>
     
     
@@ -578,6 +578,18 @@
 <li><font color=blue><em><strong>一切皆文件 ，linux将设备文件都以同一种方式进行处理，让建立一种广泛而统一的接口成为可能</strong></em></font></li>
 </ul>
 </li>
+<li><h2 id="从理论到实践"><a href="#从理论到实践" class="headerlink" title="从理论到实践"></a><font color=MediumAquamarine>从理论到实践</font></h2><p><strong><font color=ForestGreen>在学习每一个章节的过程中，我们会逐渐感觉到与一些相似的内容串联了起来。这种知识路径形成环，环闭合的感觉非常类似于我在高中看科幻小说时形成的想法。哈哈哈哈哈。这里就列举所有对应的知识群，然后随着不断学习深入，持续补充~~（突然想到也许我得去补充几个emoji和颜文字）</font></strong></p>
+<ul>
+<li><strong><font color=Lavender>二进制族群——数字电路的设计非常优美简洁;CPU流水线；</font></strong></li>
+<li><strong><font color=lavender>程序机器级表示——优化技巧</font></strong></li>
+<li><strong><font color=lavender>链接——Makefile脚本和Cmake 的使用 以及Vscode 相关json文件的配置</font></strong></li>
+<li><strong><font color=lavender></font></strong></li>
+<li><strong><font color=lavender></font></strong></li>
+<li><strong><font color=lavender></font></strong></li>
+<li><strong><font color=lavender></font></strong></li>
+<li><strong><font color=lavender></font></strong></li>
+</ul>
+</li>
 <li><h2 id="数据表示"><a href="#数据表示" class="headerlink" title="数据表示"></a>数据表示</h2><ul>
 <li><font color=brown>浮点数与整数两种格式，拥有不同的表示方法，所以进行类型转换时要注意。整型通过补码表示。公式是唯一的-2^n + 源码的二进制。浮点数是一中近似的表示，对于太多小数位，进行加减时可能出现差。还有就是有符号与无符号的区别以及对应的溢出问题，截断问题。最后就是其实很多函数%d 并不关心真正的类型也不会检查，这只是告诉函数将以一个整型的方式进行内存寻找。</font></li>
 <li><font color=cyan>big-end &amp;&amp; small -end 大小端 注意只存在于多个字节的数据的问题 例如0x12345678 小端机就是 78 56 34 12 就是地位在小地址，注意在网络编程获取主机名于端口时可能有影响，需要调用相应修改转换函数。</font></li>
@@ -586,7 +598,49 @@
 </li>
 <li><h2 id="汇编简介"><a href="#汇编简介" class="headerlink" title="汇编简介"></a><font color=PowderBlue>汇编简介</font></h2><ul>
 <li><font color=Orchid>首先我们要知道，计算机只认识01，01 构成了整个世界，在数字电路的学习中我们也能有这样的体会。事实上，我们所写的程序最终会转换成01的机器代码，所有的文件不论是文本视频图片文件最终都是01串。而汇编代码就是位于机器代码的一种助记符</font></li>
-<li></li>
+</ul>
+</li>
+<li><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a><font color=Tan>链接</font></h2></li>
+<li><h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a><font color=Maroon>进程</font></h2><ul>
+<li><h3 id="MPI"><a href="#MPI" class="headerlink" title="MPI"></a><strong><font color=Teal>MPI</font></strong></h3><p><strong><font color=DarkCyan>这里就把mpi的使用在这里写了。先补充一点前置知识。冯诺依曼体系。cpu主存分离。导致大多时钟时间去访存。进程就是一个程序的实例可以看成一个综合体包括I&#x2F;o设备即一组文件描述符表，然后主存，前两者共同由虚拟地址实现。此为被处理器表现为独享。多任务即并发。每一个执行时间片。上下文切换。因此硬件计算的优化集中在对冯诺依曼体系的优化大致有如下几个。<br>Cache 在主存与寄存器之间设置三层高速缓存，SRAM，利用局部性原理<br>虚拟地址，可以看作讲主存作为磁盘文件的Cache.同时还有很多好处，如简化加载链接，提供更安全的地址守护等。<br>指令级并行<br>线程级并行TLP 细粒度多线程就是一个线程每执行他的一条指令就切换。粗粒度就是在遇到需要较长时间的指令才切换<br>SMT 同步多线程<br>SISD 单指令流 单数据流 SIMD 单数据多指令流 处理向量运算 大型简单计算GPU就是 处理图像 大量线程 具体可以在学习CUDA后补充<br>MIMD 两种常见类型 注意有多个处理单元即多个处理器 是异步的没有全局时钟 一个是共享内存系统，多个核共享一个内存系统，分布式内存系统，多个核——内存对。第一类具体有两个<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/UMA.png"
+                     
+                ><br>分布式 最常见的就是cluster集群 以太网连接的一组PC就是 而每一台本身可能是共享内存所以称为混合系统<br>互联网络，可以理解为连接结点的结构。性能依赖于信息读取传输，而这有由硬件的互联网络决定。<br>共享内存系统中有两个 总线bus和交叉开关矩阵crossbar容易理解总线结构简单固定 ，小规模时高效，当结点增多可能出现阻塞，抢夺，因为大小是固定的，无法调整。<br>CrossBar <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Switch.png"
+                     
+                ><br>上图结构保证了不会出现信息覆盖<br>分布式网络互联结构 其实就是互联网本身的一些结构了<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/net.png"
+                     
+                ><br>带宽是衡量网络传输速度的，宽度就是讲网络划分为两部分最少的同时通信数量<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/net2.png"
+                     
+                ><br>延迟和带宽 两个指标<br>共享一致性问题以及解决方案 首先由于Cache 当一个x的内存值改变时，另一个核中cache里缓存的值可能没变。两种方法解决，监听总线和用目录记录。伪共享问题与cache 命中有关 尤其与cache大小有关 当一个核的工作区恰好覆盖一个缓存时，那么就会发生进程间跳跃地对缓存覆盖，最终其实没有共享，反而增加不命中率。<br>对于共享内存系统我们通常派生多线程，分布式我们派生多进程<br>SPMD 单程序多数据流 if(thread0&#x2F;process 0){}elif(1&#x2F;1){}的结构<br>共享内存中的问题：线程不确定性 通过 mutex 和 信号量来互斥实现 同时对于可重入函数的使用 对应的许多拥有static变量的函数就是线程不安全函数当多个线程调用时可能发生问题，解决方法可以是自己上锁或者调用对应库中的线程安全函数<br>分布式中的问题：最多的API就是解决消息传递的。而且其也可以在共享内存中使用，原理就是逻辑上讲共享空间分割为多个独立空间有点像虚拟空间的操作 通常这样的API包含一个send 一个recv函数 然后rank来唯一表示进程 然后缓冲区区分 然后0对应stdout 以及一些广播和归约函数，最常见API MPI message passing interface <br>输入输出问题 输入输出问题常常因为异步而具有不确定性这里有一些规范convention</font></strong></p>
+<p><strong><font color=pink>习惯<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/convention.png"
+                     
+                >总结而言就是没有任何两个文件标识符在实际输入输出时交叉，各自分组线程独自管理<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/speedup.png"
+                     
+                >可扩展性 增加规模与同时增加核数线程数。效率不变<br>计时通常指程序开始到结束的时间</font></strong></p>
+<p><strong><font color=Teal>并行程序设计步骤Foster方法<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/fosterm.png"
+                     
+                >注意就是平均分配 同时要注意凝聚如果下一个依赖于上一个就可以凝聚为一个任务</font></strong></p>
+</li>
 </ul>
 </li>
 </ul>
@@ -715,7 +769,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">Begin_Again</div>
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E8%87%AA%E7%84%B6%E5%8E%9F%E7%90%86"><span class="nav-text">计算机科学中的自然原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%A0%E5%A5%BD%EF%BC%81%E4%B8%96%E7%95%8C"><span class="nav-text">你好！世界</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA"><span class="nav-text">数据表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B1%87%E7%BC%96%E7%AE%80%E4%BB%8B"><span class="nav-text">汇编简介</span></a>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E8%87%AA%E7%84%B6%E5%8E%9F%E7%90%86"><span class="nav-text">计算机科学中的自然原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%A0%E5%A5%BD%EF%BC%81%E4%B8%96%E7%95%8C"><span class="nav-text">你好！世界</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E7%90%86%E8%AE%BA%E5%88%B0%E5%AE%9E%E8%B7%B5"><span class="nav-text">从理论到实践</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA"><span class="nav-text">数据表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B1%87%E7%BC%96%E7%AE%80%E4%BB%8B"><span class="nav-text">汇编简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%93%BE%E6%8E%A5"><span class="nav-text">链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B"><span class="nav-text">进程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MPI"><span class="nav-text">MPI</span></a></li></ol>
 
     </div>
 </div>
