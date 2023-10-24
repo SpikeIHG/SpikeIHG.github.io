@@ -1295,6 +1295,19 @@
                      
                 >注意就是平均分配 同时要注意凝聚如果下一个依赖于上一个就可以凝聚为一个任务</font></strong></p>
 </li>
+<li><p><strong><font color=lightyellow>MPI详解</font></strong></p>
+<ul>
+<li><font color=yellow>通信子，通信子可以看作一组可以互相通信的进程，初始时有MPI创建了一组WORLD,可以创建多组。可以调用函数得知对应大小以及每一个的rank。</font></li>
+<li><font color=yellow>Recv 与 Send函数的语义。各自有自己的缓冲区其实就是指定的存储区。tag用于互相匹配。有status结构来实际获取。匹配包括：同一个communicator，rank匹配。tag匹配。传输信息type匹配。接受去内存大于发送区。对于接受函数有两个宏量。MPI_ANY_SOURCE MPI_ANY_TAG 字面意思就是可以任意接受。发送没有 且一定要指定好comm</font></li>
+<li><font color=yellow>MPI_Status参数获取实际传送的字节数。MPI_STATUS_IGNORE</font></li>
+<li><font color=yellow>Send语义，可以阻塞，此时不返回。可以缓冲，放入内部存储器，然后返回。返回时并不知道是否成功发送。实际是如果发送信息小于默认的截止大小就缓存，否则就阻塞。Recv一定阻塞。可能出现悬挂</font></li>
+<li><font color=yellow></font></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h2 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a><font color=slateblue>CUDA</font></h2><ul>
+<li><font color=slategrey>CPU 芯片，其实L3缓存占占据了最大的位置 <br>重要的任务就是判断是任务间是否独立 如果独立可能才可以分离task 就是指的一些指令和数据的集合<br>task parallelism 关注多核上的函数并行 data parallelism 关注多核上的数据并行 cuda、主要解决data parallelism <br>核利用率的问题</font></li>
 </ul>
 </li>
 </ul>
@@ -1339,9 +1352,21 @@
 <li>注意函数变量的两个层面，一个是输入样本的维度，即样本向量的每一个维度，另一个是拟合函数中的变量即θ。h(x)(假设函数)&#x3D;θ0<em>1+θ1</em>x1 + θ2*x2+…… .eg 最后写成矩阵点积 多元线性回归</li>
 <li>通常向量n+1 个 第0个是1为了简化表达 其余都是一个特征维度</li>
 <li>根据上述结论重写表达式就是将θ化成对应n+1维向量然后求偏导时乘以一个xj^(i)的值。</li>
-<li></li>
+<li>比列失调的等高线梯度下降可能出现震荡，使用特征缩放相当于变量代换更高效将值约束在-1，1之间大约 还有归一化处理 使得平均值在0 x1-u1 代换 本质就是线性组合 u1 就是平均值 x1-u1&#x2F;s u1 就是平均值 s就是标准差 就是概率论</li>
+<li>关于学习率α 过大可能会波动或者发散 国小很慢 总之尝试不同的一系列值</li>
+<li>多项式回归 但是我还是有问题 函数都是人提出来 没有机器自己去寻找</li>
 </ul>
 </li>
+<li><h3 id="Normal-Equation"><a href="#Normal-Equation" class="headerlink" title="Normal Equation"></a><font color=cyan>Normal Equation</font></h3><ul>
+<li>线性代数永远的神，但是我已经忘记了~~~~~ 其实就是线代中的回归方程 男泵投影！！！！！</li>
+<li>似乎用于线性回归，缺点：当n增大时会很慢 复杂度为3次方 而梯度下降可以正常的 大概10000为界限 例如 Word2vec 使用梯度下降法 而且只使用与线性 梯度是通法</li>
+<li>pinv inv pinv 进阶求逆 可以是伪逆 可是当时没看</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h2 id="Deep-learning"><a href="#Deep-learning" class="headerlink" title="Deep learning"></a><font color=tan>Deep learning</font></h2><ul>
+<li><font color=red>简介。机器学习就是找函数function.在台大的课中只会有梯度下降 梯度下降开始的值朴素的是随机的，但是可能存在更好的 初始值	全面的回归求解其实就是训练<br>模型就是我们提出的拟合方程 课程采用的是绝对值衡量</font></li>
 </ul>
 </li>
 </ul>

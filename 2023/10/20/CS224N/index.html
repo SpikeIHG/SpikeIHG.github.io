@@ -522,8 +522,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-10-21 22:01:11</span>
-            <span class="mobile">2023-10-21 22:01</span>
+            <span class="pc">2023-10-23 22:16:01</span>
+            <span class="mobile">2023-10-23 22:16</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -545,12 +545,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>566 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>933 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>3 Mins</span>
         </span>
     
     
@@ -599,9 +599,21 @@
 <li>注意函数变量的两个层面，一个是输入样本的维度，即样本向量的每一个维度，另一个是拟合函数中的变量即θ。h(x)(假设函数)&#x3D;θ0<em>1+θ1</em>x1 + θ2*x2+…… .eg 最后写成矩阵点积 多元线性回归</li>
 <li>通常向量n+1 个 第0个是1为了简化表达 其余都是一个特征维度</li>
 <li>根据上述结论重写表达式就是将θ化成对应n+1维向量然后求偏导时乘以一个xj^(i)的值。</li>
-<li></li>
+<li>比列失调的等高线梯度下降可能出现震荡，使用特征缩放相当于变量代换更高效将值约束在-1，1之间大约 还有归一化处理 使得平均值在0 x1-u1 代换 本质就是线性组合 u1 就是平均值 x1-u1&#x2F;s u1 就是平均值 s就是标准差 就是概率论</li>
+<li>关于学习率α 过大可能会波动或者发散 国小很慢 总之尝试不同的一系列值</li>
+<li>多项式回归 但是我还是有问题 函数都是人提出来 没有机器自己去寻找</li>
 </ul>
 </li>
+<li><h3 id="Normal-Equation"><a href="#Normal-Equation" class="headerlink" title="Normal Equation"></a><font color=cyan>Normal Equation</font></h3><ul>
+<li>线性代数永远的神，但是我已经忘记了~~~~~ 其实就是线代中的回归方程 男泵投影！！！！！</li>
+<li>似乎用于线性回归，缺点：当n增大时会很慢 复杂度为3次方 而梯度下降可以正常的 大概10000为界限 例如 Word2vec 使用梯度下降法 而且只使用与线性 梯度是通法</li>
+<li>pinv inv pinv 进阶求逆 可以是伪逆 可是当时没看</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h2 id="Deep-learning"><a href="#Deep-learning" class="headerlink" title="Deep learning"></a><font color=tan>Deep learning</font></h2><ul>
+<li><font color=red>简介。机器学习就是找函数function.在台大的课中只会有梯度下降 梯度下降开始的值朴素的是随机的，但是可能存在更好的 初始值	全面的回归求解其实就是训练<br>模型就是我们提出的拟合方程 课程采用的是绝对值衡量</font></li>
 </ul>
 </li>
 </ul>
@@ -715,7 +727,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">CS224N</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CS224N"><span class="nav-text">CS224N</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86"><span class="nav-text">前置知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="nav-text">什么是机器学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95"><span class="nav-text">梯度下降算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1"><span class="nav-text">极大似然估计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0"><span class="nav-text">代价函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Batch-Gradient-Descent"><span class="nav-text">Batch Gradient Descent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linear-Algebra"><span class="nav-text">Linear Algebra</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E7%82%B9%E2%80%94%E2%80%94%E5%90%91%E9%87%8F%E6%8B%93%E5%B1%95%E7%9A%84%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E4%BB%A5%E5%8F%8A%E5%90%91%E9%87%8F%E5%87%BD%E6%95%B0"><span class="nav-text">注意点——向量拓展的梯度下降以及向量函数</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CS224N"><span class="nav-text">CS224N</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86"><span class="nav-text">前置知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="nav-text">什么是机器学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95"><span class="nav-text">梯度下降算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1"><span class="nav-text">极大似然估计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0"><span class="nav-text">代价函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Batch-Gradient-Descent"><span class="nav-text">Batch Gradient Descent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linear-Algebra"><span class="nav-text">Linear Algebra</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E7%82%B9%E2%80%94%E2%80%94%E5%90%91%E9%87%8F%E6%8B%93%E5%B1%95%E7%9A%84%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E4%BB%A5%E5%8F%8A%E5%90%91%E9%87%8F%E5%87%BD%E6%95%B0"><span class="nav-text">注意点——向量拓展的梯度下降以及向量函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Normal-Equation"><span class="nav-text">Normal Equation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deep-learning"><span class="nav-text">Deep learning</span></a></li></ol></li></ol>
 
     </div>
 </div>
