@@ -1413,6 +1413,13 @@
 </li>
 <li><p>实际的y帽 叫做 label</p>
 </li>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/theta1.png"
+                     
+                ></p>
+</li>
 <li><p>batch 将N划分作batch随机的来求梯度</p>
 </li>
 <li><p><img  
@@ -1449,8 +1456,16 @@
 </li>
 <li><p>overfitting 过拟合问题 worse on unknown data</p>
 </li>
-<li><p>backpropagation</p>
+<li><p>backpropagation </p>
 </li>
+<li><h3 id="anoconda-创建指令是全局的conda-create-然后可以在里面下载包-用vscode-启动可以-注意激活的时候要把代理关了"><a href="#anoconda-创建指令是全局的conda-create-然后可以在里面下载包-用vscode-启动可以-注意激活的时候要把代理关了" class="headerlink" title="anoconda 创建指令是全局的conda create 然后可以在里面下载包 用vscode 启动可以 注意激活的时候要把代理关了"></a><font color=pink>anoconda 创建指令是全局的conda create 然后可以在里面下载包 用vscode 启动可以 注意激活的时候要把代理关了</font></h3></li>
+<li><h2 id="jupyter-notebook-guide"><a href="#jupyter-notebook-guide" class="headerlink" title="jupyter notebook guide"></a><a class="link"   href="https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/install.html" >jupyter notebook guide <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h2></li>
+<li><p>jupyter 可以使用命令行调用 </p>
+</li>
+<li><pre><code class="python">jupyter notebook 然后就进入了browser
+</code></pre>
+</li>
+<li></li>
 </ul>
 ]]></content>
       <tags>
