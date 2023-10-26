@@ -19,13 +19,13 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="DNS">
+    <meta property="og:title" content="Winter&#39;s">
     <meta property="og:description" content="Hexo Theme Redefine">
     <meta property="og:url" content="https://SpikeIHG.github.io2023/03/23/DNS/">
     
     <meta property="og:site_name" content="Winter&#39;s">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DNS">
+    <meta name="twitter:title" content="Winter&#39;s">
     <meta name="twitter:description" content="Hexo Theme Redefine">
     <meta name="twitter:image" content="/images/yao.png">
     <!--- Icon Part-->
@@ -36,8 +36,6 @@
     <!--- Page Info-->
     
     <title>
-        
-            DNS -
         
         Winter&#39;s
     </title>
@@ -492,8 +490,8 @@
             
                       
                 <div class="article-title">
-                    <img src="/../images/u.png" alt="DNS" />
-                    <h1 class="article-title-cover">DNS</h1>
+                    <img src="/../images/u.png" alt="" />
+                    <h1 class="article-title-cover"></h1>
                 </div>
             
                 
@@ -522,8 +520,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-03-23 21:25:01</span>
-            <span class="mobile">2023-03-23 21:25</span>
+            <span class="pc">2023-10-26 20:15:48</span>
+            <span class="mobile">2023-10-26 20:15</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -574,7 +572,7 @@
 </li>
 <li><p>原理如下</p>
 <p>1） 同一台用户主机上运行着DNS应用的客户端。</p>
-<p>2） 浏览器从上述URL中抽取岀主机名<a target="_blank" rel="noopener" href="http://www.baidu.com,并将这台主机名传给dns应用的客户端./">www.baidu.com,并将这台主机名传给DNS应用的客户端。</a></p>
+<p>2） 浏览器从上述URL中抽取岀主机名<a class="link"   target="_blank" rel="noopener" href="http://www.baidu.com,并将这台主机名传给dns应用的客户端./" >www.baidu.com,并将这台主机名传给DNS应用的客户端。 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p>3） DNS客户向DNS服务器发送一个包含主机名的请求。</p>
 <p>4） DNS客户最终会收到一份回答报文，其中含有对应于该主机名的IP地址。</p>
 <p>5） 一旦浏览器接收到来自DNS的该IP地址，它能够向位于该IP地址80端口的HTTP服务器进程发起一个TCP连接。		</p>
@@ -588,7 +586,12 @@
 </li>
 <li><h4 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h4><ul>
 <li><h5 id="分布式，层次"><a href="#分布式，层次" class="headerlink" title="分布式，层次"></a>分布式，层次</h5><p>根，顶级域(TLD，top-level domain),权威，三层。举个例子</p>
-<p><img src="/../images/DNS%E5%B1%82%E6%AC%A1.png" alt="DNS层次"></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/DNS%E5%B1%82%E6%AC%A1.png"
+                      alt="DNS层次"
+                ></p>
 <p>国家，fr,jp,ca,也是自己国家维护的顶级域 权威顶级域就是因特网上能够被公共访问的服务器主机需要提供的一个可公共访问的DNS记录，例如大学，自己维护的DNS服务器</p>
 </li>
 <li><h5 id="本地DNS服务器与缓存"><a href="#本地DNS服务器与缓存" class="headerlink" title="本地DNS服务器与缓存"></a>本地DNS服务器与缓存</h5><p>通过本地公用来减少流量，缓存可以减少路径，尽量绕过根DNS</p>
@@ -604,7 +607,12 @@
 <p>如果Type&#x3D;CNAME，则 Value是别名为Name的主机对应的规范主机名。该记录能够向査询的主机提供一个主机名对应的规范主机名，例如(foo.com, relay1.bar. foo. com, CNAME)就是一条 CNAME 类型的记录。</p>
 <p>如果Type &#x3D; MX,则Value是个别名为Name的邮件服务器的规范主机名。举例来说，(foo.com, mail. bar. fo&lt;). com, MX)就是一条MX记录。MX记录允许邮件服务器主机名具有简单的别名。值得注意的是，通过使用MX记录，一个公司的邮件服务器和其他服务器(如它的Web服务器)可以使用相同的别名。为了获得邮件服务器的规范主机名，DNS客户应当请求一条MX记录；而为了获得其他服务器的规范主机名，DNS客户应当请求CNAME记录</p>
 <ul>
-<li><h5 id="报文"><a href="#报文" class="headerlink" title="报文"></a>报文</h5><img src="/../images/DNS%E6%8A%A5%E6%96%87.png" alt="DNS报文" title="DNS报文"></li>
+<li><h5 id="报文"><a href="#报文" class="headerlink" title="报文"></a>报文</h5><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/DNS%E6%8A%A5%E6%96%87.png"
+                      alt="DNS报文" title="DNS报文"
+                ></li>
 </ul>
 <p>控制台键入nslookup 即可看权威DNS服务器与地址 dns.hust.edu.cn</p>
 </li>
@@ -632,7 +640,7 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：DNS</li>
+        <li>Post title：</li>
         <li>Post author：Winter</li>
         <li>Create time：2023-03-23 20:24:54</li>
         <li>
@@ -749,7 +757,7 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">DNS</div>
+        <div class="page-title"></div>
         <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#DNS"><span class="nav-text">DNS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS-Domain-name-system"><span class="nav-text">DNS(Domain name system)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-text">DNS工作原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E6%80%A7"><span class="nav-text">特性</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%EF%BC%8C%E5%B1%82%E6%AC%A1"><span class="nav-text">分布式，层次</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0DNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8E%E7%BC%93%E5%AD%98"><span class="nav-text">本地DNS服务器与缓存</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DNS%E8%AE%B0%E5%BD%95%E4%B8%8E%E6%8A%A5%E6%96%87"><span class="nav-text">DNS记录与报文</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%AE%B0%E5%BD%95"><span class="nav-text">记录</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8A%A5%E6%96%87"><span class="nav-text">报文</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#P2P%E4%B8%8EBitTorrent"><span class="nav-text">P2P与BitTorrent</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#P2P%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%9A%84%E6%8B%93%E5%B1%95%E6%80%A7"><span class="nav-text">P2P体系结构的拓展性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BitTorrent-%E5%8D%8F%E8%AE%AE"><span class="nav-text">BitTorrent 协议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E6%B5%81"><span class="nav-text">视频流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#http%E6%B5%81%E4%B8%8EDASH"><span class="nav-text">http流与DASH</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E5%AE%B9%E5%8F%91%E5%B8%83%E7%BD%91"><span class="nav-text">内容发布网</span></a></li></ol></li></ol></li></ol>
 
     </div>

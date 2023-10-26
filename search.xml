@@ -239,7 +239,7 @@
       </tags>
   </entry>
   <entry>
-    <title>DNS</title>
+    <title></title>
     <url>/2023/03/23/DNS/</url>
     <content><![CDATA[<h2 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h2><ul>
 <li><h3 id="DNS-Domain-name-system"><a href="#DNS-Domain-name-system" class="headerlink" title="DNS(Domain name system)"></a>DNS(Domain name system)</h3><ul>
@@ -249,7 +249,7 @@
 </li>
 <li><p>原理如下</p>
 <p>1） 同一台用户主机上运行着DNS应用的客户端。</p>
-<p>2） 浏览器从上述URL中抽取岀主机名<a href="http://www.baidu.com,并将这台主机名传给dns应用的客户端./">www.baidu.com,并将这台主机名传给DNS应用的客户端。</a></p>
+<p>2） 浏览器从上述URL中抽取岀主机名<a class="link"   href="http://www.baidu.com,并将这台主机名传给dns应用的客户端./" >www.baidu.com,并将这台主机名传给DNS应用的客户端。 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p>3） DNS客户向DNS服务器发送一个包含主机名的请求。</p>
 <p>4） DNS客户最终会收到一份回答报文，其中含有对应于该主机名的IP地址。</p>
 <p>5） 一旦浏览器接收到来自DNS的该IP地址，它能够向位于该IP地址80端口的HTTP服务器进程发起一个TCP连接。		</p>
@@ -263,7 +263,12 @@
 </li>
 <li><h4 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h4><ul>
 <li><h5 id="分布式，层次"><a href="#分布式，层次" class="headerlink" title="分布式，层次"></a>分布式，层次</h5><p>根，顶级域(TLD，top-level domain),权威，三层。举个例子</p>
-<p><img src="/../images/DNS%E5%B1%82%E6%AC%A1.png" alt="DNS层次"></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/DNS%E5%B1%82%E6%AC%A1.png"
+                      alt="DNS层次"
+                ></p>
 <p>国家，fr,jp,ca,也是自己国家维护的顶级域 权威顶级域就是因特网上能够被公共访问的服务器主机需要提供的一个可公共访问的DNS记录，例如大学，自己维护的DNS服务器</p>
 </li>
 <li><h5 id="本地DNS服务器与缓存"><a href="#本地DNS服务器与缓存" class="headerlink" title="本地DNS服务器与缓存"></a>本地DNS服务器与缓存</h5><p>通过本地公用来减少流量，缓存可以减少路径，尽量绕过根DNS</p>
@@ -279,7 +284,12 @@
 <p>如果Type&#x3D;CNAME，则 Value是别名为Name的主机对应的规范主机名。该记录能够向査询的主机提供一个主机名对应的规范主机名，例如(foo.com, relay1.bar. foo. com, CNAME)就是一条 CNAME 类型的记录。</p>
 <p>如果Type &#x3D; MX,则Value是个别名为Name的邮件服务器的规范主机名。举例来说，(foo.com, mail. bar. fo&lt;). com, MX)就是一条MX记录。MX记录允许邮件服务器主机名具有简单的别名。值得注意的是，通过使用MX记录，一个公司的邮件服务器和其他服务器(如它的Web服务器)可以使用相同的别名。为了获得邮件服务器的规范主机名，DNS客户应当请求一条MX记录；而为了获得其他服务器的规范主机名，DNS客户应当请求CNAME记录</p>
 <ul>
-<li><h5 id="报文"><a href="#报文" class="headerlink" title="报文"></a>报文</h5><img src="/../images/DNS%E6%8A%A5%E6%96%87.png" alt="DNS报文" title="DNS报文"></li>
+<li><h5 id="报文"><a href="#报文" class="headerlink" title="报文"></a>报文</h5><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/DNS%E6%8A%A5%E6%96%87.png"
+                      alt="DNS报文" title="DNS报文"
+                ></li>
 </ul>
 <p>控制台键入nslookup 即可看权威DNS服务器与地址 dns.hust.edu.cn</p>
 </li>
@@ -362,7 +372,10 @@
   <entry>
     <title>Winter&#39;s blog</title>
     <url>/2023/03/16/Winter-s-blog/</url>
-    <content><![CDATA[<h2 id="For-Ms-Winter"><a href="#For-Ms-Winter" class="headerlink" title="For Ms.Winter"></a>For Ms.Winter</h2><h3 id="先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功"><a href="#先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功" class="headerlink" title="先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功"></a>先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功</h3>]]></content>
+    <content><![CDATA[<h2 id="For-Ms-Winter"><a href="#For-Ms-Winter" class="headerlink" title="For Ms.Winter"></a>For Ms.Winter</h2><h3 id="先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功"><a href="#先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功" class="headerlink" title="先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功"></a>先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功</h3><ul>
+<li><strong><font color=pink>emoji kitchen use ps to scale down and save in png and then port to QQ</font></strong></li>
+</ul>
+]]></content>
       <tags>
         <tag>Elements</tag>
       </tags>
@@ -1049,6 +1062,10 @@
 <li><h3 id="SSH-secure-shell"><a href="#SSH-secure-shell" class="headerlink" title="SSH secure shell"></a>SSH secure shell</h3><ul>
 <li><strong>这是一个协议 port number22</strong></li>
 <li><strong><a class="link"   href="https://phoenixnap.com/kb/ssh-to-connect-to-remote-server-linux-or-windows#:~:text=Open%20the%20terminal%20on%20the,ssh%20localhost%20and%20hit%20enter." >一个sshlocalhost教程 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></li>
+<li><strong>最近ssh遇到很多问题这里集中总结一下</strong><ul>
+<li><strong>关于启动服务器<a class="link"   href="https://askubuntu.com/questions/1379425/system-has-not-been-booted-with-systemd-as-init-system-pid-1-cant-operate" > <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> <br><font color=red> sudo service ssh restart 这个命令有作用 类似的还有 sudo service ssh status 关键就是 service 操作具体可见tldr service</font></strong></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><h3 id="locate-amp-find"><a href="#locate-amp-find" class="headerlink" title="locate &amp; find"></a>locate &amp; find</h3><ul>
@@ -1465,7 +1482,23 @@
 <li><pre><code class="python">jupyter notebook 然后就进入了browser
 </code></pre>
 </li>
+<li><h2 id="Colab-使用"><a href="#Colab-使用" class="headerlink" title="Colab 使用"></a><strong><font color=slategray>Colab 使用</font></strong></h2><ul>
+<li>python code 和 shell code 其中！接shell cmd cd除外 %cd</li>
+<li>可以选择执行的硬件 GPU runtime type 里面</li>
+<li>ctrl+ enter 执行一个代码cell</li>
+<li>总体而言其实就是jupyter 只不过是个互联的jupyter.</li>
+<li>左侧的文件图标查看结构 注意下载邮寄 可以上传到google硬盘</li>
+<li>注意自己使用的时候是在google的GPU上 所以程序结束就会消失  注意自己保存</li>
+<li><strong><font color=lightcyan>打开新的需要在file 里面upload notebook!!!! 可以的 注意一次只能有一个session 所以需要关掉前面的 notebook maybe<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/save.png"
+                     
+                >真的很不错一个tesla 真棒 然后我可以试试ssh之类的</font></strong></li>
+<li><font color=yellow>然后现在发现了 ctrl+e 普通搜索很快 然后url 对url很快 因为对普通搜索会转换为我们的query 条目 然后会比较慢！！！</font></li>
 <li></li>
+</ul>
+</li>
 </ul>
 ]]></content>
       <tags>
@@ -1523,7 +1556,7 @@
 </li>
 </ul>
 <p>  &#x2F;* Memory management <em>&#x2F;<br>  malloc(); -&gt; cudaMalloc();<br>  memcpy(); -&gt; cudaMemcpy();<br>  cudaMemset();<br>  cudaFree();	&#x2F;&#x2F; all in device memory which is seperated from host memery!!<br>  &#x2F;&#x2F; the signature of the func<br>  cudaError_t cudaMalloc(void**devPtr,size_t size);&#x2F;&#x2F; the pointer is returned in the devPtr<br>  cudaError_t cudaMemcpy ( void</em> dst, const void* src, size_t count,cudaMemcpyKind kind ) &#x2F;&#x2F; the kind takes one of the following types cudaMemcpyHostToHost –HostToDevice –Dev2Dev D2H this func 是同步的 host 会阻塞知道完成<br>  &#x2F;&#x2F; cudaError_t enumerated type include cudaSuccess .eg<br>      char*cudaGetErrorString(cudaError_t error);</p>
-<p>   &#96;&#96;&#96;</p>
+<p>  &#96;&#96;&#96;</p>
 <p>* </p>
 <ul>
 <li><p><font color=cornsilk>Global memory and shared memory in device just like memory and cache in CPU 前面的分配的函数都是在global memory 里面就像我们的malloc一样 目前我们所知道的由于这样内存分类 对应的指针是不能类型转换的，只能用cudaMemcpy来完成转移 后期由unified memory</font></p>
@@ -1535,19 +1568,40 @@
                      
                 >通常而言 grid是二维 block是三维  blockDim gridDim dim3 type 没有初始化的filed自动为1</font></p>
 </li>
-<li><p><font color=cornsilk></font></p>
+<li><p><font color=cornsilk>P88 warp执行模型 32 个thread 硬件层面都会变成 warp 然后分散在SM上执行 之所以可以是主要是内存资源决定的 32 cores是共享的 前面说到多个warp scheduler 调度将warp的一个指令放到16core的一个组合上运行 其中register file 决定了warp 数量 shared memory 决定sm的block数量 然后warp切换上下文没有开销 都是data分割的 <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/limiter.png"
+                     
+                ></font></p>
 </li>
-<li><p><font color=cornsilk></font></p>
+<li><p><font color=cornsilk><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/warp.png"
+                     
+                >warp 注意4 这个数字是由架构中每个SM的scheduler决定的 stall warp eligible warp 因此我们要最大化active warps</font></p>
 </li>
-<li><p><font color=cornsilk></font></p>
+<li><p><strong><font color=mediumseagreen>divergence 会执行所有分支 我们将分支按warp 划分</font></strong></p>
 </li>
-<li><p><font color=cornsilk></font></p>
+<li><p><strong><font color=pink>latency hiding <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/latency.png"
+                     
+                >类似于CPU的调度 latency就是时间 一般用clock cycle 计算大小</font></strong></p>
+<ul>
+<li><font color=cornsilk>P91 有趣的排队理论 就是需要同时并行的操作数&#x3D;延迟（cycle）*预期throughput throughput 与 bandwidth used interchangably bandwidth refer to as peak data transfer per time unit throughput refer to as any operations       rate metrics都是throughput单位 ops per cycle per SM 也可以进一步用warps表示也就是&#x2F;32 so the underlying thing of latency hidding is that you should increase the parallesiem to move like sequential ops without waiting </font></li>
+</ul>
 </li>
-<li><p><font color=cornsilk></font></p>
+<li><p><font color=pink>latency hidding 总体而言需要更多的并行操作也就是需要更多的active warps 但是这个数量又是由memory and register 限制的所以configuration 很重要</font></p>
 </li>
-<li><p><font color=cornsilk></font></p>
-</li>
-<li><p><font color=cornsilk></font></p>
+<li><p><font color=cornsilk>有趣的建议 <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/tipss.png"
+                     
+                ></font></p>
 </li>
 <li><p><font color=cornsilk></font></p>
 </li>
