@@ -1359,6 +1359,10 @@
 <li>出发点是想要拟合一段数据 然后我们想让整个数据组的误差最小。因此我们求导。可以理解为山坡上寻找下降路线。由于公式会随着接近局部最小点而自己缩小前进距离这是一个学习。</li>
 </ul>
 </li>
+<li><p><font color=seagreen>输入是一个特征向量 的函数求偏导本质就是我们在微积分里面学习的矢量函数求导链式法则 θ的每个分量看作一个维度 然后是复合函数求导</font></p>
+</li>
+</ul>
+</li>
 <li><h3 id="极大似然估计"><a href="#极大似然估计" class="headerlink" title="极大似然估计"></a><font color =violet>极大似然估计</font></h3><ul>
 <li>就是我们依照描述的事件写出这个事件发生的概率表达式，这个表达式由一个变量（涉及概率密度）决定。我们想求这个变量使得改概率函数取一个最大值。</li>
 </ul>
@@ -1376,13 +1380,17 @@
 </ul>
 </li>
 <li><h3 id="注意点——向量拓展的梯度下降以及向量函数"><a href="#注意点——向量拓展的梯度下降以及向量函数" class="headerlink" title="注意点——向量拓展的梯度下降以及向量函数"></a><font color=gold>注意点——向量拓展的梯度下降以及向量函数</font></h3><ul>
-<li>注意函数变量的两个层面，一个是输入样本的维度，即样本向量的每一个维度，另一个是拟合函数中的变量即θ。h(x)(假设函数)&#x3D;θ0<em>1+θ1</em>x1 + θ2*x2+…… .eg 最后写成矩阵点积 多元线性回归</li>
-<li>通常向量n+1 个 第0个是1为了简化表达 其余都是一个特征维度</li>
-<li>根据上述结论重写表达式就是将θ化成对应n+1维向量然后求偏导时乘以一个xj^(i)的值。</li>
-<li>比列失调的等高线梯度下降可能出现震荡，使用特征缩放相当于变量代换更高效将值约束在-1，1之间大约 还有归一化处理 使得平均值在0 x1-u1 代换 本质就是线性组合 u1 就是平均值 x1-u1&#x2F;s u1 就是平均值 s就是标准差 就是概率论</li>
-<li>关于学习率α 过大可能会波动或者发散 国小很慢 总之尝试不同的一系列值</li>
-<li>多项式回归 但是我还是有问题 函数都是人提出来 没有机器自己去寻找</li>
-</ul>
+<li><p>注意函数变量的两个层面，一个是输入样本的维度，即样本向量的每一个维度，另一个是拟合函数中的变量即θ。h(x)(假设函数)&#x3D;θ0<em>1+θ1</em>x1 + θ2*x2+…… .eg 最后写成矩阵点积 多元线性回归</p>
+</li>
+<li><p>通常向量n+1 个 第0个是1为了简化表达 其余都是一个特征维度</p>
+</li>
+<li><p>根据上述结论重写表达式就是将θ化成对应n+1维向量然后求偏导时乘以一个xj^(i)的值。</p>
+</li>
+<li><p>比列失调的等高线梯度下降可能出现震荡，使用特征缩放相当于变量代换更高效将值约束在-1，1之间大约 还有归一化处理 使得平均值在0 x1-u1 代换 本质就是线性组合 u1 就是平均值 x1-u1&#x2F;s u1 就是平均值 s就是标准差 就是概率论</p>
+</li>
+<li><p>关于学习率α 过大可能会波动或者发散 国小很慢 总之尝试不同的一系列值</p>
+</li>
+<li><p>多项式回归 但是我还是有问题 函数都是人提出来 没有机器自己去寻找</p>
 </li>
 <li><h3 id="Normal-Equation"><a href="#Normal-Equation" class="headerlink" title="Normal Equation"></a><font color=cyan>Normal Equation</font></h3><ul>
 <li>线性代数永远的神，但是我已经忘记了~~~~~ 其实就是线代中的回归方程 男泵投影！！！！！</li>
@@ -1483,20 +1491,84 @@
 </code></pre>
 </li>
 <li><h2 id="Colab-使用"><a href="#Colab-使用" class="headerlink" title="Colab 使用"></a><strong><font color=slategray>Colab 使用</font></strong></h2><ul>
-<li>python code 和 shell code 其中！接shell cmd cd除外 %cd</li>
-<li>可以选择执行的硬件 GPU runtime type 里面</li>
-<li>ctrl+ enter 执行一个代码cell</li>
-<li>总体而言其实就是jupyter 只不过是个互联的jupyter.</li>
-<li>左侧的文件图标查看结构 注意下载邮寄 可以上传到google硬盘</li>
-<li>注意自己使用的时候是在google的GPU上 所以程序结束就会消失  注意自己保存</li>
-<li><strong><font color=lightcyan>打开新的需要在file 里面upload notebook!!!! 可以的 注意一次只能有一个session 所以需要关掉前面的 notebook maybe<img  
+<li><p>python code 和 shell code 其中！接shell cmd cd除外 %cd</p>
+</li>
+<li><p>可以选择执行的硬件 GPU runtime type 里面</p>
+</li>
+<li><p>ctrl+ enter 执行一个代码cell</p>
+</li>
+<li><p>总体而言其实就是jupyter 只不过是个互联的jupyter.</p>
+</li>
+<li><p>左侧的文件图标查看结构 注意下载邮寄 可以上传到google硬盘</p>
+</li>
+<li><p>注意自己使用的时候是在google的GPU上 所以程序结束就会消失  注意自己保存</p>
+</li>
+<li><p><strong><font color=lightcyan>打开新的需要在file 里面upload notebook!!!! 可以的 注意一次只能有一个session 所以需要关掉前面的 notebook maybe<img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="/../images/save.png"
                      
-                >真的很不错一个tesla 真棒 然后我可以试试ssh之类的</font></strong></li>
-<li><font color=yellow>然后现在发现了 ctrl+e 普通搜索很快 然后url 对url很快 因为对普通搜索会转换为我们的query 条目 然后会比较慢！！！</font></li>
+                >真的很不错一个tesla 真棒 然后我可以试试ssh之类的</font></strong></p>
+</li>
+<li><p><font color=yellow>然后现在发现了 ctrl+e 普通搜索很快 然后url 对url很快 因为对普通搜索会转换为我们的query 条目 然后会比较慢！！！</font></p>
+</li>
+<li><p><a class="link"   href="https://github.com/virginiakm1988/ML2022-Spring" >ML github repo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</li>
+<li><p>pytorch tensor 相当于 array 可以GPU 加速</p>
+</li>
+<li><h2 id="Pytorch"><a href="#Pytorch" class="headerlink" title="Pytorch"></a><font color=green>Pytorch</font></h2><ul>
+<li>tensor就是高维数组 </li>
+<li>还得复习一下基本的python 语法 list dict class func 基本的一些使用 顺便复习写一写爬虫</li>
+<li>tensor constructor numpy zero tensor unit tensor</li>
+<li>每个batch 的 loss funct 可能存在不同的差别</li>
+<li>sigmoid 或者 Relu 叫做 neuron 总体叫做 neural network</li>
+</ul>
+</li>
+<li><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a><strong><font color=cornsilk>工具</font></strong></h2><pre><code>    *  training data 上的loss过大
+</code></pre>
+<ul>
+<li>Model bias 就是 我们的函数太简单 解决方法 一 增加 特征量 二 增加layer deep learning</li>
+<li>优化问题 梯度下降的问题</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/optm.png"
+                     
+                ></li>
+<li>怎么解决 优化的问题 next lecgt</li>
+<li>一定区分 overfitting 和 优化问题 一个是test data 一个是 training data<ul>
+<li>overfitting <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/freestyle.png"
+                     
+                ></li>
+<li>解决方法 增加 training data 二 data augmentation 就是自己创造一些条件 创造一些资料 需要有道理</li>
+<li>减小弹性 增加限制</li>
+<li>full- connected比较有弹性目前我们讨论的； CNN 比较无弹性<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/stop.png"
+                     
+                ></li>
+</ul>
+</li>
+<li>区分 overfitting 与 model bias  存在一个complexity 与 bias 关系</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/trade.png"
+                     
+                ></li>
+<li>刚刚好的<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/aaa1.png"
+                     
+                ></li>
 <li></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
