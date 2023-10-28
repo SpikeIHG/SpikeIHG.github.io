@@ -1628,55 +1628,47 @@
 </li>
 </ul>
 <p>  &#x2F;* Memory management <em>&#x2F;<br>  malloc(); -&gt; cudaMalloc();<br>  memcpy(); -&gt; cudaMemcpy();<br>  cudaMemset();<br>  cudaFree();	&#x2F;&#x2F; all in device memory which is seperated from host memery!!<br>  &#x2F;&#x2F; the signature of the func<br>  cudaError_t cudaMalloc(void**devPtr,size_t size);&#x2F;&#x2F; the pointer is returned in the devPtr<br>  cudaError_t cudaMemcpy ( void</em> dst, const void* src, size_t count,cudaMemcpyKind kind ) &#x2F;&#x2F; the kind takes one of the following types cudaMemcpyHostToHost –HostToDevice –Dev2Dev D2H this func 是同步的 host 会阻塞知道完成<br>  &#x2F;&#x2F; cudaError_t enumerated type include cudaSuccess .eg<br>      char*cudaGetErrorString(cudaError_t error);</p>
-<p>  &#96;&#96;&#96;</p>
-<p>* </p>
-<ul>
-<li><p><font color=cornsilk>Global memory and shared memory in device just like memory and cache in CPU 前面的分配的函数都是在global memory 里面就像我们的malloc一样 目前我们所知道的由于这样内存分类 对应的指针是不能类型转换的，只能用cudaMemcpy来完成转移 后期由unified memory</font></p>
+<pre><code>
+* 
+
+* &lt;font color=cornsilk&gt;Global memory and shared memory in device just like memory and cache in CPU 前面的分配的函数都是在global memory 里面就像我们的malloc一样 目前我们所知道的由于这样内存分类 对应的指针是不能类型转换的，只能用cudaMemcpy来完成转移 后期由unified memory&lt;/font&gt;
+
+* &lt;font color=cornsilk&gt;![](../images/bg.png)通常而言 grid是二维 block是三维  blockDim gridDim dim3 type 没有初始化的filed自动为1&lt;/font&gt;
+
+* &lt;font color=cornsilk&gt;P88 warp执行模型 32 个thread 硬件层面都会变成 warp 然后分散在SM上执行 之所以可以是主要是内存资源决定的 32 cores是共享的 前面说到多个warp scheduler 调度将warp的一个指令放到16core的一个组合上运行 其中register file 决定了warp 数量 shared memory 决定sm的block数量 然后warp切换上下文没有开销 都是data分割的 ![](../images/limiter.png)&lt;/font&gt;
+
+* &lt;font color=cornsilk&gt;![](../images/warp.png)warp 注意4 这个数字是由架构中每个SM的scheduler决定的 stall warp eligible warp 因此我们要最大化active warps&lt;/font&gt;
+
+* **&lt;font color=mediumseagreen&gt;divergence 会执行所有分支 我们将分支按warp 划分&lt;/font&gt;**
+
+* **&lt;font color=pink&gt;latency hiding ![](../images/latency.png)类似于CPU的调度 latency就是时间 一般用clock cycle 计算大小&lt;/font&gt;**
+
+* &lt;font color=cornsilk&gt;P91 有趣的排队理论 就是需要同时并行的操作数=延迟（cycle）*预期throughput throughput 与 bandwidth used interchangably bandwidth refer to as peak data transfer per time unit throughput refer to as any operations       rate metrics都是throughput单位 ops per cycle per SM 也可以进一步用warps表示也就是/32 so the underlying thing of latency hidding is that you should increase the parallesiem to move like sequential ops without waiting &lt;/font&gt;
+
+* &lt;font color=pink&gt;latency hidding 总体而言需要更多的并行操作也就是需要更多的active warps 但是这个数量又是由memory and register 限制的所以configuration 很重要&lt;/font&gt;
+
+* &lt;font color=cornsilk&gt;有趣的建议 ![](../images/tipss.png)&lt;/font&gt;
+
+* &lt;font color=cornsilk&gt;一些使用CUDA 的建议 ![](../images/bsize.png)太大的block size 会使每个thread硬件资源很少 太小的 block size warp 数量太少&lt;/font&gt;
+</code></pre>
 </li>
-<li><p><font color=cornsilk><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/bg.png"
-                     
-                >通常而言 grid是二维 block是三维  blockDim gridDim dim3 type 没有初始化的filed自动为1</font></p>
-</li>
-<li><p><font color=cornsilk>P88 warp执行模型 32 个thread 硬件层面都会变成 warp 然后分散在SM上执行 之所以可以是主要是内存资源决定的 32 cores是共享的 前面说到多个warp scheduler 调度将warp的一个指令放到16core的一个组合上运行 其中register file 决定了warp 数量 shared memory 决定sm的block数量 然后warp切换上下文没有开销 都是data分割的 <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/limiter.png"
-                     
-                ></font></p>
-</li>
-<li><p><font color=cornsilk><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/warp.png"
-                     
-                >warp 注意4 这个数字是由架构中每个SM的scheduler决定的 stall warp eligible warp 因此我们要最大化active warps</font></p>
-</li>
-<li><p><strong><font color=mediumseagreen>divergence 会执行所有分支 我们将分支按warp 划分</font></strong></p>
-</li>
-<li><p><strong><font color=pink>latency hiding <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/latency.png"
-                     
-                >类似于CPU的调度 latency就是时间 一般用clock cycle 计算大小</font></strong></p>
-<ul>
-<li><font color=cornsilk>P91 有趣的排队理论 就是需要同时并行的操作数&#x3D;延迟（cycle）*预期throughput throughput 与 bandwidth used interchangably bandwidth refer to as peak data transfer per time unit throughput refer to as any operations       rate metrics都是throughput单位 ops per cycle per SM 也可以进一步用warps表示也就是&#x2F;32 so the underlying thing of latency hidding is that you should increase the parallesiem to move like sequential ops without waiting </font></li>
-</ul>
-</li>
-<li><p><font color=pink>latency hidding 总体而言需要更多的并行操作也就是需要更多的active warps 但是这个数量又是由memory and register 限制的所以configuration 很重要</font></p>
-</li>
-<li><p><font color=cornsilk>有趣的建议 <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/tipss.png"
-                     
-                ></font></p>
-</li>
-<li><p><font color=cornsilk></font></p>
-</li>
+<li><h2 id="Synchronization"><a href="#Synchronization" class="headerlink" title="Synchronization"></a><font color=slatecyan>Synchronization</font></h2><ul>
+<li><strong><font color=cornsilk>两个层面 host and device 2 thread </font></strong></li>
+<li><strong><font color=cornsilk><strong>device</strong> void __syncthreads(void) 一个让同一个block 的线程同步的函数</font></strong></li>
+<li><strong><font color=cornsilk></font></strong></li>
+<li><strong><font color=cornsilk></font></strong></li>
+<li><strong><font color=cornsilk></font></strong></li>
+<li><strong><font color=cornsilk></font></strong></li>
+<li><strong><font color=cornsilk></font></strong></li>
+<li><strong><font color=cornsilk></font></strong></li>
+<li><strong><font color=cornsilk></font></strong></li>
+<li><strong><font color=cornsilk></font></strong></li>
+<li><strong><font color=cornsilk></font></strong></li>
+<li><strong><font color=cornsilk></font></strong></li>
+<li><strong><font color=cornsilk></font></strong></li>
+<li><strong><font color=cornsilk></font></strong></li>
+<li><strong><font color=cornsilk></font></strong></li>
+<li><strong><font color=cornsilk></font></strong></li>
 </ul>
 </li>
 </ul>
