@@ -522,8 +522,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-10-28 19:11:22</span>
-            <span class="mobile">2023-10-28 19:11</span>
+            <span class="pc">2023-10-28 22:27:13</span>
+            <span class="mobile">2023-10-28 22:27</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -545,12 +545,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.2k Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.7k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>5 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>7 Mins</span>
         </span>
     
     
@@ -638,23 +638,74 @@
 * &lt;font color=cornsilk&gt;一些使用CUDA 的建议 ![](../images/bsize.png)太大的block size 会使每个thread硬件资源很少 太小的 block size warp 数量太少&lt;/font&gt;
 </code></pre>
 </li>
+<li><h2 id="GPU-ARCH"><a href="#GPU-ARCH" class="headerlink" title="GPU ARCH"></a><font color=Pink>GPU ARCH</font></h2><ul>
+<li><strong><font color=cyan>The GPU architecture is built around a scalable array of <em>Streaming Multiprocessors</em> (SM). GPU hardware parallelism is achieved through the replication of this architectural building block. </font></strong></li>
+<li><strong><font color=cyan>P 68我们先可以把SM看作一个比较强的硬件 一个grid 对应一个 kernel 一个grid的block可以分配到多个 SMs 然后一个SM 可以有多个block 也可能来自不同的grid(kernel 并发)每一个线程都具有流水线</font></strong></li>
+<li><strong><font color=cyan>SIMT warp为一个基本管理 thread warp中每一个线程的内存与寄存器与计算资源都是独立的 SM将 block划分为warps 所以最好为32的倍数</font></strong></li>
+<li><strong><font color=cyan>Even though all threads in a warp start together at the same program address, it is possible for individual threads to have different behavior. SIMT enables you to write thread-level </font></strong></li>
+<li><strong><font color=cyan><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/SM.png"
+                     
+                ></font></strong></li>
+<li><strong><font color=red>一个block只能安排在一个SMs！！！记住知道执行结束都在一个SMs 同样的一个SM可以同时有多个block</font></strong><ul>
+<li><strong><font color=cyan>一个grid其实就是整个device了只是支持kernel的并行操纵 然后有个SM商店 shared memory 按照block划分 register 几万个按照thread划分因此 一个block间的thread可以shared mem 交流 While all threads in a thread block run logically in parallel, not all threads can execute physically at the same time. As a result, different threads in a thread block may make progress at a different pace.同一个block中的thread以warp执行 所以实际没有物理并行 这里可能会在 shared mem访存时出现竞争 CUDA提供了block内部的同步函数 但是多个block 之间没有提供同步函数 </font></strong></li>
+</ul>
+</li>
+<li><strong><font color=cyan>一个core通常有一个整数ALU和浮点ALU <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/device.png"
+                     
+                >gigathread 就是全局的安排block到SM的</font></strong></li>
+<li><strong><font color=cyan>two warps and issue one instruction from each warp to a group of 16 CUDA cores, 16 load&#x2F;store units, or 4 special function units (illustrated in Figure 3-4). The Fermi architecture, compute capability 2.x, can simultaneously handle 48 warps per SM for a total of 1,536 threads resident in a single SM at a time. 我们的这个关键就是 分组 其实有四个组合 然后选择其中一个一个作为执行选项 然后对于两个warp scheduler 就是两条流水线</font></strong></li>
+<li><strong><font color=cyan></font></strong></li>
+<li><strong><font color=cyan></font></strong></li>
+<li><strong><font color=cyan></font></strong></li>
+<li><strong><font color=cyan></font></strong></li>
+<li><strong><font color=cyan></font></strong></li>
+<li><strong><font color=cyan></font></strong></li>
+<li><strong><font color=cyan></font></strong></li>
+<li><strong><font color=cyan></font></strong></li>
+<li><strong><font color=cyan></font></strong></li>
+<li></li>
+</ul>
+</li>
 <li><h2 id="Synchronization"><a href="#Synchronization" class="headerlink" title="Synchronization"></a><font color=slatecyan>Synchronization</font></h2><ul>
-<li><strong><font color=cornsilk>两个层面 host and device 2 thread </font></strong></li>
-<li><strong><font color=cornsilk><strong>device</strong> void __syncthreads(void) 一个让同一个block 的线程同步的函数</font></strong></li>
-<li><strong><font color=cornsilk></font></strong></li>
-<li><strong><font color=cornsilk></font></strong></li>
-<li><strong><font color=cornsilk></font></strong></li>
-<li><strong><font color=cornsilk></font></strong></li>
-<li><strong><font color=cornsilk></font></strong></li>
-<li><strong><font color=cornsilk></font></strong></li>
-<li><strong><font color=cornsilk></font></strong></li>
-<li><strong><font color=cornsilk></font></strong></li>
-<li><strong><font color=cornsilk></font></strong></li>
-<li><strong><font color=cornsilk></font></strong></li>
-<li><strong><font color=cornsilk></font></strong></li>
-<li><strong><font color=cornsilk></font></strong></li>
-<li><strong><font color=cornsilk></font></strong></li>
-<li><strong><font color=cornsilk></font></strong></li>
+<li><p><strong><font color=cornsilk>两个层面 host and device 2 thread </font></strong></p>
+</li>
+<li><p><strong><font color=cornsilk><strong>device</strong> void __syncthreads(void) 一个让同一个block 的线程同步的函数</font></strong></p>
+</li>
+<li></li>
+<li><p><strong><font color=cornsilk></font></strong></p>
+</li>
+<li><p><strong><font color=cornsilk></font></strong></p>
+</li>
+<li><p><strong><font color=cornsilk></font></strong></p>
+</li>
+<li><p><strong><font color=cornsilk></font></strong></p>
+</li>
+<li><p><strong><font color=cornsilk></font></strong></p>
+</li>
+<li><p><strong><font color=cornsilk></font></strong></p>
+</li>
+<li><p><strong><font color=cornsilk></font></strong></p>
+</li>
+<li><p><strong><font color=cornsilk></font></strong></p>
+</li>
+<li><p><strong><font color=cornsilk></font></strong></p>
+</li>
+<li><p><strong><font color=cornsilk></font></strong></p>
+</li>
+<li><p><strong><font color=cornsilk></font></strong></p>
+</li>
+<li><p><strong><font color=cornsilk></font></strong></p>
+</li>
+<li><p><strong><font color=cornsilk></font></strong></p>
+</li>
+<li><p><strong><font color=cornsilk></font></strong></p>
+</li>
 </ul>
 </li>
 </ul>
@@ -768,7 +819,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">CUDA</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CUDA-amp-Algorithm"><span class="nav-text">CUDA&amp;Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Prelace"><span class="nav-text">Prelace</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F-amp-Q"><span class="nav-text">F&amp;Q</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Heterogeneous-Computing"><span class="nav-text">Heterogeneous Computing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Synchronization"><span class="nav-text">Synchronization</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CUDA-amp-Algorithm"><span class="nav-text">CUDA&amp;Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Prelace"><span class="nav-text">Prelace</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F-amp-Q"><span class="nav-text">F&amp;Q</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Heterogeneous-Computing"><span class="nav-text">Heterogeneous Computing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GPU-ARCH"><span class="nav-text">GPU ARCH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Synchronization"><span class="nav-text">Synchronization</span></a></li></ol></li></ol>
 
     </div>
 </div>
