@@ -6,7 +6,7 @@
   <link href="https://spikeihg.github.io/atom.xml" rel="self"/>
   
   <link href="https://spikeihg.github.io/"/>
-  <updated>2023-10-29T04:29:04.245Z</updated>
+  <updated>2023-10-29T08:20:37.234Z</updated>
   <id>https://spikeihg.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>佩索呀</title>
+    <link href="https://spikeihg.github.io/2023/10/29/%E4%BD%A9%E7%B4%A2%E5%91%80/"/>
+    <id>https://spikeihg.github.io/2023/10/29/%E4%BD%A9%E7%B4%A2%E5%91%80/</id>
+    <published>2023-10-29T08:04:14.000Z</published>
+    <updated>2023-10-29T08:20:37.234Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Darling-I-‘m-getting-older-亲爱的，我原来也会变老"><a href="#Darling-I-‘m-getting-older-亲爱的，我原来也会变老" class="headerlink" title="Darling . I ‘m getting older. (亲爱的，我原来也会变老)"></a>Darling . I ‘m getting older. (亲爱的，我原来也会变老)</h3><ul><li>Everyday poetry.</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Darling-I-‘m-getting-older-亲爱的，我原来也会变老&quot;&gt;&lt;a href=&quot;#Darling-I-‘m-getting-older-亲爱的，我原来也会变老&quot; class=&quot;headerlink&quot; title=&quot;Darling . I ‘m g</summary>
+      
+    
+    
+    
+    
+    <category term="自然" scheme="https://spikeihg.github.io/tags/%E8%87%AA%E7%84%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>CUDA</title>
@@ -443,28 +465,6 @@
     
     
     <category term="数据结构与算法" scheme="https://spikeihg.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基础汇编指令</title>
-    <link href="https://spikeihg.github.io/2023/03/23/%E5%9F%BA%E7%A1%80%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4/"/>
-    <id>https://spikeihg.github.io/2023/03/23/%E5%9F%BA%E7%A1%80%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4/</id>
-    <published>2023-03-23T15:18:23.000Z</published>
-    <updated>2023-03-25T12:27:41.857Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="概念补充"><a href="#概念补充" class="headerlink" title="概念补充"></a>概念补充</h3><ul><li><h4 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h4><p>一个标准的c语言程序在编译过程中，首先是经过翻译，成汇编语言，也就是Linux命令行中的-s选项，然后转为二进制的机器代码，然后通过连接器，与库相连，并且附上一些地址与起始终止信息。</p></li><li><h4 id="汇编语言与机器代码"><a href="#汇编语言与机器代码" class="headerlink" title="汇编语言与机器代码"></a>汇编语言与机器代码</h4><p>机器是二进制字节，电脑可读的指令，汇编语言就是助记符。可以编写</p></li><li><h4 id="指令集架构"><a href="#指令集架构" class="headerlink" title="指令集架构"></a>指令集架构</h4><p>不同机器，处理器的指令集架构不一样，但是高级抽象语言却能够通用，只要选用适合机器的编译器即可。</p></li><li><h4 id="x86"><a href="#x86" class="headerlink" title="x86"></a>x86</h4><p>因为英特尔前期处理器都是某某86所以简称x86，x86-64即64位拓展</p></li><li><h4 id="O优化"><a href="#O优化" class="headerlink" title="O优化"></a>O优化</h4><p>其实就是命令行的一个选型，高度优化可能使代码的汇编代码逻辑改变较大。</p></li><li><h4 id="寄存器"><a href="#寄存器" class="headerlink" title="寄存器"></a>寄存器</h4><ul><li><h5 id="程序寄存器"><a href="#程序寄存器" class="headerlink" title="程序寄存器"></a>程序寄存器</h5><p>用于专门存储指令的地址 %rip</p></li><li><h5 id="一组十六个整数寄存器"><a href="#一组十六个整数寄存器" class="headerlink" title="一组十六个整数寄存器"></a>一组十六个整数寄存器</h5><p>用于系列操作</p></li><li><h5 id="条件码寄存器"><a href="#条件码寄存器" class="headerlink" title="条件码寄存器"></a>条件码寄存器</h5><p>存储维护条件码实现逻辑控制</p></li><li><h5 id="向量寄存器"><a href="#向量寄存器" class="headerlink" title="向量寄存器"></a>向量寄存器</h5><p>实现浮点数操作</p></li></ul></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;h3 id=&quot;概念补充&quot;&gt;&lt;a href=&quot;#概念补充&quot; class=&quot;headerlink&quot; title=&quot;概念补充&quot;&gt;&lt;/a&gt;概念补充&lt;/h</summary>
-      
-    
-    
-    
-    
-    <category term="“CSAPP”" scheme="https://spikeihg.github.io/tags/%E2%80%9CCSAPP%E2%80%9D/"/>
     
   </entry>
   
