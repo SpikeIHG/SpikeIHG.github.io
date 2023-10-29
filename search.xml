@@ -1673,7 +1673,29 @@
                      data-src="/../images/device.png"
                      
                 >gigathread 就是全局的安排block到SM的</font></strong></li>
-<li><strong><font color=cyan>two warps and issue one instruction from each warp to a group of 16 CUDA cores, 16 load&#x2F;store units, or 4 special function units (illustrated in Figure 3-4). The Fermi architecture, compute capability 2.x, can simultaneously handle 48 warps per SM for a total of 1,536 threads resident in a single SM at a time. 我们的这个关键就是 分组 其实有四个组合 然后选择其中一个一个作为执行选项 然后对于两个warp scheduler 就是两条流水线</font></strong></li>
+<li><strong><font color=cyan>two warps and issue one instruction from each warp to a group of 16 CUDA cores, 16 load&#x2F;store units, or 4 special function units (illustrated in Figure 3-4). The Fermi architecture, compute capability 2.x, can simultaneously handle 48 warps per SM for a total of 1,536 threads resident in a single SM at a time. 我们的这个关键就是 分组 其实有四个组合 然后选择其中一个一个作为执行选项 然后对于两个warp scheduler 就是两条流水线 然后其实每一组调度都可以看作是并行的了 不用再去管物理上的运行了上面说的48 个warp就是 同时dispatch 48 个 而不是同时运行 48个</font></strong></li>
+<li><strong><font color=cyan>64KB memory 被分成了shared memory 和L1 cache两者关系运行更改通过runtime API </font></strong></li>
+<li><strong><font color=red>Fermi also supports concurrent kernel execution: <font color=bluseagreen>multiple kernels launched from the same applicationtion context executing on the same GPU at the same time.</font> Concurrent kernel execution allows programs that execute a number of small kernels to fully utilize the GPU, as illustrated in Figure 3-5. Fermi allows up to 16 kernels to be run on the device at the same time. Concurrent kernel execution makes the GPU appear more like a MIMD architecture from the programmer’s perspective.<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/conc.png"
+                     
+                ></font></strong></li>
+<li><strong><font color=cyan>LD&#x2F;ST 使用来进行转换地址的单元 16 个也是因为并行的原因</font></strong></li>
+<li><strong><font color=cyan>kepler dynamic parallelism 允许 nested kernel invoke ; Hyper-Q 避免一个失败的kernel 调用 idle CPU 太长时间 多个task queue</font></strong></li>
+<li><strong><font color=cyan>P 79 nvprof profiling driven 性能测试初步 类似linux里的一个 profile Event and metric</font></strong></li>
+<li><strong><font color=cyan>memory bandwidth; compute resource ; latency</font></strong></li>
+<li><strong><font color=cyan>Warps are the basic unit of execution in an SM. When you launch a grid of thread blocks, the thread blocks in the grid are distributed among SMs.  就是可以多个相同grid block在一个SM，也可以一个SM有来自不同block 最终硬件上都是一维</font></strong></li>
+<li><strong><font color=cyan>warp 的划分原则 consecutive threadIdx.x !! 最后是向上取取整warps 如果非整数倍会出现空闲的不活跃thread 但是仍然会消耗占用硬件自资源也就是最终都是一维的硬件实现</font></strong></li>
+<li><strong><font color=cyan>Warp Divergence 就是分支判断的问题 会 连串掩码式地执行 在优化等级较高时时间开销接近正常 解决就是 让一个分支用warp size 与运行</font></strong></li>
+<li><strong><font color=cyan><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/reso.png"
+                     
+                >仔细想想居然很大程度上我们的这两个是独立影响的</font></strong></li>
+<li><strong><font color=cyan>P89 A thread block is called an <em>active block</em> when compute resources, such as registers and shared memory, have been allocated to it. The warps it contains are called <em>active warps</em>. Active warps can be further classifi ed into the following three types: 三种 selected warp stalled warp eligible warp selected 不多于4个 是不是类似于我所说的流水线 4个选项 </font></strong></li>
+<li><strong><font color=cyan>block太小 可以认为与大block相比同样的共享内存能偶拥有的thread 数量较少 所有register等没有充分利用 ；太大，线程太多，没有足够的thread</font></strong></li>
 <li><strong><font color=cyan></font></strong></li>
 <li><strong><font color=cyan></font></strong></li>
 <li><strong><font color=cyan></font></strong></li>
@@ -1683,7 +1705,7 @@
 <li><strong><font color=cyan></font></strong></li>
 <li><strong><font color=cyan></font></strong></li>
 <li><strong><font color=cyan></font></strong></li>
-<li></li>
+<li><strong><font color=cyan></font></strong></li>
 </ul>
 </li>
 <li><h2 id="Synchronization"><a href="#Synchronization" class="headerlink" title="Synchronization"></a><font color=slatecyan>Synchronization</font></h2><ul>
