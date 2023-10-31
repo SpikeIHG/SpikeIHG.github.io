@@ -374,6 +374,7 @@
     <url>/2023/03/16/Winter-s-blog/</url>
     <content><![CDATA[<h2 id="For-Ms-Winter"><a href="#For-Ms-Winter" class="headerlink" title="For Ms.Winter"></a>For Ms.Winter</h2><h3 id="先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功"><a href="#先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功" class="headerlink" title="先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功"></a>先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功</h3><ul>
 <li><strong><font color=pink>emoji kitchen use ps to scale down and save in png and then port to QQ</font></strong></li>
+<li><strong><font color=pink>QQ music .first download music from the magic website and then open in the directory with QQ player. Note: when you download by qq you could easily get adapted in the app ! Good!</font></strong></li>
 </ul>
 ]]></content>
       <tags>
@@ -928,6 +929,45 @@
 <p><em><strong><a class="link"   href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/naming/" >CPPformal <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></em></p>
 <p><a class="link"   href="https://github.com/nlohmann/json" >json <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p>[redfiredoc](<a class="link"   href="https://redefine-docs.ohevan.com/getting-started" >快速开始 - Redefine Docs (ohevan.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>)</p>
+<h2 id="C-review-with-the-tinyrender"><a href="#C-review-with-the-tinyrender" class="headerlink" title="C++ review with the tinyrender"></a><font color=teal>C++ review with the tinyrender</font></h2><ul>
+<li><h3 id="Oriented-object-programming"><a href="#Oriented-object-programming" class="headerlink" title="Oriented-object programming"></a><strong><font color=pink>Oriented-object programming</font></strong></h3><ul>
+<li><p><strong><font color=pink>用户。类的用户就是使用类的程序(员)。这是通常情况。与程序的用户不一样。</font></strong></p>
+</li>
+<li><p><strong><font color=pink>inline 最好写在外面的定义处</font></strong></p>
+</li>
+<li><p><strong><font color=pink>mutable 可变数据成员 永远可以改变 具体例子就是外面想要设计一个计数器来统计这个类的实例次数 无论是作为const还是非const都要计数</font></strong></p>
+</li>
+<li><p><strong><font color=pink>类内初始化只能用花括号和等号 这里区分下圆括号和花括号 两者本身都是一样的调用构造函数只是有些区别 一花括号不允许隐式转换；二花括号才能用在类内三花括号才能默认构造函数</font></strong></p>
+</li>
+<li><p><strong><font color=pink>const成员重载 显然只用底层const才能重载通常会借用一个共有的const功能函数</font></strong></p>
+</li>
+<li><p><strong><font color=pink>尽量多些工厂函数</font></strong></p>
+</li>
+<li><p><strong><font color=pink>友元类，类中所有的函数都可以访问原来的函数的所有成员</font></strong></p>
+</li>
+<li><p><strong><font color=pink></font></strong></p>
+</li>
+<li><p><strong><font color=pink></font></strong></p>
+</li>
+<li><p><strong><font color=pink></font></strong></p>
+</li>
+<li><p><strong><font color=pink></font></strong></p>
+</li>
+<li><p><strong><font color=pink></font></strong></p>
+</li>
+<li><p><strong><font color=pink></font></strong></p>
+</li>
+<li><p><strong><font color=pink></font></strong></p>
+</li>
+<li><p><strong><font color=pink></font></strong></p>
+</li>
+<li><p><strong><font color=pink></font></strong></p>
+</li>
+<li><p><strong><font color=pink></font></strong></p>
+</li>
+</ul>
+</li>
+</ul>
 ]]></content>
       <tags>
         <tag>Cmake</tag>
@@ -1524,6 +1564,60 @@
 <li>sigmoid 或者 Relu 叫做 neuron 总体叫做 neural network</li>
 </ul>
 </li>
+<li><h2 id="Python-review"><a href="#Python-review" class="headerlink" title="Python review"></a><font color=purple>Python review</font></h2><ul>
+<li><p>if var in list:  if var not in list:</p>
+</li>
+<li><p>if var1,var2 not in list；</p>
+</li>
+<li><p>for key,value in dict:</p>
+</li>
+<li><p>for key in sorted(dict.keys()):</p>
+</li>
+<li><p>for value in sorted(dict.values())</p>
+</li>
+<li><p>answer &#x3D; input(‘please enter your answer’)</p>
+</li>
+<li><p>int(input(‘how old are you’)) </p>
+</li>
+<li><p>f”{var1_has_defined} {var2_has_dafined}” mesg_to_be_printed&#x3D;f””</p>
+</li>
+<li><p>python 函数调用时候 可以直接指定 def fun(var1,var2): …… fun(var1&#x3D;yes,var2&#x3D;no) 但是一定要记住名字 不要出错</p>
+</li>
+<li><p>默认形参也是放在后面</p>
+</li>
+<li><p>while some_list:</p>
+<p> ​	item&#x3D;list.pop()</p>
+<p> ​	do_with(item)</p>
+</li>
+<li><p>dict[‘new_key’]&#x3D;new_value</p>
+</li>
+<li><p>def fun(list_para):…     fun(list[:]) 传递一个切片  函数都是引用一定会修改变量的</p>
+</li>
+<li><p>可变形参 def func(*tuple_para): def func2(size,**dict_para):</p>
+</li>
+<li><h3 id="Class-in-Python"><a href="#Class-in-Python" class="headerlink" title="Class in Python"></a><font color=maroon>Class in Python</font></h3></li>
+<li><p>class my_class(): 开头的书写方法</p>
+<ul>
+<li>def __init(self,para1,para2)__	self 必须第一个</li>
+<li>然后接着是 self.para&#x3D;para(实际传入实例类的形参)这样写之后this 相当于才拥有这些成员</li>
+<li>​	普通方法 def member_func(self): 不要忘记了self</li>
+<li>如果要有具有默认初始值的属性 可以直接在__init()__ 下面进行写 self.prop&#x3D;1000 prop 不用出现在init括号里面</li>
+<li><font color=aqua>继承</font></li>
+<li>首先必须括号里写明继承的类 class derived(base):</li>
+<li>super()._<em>init(para,para,para)</em>_注意里面没有self 继承全部内容</li>
+<li>自己属性接着写就可以</li>
+<li>可以重写父类方法 名字不同就可以</li>
+<li>可以类实例作为成员 self.class_mem&#x3D;classA()</li>
+</ul>
+</li>
+<li><p><font color=green>文件操作</font></p>
+<ul>
+<li>with open(‘filename’) as name:  不需要close了 因为with</li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a><strong><font color=cornsilk>工具</font></strong></h2><pre><code>    *  training data 上的loss过大
 </code></pre>
 <ul>
@@ -1567,6 +1661,19 @@
                      
                 ></li>
 <li></li>
+</ul>
+</li>
+<li><h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a><font color=pink>Tips</font></h3><ul>
+<li><font color=mediumspringgreen>critical point saddle point &amp; local minima 前者更多 通过hessian 矩阵来判断 特征值来判断 全正或者全负local其余就是saddle point</font></li>
+<li><font color=mediumspringgreen>针对local point 的方法 batch size  一般来说越小noise 越多但实际上更好 但是在并行计算下可能更慢 第二 momentum 惯性一样的下一步加成</font></li>
+<li><font color=mediumspringgreen></font></li>
+<li><font color=mediumspringgreen></font></li>
+<li><font color=mediumspringgreen></font></li>
+<li><font color=mediumspringgreen></font></li>
+<li><font color=mediumspringgreen></font></li>
+<li><font color=mediumspringgreen></font></li>
+<li><font color=mediumspringgreen></font></li>
+<li><font color=mediumspringgreen></font></li>
 </ul>
 </li>
 </ul>
@@ -1623,34 +1730,60 @@
 <li><p><font color=cornsilk>Host CPU and its memory ; Device : GPUs and its memory eg h_ for host m; d_ for device space</font></p>
 </li>
 <li><p><font color=cornsilk>Kernel 即跑在GPU 的codes我们可以看作是一个普通函数 实际上 GPU将其分配在多个线程上同时运行 ，当kernel运行后控制会立马交还给cpu以开始其他工作 异步工作。serial code 串行码 complemented by parallel code</font></p>
+<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* Memory management */</span></span><br><span class="line"><span class="built_in">malloc</span>(); -&gt; <span class="built_in">cudaMalloc</span>();</span><br><span class="line"><span class="built_in">memcpy</span>(); -&gt; <span class="built_in">cudaMemcpy</span>();</span><br><span class="line"><span class="built_in">cudaMemset</span>();</span><br><span class="line"><span class="built_in">cudaFree</span>();	<span class="comment">// all in device memory which is seperated from host memery!!</span></span><br><span class="line"><span class="comment">// the signature of the func</span></span><br><span class="line"><span class="function">cudaError_t <span class="title">cudaMalloc</span><span class="params">(<span class="type">void</span>**devPtr,<span class="type">size_t</span> size)</span></span>;<span class="comment">// the pointer is returned in the devPtr</span></span><br><span class="line"><span class="function">cudaError_t <span class="title">cudaMemcpy</span> <span class="params">( <span class="type">void</span>* dst, <span class="type">const</span> <span class="type">void</span>* src, <span class="type">size_t</span> count,cudaMemcpyKind kind )</span> <span class="comment">// the kind takes one of the following types cudaMemcpyHostToHost --HostToDevice --Dev2Dev D2H this func 是同步的 host 会阻塞知道完成</span></span></span><br><span class="line"><span class="function"><span class="comment">// cudaError_t enumerated type include cudaSuccess .eg </span></span></span><br><span class="line"><span class="function">    <span class="type">char</span>*<span class="title">cudaGetErrorString</span><span class="params">(cudaError_t error)</span></span>;</span><br></pre></td></tr></table></figure></div>
 </li>
-<li><p>&#96;&#96;&#96;cpp</p>
+<li><p><font color=cornsilk>Global memory and shared memory in device just like memory and cache in CPU 前面的分配的函数都是在global memory 里面就像我们的malloc一样 目前我们所知道的由于这样内存分类 对应的指针是不能类型转换的，只能用cudaMemcpy来完成转移 后期由unified memory</font></p>
+</li>
+<li><p><font color=cornsilk><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/bg.png"
+                     
+                >通常而言 grid是二维 block是三维  blockDim gridDim dim3 type 没有初始化的filed自动为1</font></p>
+</li>
+<li><p><font color=cornsilk>P88 warp执行模型 32 个thread 硬件层面都会变成 warp 然后分散在SM上执行 之所以可以是主要是内存资源决定的 32 cores是共享的 前面说到多个warp scheduler 调度将warp的一个指令放到16core的一个组合上运行 其中register file 决定了warp 数量 shared memory 决定sm的block数量 然后warp切换上下文没有开销 都是data分割的 <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/limiter.png"
+                     
+                ></font></p>
+</li>
+<li><p><font color=cornsilk><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/warp.png"
+                     
+                >warp 注意4 这个数字是由架构中每个SM的scheduler决定的 stall warp eligible warp 因此我们要最大化active warps</font></p>
+</li>
+<li><p><strong><font color=mediumseagreen>divergence 会执行所有分支 我们将分支按warp 划分</font></strong></p>
+</li>
+<li><p><strong><font color=pink>latency hiding <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/latency.png"
+                     
+                >类似于CPU的调度 latency就是时间 一般用clock cycle 计算大小</font></strong></p>
+<ul>
+<li><font color=cornsilk>P91 有趣的排队理论 就是需要同时并行的操作数&#x3D;延迟（cycle）*预期throughput throughput 与 bandwidth used interchangably bandwidth refer to as peak data transfer per time unit throughput refer to as any operations       rate metrics都是throughput单位 ops per cycle per SM 也可以进一步用warps表示也就是&#x2F;32 so the underlying thing of latency hidding is that you should increase the parallesiem to move like sequential ops without waiting </font></li>
+</ul>
+</li>
+<li><p><font color=pink>latency hidding 总体而言需要更多的并行操作也就是需要更多的active warps 但是这个数量又是由memory and register 限制的所以configuration 很重要</font></p>
+</li>
+<li><p><font color=cornsilk>有趣的建议 <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/tipss.png"
+                     
+                ></font></p>
+</li>
+<li><p><font color=cornsilk>一些使用CUDA 的建议 <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/bsize.png"
+                     
+                >太大的block size 会使每个thread硬件资源很少 太小的 block size warp 数量太少</font></p>
 </li>
 </ul>
-<p>  &#x2F;* Memory management <em>&#x2F;<br>  malloc(); -&gt; cudaMalloc();<br>  memcpy(); -&gt; cudaMemcpy();<br>  cudaMemset();<br>  cudaFree();	&#x2F;&#x2F; all in device memory which is seperated from host memery!!<br>  &#x2F;&#x2F; the signature of the func<br>  cudaError_t cudaMalloc(void**devPtr,size_t size);&#x2F;&#x2F; the pointer is returned in the devPtr<br>  cudaError_t cudaMemcpy ( void</em> dst, const void* src, size_t count,cudaMemcpyKind kind ) &#x2F;&#x2F; the kind takes one of the following types cudaMemcpyHostToHost –HostToDevice –Dev2Dev D2H this func 是同步的 host 会阻塞知道完成<br>  &#x2F;&#x2F; cudaError_t enumerated type include cudaSuccess .eg<br>      char*cudaGetErrorString(cudaError_t error);</p>
-<pre><code>
-* 
-
-* &lt;font color=cornsilk&gt;Global memory and shared memory in device just like memory and cache in CPU 前面的分配的函数都是在global memory 里面就像我们的malloc一样 目前我们所知道的由于这样内存分类 对应的指针是不能类型转换的，只能用cudaMemcpy来完成转移 后期由unified memory&lt;/font&gt;
-
-* &lt;font color=cornsilk&gt;![](../images/bg.png)通常而言 grid是二维 block是三维  blockDim gridDim dim3 type 没有初始化的filed自动为1&lt;/font&gt;
-
-* &lt;font color=cornsilk&gt;P88 warp执行模型 32 个thread 硬件层面都会变成 warp 然后分散在SM上执行 之所以可以是主要是内存资源决定的 32 cores是共享的 前面说到多个warp scheduler 调度将warp的一个指令放到16core的一个组合上运行 其中register file 决定了warp 数量 shared memory 决定sm的block数量 然后warp切换上下文没有开销 都是data分割的 ![](../images/limiter.png)&lt;/font&gt;
-
-* &lt;font color=cornsilk&gt;![](../images/warp.png)warp 注意4 这个数字是由架构中每个SM的scheduler决定的 stall warp eligible warp 因此我们要最大化active warps&lt;/font&gt;
-
-* **&lt;font color=mediumseagreen&gt;divergence 会执行所有分支 我们将分支按warp 划分&lt;/font&gt;**
-
-* **&lt;font color=pink&gt;latency hiding ![](../images/latency.png)类似于CPU的调度 latency就是时间 一般用clock cycle 计算大小&lt;/font&gt;**
-
-* &lt;font color=cornsilk&gt;P91 有趣的排队理论 就是需要同时并行的操作数=延迟（cycle）*预期throughput throughput 与 bandwidth used interchangably bandwidth refer to as peak data transfer per time unit throughput refer to as any operations       rate metrics都是throughput单位 ops per cycle per SM 也可以进一步用warps表示也就是/32 so the underlying thing of latency hidding is that you should increase the parallesiem to move like sequential ops without waiting &lt;/font&gt;
-
-* &lt;font color=pink&gt;latency hidding 总体而言需要更多的并行操作也就是需要更多的active warps 但是这个数量又是由memory and register 限制的所以configuration 很重要&lt;/font&gt;
-
-* &lt;font color=cornsilk&gt;有趣的建议 ![](../images/tipss.png)&lt;/font&gt;
-
-* &lt;font color=cornsilk&gt;一些使用CUDA 的建议 ![](../images/bsize.png)太大的block size 会使每个thread硬件资源很少 太小的 block size warp 数量太少&lt;/font&gt;
-</code></pre>
 </li>
 <li><h2 id="GPU-ARCH"><a href="#GPU-ARCH" class="headerlink" title="GPU ARCH"></a><font color=Pink>GPU ARCH</font></h2><ul>
 <li><strong><font color=cyan>The GPU architecture is built around a scalable array of <em>Streaming Multiprocessors</em> (SM). GPU hardware parallelism is achieved through the replication of this architectural building block. </font></strong></li>

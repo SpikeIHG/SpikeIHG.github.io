@@ -522,8 +522,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-10-02 17:41:49</span>
-            <span class="mobile">2023-10-02 17:41</span>
+            <span class="pc">2023-10-31 14:08:21</span>
+            <span class="mobile">2023-10-31 14:08</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -545,7 +545,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>36 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>282 Words</span>
         </span>
     
     
@@ -571,6 +571,45 @@
 <p><em><strong><a class="link"   target="_blank" rel="noopener" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/naming/" >CPPformal <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></em></p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://github.com/nlohmann/json" >json <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p>[redfiredoc](<a class="link"   target="_blank" rel="noopener" href="https://redefine-docs.ohevan.com/getting-started" >快速开始 - Redefine Docs (ohevan.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>)</p>
+<h2 id="C-review-with-the-tinyrender"><a href="#C-review-with-the-tinyrender" class="headerlink" title="C++ review with the tinyrender"></a><font color=teal>C++ review with the tinyrender</font></h2><ul>
+<li><h3 id="Oriented-object-programming"><a href="#Oriented-object-programming" class="headerlink" title="Oriented-object programming"></a><strong><font color=pink>Oriented-object programming</font></strong></h3><ul>
+<li><p><strong><font color=pink>用户。类的用户就是使用类的程序(员)。这是通常情况。与程序的用户不一样。</font></strong></p>
+</li>
+<li><p><strong><font color=pink>inline 最好写在外面的定义处</font></strong></p>
+</li>
+<li><p><strong><font color=pink>mutable 可变数据成员 永远可以改变 具体例子就是外面想要设计一个计数器来统计这个类的实例次数 无论是作为const还是非const都要计数</font></strong></p>
+</li>
+<li><p><strong><font color=pink>类内初始化只能用花括号和等号 这里区分下圆括号和花括号 两者本身都是一样的调用构造函数只是有些区别 一花括号不允许隐式转换；二花括号才能用在类内三花括号才能默认构造函数</font></strong></p>
+</li>
+<li><p><strong><font color=pink>const成员重载 显然只用底层const才能重载通常会借用一个共有的const功能函数</font></strong></p>
+</li>
+<li><p><strong><font color=pink>尽量多些工厂函数</font></strong></p>
+</li>
+<li><p><strong><font color=pink>友元类，类中所有的函数都可以访问原来的函数的所有成员</font></strong></p>
+</li>
+<li><p><strong><font color=pink></font></strong></p>
+</li>
+<li><p><strong><font color=pink></font></strong></p>
+</li>
+<li><p><strong><font color=pink></font></strong></p>
+</li>
+<li><p><strong><font color=pink></font></strong></p>
+</li>
+<li><p><strong><font color=pink></font></strong></p>
+</li>
+<li><p><strong><font color=pink></font></strong></p>
+</li>
+<li><p><strong><font color=pink></font></strong></p>
+</li>
+<li><p><strong><font color=pink></font></strong></p>
+</li>
+<li><p><strong><font color=pink></font></strong></p>
+</li>
+<li><p><strong><font color=pink></font></strong></p>
+</li>
+</ul>
+</li>
+</ul>
 
             </div>
 
@@ -696,7 +735,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">Cmake</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E4%BB%A5%E5%BC%80%E5%A7%8B%E4%BA%86%E8%A7%A3CMake"><span class="nav-text">可以开始了解CMake</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E4%BB%A5%E5%BC%80%E5%A7%8B%E4%BA%86%E8%A7%A3CMake"><span class="nav-text">可以开始了解CMake</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-review-with-the-tinyrender"><span class="nav-text">C++ review with the tinyrender</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Oriented-object-programming"><span class="nav-text">Oriented-object programming</span></a></li></ol></li></ol>
 
     </div>
 </div>
