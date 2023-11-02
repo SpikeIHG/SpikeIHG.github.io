@@ -522,8 +522,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-10-04 20:32:23</span>
-            <span class="mobile">2023-10-04 20:32</span>
+            <span class="pc">2023-11-01 23:34:42</span>
+            <span class="mobile">2023-11-01 23:34</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -545,12 +545,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>294 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>494 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 Mins</span>
         </span>
     
     
@@ -573,12 +573,25 @@
 <hr>
 <h2 id="本系列主要是对阅读了python网络编程相关的总结与回顾"><a href="#本系列主要是对阅读了python网络编程相关的总结与回顾" class="headerlink" title="本系列主要是对阅读了python网络编程相关的总结与回顾"></a>本系列主要是对阅读了python网络编程相关的总结与回顾</h2><ol>
 <li><h3 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h3><ol>
-<li><h4 id="http简介"><a href="#http简介" class="headerlink" title="http简介"></a><strong>http简介</strong></h4>  <em><strong>url</strong></em> : 统一资源定位符  格式如下 []代表可省略<br> <font color=seablue>protocol :&#x2F;&#x2F;[username:password@] hostname[:port] &#x2F; path &#x2F; [;parameters][?query]#fragment  </font><br> <font color=yellow>protocol</font>  : 协议 主要有 http,https,ftp,sms,<br> <font color =red>username,password</font> : 主要ftp<br> <font color =green>hostname</font> ： 主机名也就是域名 也可以用DNS映射得到IP地址，有一级二级域名之分<br> <font color =brown>port</font> : 端口号 http默认是80 类似还有https 443 属于套接口<br> <font color='cayon'>path</font> : 路径 就是位于主机中的地址<br> <font color='purple'>parameters</font> : 附加信息 现在用的少了<br> <font color=gold>query</font>  : 查询，多个查询就用&amp;分开，GET请求参数里也有<br> <font color=#a34929>fragment</font> : 片段 资源的补充 似乎很少使用<br> <font style =background:seagreen>http基本转向https 基于SSL socket相关也是爬取的主要内容</font>  </li>
-<li><h4 id="http请求过程"><a href="#http请求过程" class="headerlink" title="http请求过程"></a><strong>http请求过程</strong></h4> <u>使用F12 Network 监听 Ctrl+R </u><br> <font color=seaf>Status</font>    : 状态码就是404 403 200 类似的<br> <font color=gold>Initiator</font> : 请求源 标记请求是由哪个进程或对象发起的<br> <font color=chocolate>Request</font>请求方法 请求头 请求体<br> <font color = aqua>Request Method</font> ： 请求方法GET POST居多 还有PUT DELETE 很多<br> <font color=azure></font><br> <font color=darkblue></font><br> <font color=coroflowerblue></font><br> <font color=blueviolet></font><br> <font color=coral></font><br> <font color=darkBlue></font></li>
+<li><h4 id="http简介"><a href="#http简介" class="headerlink" title="http简介"></a><strong>http简介</strong></h4><p>  <em><strong>url</strong></em> : 统一资源定位符  格式如下 []代表可省略<br> <font color=seablue>protocol :&#x2F;&#x2F;[username:password@] hostname[:port] &#x2F; path &#x2F; [;parameters][?query]#fragment  </font><br> <font color=yellow>protocol</font>  : 协议 主要有 http,https,ftp,sms,<br> <font color =red>username,password</font> : 主要ftp<br> <font color =green>hostname</font> ： 主机名也就是域名 也可以用DNS映射得到IP地址，有一级二级域名之分<br> <font color =brown>port</font> : 端口号 http默认是80 类似还有https 443 属于套接口<br> <font color='cayon'>path</font> : 路径 就是位于主机中的地址<br> <font color='purple'>parameters</font> : 附加信息 现在用的少了<br> <font color=gold>query</font>  : 查询，多个查询就用&amp;分开，GET请求参数里也有<br> <font color=#a34929>fragment</font> : 片段 资源的补充 似乎很少使用<br> <font style =background:seagreen>http基本转向https 基于SSL socket相关也是爬取的主要内容</font>  </p>
+</li>
+<li><h4 id="http请求过程"><a href="#http请求过程" class="headerlink" title="http请求过程"></a><strong>http请求过程</strong></h4><p> <u>使用F12 Network 监听 Ctrl+R </u><br> <font color=seaf>Status</font>    : 状态码就是404 403 200 类似的<br> <font color=gold>Initiator</font> : 请求源 标记请求是由哪个进程或对象发起的<br> <font color=chocolate>Request</font>请求方法 请求头 请求体<br> <font color = aqua>Request Method</font> ： 请求方法GET POST居多 还有PUT DELETE 很多<br> <font color=azure></font><br> <font color=darkblue></font><br> <font color=coroflowerblue></font><br> <font color=blueviolet></font><br> <font color=coral></font><br> <font color=darkBlue></font>       </p>
+<pre><code>3. **&lt;font color=azure&gt;Scrapy&lt;/font&gt;**
+              1. Xpath syntax 用在我们的xml 文件里面 便于快速提取所需要的性质 /  // [] (predicates)
+              2. Xml treated like tree of nodes 
+              3.  [一个教程网站](https://docs.scrapy.org/en/latest/intro/tutorial.html)
+              4. scrpay 的使用 基本教程都有  注意就是 有自己的内建命令 自己的脚本 不要出错了
+              5. getall()  get()第一个元素 [0].get() title::text 仅仅要文本时候 re() 用正则表达式寻找
+              6.  除此之外还有  xpath的方法 response.xpath(&quot;//title&quot;)
+              7. [scrapy](https://docs.scrapy.org/en/latest/intro/tutorial.html)
+              8. 在我们 的 html 文件里面一个这个&lt;&gt;&lt;&gt; 叫做一个 quote
+                            1.  -O 会覆盖当前文件 -o 就是append模式
+                            2.  用 jsonl 文件格式  可以不断添加 stream-like
+</code></pre>
+</li>
 </ol>
 </li>
 </ol>
-<p>​        </p>
 
             </div>
 
