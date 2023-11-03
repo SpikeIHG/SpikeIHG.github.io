@@ -1239,8 +1239,25 @@
 </li>
 <li><p><font color=maroon>注意 git clone 最后在url后面加一个.<font color=blue>git</font></font></p>
 </li>
+<li><p><font color=cyan>deb 有统一的包管理所以可能下载安装更见简单 有内置命令来解决   runfile 通常是脚本完成</font></p>
+</li>
+<li><h2 id="apt-对于终端用户更加友好-相当于一个集合-集合很多命令的东西-然后就是apt-get-更加底层-有"><a href="#apt-对于终端用户更加友好-相当于一个集合-集合很多命令的东西-然后就是apt-get-更加底层-有" class="headerlink" title="apt 对于终端用户更加友好 相当于一个集合 集合很多命令的东西 然后就是apt-get 更加底层 有"></a><font color=pink>apt 对于终端用户更加友好 相当于一个集合 集合很多命令的东西 然后就是apt-get 更加底层 有</font></h2></li>
+<li><h2 id="sudo-apt-get-autoremove-这是一个安全的指令用来-clean-you-system-没事就可以输入一下-原理就是清楚不再被任何应用使用的依赖-lib-stackoverflow-上面似乎还有一些其他工具可以-但是目前-这个命令就可以了"><a href="#sudo-apt-get-autoremove-这是一个安全的指令用来-clean-you-system-没事就可以输入一下-原理就是清楚不再被任何应用使用的依赖-lib-stackoverflow-上面似乎还有一些其他工具可以-但是目前-这个命令就可以了" class="headerlink" title="sudo apt-get autoremove 这是一个安全的指令用来 clean you system  没事就可以输入一下 原理就是清楚不再被任何应用使用的依赖 lib !!!! stackoverflow 上面似乎还有一些其他工具可以 但是目前 这个命令就可以了"></a><font color=yellow>sudo apt-get autoremove 这是一个安全的指令用来 clean you system  没事就可以输入一下 原理就是清楚不再被任何应用使用的依赖 lib !!!! stackoverflow 上面似乎还有一些其他工具可以 但是目前 这个命令就可以了</font></h2></li>
+<li><p><font color=green>非登录就是不需要输入用户和密码 echo $0 查看 如果是-bash  就是登录 bash 就是非登录 主要区别就在于载入相关启动文件</font></p>
+</li>
+<li><p>cat -n </p>
+</li>
+<li><p>power9 是一个超级电脑的架构流式处理器</p>
+</li>
+<li><p>expansion 尤其是 brace expansion 还有 quoting 引用就是 “” ‘’</p>
+</li>
+<li><h2 id="root-开机自启项和sysmecl"><a href="#root-开机自启项和sysmecl" class="headerlink" title="root 开机自启项和sysmecl"></a><a class="link"   href="https://learn.microsoft.com/en-us/windows/wsl/wsl-config" >root 开机自启项和sysmecl <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h2></li>
+<li><p>rm -r删除非空文件夹 rmdir rm -d删除空文件夹</p>
+</li>
+<li><p>descend into directory 就是问是否同时删除里面的文件 yes即可 但是这首会一个一个出现 所以最好还是不要-i当文件很多的时候</p>
+</li>
 </ul>
-]]></content>
+<h2 id="真的不好说-autoremove-把我mpi删了-乐！！！"><a href="#真的不好说-autoremove-把我mpi删了-乐！！！" class="headerlink" title="真的不好说 autoremove 把我mpi删了 乐！！！"></a><strong><font color=red>真的不好说 autoremove 把我mpi删了 乐！！！</font></strong></h2>]]></content>
       <tags>
         <tag>LINUX</tag>
       </tags>
@@ -1352,6 +1369,8 @@
 </li>
 <li><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a><font color=Tan>链接</font></h2></li>
 <li><h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a><font color=Maroon>进程</font></h2><ul>
+<li><p><font color=blue>Open MPI 和 mpch 似是两个不同的mpi 实现 我看的教程似乎是 mpich ,但是一般而言都可以如果只是学习的话 我不过上次我似乎安装的是 openmpi</font></p>
+</li>
 <li><h3 id="MPI"><a href="#MPI" class="headerlink" title="MPI"></a><strong><font color=Teal>MPI</font></strong></h3><p><strong><font color=DarkCyan>这里就把mpi的使用在这里写了。先补充一点前置知识。冯诺依曼体系。cpu主存分离。导致大多时钟时间去访存。进程就是一个程序的实例可以看成一个综合体包括I&#x2F;o设备即一组文件描述符表，然后主存，前两者共同由虚拟地址实现。此为被处理器表现为独享。多任务即并发。每一个执行时间片。上下文切换。因此硬件计算的优化集中在对冯诺依曼体系的优化大致有如下几个。<br>Cache 在主存与寄存器之间设置三层高速缓存，SRAM，利用局部性原理<br>虚拟地址，可以看作讲主存作为磁盘文件的Cache.同时还有很多好处，如简化加载链接，提供更安全的地址守护等。<br>指令级并行<br>线程级并行TLP 细粒度多线程就是一个线程每执行他的一条指令就切换。粗粒度就是在遇到需要较长时间的指令才切换<br>SMT 同步多线程<br>SISD 单指令流 单数据流 SIMD 单数据多指令流 处理向量运算 大型简单计算GPU就是 处理图像 大量线程 具体可以在学习CUDA后补充<br>MIMD 两种常见类型 注意有多个处理单元即多个处理器 是异步的没有全局时钟 一个是共享内存系统，多个核共享一个内存系统，分布式内存系统，多个核——内存对。第一类具体有两个<img  
                      lazyload
                      src="/images/loading.svg"
@@ -1734,7 +1753,47 @@
 <li><h2 id="Prelace"><a href="#Prelace" class="headerlink" title="Prelace"></a><font color=pink>Prelace</font></h2><p><strong><font color=mediumaquamarine>希望通过CUDA走进计算的前言，并且加深我对计算机体系结构的认知。同时从另一条路走进我们的machine learning 与 deep learning.同时也在这里写下一些算法的学习知识。</font></strong></p>
 </li>
 <li><h2 id="F-amp-Q"><a href="#F-amp-Q" class="headerlink" title="F&amp;Q"></a><font color=DarkSeagreen>F&amp;Q</font></h2><ul>
-<li>内存布局具体硬件实现忘了，忘了栈实际上是在cache还是memory里</li>
+<li><p>内存布局具体硬件实现忘了，忘了栈实际上是在cache还是memory里</p>
+</li>
+<li><p>nvidia-smi 才是查看设别的指令 nvidia-smi -q 不错 </p>
+</li>
+<li><p>nvprof 已经弃用了 ncu（nsight-compute) 现在是profiler</p>
+</li>
+<li><p>nsight-compute 需要 全局安装 sudo apt install -y 选项<a class="link"   href="https://developer.nvidia.com/nvidia-development-tools-solutions-err_nvgpuctrperm-permission-issue-performance-counters#AllUsersTag" >issue <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</li>
+<li><p><font color=pink>driver 是一个硬件用来显示的   tookit就是一个集合 有些下载method可以同时下载适配的 driver 总结就是除了会安装还要学会卸载</font></p>
+</li>
+<li><p>These instructions must be used if you are installing in a WSL environment. Do not use the Ubuntu instructions in this case; it is important to not install the <code>cuda-drivers</code> packages within the WSL environment. <font color=red>乐死</font></p>
+</li>
+<li><p>Installation using RPM or Debian packages interfaces with your system’s package management system. When using RPM or Debian local repo installers, the downloaded package contains a repository snapshot stored on the local filesystem in &#x2F;var&#x2F;. Such a package only informs the package manager where to find the actual installation packages, but will not install them.</p>
+<p>If the online network repository is enabled, RPM or Debian packages will be automatically downloaded at installation time using the package manager: apt-get, dnf, yum, or zypper.</p>
+</li>
+<li><p>安装是很复杂的 wsl有单独的教程 然后就是 有 post-installation mandatory actions !!</p>
+</li>
+<li><p>The <code>PATH</code> variable needs to include <code>export PATH=/usr/local/cuda-12./bin$&#123;PATH:+:$&#123;PATH&#125;&#125;</code>. Nsight Compute has moved to <code>/opt/nvidia/nsight-compute/</code> only in rpm&#x2F;deb installation method. When using <code>.run</code> installer it is still located under <code>/usr/local/cuda-12.2/</code>.<font color=cyan>记住这个路径问题 在opt里面</font></p>
+</li>
+<li><p><font color=pink>妈妈我终于解决这个问题了 就是我在安装后没有设置环境变量 啊啊啊啊啊啊 男泵</font></p>
+</li>
+<li><p><a class="link"   href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#post-installation-actions" >今后还可能出现的 问题 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</li>
+<li><p>开始在vscode 里面进行配置 nsight debug</p>
+</li>
+<li><p>ctrl + space </p>
+</li>
+<li><p>命令面板很好用目前看来 ctrl shift + p</p>
+<h2 id="我修改了提示-ctrl-t-s-好有用啊-还有就是控制面板太好用了有很多提示键-然后-task-也可以在里面选择生成"><a href="#我修改了提示-ctrl-t-s-好有用啊-还有就是控制面板太好用了有很多提示键-然后-task-也可以在里面选择生成" class="headerlink" title="我修改了提示 ctrl + t + s 好有用啊 还有就是控制面板太好用了有很多提示键 然后 task 也可以在里面选择生成"></a>我修改了提示 ctrl + t + s 好有用啊 还有就是控制面板太好用了有很多提示键 然后 task 也可以在里面选择生成</h2><ul>
+<li><p><strong>[launch attach&amp; launch.json entry](<a class="link"   href="https://code.visualstudio.com/docs/editor/debugging" >Debugging in Visual Studio Code <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>)</strong></p>
+</li>
+<li><p>dropdown configuration 就是下落的可以滑动的竖直设置栏</p>
+</li>
+<li><h3 id="预定义变量"><a href="#预定义变量" class="headerlink" title="预定义变量"></a><a class="link"   href="https://code.visualstudio.com/docs/editor/variables-reference" >预定义变量 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h3></li>
+<li><h3 id="最新发现-ctrl-alt-n-code-runner-似乎无所不能-但是不能调试只是"><a href="#最新发现-ctrl-alt-n-code-runner-似乎无所不能-但是不能调试只是" class="headerlink" title="最新发现 ctrl alt n code runner 似乎无所不能 但是不能调试只是"></a>最新发现 ctrl alt n code runner 似乎无所不能 但是不能调试只是</h3></li>
+<li><p>program 就是 要debug的文件</p>
+</li>
+<li><p><font color=gold>注意这个launch 是调试 要先生成可执行文件 也就是task 先配置的是task 然后是 launch.json</font></p>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><h2 id="Heterogeneous-Computing"><a href="#Heterogeneous-Computing" class="headerlink" title="Heterogeneous Computing"></a><strong><font color=tan>Heterogeneous Computing</font></strong></h2><ul>
@@ -1885,18 +1944,25 @@
 </ul>
 </li>
 <li><h2 id="Synchronization"><a href="#Synchronization" class="headerlink" title="Synchronization"></a><font color=slatecyan>Synchronization</font></h2><ul>
-<li><p><strong><font color=cornsilk>两个层面 host and device 2 thread </font></strong></p>
+<li><strong><font color=cornsilk>两个层面 host and device 2 thread </font></strong></li>
+</ul>
 </li>
 <li><p><strong><font color=cornsilk><strong>device</strong> void __syncthreads(void) 一个让同一个block 的线程同步的函数</font></strong></p>
 </li>
-<li></li>
-<li><p><strong><font color=cornsilk></font></strong></p>
+<li><ul>
+<li><h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a><font color=yellow>Configuration</font></h2></li>
+<li><p><strong><font color=cornsilk>配置函数 对于 blockdim 的innermost x 一般是32 的倍数 这个是有 warp 决定的 同时 一个block的thread数量不能超过 1024</font></strong></p>
 </li>
-<li><p><strong><font color=cornsilk></font></strong></p>
+<li><p><strong><font color=cornsilk>通常而言 block 数量越多 并行度越高 但是load throughput会下降 但是load efficency 更高 具有更高的achieved occupancy 但是实际上 由于 block 数量的限制反而会限制active warp </font></strong></p>
 </li>
-<li><p><strong><font color=cornsilk></font></strong></p>
+<li><p><strong><font color=cornsilk><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/bal.png"
+                     
+                ></font></strong></p>
 </li>
-<li><p><strong><font color=cornsilk></font></strong></p>
+<li><p><strong><font color=cornsilk>第一个常见的算法就是 reduction 树形结构</font></strong></p>
 </li>
 <li><p><strong><font color=cornsilk></font></strong></p>
 </li>
@@ -1935,6 +2001,32 @@
 ]]></content>
       <tags>
         <tag>自然</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Algorithm</title>
+    <url>/2023/11/02/Algorithm/</url>
+    <content><![CDATA[<h1 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a><font color=yellow>Algorithm</font></h1><ul>
+<li><strong><font color=seagreen></font></strong></li>
+<li><strong><font color=seagreen></font></strong></li>
+<li><strong><font color=seagreen></font></strong></li>
+<li><strong><font color=seagreen></font></strong></li>
+<li><strong><font color=seagreen></font></strong></li>
+<li><strong><font color=seagreen></font></strong></li>
+<li><strong><font color=seagreen></font></strong></li>
+<li><strong><font color=seagreen></font></strong></li>
+<li><strong><font color=seagreen></font></strong></li>
+<li><strong><font color=seagreen></font></strong></li>
+<li><strong><font color=seagreen></font></strong></li>
+<li><strong><font color=seagreen></font></strong></li>
+<li><strong><font color=seagreen></font></strong></li>
+<li><strong><font color=seagreen></font></strong></li>
+<li><strong><font color=seagreen></font></strong></li>
+<li><strong><font color=seagreen></font></strong></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Algorithm</tag>
       </tags>
   </entry>
 </search>

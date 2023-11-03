@@ -522,8 +522,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-10-24 21:49:53</span>
-            <span class="mobile">2023-10-24 21:49</span>
+            <span class="pc">2023-11-03 22:49:42</span>
+            <span class="mobile">2023-11-03 22:49</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -545,7 +545,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>2.8k Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>2.9k Words</span>
         </span>
     
     
@@ -602,6 +602,8 @@
 </li>
 <li><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a><font color=Tan>链接</font></h2></li>
 <li><h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a><font color=Maroon>进程</font></h2><ul>
+<li><p><font color=blue>Open MPI 和 mpch 似是两个不同的mpi 实现 我看的教程似乎是 mpich ,但是一般而言都可以如果只是学习的话 我不过上次我似乎安装的是 openmpi</font></p>
+</li>
 <li><h3 id="MPI"><a href="#MPI" class="headerlink" title="MPI"></a><strong><font color=Teal>MPI</font></strong></h3><p><strong><font color=DarkCyan>这里就把mpi的使用在这里写了。先补充一点前置知识。冯诺依曼体系。cpu主存分离。导致大多时钟时间去访存。进程就是一个程序的实例可以看成一个综合体包括I&#x2F;o设备即一组文件描述符表，然后主存，前两者共同由虚拟地址实现。此为被处理器表现为独享。多任务即并发。每一个执行时间片。上下文切换。因此硬件计算的优化集中在对冯诺依曼体系的优化大致有如下几个。<br>Cache 在主存与寄存器之间设置三层高速缓存，SRAM，利用局部性原理<br>虚拟地址，可以看作讲主存作为磁盘文件的Cache.同时还有很多好处，如简化加载链接，提供更安全的地址守护等。<br>指令级并行<br>线程级并行TLP 细粒度多线程就是一个线程每执行他的一条指令就切换。粗粒度就是在遇到需要较长时间的指令才切换<br>SMT 同步多线程<br>SISD 单指令流 单数据流 SIMD 单数据多指令流 处理向量运算 大型简单计算GPU就是 处理图像 大量线程 具体可以在学习CUDA后补充<br>MIMD 两种常见类型 注意有多个处理单元即多个处理器 是异步的没有全局时钟 一个是共享内存系统，多个核共享一个内存系统，分布式内存系统，多个核——内存对。第一类具体有两个<img  
                      lazyload
                      src="/images/loading.svg"
