@@ -1730,8 +1730,8 @@
 <li><h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a><font color=pink>Tips</font></h3><ul>
 <li><font color=mediumspringgreen>critical point saddle point &amp; local minima 前者更多 通过hessian 矩阵来判断 特征值来判断 全正或者全负local其余就是saddle point</font></li>
 <li><font color=mediumspringgreen>针对local point 的方法 batch size  一般来说越小noise 越多但实际上更好 但是在并行计算下可能更慢 第二 momentum 惯性一样的下一步加成</font></li>
-<li><font color=mediumspringgreen></font></li>
-<li><font color=mediumspringgreen></font></li>
+<li><font color=mediumspringgreen>learning rate 的问题 有一个方法 叫做 Adam Optimizer 就是RSM 加上 momentum 的结合 可以动态改变learning rate 。 也就是说我们的learning rate可能也是 loss stuck的原因，而非 critical point </font></li>
+<li><font color=mediumspringgreen>loss 函数也有影响 对于分类问题而言 使用最多的 是 cross entrophy 原来是用似然函数 好处就是 可以将整个surface 放得平缓</font></li>
 <li><font color=mediumspringgreen></font></li>
 <li><font color=mediumspringgreen></font></li>
 <li><font color=mediumspringgreen></font></li>
@@ -1969,9 +1969,9 @@
 </li>
 <li><p><strong><font color=cornsilk>第一个常见的算法就是 reduction 树形结构</font></strong></p>
 </li>
-<li><p><strong><font color=cornsilk></font></strong></p>
+<li><p><strong><font color=cornsilk>有 neighbor reduction 和 interleave reduction 后者拥有更好的global memory的局部性所以性能更好</font></strong></p>
 </li>
-<li><p><strong><font color=cornsilk></font></strong></p>
+<li><p><strong><font color=cornsilk>unrolling loop 同样的一个方法循环展开真的非常快 wtf 注意这里是Unrolling loop 注意 同步函数是用来进行 一个block 之间的同步的 block之间无法同步 </font></strong></p>
 </li>
 <li><p><strong><font color=cornsilk></font></strong></p>
 </li>
