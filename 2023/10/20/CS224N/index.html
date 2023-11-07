@@ -520,8 +520,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-11-06 14:35:49</span>
-            <span class="mobile">2023-11-06 14:35</span>
+            <span class="pc">2023-11-07 17:27:59</span>
+            <span class="mobile">2023-11-07 17:27</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -543,7 +543,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>2.4k Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>2.6k Words</span>
         </span>
     
     
@@ -862,7 +862,22 @@
 <li><font color=mediumspringgreen>针对local point 的方法 batch size  一般来说越小noise 越多但实际上更好 但是在并行计算下可能更慢 第二 momentum 惯性一样的下一步加成</font></li>
 <li><font color=mediumspringgreen>learning rate 的问题 有一个方法 叫做 Adam Optimizer 就是RSM 加上 momentum 的结合 可以动态改变learning rate 。 也就是说我们的learning rate可能也是 loss stuck的原因，而非 critical point </font></li>
 <li><font color=mediumspringgreen>loss 函数也有影响 对于分类问题而言 使用最多的 是 cross entrophy 原来是用似然函数 好处就是 可以将整个surface 放得平缓</font></li>
-<li><font color=mediumspringgreen></font></li>
+<li><font color=mediumspringgreen><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Fea.png"
+                     
+                >理解权重影响的问题 和这个surface是怎么来的 我们要不断修正的是w1 w2  mean 就是平均值 standard deviation 就是标准差 标准化  数学的影响就是 loss converge 收敛更快 但是还是有个问题，在实际的多层神经网络中 每经过一层 可能分别差别又会变大 所以我们还是需要不断地进行normalization 可以是activationfunc 之前 也可以之后 sigmoid 最好之前 因为可以化到-1 1 之间使得函数的值变化比较大<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/norm.png"
+                     
+                > 这个优化提升的是训练速度 主要是<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/arx.png"
+                     
+                ></font></li>
 <li><font color=mediumspringgreen></font></li>
 <li><font color=mediumspringgreen></font></li>
 <li><font color=mediumspringgreen></font></li>

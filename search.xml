@@ -1732,7 +1732,22 @@
 <li><font color=mediumspringgreen>针对local point 的方法 batch size  一般来说越小noise 越多但实际上更好 但是在并行计算下可能更慢 第二 momentum 惯性一样的下一步加成</font></li>
 <li><font color=mediumspringgreen>learning rate 的问题 有一个方法 叫做 Adam Optimizer 就是RSM 加上 momentum 的结合 可以动态改变learning rate 。 也就是说我们的learning rate可能也是 loss stuck的原因，而非 critical point </font></li>
 <li><font color=mediumspringgreen>loss 函数也有影响 对于分类问题而言 使用最多的 是 cross entrophy 原来是用似然函数 好处就是 可以将整个surface 放得平缓</font></li>
-<li><font color=mediumspringgreen></font></li>
+<li><font color=mediumspringgreen><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Fea.png"
+                     
+                >理解权重影响的问题 和这个surface是怎么来的 我们要不断修正的是w1 w2  mean 就是平均值 standard deviation 就是标准差 标准化  数学的影响就是 loss converge 收敛更快 但是还是有个问题，在实际的多层神经网络中 每经过一层 可能分别差别又会变大 所以我们还是需要不断地进行normalization 可以是activationfunc 之前 也可以之后 sigmoid 最好之前 因为可以化到-1 1 之间使得函数的值变化比较大<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/norm.png"
+                     
+                > 这个优化提升的是训练速度 主要是<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/arx.png"
+                     
+                ></font></li>
 <li><font color=mediumspringgreen></font></li>
 <li><font color=mediumspringgreen></font></li>
 <li><font color=mediumspringgreen></font></li>
@@ -2020,8 +2035,21 @@
     <title>Algorithm</title>
     <url>/2023/11/02/Algorithm/</url>
     <content><![CDATA[<h1 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a><font color=yellow>Algorithm</font></h1><ul>
-<li><strong><font color=seagreen></font></strong></li>
-<li><strong><font color=seagreen></font></strong></li>
+<li><strong><font color=seagreen>最近点对问题</font></strong><ul>
+<li><font color=pink>分治法求解 垂直线分割 实际使用时可以对应实际的问题进行优化 比如使用一个 strip  然后可以在递归的最底层加入一个全局的区间值的判断 双重循环 但是每一层都是O(n^1&#x2F;2)判断方法是否存在在特殊情况失效 例如几乎垂直或者水平的点对。所以可以单独的进行筛选 类似机器学习的算法的改进 多个维度通道 简化的一些思想 </font></li>
+<li><font color=pink>对称性思想 每一个维度都是一样的</font></li>
+<li><font color=pink>建表  对于频繁使用的信息进行见表索引检索哈希码 向量 量化处理</font></li>
+<li><font color=pink>曼哈顿距离</font></li>
+</ul>
+</li>
+<li><strong><font color=seagreen>概率分析与随机算法</font></strong><ul>
+<li><font color=pink></font></li>
+</ul>
+</li>
+<li><strong><font color=seagreen>正太分布问题思考</font></strong><ul>
+<li><font color=pink>解决一种问题 就是关于某个中心点对称任何维度的可能性相同。 同时随着偏离中心概率减小 关键就在于与角度无关 非常的厉害</font></li>
+</ul>
+</li>
 <li><strong><font color=seagreen></font></strong></li>
 <li><strong><font color=seagreen></font></strong></li>
 <li><strong><font color=seagreen></font></strong></li>
