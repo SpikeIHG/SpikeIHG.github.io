@@ -520,8 +520,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-11-07 17:27:59</span>
-            <span class="mobile">2023-11-07 17:27</span>
+            <span class="pc">2023-11-09 10:28:18</span>
+            <span class="mobile">2023-11-09 10:28</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -543,12 +543,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>2.6k Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>2.9k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>9 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>10 Mins</span>
         </span>
     
     
@@ -584,6 +584,7 @@
 <li><font color=red>注意要关代理 创建环境的时候更新版本的时候也要关代理 可以设置使得能够在代理下使用但是有一点麻烦</font></li>
 </ul>
 </li>
+<li><h3 id="pytorch-tutorial"><a href="#pytorch-tutorial" class="headerlink" title="pytorch tutorial"></a><a class="link"   target="_blank" rel="noopener" href="https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html" >pytorch tutorial <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h3></li>
 <li><h3 id="梯度下降算法"><a href="#梯度下降算法" class="headerlink" title="梯度下降算法"></a><font color=pink>梯度下降算法</font></h3><ul>
 <li>同步更新所有变量 </li>
 <li>出发点是想要拟合一段数据 然后我们想让整个数据组的误差最小。因此我们求导。可以理解为山坡上寻找下降路线。由于公式会随着接近局部最小点而自己缩小前进距离这是一个学习。</li>
@@ -878,11 +879,31 @@
                      data-src="/../images/arx.png"
                      
                 ></font></li>
-<li><font color=mediumspringgreen></font></li>
-<li><font color=mediumspringgreen></font></li>
-<li><font color=mediumspringgreen></font></li>
-<li><font color=mediumspringgreen></font></li>
-<li><font color=mediumspringgreen></font></li>
+<li><font color=mediumspringgreen>CNN 卷积神经网影像处理，一个图像就是一个RGB的三位channel 的tensor 就是一个高维的叠加的数组 拉直就是一个向量 但是我们一般不会全部进行训练 我们会进行一定的相关的简化receptive field 这样做的一个理论 就是探查pattern 用pattern 去进行识别</font></li>
+<li><font color=mediumspringgreen>一般通常选取都是三个channel 然后此时的长宽称为kernel size 3X3 通常就可以了 stride hyper para 超出的部分进行padding <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/stri.png"
+                     
+                ><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/filter.png"
+                     
+                ></font></li>
+<li><font color=mediumspringgreen>fully connected layer弹性最大  receptive field 共享参数 减小了弹性这两个加起来就是convolution al layer 对应的就叫 CNN model bias 较大<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/fmap.png"
+                     
+                >这里的channel变成了neuron 的个数了</font></li>
+<li><font color=mediumspringgreen>pooling 方法 max pooling  的方法 为了减少运算量 现在开始减少了<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/CNN.png"
+                     
+                >下面那个是flatter 还有一个重要应用 就是 playing go</font></li>
+<li><font color=mediumspringgreen>分类问题softmax的原因简单解释 就是 我们用one-hot 向量表示我们的类 然后用1 然后我们将softmax 将其转换为-1 到 1 当然我觉得可能还是因为概率分布的问题就是越大的比例越大</font></li>
 </ul>
 </li>
 </ul>
@@ -1011,7 +1032,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title"></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CS224N"><span class="nav-text">CS224N</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86"><span class="nav-text">前置知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="nav-text">什么是机器学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95"><span class="nav-text">梯度下降算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1"><span class="nav-text">极大似然估计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0"><span class="nav-text">代价函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Batch-Gradient-Descent"><span class="nav-text">Batch Gradient Descent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linear-Algebra"><span class="nav-text">Linear Algebra</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E7%82%B9%E2%80%94%E2%80%94%E5%90%91%E9%87%8F%E6%8B%93%E5%B1%95%E7%9A%84%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E4%BB%A5%E5%8F%8A%E5%90%91%E9%87%8F%E5%87%BD%E6%95%B0"><span class="nav-text">注意点——向量拓展的梯度下降以及向量函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Normal-Equation"><span class="nav-text">Normal Equation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deep-learning"><span class="nav-text">Deep learning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#piecewise-linear-curve%E6%89%80%E6%9C%89%E7%BA%BF%E6%80%A7%E7%9A%84%E6%8A%98%E7%BA%BF%E9%83%BD%E5%8F%AF%E4%BB%A5%E7%94%A8%E4%B8%80%E7%BB%84z%E6%9D%A5%E6%8B%9F%E5%90%88-%E5%90%8C%E7%90%86%E5%AF%B9%E4%BA%8E%E5%85%89%E6%BB%91%E7%9A%84-%E6%88%91%E4%BB%AC%E5%8F%AF%E4%BB%A5%E6%97%A0%E7%BA%BF%E7%BB%86%E5%88%86-%E7%94%B1piecewise-linear-curve-%E6%9D%A5%E9%80%BC%E8%BF%91-%E8%BF%9B%E4%B8%80%E6%AD%A5%E5%8F%88%E7%94%B1%E8%93%9D%E8%89%B2%E6%9D%A5%E9%80%BC%E8%BF%91-%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81"><span class="nav-text">piecewise linear curve所有线性的折线都可以用一组z来拟合 同理对于光滑的 我们可以无线细分 由piecewise linear curve 来逼近 进一步又由蓝色来逼近 ！！！！！！！！！！！</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#anoconda-%E5%88%9B%E5%BB%BA%E6%8C%87%E4%BB%A4%E6%98%AF%E5%85%A8%E5%B1%80%E7%9A%84conda-create-%E7%84%B6%E5%90%8E%E5%8F%AF%E4%BB%A5%E5%9C%A8%E9%87%8C%E9%9D%A2%E4%B8%8B%E8%BD%BD%E5%8C%85-%E7%94%A8vscode-%E5%90%AF%E5%8A%A8%E5%8F%AF%E4%BB%A5-%E6%B3%A8%E6%84%8F%E6%BF%80%E6%B4%BB%E7%9A%84%E6%97%B6%E5%80%99%E8%A6%81%E6%8A%8A%E4%BB%A3%E7%90%86%E5%85%B3%E4%BA%86"><span class="nav-text">anoconda 创建指令是全局的conda create 然后可以在里面下载包 用vscode 启动可以 注意激活的时候要把代理关了</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jupyter-notebook-guide"><span class="nav-text">jupyter notebook guide </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Colab-%E4%BD%BF%E7%94%A8"><span class="nav-text">Colab 使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pytorch"><span class="nav-text">Pytorch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-review"><span class="nav-text">Python review</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Class-in-Python"><span class="nav-text">Class in Python</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7"><span class="nav-text">工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips"><span class="nav-text">Tips</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CS224N"><span class="nav-text">CS224N</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86"><span class="nav-text">前置知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="nav-text">什么是机器学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pytorch-tutorial"><span class="nav-text">pytorch tutorial </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95"><span class="nav-text">梯度下降算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1"><span class="nav-text">极大似然估计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0"><span class="nav-text">代价函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Batch-Gradient-Descent"><span class="nav-text">Batch Gradient Descent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linear-Algebra"><span class="nav-text">Linear Algebra</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E7%82%B9%E2%80%94%E2%80%94%E5%90%91%E9%87%8F%E6%8B%93%E5%B1%95%E7%9A%84%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E4%BB%A5%E5%8F%8A%E5%90%91%E9%87%8F%E5%87%BD%E6%95%B0"><span class="nav-text">注意点——向量拓展的梯度下降以及向量函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Normal-Equation"><span class="nav-text">Normal Equation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deep-learning"><span class="nav-text">Deep learning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#piecewise-linear-curve%E6%89%80%E6%9C%89%E7%BA%BF%E6%80%A7%E7%9A%84%E6%8A%98%E7%BA%BF%E9%83%BD%E5%8F%AF%E4%BB%A5%E7%94%A8%E4%B8%80%E7%BB%84z%E6%9D%A5%E6%8B%9F%E5%90%88-%E5%90%8C%E7%90%86%E5%AF%B9%E4%BA%8E%E5%85%89%E6%BB%91%E7%9A%84-%E6%88%91%E4%BB%AC%E5%8F%AF%E4%BB%A5%E6%97%A0%E7%BA%BF%E7%BB%86%E5%88%86-%E7%94%B1piecewise-linear-curve-%E6%9D%A5%E9%80%BC%E8%BF%91-%E8%BF%9B%E4%B8%80%E6%AD%A5%E5%8F%88%E7%94%B1%E8%93%9D%E8%89%B2%E6%9D%A5%E9%80%BC%E8%BF%91-%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81"><span class="nav-text">piecewise linear curve所有线性的折线都可以用一组z来拟合 同理对于光滑的 我们可以无线细分 由piecewise linear curve 来逼近 进一步又由蓝色来逼近 ！！！！！！！！！！！</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#anoconda-%E5%88%9B%E5%BB%BA%E6%8C%87%E4%BB%A4%E6%98%AF%E5%85%A8%E5%B1%80%E7%9A%84conda-create-%E7%84%B6%E5%90%8E%E5%8F%AF%E4%BB%A5%E5%9C%A8%E9%87%8C%E9%9D%A2%E4%B8%8B%E8%BD%BD%E5%8C%85-%E7%94%A8vscode-%E5%90%AF%E5%8A%A8%E5%8F%AF%E4%BB%A5-%E6%B3%A8%E6%84%8F%E6%BF%80%E6%B4%BB%E7%9A%84%E6%97%B6%E5%80%99%E8%A6%81%E6%8A%8A%E4%BB%A3%E7%90%86%E5%85%B3%E4%BA%86"><span class="nav-text">anoconda 创建指令是全局的conda create 然后可以在里面下载包 用vscode 启动可以 注意激活的时候要把代理关了</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jupyter-notebook-guide"><span class="nav-text">jupyter notebook guide </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Colab-%E4%BD%BF%E7%94%A8"><span class="nav-text">Colab 使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pytorch"><span class="nav-text">Pytorch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-review"><span class="nav-text">Python review</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Class-in-Python"><span class="nav-text">Class in Python</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7"><span class="nav-text">工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips"><span class="nav-text">Tips</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>

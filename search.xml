@@ -1454,6 +1454,7 @@
 <li><font color=red>注意要关代理 创建环境的时候更新版本的时候也要关代理 可以设置使得能够在代理下使用但是有一点麻烦</font></li>
 </ul>
 </li>
+<li><h3 id="pytorch-tutorial"><a href="#pytorch-tutorial" class="headerlink" title="pytorch tutorial"></a><a class="link"   href="https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html" >pytorch tutorial <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h3></li>
 <li><h3 id="梯度下降算法"><a href="#梯度下降算法" class="headerlink" title="梯度下降算法"></a><font color=pink>梯度下降算法</font></h3><ul>
 <li>同步更新所有变量 </li>
 <li>出发点是想要拟合一段数据 然后我们想让整个数据组的误差最小。因此我们求导。可以理解为山坡上寻找下降路线。由于公式会随着接近局部最小点而自己缩小前进距离这是一个学习。</li>
@@ -1748,11 +1749,31 @@
                      data-src="/../images/arx.png"
                      
                 ></font></li>
-<li><font color=mediumspringgreen></font></li>
-<li><font color=mediumspringgreen></font></li>
-<li><font color=mediumspringgreen></font></li>
-<li><font color=mediumspringgreen></font></li>
-<li><font color=mediumspringgreen></font></li>
+<li><font color=mediumspringgreen>CNN 卷积神经网影像处理，一个图像就是一个RGB的三位channel 的tensor 就是一个高维的叠加的数组 拉直就是一个向量 但是我们一般不会全部进行训练 我们会进行一定的相关的简化receptive field 这样做的一个理论 就是探查pattern 用pattern 去进行识别</font></li>
+<li><font color=mediumspringgreen>一般通常选取都是三个channel 然后此时的长宽称为kernel size 3X3 通常就可以了 stride hyper para 超出的部分进行padding <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/stri.png"
+                     
+                ><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/filter.png"
+                     
+                ></font></li>
+<li><font color=mediumspringgreen>fully connected layer弹性最大  receptive field 共享参数 减小了弹性这两个加起来就是convolution al layer 对应的就叫 CNN model bias 较大<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/fmap.png"
+                     
+                >这里的channel变成了neuron 的个数了</font></li>
+<li><font color=mediumspringgreen>pooling 方法 max pooling  的方法 为了减少运算量 现在开始减少了<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/CNN.png"
+                     
+                >下面那个是flatter 还有一个重要应用 就是 playing go</font></li>
+<li><font color=mediumspringgreen>分类问题softmax的原因简单解释 就是 我们用one-hot 向量表示我们的类 然后用1 然后我们将softmax 将其转换为-1 到 1 当然我觉得可能还是因为概率分布的问题就是越大的比例越大</font></li>
 </ul>
 </li>
 </ul>
@@ -2050,7 +2071,10 @@
 <li><font color=pink>解决一种问题 就是关于某个中心点对称任何维度的可能性相同。 同时随着偏离中心概率减小 关键就在于与角度无关 非常的厉害</font></li>
 </ul>
 </li>
-<li><strong><font color=seagreen></font></strong></li>
+<li><strong><font color=seagreen>随机问题</font></strong><ul>
+<li><font color=pink></font></li>
+</ul>
+</li>
 <li><strong><font color=seagreen></font></strong></li>
 <li><strong><font color=seagreen></font></strong></li>
 <li><strong><font color=seagreen></font></strong></li>
