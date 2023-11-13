@@ -1524,7 +1524,7 @@
 <li><font color=pink>torch.tensor()总是拷贝tensor 要尽量避免拷贝 detach() 改变 required属性</font></li>
 <li><font color=pink>卷积的filter是一个多维的matrices 一定要注意的是我们的结果始终是一个2d matrix 对于一个filter不是多个filter 妈的 kernel 就是filter 带bias 的卷积操作就是卷积的时候加上bias 得到输出 传入kernel size 是一个int默认就是方正</font></li>
 <li><font color=pink>dim 就是一个方向可以堆叠的方向 然后可以看括号来判断</font></li>
-<li><font color=pink>N batch size 自己定义一些东西 dataset 可以抽象成一个 list  每一个元素就是一个 map 例如 path: label 之类的 feature 就是我们的prediction label 就是实际值</font></li>
+<li><font color=pink>N batch size 自己定义一些东西 dataset 可以抽象成一个 list  每一个元素就是一个 map 例如 path: label 之类的 feature 就是我们的prediction label 就是实际值 定义dataset 和 dataloader 就是第一步 注意一张定制化的思想 很不错面向对象编程</font></li>
 <li><font color=pink></font></li>
 <li><font color=pink></font></li>
 <li><font color=pink></font></li>
