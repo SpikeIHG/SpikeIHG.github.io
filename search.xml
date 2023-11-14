@@ -1530,6 +1530,31 @@
 <li><font color=pink></font></li>
 </ul>
 </li>
+<li><h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a><font color=orange>流程</font></h3><ul>
+<li><p><font color=lightgreen>custom dataset and dataloader</font></p>
+<p>   <font color=lightgreen>dataset 抽象定义为一个map 有一个annotation file 存储所有的样本的名字 还有存储的路径 两者结合可以得到一个图片的完整路径 然后预定义transformer 三个必要的 函数 ——init—— 就是 self.img_labels read csv 读入csv 然后定义dir和 transform  ——len——  ——getitem——  对于dataloader 设置加载方式 batch shuffle  多线程加速等</font></p>
+</li>
+<li><p><font color=lightgreen>layer</font></p>
+<p>   <font color=lightgreen>Linear 就是一个layer 改变输入的最内层dim 的size 由输入的参数决定 注意我们的这个layer里面已经有预先设定好的bias 和 weight 相当于就是 对于图像可能就是一个 convolve </font></p>
+</li>
+<li><p><font color=lightgreen></font></p>
+</li>
+<li><p><font color=lightgreen></font></p>
+</li>
+<li><p><font color=lightgreen></font></p>
+</li>
+<li><p><font color=lightgreen></font></p>
+</li>
+<li><p><font color=lightgreen></font></p>
+</li>
+<li><p><font color=lightgreen></font></p>
+</li>
+<li><p><font color=lightgreen></font></p>
+</li>
+<li><p><font color=lightgreen></font></p>
+</li>
+</ul>
+</li>
 <li><h3 id="梯度下降算法"><a href="#梯度下降算法" class="headerlink" title="梯度下降算法"></a><font color=pink>梯度下降算法</font></h3><ul>
 <li>同步更新所有变量 </li>
 <li>出发点是想要拟合一段数据 然后我们想让整个数据组的误差最小。因此我们求导。可以理解为山坡上寻找下降路线。由于公式会随着接近局部最小点而自己缩小前进距离这是一个学习。</li>
