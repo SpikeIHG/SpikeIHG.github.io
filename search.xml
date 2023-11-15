@@ -1417,6 +1417,23 @@
 </ul>
 </li>
 <li><h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a><font color=Maroon>进程</font></h2><ul>
+<li><p><font color=yellowgreen>进程就是一个运行的程序的实例。可以从功能上理解就是一个具体完成我们程序的过程。从组成上就是包括一系列的物理资源。包括内存，寄存器文件，控制器，内核栈等信息。总之就是上下文。</font></p>
+</li>
+<li><p><font color=salmon>异常，，就是逻辑控制流发生改变的情况，event事件也是如此。 异常发生在内核模式下。异常有中断interrupt 陷阱 trap 故障 终止。 终端就是硬件上，异步发生的。 trap 就是系统调用 system call  对于异常有三种情况 Icur 返回 Icur Inext 或者直接俄abort。 </font></p>
+</li>
+<li><p><font color=yellow>shell 执行一个命令就是fork 了一个新的进程并发 就是多任务 多进程 很多错误都是有定义的 有硬件设计者或者是内核维护 同样的异常处理程序也是。 可以通过 errno来查看 函数就是 stderror(error)</font></p>
+</li>
+<li><p><font color=deepskyblue>进程</font></p>
+<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line">  <span class="meta">#<span class="keyword">include</span><span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">pid_t</span> <span class="title">getpid</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line">  <span class="function"><span class="type">pid_t</span> <span class="title">getppid</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">pid_t</span> <span class="title">fork</span><span class="params">(<span class="type">void</span>)</span></span>;		<span class="comment">// 子进程得到的是副本</span></span><br><span class="line">  <span class="function"><span class="type">int</span> <span class="title">execve</span><span class="params">(...)</span></span>;</span><br><span class="line">  <span class="function">unsighed <span class="type">int</span> <span class="title">sleep</span><span class="params">(ui)</span></span>;</span><br><span class="line">  <span class="function"><span class="type">int</span> <span class="title">pause</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line">  <span class="comment">// 还有可以设置环境变量的sysm call env</span></span><br></pre></td></tr></table></figure></div>
+
+<p><font color=deepskyblue>进程三个状态 运行 停止 终止 停止就是挂起 可以接受信号后继续运行 其中终止三种 接受到一个信号，主程序返回，exit函数</font></p>
+<p><font color=pink>理解子进程共享状态 关键： 副本虚拟内存的副本。仔细研究就是 相同的执行程序，内存，data等节。然后相同的用户栈信息，共享文件描述符，共享共享库也就是相同的工具 最大不同就是PID 子进程是0 父进程是子进程的PID返回对于fork 一次调用两次返回 注意这是系统调用 从内核返回到用户模式 并发执行父子进程 </font></p>
+<p><font color=lightgreen>进程操作，主要是理解不用背。 未回收的进程就是僵尸进程交给init 进程 PID&#x3D;1 所有进程的祖先 waitpid wait 可以等待并且有一定的行为可以操作   fork 和 exevce 就是实现 sh的关键 大概就是 fork 一个子进程然后进行 execve 执行 对应的命令</font></p>
+</li>
+<li><p><font color=lightblue>信号 linux 信号 可能来自内核检测到一个系统事件(event) 也可能来自其他程序的kill发送 接受三种 忽略 终止 或者信号处理程序</font></p>
+</li>
+<li><p><font color=cornsilk>strace 命令 可以使用-static 编译后查看程序中所有系统调用的轨迹 pmap 显示进程的内存映射 &#x2F;proc 内核提供的一个可以在用户模式下查看系统信息的文件 还有&#x2F;sys   execve 在内存里拥有一个内存栈 存储有argv 和 env 以及初始化函数的栈帧 非常的good</font></p>
+</li>
 <li><p><font color=blue>Open MPI 和 mpch 似是两个不同的mpi 实现 我看的教程似乎是 mpich ,但是一般而言都可以如果只是学习的话 我不过上次我似乎安装的是 openmpi</font></p>
 </li>
 <li><h3 id="MPI"><a href="#MPI" class="headerlink" title="MPI"></a><strong><font color=Teal>MPI</font></strong></h3><p><strong><font color=DarkCyan>这里就把mpi的使用在这里写了。先补充一点前置知识。冯诺依曼体系。cpu主存分离。导致大多时钟时间去访存。进程就是一个程序的实例可以看成一个综合体包括I&#x2F;o设备即一组文件描述符表，然后主存，前两者共同由虚拟地址实现。此为被处理器表现为独享。多任务即并发。每一个执行时间片。上下文切换。因此硬件计算的优化集中在对冯诺依曼体系的优化大致有如下几个。<br>Cache 在主存与寄存器之间设置三层高速缓存，SRAM，利用局部性原理<br>虚拟地址，可以看作讲主存作为磁盘文件的Cache.同时还有很多好处，如简化加载链接，提供更安全的地址守护等。<br>指令级并行<br>线程级并行TLP 细粒度多线程就是一个线程每执行他的一条指令就切换。粗粒度就是在遇到需要较长时间的指令才切换<br>SMT 同步多线程<br>SISD 单指令流 单数据流 SIMD 单数据多指令流 处理向量运算 大型简单计算GPU就是 处理图像 大量线程 具体可以在学习CUDA后补充<br>MIMD 两种常见类型 注意有多个处理单元即多个处理器 是异步的没有全局时钟 一个是共享内存系统，多个核共享一个内存系统，分布式内存系统，多个核——内存对。第一类具体有两个<img  
@@ -1464,6 +1481,17 @@
 <li><font color=yellow>Recv 与 Send函数的语义。各自有自己的缓冲区其实就是指定的存储区。tag用于互相匹配。有status结构来实际获取。匹配包括：同一个communicator，rank匹配。tag匹配。传输信息type匹配。接受去内存大于发送区。对于接受函数有两个宏量。MPI_ANY_SOURCE MPI_ANY_TAG 字面意思就是可以任意接受。发送没有 且一定要指定好comm</font></li>
 <li><font color=yellow>MPI_Status参数获取实际传送的字节数。MPI_STATUS_IGNORE</font></li>
 <li><font color=yellow>Send语义，可以阻塞，此时不返回。可以缓冲，放入内部存储器，然后返回。返回时并不知道是否成功发送。实际是如果发送信息小于默认的截止大小就缓存，否则就阻塞。Recv一定阻塞。可能出现悬挂</font></li>
+<li><font color=yellow>前面的是点对点 还有可以广播的集合通有内置的操作和我们自定义的operator 同样的还有信息的传播 API</font></li>
+<li><font color=yellow>线程可以理解为轻量级进程 一个正在运行的程序在一个处理器上的实例 编译器的话需要一个-lpthread 参数</font></li>
+<li><font color=yellow>注意我们的这个全局变量需要定义在所有的函数外面然后 main 就是一个主线程</font></li>
+<li><font color=orange>目前看来我们需要做到就是明白原理，然后学下具体的API  </font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
 <li><font color=yellow></font></li>
 </ul>
 </li>
