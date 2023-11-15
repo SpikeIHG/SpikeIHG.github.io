@@ -1876,6 +1876,36 @@
 <li><font color=mediumspringgreen>分类问题softmax的原因简单解释 就是 我们用one-hot 向量表示我们的类 然后用1 然后我们将softmax 将其转换为-1 到 1 当然我觉得可能还是因为概率分布的问题就是越大的比例越大</font></li>
 </ul>
 </li>
+<li><h2 id="self-attention-自注意"><a href="#self-attention-自注意" class="headerlink" title="self-attention 自注意"></a>self-attention 自注意</h2><ul>
+<li><font color=pink>问题引入 加入我们处理的input data是一个向量序列 而不是一个向量。 对应的输入也有不同的种类。比如说输入的每一个向量都计算一个label 例如判断文本每个单词的 词性 或者类似的分裂问题 。或者一个输出 比如对一句话进行定义  反正应用情形自己去想象 最复杂也许是seq2seq 输出的已是一个序列 例如翻译</font></li>
+<li><font color=pink>sequence labeling 如果仅仅使用前面的network 然后单独输入的话存在一个巨大的问题就是无法做到考虑上下文使用情形有限</font></li>
+<li><font color=pink>attention is all you need <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/matr.png"
+                     
+                ><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/attention.png"
+                     
+                ><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/multi.png"
+                     
+                ></font></li>
+<li><font color=pink></font></li>
+<li><font color=pink></font></li>
+<li><font color=pink></font></li>
+<li><font color=pink></font></li>
+<li><font color=pink></font></li>
+<li><font color=pink></font></li>
+<li><font color=pink></font></li>
+<li><font color=pink></font></li>
+<li><font color=pink></font></li>
+</ul>
+</li>
 </ul>
 ]]></content>
       <tags>
