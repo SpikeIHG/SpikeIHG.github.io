@@ -522,8 +522,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-11-15 22:07:22</span>
-            <span class="mobile">2023-11-15 22:07</span>
+            <span class="pc">2023-11-16 17:55:56</span>
+            <span class="mobile">2023-11-16 17:55</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -545,12 +545,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>6.6k Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>7.1k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>23 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>24 Mins</span>
         </span>
     
     
@@ -661,6 +661,15 @@
 </li>
 <li><p><font color=cornsilk>strace 命令 可以使用-static 编译后查看程序中所有系统调用的轨迹 pmap 显示进程的内存映射 &#x2F;proc 内核提供的一个可以在用户模式下查看系统信息的文件 还有&#x2F;sys   execve 在内存里拥有一个内存栈 存储有argv 和 env 以及初始化函数的栈帧 非常的good</font></p>
 </li>
+<li><p><font color=pink>信号</font></p>
+<p><font color=pink>信号是操作系统提供的内核。接受信号的物理实现 内核为每一个进程维护两个位向量,pending &amp; blocked.规则：一个类型至多一个待处理信号，多余发送直接丢弃。进程可以 选择性阻塞信号，这样的信号不会被接收，但是能够发送，只要传送信号，pending就会置为，只要接受，pending就会清除，这里接受可以理解为成功捕获并响应。更准确的说是trap 陷入那一刻起就恢复，因此可以执行handler K 时 捕获k<br>进程组 一般子进程会具有父进程的组pid。 job 一个前台job 很多个后台job job 就是一个进程组<br>signal 函数可以修改信号默认行为 每个信号都有默认行为 sigkill sigstop 不可修改 <br>编写信号处理程序的忠告 处理程序简单 调用异步安全函数sprintf 之类不安全。 保存errno 对全局变量访问期间要暂时阻塞信号 volatile声明防止缓存不一致 sig_atomic_t 声明变量 单变量原子操作</font></p>
+<p>Richard Stevens<br><font color=pink>我们每次一个命令执行完后都会return main 所以当前进程会终止 然后被也许 init 或者父进程回收 子进程也会继承信号阻塞的信息向量 信号许多时候会造成竞争，所以我们也需要禁止某种操作，所以我们需要阻塞某些信号。 最后一个 sigsuspend 函数用于等待操作 详细请见 我们的P527 讨论<br>非本地跳转setjump longjump 函数实现的 可以超过一般的处理程序调用的规则进行调用</font></p>
+</li>
+</ul>
+</li>
+<li><h2 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a><font color=lightgreen>虚拟内存</font></h2></li>
+<li><p><font color=lightgreen>虚拟内存针对核心对象的是主存</font></p>
+</li>
 <li><p><font color=blue>Open MPI 和 mpch 似是两个不同的mpi 实现 我看的教程似乎是 mpich ,但是一般而言都可以如果只是学习的话 我不过上次我似乎安装的是 openmpi</font></p>
 </li>
 <li><h3 id="MPI"><a href="#MPI" class="headerlink" title="MPI"></a><strong><font color=Teal>MPI</font></strong></h3><p><strong><font color=DarkCyan>这里就把mpi的使用在这里写了。先补充一点前置知识。冯诺依曼体系。cpu主存分离。导致大多时钟时间去访存。进程就是一个程序的实例可以看成一个综合体包括I&#x2F;o设备即一组文件描述符表，然后主存，前两者共同由虚拟地址实现。此为被处理器表现为独享。多任务即并发。每一个执行时间片。上下文切换。因此硬件计算的优化集中在对冯诺依曼体系的优化大致有如下几个。<br>Cache 在主存与寄存器之间设置三层高速缓存，SRAM，利用局部性原理<br>虚拟地址，可以看作讲主存作为磁盘文件的Cache.同时还有很多好处，如简化加载链接，提供更安全的地址守护等。<br>指令级并行<br>线程级并行TLP 细粒度多线程就是一个线程每执行他的一条指令就切换。粗粒度就是在遇到需要较长时间的指令才切换<br>SMT 同步多线程<br>SISD 单指令流 单数据流 SIMD 单数据多指令流 处理向量运算 大型简单计算GPU就是 处理图像 大量线程 具体可以在学习CUDA后补充<br>MIMD 两种常见类型 注意有多个处理单元即多个处理器 是异步的没有全局时钟 一个是共享内存系统，多个核共享一个内存系统，分布式内存系统，多个核——内存对。第一类具体有两个<img  
@@ -701,9 +710,10 @@
                      data-src="/../images/fosterm.png"
                      
                 >注意就是平均分配 同时要注意凝聚如果下一个依赖于上一个就可以凝聚为一个任务</font></strong></p>
-</li>
+<ul>
 <li><p><strong><font color=lightyellow>MPI详解</font></strong></p>
 <ul>
+<li><font color=salmon><a class="link"   target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/creating-an-mpi-cluster/" >MPI集群的搭建方法 感觉mpi 也逐渐成为其他更高层计算框架实现的底层原理 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></font></li>
 <li><font color=yellow>通信子，通信子可以看作一组可以互相通信的进程，初始时有MPI创建了一组WORLD,可以创建多组。可以调用函数得知对应大小以及每一个的rank。</font></li>
 <li><font color=yellow>Recv 与 Send函数的语义。各自有自己的缓冲区其实就是指定的存储区。tag用于互相匹配。有status结构来实际获取。匹配包括：同一个communicator，rank匹配。tag匹配。传输信息type匹配。接受去内存大于发送区。对于接受函数有两个宏量。MPI_ANY_SOURCE MPI_ANY_TAG 字面意思就是可以任意接受。发送没有 且一定要指定好comm</font></li>
 <li><font color=yellow>MPI_Status参数获取实际传送的字节数。MPI_STATUS_IGNORE</font></li>
@@ -717,7 +727,10 @@
 <li><font color=yellow></font></li>
 <li><font color=yellow></font></li>
 <li><font color=yellow></font></li>
-<li><font color=yellow></font></li>
+</ul>
+</li>
+<li><p><font color=yellow></font></p>
+<ul>
 <li><font color=yellow></font></li>
 <li><font color=yellow></font></li>
 </ul>
@@ -854,7 +867,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">Begin_Again</div>
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E8%87%AA%E7%84%B6%E5%8E%9F%E7%90%86"><span class="nav-text">计算机科学中的自然原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%A0%E5%A5%BD%EF%BC%81%E4%B8%96%E7%95%8C"><span class="nav-text">你好！世界</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E7%90%86%E8%AE%BA%E5%88%B0%E5%AE%9E%E8%B7%B5"><span class="nav-text">从理论到实践</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FAQ"><span class="nav-text">FAQ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA"><span class="nav-text">数据表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B1%87%E7%BC%96%E7%AE%80%E4%BB%8B"><span class="nav-text">汇编简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96"><span class="nav-text">优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98"><span class="nav-text">内存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%93%BE%E6%8E%A5"><span class="nav-text">链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B"><span class="nav-text">进程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MPI"><span class="nav-text">MPI</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CUDA"><span class="nav-text">CUDA</span></a>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E8%87%AA%E7%84%B6%E5%8E%9F%E7%90%86"><span class="nav-text">计算机科学中的自然原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%A0%E5%A5%BD%EF%BC%81%E4%B8%96%E7%95%8C"><span class="nav-text">你好！世界</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E7%90%86%E8%AE%BA%E5%88%B0%E5%AE%9E%E8%B7%B5"><span class="nav-text">从理论到实践</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FAQ"><span class="nav-text">FAQ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA"><span class="nav-text">数据表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B1%87%E7%BC%96%E7%AE%80%E4%BB%8B"><span class="nav-text">汇编简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96"><span class="nav-text">优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98"><span class="nav-text">内存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%93%BE%E6%8E%A5"><span class="nav-text">链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B"><span class="nav-text">进程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98"><span class="nav-text">虚拟内存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MPI"><span class="nav-text">MPI</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CUDA"><span class="nav-text">CUDA</span></a>
 
     </div>
 </div>
