@@ -1936,7 +1936,10 @@
                      data-src="/../images/multi.png"
                      
                 ></font></li>
-<li><font color=pink></font></li>
+</ul>
+</li>
+<li><h2 id="Seq2seq"><a href="#Seq2seq" class="headerlink" title="Seq2seq"></a>Seq2seq</h2><ul>
+<li><font color=pink>encoder FFN feed forward network </font></li>
 <li><font color=pink></font></li>
 <li><font color=pink></font></li>
 <li><font color=pink></font></li>
