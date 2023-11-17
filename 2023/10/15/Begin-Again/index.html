@@ -522,8 +522,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-11-16 17:55:56</span>
-            <span class="mobile">2023-11-16 17:55</span>
+            <span class="pc">2023-11-17 21:14:21</span>
+            <span class="mobile">2023-11-17 21:14</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -545,12 +545,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>7.1k Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>8.7k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>24 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>30 Mins</span>
         </span>
     
     
@@ -667,8 +667,36 @@
 </li>
 </ul>
 </li>
-<li><h2 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a><font color=lightgreen>虚拟内存</font></h2></li>
-<li><p><font color=lightgreen>虚拟内存针对核心对象的是主存</font></p>
+<li><h2 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a><font color=lightgreen>虚拟内存</font></h2><ul>
+<li><font color=lightgreen>虚拟内存针对核心对象的是主存</font></li>
+<li><font color=lightgreen>虚拟内存的核心思想就是把磁盘的所有字节划分为一个连续的数组构成一个虚拟地址空间。然后将主存划分为一个物理地址空间，将磁盘的内容缓存在主存上，类似于SRAM缓存体系，这个就是DRAM 缓存体系，很多地方是相同的。我们有操作系统维护一个于虚拟页数（就是缓存里面的块）相同的一个PT（page table 页表） PTE一个条目里可以简化为一个有效位标志是否被缓存，以及一个物理地址字段对应其被缓存在主存上的实际地址。一个page 有三个状态(未分配就相当于磁盘未被使用；分配未缓存，已经被分配例如使用了malloc,但是还没有被加载到主存中；已分配已缓存，此时有效位置位)。现在你直到了malloc 的实际用法。还有就是因为巨大的不命中处罚，所以一个虚拟页较大，并且全相联。同时按需调度，到最后一刻才真正加载到主存。 getrusage 函数可以查看缺页情况。</font></li>
+</ul>
+<p><font color=lightgreen>虚拟内存如何实现一个统一的内存图景。这样想，我们任何一个程序的开始都一样，这个是虚拟地址，因为内核为每一个进程都维护了一个完整相同的独立的虚拟地址页表，并且虚拟地址要翻译为物理地址，所以啦，我们只需要在虚拟地址向物理地址的映射做一点手脚，我们认为控制这个映射就可以实现任意内存分配 简化加载，我们可以划出虚拟页表指向目标文件中的内容，这就是文件内存的映射，mmap 可以在应用层控制。 简化内存分配 malloc 实际的物理地址可以散落各处 实现内存保护。有几位标识读，写，执行权限。CPU 每次产生一个地址都需要查看PTE 所以在翻译的硬件MMU 中有一个缓存 TLB了解就好 翻译过程可以感兴趣再看看。还有就是使用了一个叫做多级页表的方式减少内存占用。</font></p>
+<p><font color=pink>图景的实现原理。内核为每一个进程都维护了一个虚拟地址空间。并将虚拟内存组织成区域也叫做段。例如数据段，代码段，共享库段。实际过程中内核为每一个进程记录一个task_struct 的结构数组，里面包含着进程上下文信息。其中mm_struct 记录了有关虚拟地址的信息。在这个结构中存在一个链表每个node 对应一个段的相关信息。 缺页处理，首先判断是否位于虚拟内存内，如果不在就触发一个段错误。1 .然后判断权限是否对应，如果错误 2.然后开始替换，然后返回到除法信号的指令再次翻译地址。注意虚拟内存上的分配与磁盘上的存储是两个不同概念。只有当前执行的时候我们才加载，而加载的实际含义语义其实是让它具有虚拟地址。让其映射到虚拟地址空间！！！！！！！！！好好理解。抽象成一个空间集合！！！！简洁而有效。</font></p>
+<p><font color=deepskyblue>memory mapping。 定义由上面其实页明白就是将一个虚拟内存区域与一个磁盘的对象关联起来，然后初始化这段虚拟内存的内容。映射磁盘对象的时候，有两种。对于Linux普通文件，将文件区分成片，映射到对应的虚拟内存页面。实际上并没有进入物理内存，而是使用按需调度机制。还有就是匿名文件，其实就是选择物理内存上一个牺牲页然后覆盖为0，实际上也没有磁盘的流量。 现在我们特殊讨论一下我们的共享对象。也就是映射的实际情况。首先，对于我们的这个共享对象，我们只需要一个物理内存中的副本，每一个进程可以在自己各自的不同的虚拟内存段上映射，同时每一个进程对于该共享对象的修改都是公开的。 同时还有私有对象，即每一个都是独立的。这种独立的实际事项方式是，先共享映射不过我们设置只读，当正在有探测到写入的时候，我们在复制该对象给写入的进程，尽量推迟从而提高效率。这就是写时复制技术。这也是fork 保持独立的实现原理。私有的，写时复制。execve函数就是一个删除现存虚拟内存重新映射的一个过程 然后mmap 函数可以让我们要求内核开辟虚拟内空间然后把我想要映射的对象关联起来。至于malloc 显式分配器的实践就是一个应用，可以参看书P587 .</font></p>
+</li>
+<li><h2 id="系统级I-x2F-O"><a href="#系统级I-x2F-O" class="headerlink" title="系统级I&#x2F;O"></a><font color=salmon>系统级I&#x2F;O</font></h2><ul>
+<li><p><font color=salmon>一切皆文件的终极体现。就是将所有的i&#x2F;o设备抽象成文件，提供统一的文件接口。 打开文件得到一个唯一的文件描述符。0 stdin 1 stdout 2 stderr. k seek记录文件位置。读文件，读过大小限制后会自己触发一个EOF 而非有这个东西。文件。普通文件，套接字文件，目录。还有一些其他的。每个进程都会记录当前的工作目录，可以通过 cd 命令改变</font></p>
+</li>
+<li><pre><code class="cpp">#include&lt;sys/types.h&gt;
+#include&lt;sys/stats.h&gt;
+#include&lt;fcntl.h&gt;
+
+int open();
+int close();
+int read();
+int write();
+// Richard Stevens 和他的RIO包 R.I.P 缓存的使用减少系统trap
+// 针对不同的应用情景选择不同的i/o 自己写包装更好的尤其是网络编程
+//
+</code></pre>
+</li>
+<li><p><font color=salmon>共享文件的实现，维护三个表，针对进程也有一些东西。同时fork的时候也是这样的。</font></p>
+</li>
+</ul>
+</li>
+<li><h2 id="并行编程"><a href="#并行编程" class="headerlink" title="并行编程"></a><font color=yellow>并行编程</font></h2></li>
+<li><p><font color=cyan>线程，信号量是实现对全局变量的访问。防止竞争。竞争可以使用进程图来直观表示。同时要防止死锁。还有很多，好几个基于线程进程，i&#x2F;o复用的编程模型</font></p>
 </li>
 <li><p><font color=blue>Open MPI 和 mpch 似是两个不同的mpi 实现 我看的教程似乎是 mpich ,但是一般而言都可以如果只是学习的话 我不过上次我似乎安装的是 openmpi</font></p>
 </li>
@@ -867,7 +895,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">Begin_Again</div>
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E8%87%AA%E7%84%B6%E5%8E%9F%E7%90%86"><span class="nav-text">计算机科学中的自然原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%A0%E5%A5%BD%EF%BC%81%E4%B8%96%E7%95%8C"><span class="nav-text">你好！世界</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E7%90%86%E8%AE%BA%E5%88%B0%E5%AE%9E%E8%B7%B5"><span class="nav-text">从理论到实践</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FAQ"><span class="nav-text">FAQ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA"><span class="nav-text">数据表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B1%87%E7%BC%96%E7%AE%80%E4%BB%8B"><span class="nav-text">汇编简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96"><span class="nav-text">优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98"><span class="nav-text">内存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%93%BE%E6%8E%A5"><span class="nav-text">链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B"><span class="nav-text">进程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98"><span class="nav-text">虚拟内存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MPI"><span class="nav-text">MPI</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CUDA"><span class="nav-text">CUDA</span></a>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E8%87%AA%E7%84%B6%E5%8E%9F%E7%90%86"><span class="nav-text">计算机科学中的自然原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%A0%E5%A5%BD%EF%BC%81%E4%B8%96%E7%95%8C"><span class="nav-text">你好！世界</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E7%90%86%E8%AE%BA%E5%88%B0%E5%AE%9E%E8%B7%B5"><span class="nav-text">从理论到实践</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FAQ"><span class="nav-text">FAQ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA"><span class="nav-text">数据表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B1%87%E7%BC%96%E7%AE%80%E4%BB%8B"><span class="nav-text">汇编简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96"><span class="nav-text">优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98"><span class="nav-text">内存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%93%BE%E6%8E%A5"><span class="nav-text">链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B"><span class="nav-text">进程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98"><span class="nav-text">虚拟内存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E7%BA%A7I-x2F-O"><span class="nav-text">系统级I&#x2F;O</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B6%E8%A1%8C%E7%BC%96%E7%A8%8B"><span class="nav-text">并行编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MPI"><span class="nav-text">MPI</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CUDA"><span class="nav-text">CUDA</span></a>
 
     </div>
 </div>
