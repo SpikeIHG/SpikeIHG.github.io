@@ -19,13 +19,13 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="逻辑电路">
+    <meta property="og:title" content="逻辑电路/c++">
     <meta property="og:description" content="Hexo Theme Redefine">
     <meta property="og:url" content="https://SpikeIHG.github.io2023/10/11/逻辑电路/">
     
     <meta property="og:site_name" content="Winter&#39;s">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="逻辑电路">
+    <meta name="twitter:title" content="逻辑电路/c++">
     <meta name="twitter:description" content="Hexo Theme Redefine">
     <meta name="twitter:image" content="/images/yao.png">
     <!--- Icon Part-->
@@ -37,7 +37,7 @@
     
     <title>
         
-            逻辑电路 -
+            逻辑电路/c++ -
         
         Winter&#39;s
     </title>
@@ -492,8 +492,8 @@
             
                       
                 <div class="article-title">
-                    <img src="/../images/cloud1.jpg" alt="逻辑电路" />
-                    <h1 class="article-title-cover">逻辑电路</h1>
+                    <img src="/../images/cloud1.jpg" alt="逻辑电路/c++" />
+                    <h1 class="article-title-cover">逻辑电路/c++</h1>
                 </div>
             
                 
@@ -522,8 +522,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-10-11 20:24:15</span>
-            <span class="mobile">2023-10-11 20:24</span>
+            <span class="pc">2023-11-18 22:22:44</span>
+            <span class="mobile">2023-11-18 22:22</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -545,12 +545,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>13 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>712 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 Mins</span>
         </span>
     
     
@@ -566,14 +566,32 @@
             
 
             <div class="article-content markdown-body">
-                <h3 id="大爱逻辑电路，简洁是美的灵魂"><a href="#大爱逻辑电路，简洁是美的灵魂" class="headerlink" title="大爱逻辑电路，简洁是美的灵魂"></a><font color=pink>大爱逻辑电路，简洁是美的灵魂</font></h3>
+                <h3 id="大爱逻辑电路，简洁是美的灵魂"><a href="#大爱逻辑电路，简洁是美的灵魂" class="headerlink" title="大爱逻辑电路，简洁是美的灵魂"></a><font color=pink>大爱逻辑电路，简洁是美的灵魂</font></h3><ul>
+<li><h2 id="My-Efficient-c-想不到吧"><a href="#My-Efficient-c-想不到吧" class="headerlink" title="My Efficient c ++ (想不到吧)"></a><font color=deepskyblue>My Efficient c ++ (想不到吧)</font></h2><p><font color=salmon>同时，我觉得既然是总结，咱们就换一种视角串联整个c ++ 知识点。</font></p>
+</li>
+<li><p><font color=pink>模板</font></p>
+<p><font color=lightgreen>模板推断，也就是实例化是编译器的工作。理解实例化，只有实际调用或者是定义时才会实例化。并且不同实例的函数或者类是独立的。同时模板定义一般写在头文件里面。class 和 typename 是相同的含义。模板具有默认类型参数，所以平时看定义的时候注意一下</font></p>
+<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="type">unsigned</span> N,<span class="type">unsigned</span> M&gt; <span class="built_in">compare</span>(<span class="built_in">char</span> (&amp;a)[N],<span class="built_in">char</span> (&amp;b)[M]);	<span class="comment">// 非类型实参</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T,<span class="keyword">typename</span> F=less&lt;T&gt;&gt;<span class="type">int</span> <span class="built_in">compare</span>(<span class="type">const</span> T&amp;v1,<span class="type">const</span> T&amp;v2,F f=<span class="built_in">F</span>());</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>=<span class="type">int</span>&gt; <span class="keyword">class</span> Numbers&#123;&#125;;</span><br><span class="line">Numbers &lt;&gt; b; <span class="comment">// 使用默认参数 任何时候&lt;&gt;都不能省略</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Debugdelete</span>&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;<span class="function"><span class="type">void</span> <span class="title">operator</span><span class="params">()</span><span class="params">(T*p)</span><span class="type">const</span></span>&#123;<span class="keyword">delete</span> p;&#125;	<span class="comment">// 之所以有const的原因是const保护的是删除器的成员，区分清楚保护的对象 p 是外来的</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Debugdelete</span>()(); <span class="comment">//在一个临时对象上调用operator()</span></span><br><span class="line"><span class="function">unique_ptr&lt;<span class="type">int</span>,Debugdelete&gt; <span class="title">ptr</span><span class="params">(<span class="keyword">new</span> <span class="type">int</span>,Debugdelete())</span></span>; <span class="comment">// 这里可以窥见删除器的本质就是一个可调用对象，这是一个简洁而深刻的概念 全新的 这是常见的用法</span></span><br><span class="line"><span class="function">unique_ptr&lt;<span class="type">int</span>, <span class="title">decltype</span><span class="params">(compareIntfunction)</span>*&gt; <span class="title">ptr2</span><span class="params">(<span class="keyword">new</span> <span class="type">int</span> ,compareIntfunction)</span></span>; <span class="comment">// 类似的 具体原理就是指针调用析构函数时会是使用删除器</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">check</span><span class="params">(size_type i,<span class="type">const</span> std::string &amp; msg)</span><span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123; <span class="keyword">if</span>(i&gt;=data-&gt;<span class="built_in">size</span>())</span><br><span class="line">    <span class="keyword">throw</span> std::<span class="built_in">out_of_range</span>(msg);&#125;<span class="comment">// 这个工厂函数写得很好！！！</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+
+</li>
+<li><p><font color=yellow>异常处理</font></p>
+<p><font color=cornsilk>异常处理包含两个过程，异常捕获和异常处理。捕获依靠throw 表达式，处理依靠try catch 语句块。 注意想要被catch 捕获需要使用try 存在 try 的多重嵌套，依照调用链反向寻找所有层次的catch 语句直到匹配，如果一个都不匹配则terminate直接终止。有一些标准库定义的错误类，有些需要初始化const char[]。 .what()方法可以查看字符串内容 栈展开其实就是。 展开过程会销毁对象，依照局部对象的销毁原则。</font></p>
+</li>
+<li><p><font color=cyan>随机数</font></p>
+<p><font color=lightgreen>随机数使用，包含两个部分，一个部分是随机数引擎，另一个是随机数分布。引擎生成一系列unsigned ，分布完成我们的需求生成所需的指定类型给定范围，满足特定概率分布的随机数 。引擎需要种子，否则也是固定的伪随机 ,default_random_engine 其实是系统预定义的最佳引擎，具体有三个。然后分布种类是模板，需要指定类型别名。调用的方法类似 u(e) 。 u是分布种类。 e 是对象。</font></p>
+</li>
+</ul>
+
             </div>
 
             
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：逻辑电路</li>
+        <li>Post title：逻辑电路/c++</li>
         <li>Post author：Winter</li>
         <li>Create time：2023-10-11 20:15:48</li>
         <li>
@@ -690,8 +708,8 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">逻辑电路</div>
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7%E7%88%B1%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF%EF%BC%8C%E7%AE%80%E6%B4%81%E6%98%AF%E7%BE%8E%E7%9A%84%E7%81%B5%E9%AD%82"><span class="nav-text">大爱逻辑电路，简洁是美的灵魂</span></a></li></ol>
+        <div class="page-title">逻辑电路/c++</div>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7%E7%88%B1%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF%EF%BC%8C%E7%AE%80%E6%B4%81%E6%98%AF%E7%BE%8E%E7%9A%84%E7%81%B5%E9%AD%82"><span class="nav-text">大爱逻辑电路，简洁是美的灵魂</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#My-Efficient-c-%E6%83%B3%E4%B8%8D%E5%88%B0%E5%90%A7"><span class="nav-text">My Efficient c ++ (想不到吧)</span></a>
 
     </div>
 </div>
