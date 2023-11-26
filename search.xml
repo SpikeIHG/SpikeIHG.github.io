@@ -2425,6 +2425,10 @@ int write();
 <li>residual connection 这个是与self attention 不一样的地方把input 和 output加起来</li>
 </ul>
 </li>
+<li><h2 id="self-attention"><a href="#self-attention" class="headerlink" title="self-attention"></a><font color=deepskyblue>self-attention</font></h2><ul>
+<li>q,k 矩阵学习 multi-head 就是分出多个 q 矩阵 然后得到bi,j 然后再处理成一个 positional embding , hand-crafted 目前的 目前是一个全新的领域 也可以学习。 self-attention 之间是没有位置关系的，然后q k 也不一定需要包含整个窗口</li>
+</ul>
+</li>
 <li><h2 id="Batch-normalization"><a href="#Batch-normalization" class="headerlink" title="Batch normalization"></a><font color=salmon>Batch normalization</font></h2><p>layer norm 是对同一个feature(sample)不同的dim 进行计算 mean和 deviation 而 batch norm 是对所有不同的feature 的同一个dim 进行处理</p>
 <p><img  
                      lazyload
