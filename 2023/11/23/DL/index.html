@@ -521,8 +521,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-11-26 23:08:56</span>
-            <span class="mobile">2023-11-26 23:08</span>
+            <span class="pc">2023-11-27 22:20:57</span>
+            <span class="mobile">2023-11-27 22:20</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -544,12 +544,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.8k Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>2.8k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>6 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>10 Mins</span>
         </span>
     
     
@@ -570,10 +570,28 @@
 <li><h2 id="Transformer"><a href="#Transformer" class="headerlink" title="Transformer"></a><font color=lightgreen>Transformer</font></h2><p>transformer是什么？变形金刚！！！ 好吧transformer 是用来解决seq2seq的一个模型。 seq2seq是一种模式，一些常见的情形：翻译，听译，语音辨识，听译 男泵 万恶之源 硬train一发 chatbot 之类的也是</p>
 <p>BOS</p>
 <ul>
-<li>NLP QA模式 问题回答的一种模式</li>
-<li>multi-label 就是每一个输入对象可能身上有多个标签</li>
-<li>transformer 就是求解s2s的一个模型 encoder 和 decoder</li>
-<li>residual connection 这个是与self attention 不一样的地方把input 和 output加起来</li>
+<li><p>NLP QA模式 问题回答的一种模式</p>
+</li>
+<li><p>multi-label 就是每一个输入对象可能身上有多个标签</p>
+</li>
+<li><p>transformer 就是求解s2s的一个模型 encoder 和 decoder</p>
+</li>
+<li><p>residual connection 这个是与self attention 不一样的地方把input 和 output加起来</p>
+</li>
+<li><p>为什么能够应对seq2seq的情况</p>
+<p>输入有两个部分 一部分来则于自己之前的输出</p>
+<p>masked -attention 为什么需要</p>
+<p>单纯看自己的输入作为输出的时候不可能停止下来，机，器，学。习。惯…… 首先我们需要准备以恶搞special toke as end(断) 所以原理就是让机器学习断，在该停止时候最大的概率输出end</p>
+<p>上面是对于AT NAT是同时产生所有的输出 解决停止问题 有两个，第一个单独训练一个classifier来判断长度，方法二，传入很多begin token.忽略end 后的 输出 NAT 更好的并行化，可以控制长度 但是效果很难达到AT multi-modality</p>
+<p>decoder 和 encoder的连接依靠一个叫做 cross-attention 的操作完成的就是 decoder 产生的向量q然后对每一个encoder的output k做kq，然后得到的新的v作为input丢到fc进行之后操作</p>
+<p>train的时候采用分类的视角 计算向量之间的cross-entrophy 并且在训练情况下，我们给decoder的是正确的答案 就是一个监督 tearcher forcing </p>
+<p>训练的一些 tips copy mechanism 例如chat-bot 将一些从来没有见过的词汇 直接进行复制 例如做摘要的时候 pointer network</p>
+<p>TTS 语音合成 guide attention 就是规定 attention的顺序 有固定的过程 需要提前分享任务的特征monotonic attention</p>
+<p>观察确定 我们的encoder 就是输出简单的数据 作为中间向量</p>
+<p><font color=yellow>beam search</font> greedy path可能存在问题 局部最优不代表全局最优 类似于老师讲的王者问题 加入随机 decoder加一点 noise</p>
+<p><font color=pink>BLEU score 用来检测inference 的指标但是训练的时候使用的是cross -entrophy 这两个没有关联的，没有相关性的blet score无法微分 一种策略使用 rl reinforcing learning reward与 agent来硬train一发</font></p>
+<p><font color=cornsilk>在训练的时候加入一些错误的情况，scheduled sampling 也很直觉啊，面对错误的时候得到正确的这样学习应对错误的能力</font></p>
+</li>
 </ul>
 </li>
 <li><h2 id="self-attention"><a href="#self-attention" class="headerlink" title="self-attention"></a><font color=deepskyblue>self-attention</font></h2><ul>
@@ -609,7 +627,7 @@
 <li>NAT non-autoregressive</li>
 </ul>
 </li>
-<li><h2 id="d"><a href="#d" class="headerlink" title="d"></a><font color=white>d</font></h2><ul>
+<li><h2 id="pytorch"><a href="#pytorch" class="headerlink" title="pytorch"></a><font color=white>pytorch</font></h2><ul>
 <li><p>总体流程就是，先定义我们的数据， dataset可以理解为存储我们的数据，feature 和 label ，然后dataloader 以我们想要的方式加载数据，自定义操作，包括batch ,还有 transform 等等。</p>
 </li>
 <li><p>然后就是定义 目标函数 loss ，以及一个优化器 optimizer ，有了之后定义 响应的train 和 test 函数 ，最后还有对模型的保存以及调用 和实际运用。</p>
@@ -691,11 +709,32 @@
 </li>
 <li><font color=pink>Save and load the model</font><ul>
 <li>组后要进行保存和加载的化调用响应的方法即可 ，然后注意两个东西就是.eavl() 模式的切换，记住这个是避免dropout和batch normalization 的一个东西</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h2 id="computational-graph"><a href="#computational-graph" class="headerlink" title="computational graph"></a><font color=salmon>computational graph</font></h2><ul>
+<li><p>反向传播</p>
+<p>前向传播和反向传播 forward and backward torch的抽象 forward 可以理解为求值 从input 到output 从leaf到root 反向传播就是求误差，根据链式法则求取偏导然后更新参数进行optimize。</p>
+</li>
+<li><p>torch的实际实现过程</p>
+<p>根据我们对neuralnet 的定义  一个sequential 里面有很多layer，然后forward就是调用这个module ,在进行forward pass的时候会进行两件事情，第一件事就是按照要求计算得到output tensor第二件事就是建立其DAG，每个结点就是对应的求导函数，在后续的backward pass中调用进行求导</p>
+<p> what you run is what you differentiate.</p>
+<ul>
+<li>tensor 需要保存，用来求导</li>
+<li>对于数学上不可求导的函数或者是未定义情况有指定的数学方式来处理</li>
+<li>先要阻止gradient 可以更改text manager mode 以及.eval(),同时要想控制子图subgraph的性质 可以对单个tensor 调用 require_grad</li>
+<li>torch.nn 中parameter默认要求导，中间变量都会求导</li>
+<li>现在终于懂了</li>
+<li>lossfunction 进行 backward()相当宇求梯度然后得到grad值，optimizer 则是根据不同的类型操作 grad 进行更新所有  parameter  .step()就是进行一步 。 .zero_grad()就是重置tensor</li>
+</ul>
+</li>
+<li><p>梯度消失和爆炸 的原因</p>
+<p>我们在计算梯度的时候采用的是反向传播求取雅各布矩阵，由于很多hidden layer都会采用一些激活函数对于sigmoid而言，其倒数最大值为0.25 如果乘以w 后得到的积仍然小于1 如果很多小于1累计起来可能造成靠近输入层的参数更新极为缓慢，当然输出层的影响较小，爆炸则是产生NaN 或者不稳定。</p>
+</li>
+</ul>
+</li>
 <li></li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -809,7 +848,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">DL</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Deep-learning-premier"><span class="nav-text">Deep learning premier</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Transformer"><span class="nav-text">Transformer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#self-attention"><span class="nav-text">self-attention</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Batch-normalization"><span class="nav-text">Batch normalization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#d"><span class="nav-text">d</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Deep-learning-premier"><span class="nav-text">Deep learning premier</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Transformer"><span class="nav-text">Transformer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#self-attention"><span class="nav-text">self-attention</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Batch-normalization"><span class="nav-text">Batch normalization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pytorch"><span class="nav-text">pytorch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#computational-graph"><span class="nav-text">computational graph</span></a></li></ol>
 
     </div>
 </div>
