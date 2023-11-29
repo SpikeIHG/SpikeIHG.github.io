@@ -1368,7 +1368,7 @@
 <p>template<typename T><br>  class A{<br>      template<typename It>A(It b,Ite);<br>  };</p>
 <p>  template<typename T><br>  template<typename It><br>      A<T>::A(It b,It e):data(make_shared&lt;std::vector<T>&gt;(b,e)){}<br>  <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">  </span><br><span class="line">* &lt;font color=violet&gt;类模板的成员模板&lt;/font&gt;</span><br><span class="line"></span><br><span class="line">  &lt;font color=violet&gt;正是依靠这个实现迭代器构造函数.——一个问题，由于实例化时，每一个独立的源文件都需要一份实例，可能存在重复的性能消耗，所以我们可以显示控制实例化 extern 声明一个具体的类型参数的模板，然后必须在某一文件里有定义 template 开始。最后记得链接在一起。定义其实也就是一句话，对于类模板来说这会使得所有成员都实例化，这点注意哦&lt;br&gt;这里也有一个有趣的问题就是shared_ptr 与 unique_ptr 删除器的实现方式。shared_ptr 可以随时reset 改变删除器所以实际是将删除器作为成员保存，指针形式保存，析构时大概就是 del? del(p): delete p; 而 unique_ptr 只允许定义时传入作为模板参数，所以就是编译时绑定效率更高，但是不能任意改变。&lt;/font&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* &lt;font color=yellow&gt;异常处理&lt;/font&gt;</span><br><span class="line"></span><br><span class="line">  &lt;font color=cornsilk&gt;异常处理包含两个过程，异常捕获和异常处理。捕获依靠throw 表达式，处理依靠try catch 语句块。 注意想要被catch 捕获需要使用try 存在 try 的多重嵌套，依照调用链反向寻找所有层次的catch 语句直到匹配，如果一个都不匹配则terminate直接终止。有一些标准库定义的错误类，有些需要初始化const char[]。 .what()方法可以查看字符串内容 栈展开其实就是。 展开过程会销毁对象，依照局部对象的销毁原则。&lt;br&gt;异常对象可以是标准库定义，也可以自己定义，完全类型有可访问的析构与构造函数，同时如果在throw 语句中解引用指针，如果是一个派生对象，基类指针则抛出的部分只有其基类的部分&lt;/font&gt;</span><br><span class="line"></span><br><span class="line">* &lt;font color=cyan&gt;随机数&lt;/font&gt;</span><br><span class="line"></span><br><span class="line">  &lt;font color=lightgreen&gt;随机数使用，包含两个部分，一个部分是随机数引擎，另一个是随机数分布。引擎生成一系列unsigned ，分布完成我们的需求生成所需的指定类型给定范围，满足特定概率分布的随机数 。引擎需要种子，否则也是固定的伪随机 ,default_random_engine 其实是系统预定义的最佳引擎，具体有三个。然后分布种类是模板，需要指定类型别名。调用的方法类似 u(e) 。 u是分布种类。 e 是对象。&lt;/font&gt;</span><br></pre></td></tr></table></figure></div></p>
 <ul>
-<li>&lt;font color&#x3D;</li>
+<li><font color=salmon>5G555 多谐振荡器 产生脉冲</font></li>
 </ul>
 ]]></content>
       <tags>
@@ -2583,6 +2583,9 @@ int write();
 </li>
 </ul>
 </li>
+</ul>
+</li>
+<li><h2 id="transformer-is-all-you-need"><a href="#transformer-is-all-you-need" class="headerlink" title="transformer is all you need"></a><font color=deepskyblue>transformer is all you need</font></h2><ul>
 <li></li>
 </ul>
 </li>
