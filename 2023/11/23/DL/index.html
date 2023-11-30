@@ -521,8 +521,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-11-29 10:40:58</span>
-            <span class="mobile">2023-11-29 10:40</span>
+            <span class="pc">2023-12-01 00:39</span>
+            <span class="mobile">2023-12-01 00</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -544,12 +544,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>2.8k Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>3k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>10 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>11 Mins</span>
         </span>
     
     
@@ -737,7 +737,10 @@
 </ul>
 </li>
 <li><h2 id="transformer-is-all-you-need"><a href="#transformer-is-all-you-need" class="headerlink" title="transformer is all you need"></a><font color=deepskyblue>transformer is all you need</font></h2><ul>
-<li></li>
+<li><font color=yellow>正向的 rnn 。 双向的rnn 可以正反同时读取我们的，</font></li>
+<li>LSTM 关键四个们 标量也是用来学习的 每个单元可以用来替代之前的neuron 然后只是输入需要四倍，因为三个们和一个输入 。使用的是sigmoid 函数表示打开的程度。实际的模型还会在输入中参考中间步骤的输入</li>
+<li>BPTT learning train  的 方法。考虑时间的关系。</li>
+<li>train的问题 error surface存在很平坦到很陡峭的分界限，所以存在参数的抖动。 clipping 解决方案，就是为gradient 做一个上界，如果超过就直接等于。</li>
 </ul>
 </li>
 </ul>

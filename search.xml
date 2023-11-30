@@ -958,23 +958,23 @@
 </li>
 <li><p><strong><font color=pink>友元类，类中所有的函数都可以访问原来的函数的所有成员</font></strong></p>
 </li>
-<li><p><strong><font color=pink></font></strong></p>
+<li><p><strong><font color=pink>volatlile 就是告诉编译器不能优化的意思。基本语法限制和const完全一样。也存在底层顶层，也存在数组对象。两者可以同时叠加的。</font></strong></p>
 </li>
-<li><p><strong><font color=pink></font></strong></p>
+<li><p><strong><font color=pink>constexpr 由数据类型和初始值同时决定。const 字面量。关键判断就是能不能在编译的时候就知道是不是能求值。constexpr 函数</font></strong></p>
 </li>
-<li><p><strong><font color=pink></font></strong></p>
+<li><p><strong><font color=pink>默认形参永远符合位置解析。所以需要进行覆盖的话必须要满足位置。这是一个比较大的限制，默认形参声明在函数声明里面，并且函数可以多次声明，对于已经声明过默认形参的形参，下一次声明时，直接省略就好，不能重复声明。在定义函数的时候也可以写默认形参，但是依然不能重写已经存在的。同时默认形参的初始值，可以是除了局部变量外的所有值，求值发生在运行阶段</font></strong></p>
 </li>
-<li><p><strong><font color=pink></font></strong></p>
+<li><p>**<font color=pink>字面值类型——算术，指针，引用&#x2F;  而io 类之类就不是字面值类型。 constexpr 函数形参返回值都是字面值类型。同时有且只有一个return 语句在函数体里面 函数调用的时候编译器会将此类函数转换为对应字面值。同时返回的表达式不一定是常量。看函数调用情况。 constexpr int scale(int size){return new_fun()<em>size} 假如new 是一个constexpr func 若size是常量返回就是常量表达式</font></em>*</p>
 </li>
-<li><p><strong><font color=pink></font></strong></p>
+<li><p><strong><font color=pink>函数参数传递，理解的关键就是要知道形参对象和局部变量一样都会申请堆的空间然后自动销毁。所以就明白了引用传参和拷贝传参。传参相当于初始化。初始化const当然是不是const都无所谓 重载的时候 顶层是无法区分形参的，因为适用的参数都相同，所以不能区分重载。只有底层才能重载，因为此时的 const不能转换为其他类型。</font></strong></p>
 </li>
-<li><p><strong><font color=pink></font></strong></p>
+<li><p><strong><font color=pink>只有const_cast&lt;T*&gt; 可以改变，同时也只能改变变量的底层const 属性</font></strong></p>
 </li>
-<li><p><strong><font color=pink></font></strong></p>
+<li><p><strong><font color=pink>函数定义中没有命名的参数，其实可以有，只要函数体没有使用就可以的。例如 ++ 运算符的使用情况。static_cast 本质就是覆盖编译器的类型检查，因为大多数类型检查都是根据静态类型进行的</font></strong></p>
 </li>
-<li><p><strong><font color=pink></font></strong></p>
+<li><p><strong><font color=pink>位域 不能取地址的，通常定义为无符号类型 只能整型和枚举类型 通常包含一些二进制运算和枚举常量枚举类似于 类 有class就是限定作用域的 没class就是不限定 同时可以同时定义对象变量 类似class  const对象必须定义时候初始化 枚举看似不用的原因是不提供初始值的情况下是从0开始的</font></strong></p>
 </li>
-<li><p><strong><font color=pink></font></strong></p>
+<li><p><strong><font color=pink>对于多重继承首先，用虚继承解决菱形继承问题。然后对于虚继承只会改变派生类的派生类的情况。并且在构造的时候顺序是按照派生列表顺序找到所有的虚基类然后按同样顺序初始化所有的非虚基类。默认的是默认构造函数，所以要保证默认构造函数存在。派生列表不允许多次出现同一个基类，但是实际继承没有什么限制，但是虚基类的问题只在继承时有关系，对于类中存在的变量不会有关系！！</font></strong></p>
 </li>
 <li><p><strong><font color=pink></font></strong></p>
 </li>
@@ -2586,7 +2586,10 @@ int write();
 </ul>
 </li>
 <li><h2 id="transformer-is-all-you-need"><a href="#transformer-is-all-you-need" class="headerlink" title="transformer is all you need"></a><font color=deepskyblue>transformer is all you need</font></h2><ul>
-<li></li>
+<li><font color=yellow>正向的 rnn 。 双向的rnn 可以正反同时读取我们的，</font></li>
+<li>LSTM 关键四个们 标量也是用来学习的 每个单元可以用来替代之前的neuron 然后只是输入需要四倍，因为三个们和一个输入 。使用的是sigmoid 函数表示打开的程度。实际的模型还会在输入中参考中间步骤的输入</li>
+<li>BPTT learning train  的 方法。考虑时间的关系。</li>
+<li>train的问题 error surface存在很平坦到很陡峭的分界限，所以存在参数的抖动。 clipping 解决方案，就是为gradient 做一个上界，如果超过就直接等于。</li>
 </ul>
 </li>
 </ul>
