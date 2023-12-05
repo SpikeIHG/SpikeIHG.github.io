@@ -1100,6 +1100,10 @@
     <url>/2023/10/04/TLCL-3/</url>
     <content><![CDATA[<h2 id="TLCL-chapter-3"><a href="#TLCL-chapter-3" class="headerlink" title="TLCL chapter 3"></a>TLCL chapter 3</h2><h3 id="GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf"><a href="#GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf" class="headerlink" title="GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)"></a><font color=pink>GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)</font></h3><ul>
 <li><h3 id="发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记"><a href="#发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记" class="headerlink" title="发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记"></a><font color=aqua>发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记</font></h3></li>
+<li><h2 id="Cmake-and-Makefile"><a href="#Cmake-and-Makefile" class="headerlink" title="Cmake and Makefile"></a><font color=salmon>Cmake and Makefile</font></h2><ul>
+<li>export PATH&#x3D;”$PATH:&#x2F;usr&#x2F;bin”	注意规范 前面没有$</li>
+</ul>
+</li>
 <li><h3 id="文件操作here"><a href="#文件操作here" class="headerlink" title="文件操作here"></a>文件操作<a class="link"   href="http://billie66.github.io/TLCL/book/chap16.html" >here <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h3><ul>
 <li>设计很多底层硬件，由于wsl与虚拟机文件差别较大暂时skip read</li>
 </ul>
@@ -2596,6 +2600,51 @@ int write();
 ]]></content>
       <tags>
         <tag>Deep Learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>APSP</title>
+    <url>/2023/12/05/APSP/</url>
+    <content><![CDATA[<h1 id="APSP"><a href="#APSP" class="headerlink" title="APSP"></a><font color=deepskyblue>APSP</font></h1><ul>
+<li><h2 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a><font color=pink>Prerequisites</font></h2><ul>
+<li><font color=yellow><a class="link"   href="https://www.bilibili.com/video/BV1YW411h7Pk/?spm_id_from=333.337.search-card.all.click&vd_source=c8c7f6103570a31005f12d5a33a60b47" >morphine <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></font></li>
+<li><a class="link"   href="https://cmake.org/cmake/help/latest/guide/tutorial/A%20Basic%20Starting%20Point.html" >Cmake <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><font color=yellow>熟悉cmake 的常见函数或命令以及了解下makefile 的原理</font></li>
+<li>[]<font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+</ul>
+</li>
+<li><p><font color=pink></font></p>
+</li>
+<li><p><font color=pink></font></p>
+</li>
+<li><p><font color=pink></font></p>
+</li>
+<li><p><font color=pink></font></p>
+</li>
+<li><p><font color=pink></font></p>
+</li>
+<li><p><font color=pink></font></p>
+</li>
+<li><p><font color=pink></font></p>
+</li>
+<li><p><font color=pink></font></p>
+</li>
+<li><p><font color=pink></font></p>
+</li>
+<li><p><font color=pink></font></p>
+</li>
+<li><p><font color=pink></font></p>
+</li>
+<li><p><font color=pink></font></p>
+</li>
+<li><p><font color=pink></font></p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>hpc</tag>
       </tags>
   </entry>
 </search>
