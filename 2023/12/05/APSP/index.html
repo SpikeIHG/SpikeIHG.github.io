@@ -522,8 +522,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-12-07 20:11:17</span>
-            <span class="mobile">2023-12-07 20:11</span>
+            <span class="pc">2023-12-07 23:06:54</span>
+            <span class="mobile">2023-12-07 23:06</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -545,7 +545,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>380 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>460 Words</span>
         </span>
     
     
@@ -568,8 +568,8 @@
             <div class="article-content markdown-body">
                 <h1 id="APSP"><a href="#APSP" class="headerlink" title="APSP"></a><font color=deepskyblue>APSP</font></h1><ul>
 <li><h2 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a><font color=pink>Prerequisites</font></h2><ul>
-<li><font color=yellow><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YW411h7Pk/?spm_id_from=333.337.search-card.all.click&vd_source=c8c7f6103570a31005f12d5a33a60b47" >morphine <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></font></li>
-<li><a class="link"   target="_blank" rel="noopener" href="https://cmake.org/cmake/help/latest/guide/tutorial/A%20Basic%20Starting%20Point.html" >Cmake <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><font color=yellow>熟悉cmake 的常见函数或命令以及了解下makefile 的原理 有点搞笑 我们的这个prefix 的路径似乎不能使用 ~ 而必须使用绝对路径</font></li>
+<li><font color=yellow><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YW411h7Pk/?spm_id_from=333.337.search-card.all.click&vd_source=c8c7f6103570a31005f12d5a33a60b47" >morphine <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>在结尾处，准备总结一下实验的一些基本环境配置和有用链接以及FAQ留个之后看到这个网页以及遇到问题的人，所以如果是有问题需要解决可以先看看结尾。</font></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://cmake.org/cmake/help/latest/guide/tutorial/A%20Basic%20Starting%20Point.html" >Cmake <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><font color=yellow>熟悉cmake 的常见函数或命令以及了解下makefile 的原理 有点搞笑 我们的这个prefix 的路径似乎不能使用 ~ 而必须使用绝对路径 </font></li>
 <li><a href="/doc/%E5%B9%B6%E8%A1%8C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AF%BC%E8%AE%BA.pdf">OpenMP</a><font color=yellow>OpenMP</font><ul>
 <li><font color=lightgreen>首先，我们知道对于floyd算法的三层for循环中 ,最外层k 是无法并行化的，因为每一个k的路径比较依赖于已有的路径，需要顺序进行更新，但是内层i,j循环在src dest一定时，k 可以按照任何顺序选取所以是可并行的。因此private(i,j).</font></li>
 <li><font color=lightgreen>OpenMP 原理 就是启用多线程，具体运行的时候可以跑在多核上，并行运算。底层就是pthread 实现的</font></li>
@@ -583,12 +583,12 @@
 <li><font color=lightgreen></font></li>
 </ul>
 </li>
-<li><font color=yellow></font></li>
+<li><font color=yellow><a class="link"   target="_blank" rel="noopener" href="https://arxiv.org/pdf/1811.01201.pdf" >AVX参考 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>avx优化</font></li>
 <li><font color=yellow></font></li>
 <li><font color=yellow></font></li>
 </ul>
 </li>
-<li><p><font color=pink></font></p>
+<li><p><font color=pink><a class="link"   target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/transinf/E95.D/12/E95.D_2759/_pdf" >BFW <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>(算法优化——Blocked Floyd Algorithm</font></p>
 </li>
 <li><p><font color=pink></font></p>
 </li>
