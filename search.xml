@@ -942,6 +942,16 @@
 <p><em><strong><a class="link"   href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/naming/" >CPPformal <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></em></p>
 <p><a class="link"   href="https://github.com/nlohmann/json" >json <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p>[redfiredoc](<a class="link"   href="https://redefine-docs.ohevan.com/getting-started" >快速开始 - Redefine Docs (ohevan.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>)</p>
+<p>Cmake</p>
+<ul>
+<li><font color=salmon>需要设置最小要求版本</font></li>
+<li><font color=salmon>一个术语  source of truth 就是可以用来指一个权威数据来源 大概就是一些重要常量或者是预定义宏 </font></li>
+<li><font color=salmon></font></li>
+<li><font color=salmon></font></li>
+<li><font color=salmon></font></li>
+<li><font color=salmon></font></li>
+<li><font color=salmon></font></li>
+</ul>
 <h2 id="C-review-with-the-tinyrender"><a href="#C-review-with-the-tinyrender" class="headerlink" title="C++ review with the tinyrender"></a><font color=teal>C++ review with the tinyrender</font></h2><ul>
 <li><h3 id="Oriented-object-programming"><a href="#Oriented-object-programming" class="headerlink" title="Oriented-object programming"></a><strong><font color=pink>Oriented-object programming</font></strong></h3><ul>
 <li><p><strong><font color=pink>用户。类的用户就是使用类的程序(员)。这是通常情况。与程序的用户不一样。</font></strong></p>
@@ -1100,6 +1110,8 @@
     <url>/2023/10/04/TLCL-3/</url>
     <content><![CDATA[<h2 id="TLCL-chapter-3"><a href="#TLCL-chapter-3" class="headerlink" title="TLCL chapter 3"></a>TLCL chapter 3</h2><h3 id="GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf"><a href="#GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf" class="headerlink" title="GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)"></a><font color=pink>GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)</font></h3><ul>
 <li><h3 id="发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记"><a href="#发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记" class="headerlink" title="发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记"></a><font color=aqua>发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记</font></h3></li>
+<li><p>#<font color=yellow>我是真的有病 注意更改 .bashrc 文件之前要保存一下原有配置</font></p>
+</li>
 <li><h2 id="Cmake-and-Makefile"><a href="#Cmake-and-Makefile" class="headerlink" title="Cmake and Makefile"></a><font color=salmon>Cmake and Makefile</font></h2><ul>
 <li>export PATH&#x3D;”$PATH:&#x2F;usr&#x2F;bin”	注意规范 前面没有$</li>
 </ul>
@@ -2608,8 +2620,20 @@ int write();
     <content><![CDATA[<h1 id="APSP"><a href="#APSP" class="headerlink" title="APSP"></a><font color=deepskyblue>APSP</font></h1><ul>
 <li><h2 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a><font color=pink>Prerequisites</font></h2><ul>
 <li><font color=yellow><a class="link"   href="https://www.bilibili.com/video/BV1YW411h7Pk/?spm_id_from=333.337.search-card.all.click&vd_source=c8c7f6103570a31005f12d5a33a60b47" >morphine <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></font></li>
-<li><a class="link"   href="https://cmake.org/cmake/help/latest/guide/tutorial/A%20Basic%20Starting%20Point.html" >Cmake <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><font color=yellow>熟悉cmake 的常见函数或命令以及了解下makefile 的原理</font></li>
-<li>[]<font color=yellow></font></li>
+<li><a class="link"   href="https://cmake.org/cmake/help/latest/guide/tutorial/A%20Basic%20Starting%20Point.html" >Cmake <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><font color=yellow>熟悉cmake 的常见函数或命令以及了解下makefile 的原理 有点搞笑 我们的这个prefix 的路径似乎不能使用 ~ 而必须使用绝对路径</font></li>
+<li><a href="/doc/%E5%B9%B6%E8%A1%8C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AF%BC%E8%AE%BA.pdf">OpenMP</a><font color=yellow>OpenMP</font><ul>
+<li><font color=lightgreen>首先，我们知道对于floyd算法的三层for循环中 ,最外层k 是无法并行化的，因为每一个k的路径比较依赖于已有的路径，需要顺序进行更新，但是内层i,j循环在src dest一定时，k 可以按照任何顺序选取所以是可并行的。因此private(i,j).</font></li>
+<li><font color=lightgreen>OpenMP 原理 就是启用多线程，具体运行的时候可以跑在多核上，并行运算。底层就是pthread 实现的</font></li>
+<li><font color=lightgreen>平衡负载，我采用的是dynamic ，不过可以多试试看看，static guide 都可以尝试，默认的也可以，感觉每次迭代的计算量似乎是随机的但是总体是均匀的 感觉static 应该就可以，dynamic 还是用在计算量会增加的比较好</font></li>
+<li><font color=lightgreen>线程数的设置，过多会增大合并开销，同时还存在内存分配问题，降低效率，数量过少会导致并行度不够，根据我的猜想，看CUDA简介的经验，使用一个和迭代数以及某些硬件属性数的倍数或者因子书。32 64 之类的。问题不大，实践是检验真理的唯一方式，多试试就可以了，试了再来补充。</font></li>
+<li><font color=lightgreen>编译器优化猜想</font></li>
+<li><font color=lightgreen></font></li>
+<li><font color=lightgreen></font></li>
+<li><font color=lightgreen></font></li>
+<li><font color=lightgreen></font></li>
+<li><font color=lightgreen></font></li>
+</ul>
+</li>
 <li><font color=yellow></font></li>
 <li><font color=yellow></font></li>
 <li><font color=yellow></font></li>
