@@ -522,8 +522,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-12-09 21:33:41</span>
-            <span class="mobile">2023-12-09 21:33</span>
+            <span class="pc">2023-12-10 23:39:22</span>
+            <span class="mobile">2023-12-10 23:39</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -545,12 +545,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>529 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>909 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>3 Mins</span>
         </span>
     
     
@@ -568,18 +568,28 @@
             <div class="article-content markdown-body">
                 <h1 id="APSP"><a href="#APSP" class="headerlink" title="APSP"></a><font color=deepskyblue>APSP</font></h1><ul>
 <li><h2 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a><font color=pink>Prerequisites</font></h2><ul>
-<li><font color=yellow><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YW411h7Pk/?spm_id_from=333.337.search-card.all.click&vd_source=c8c7f6103570a31005f12d5a33a60b47" >morphine <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>在结尾处，准备总结一下实验的一些基本环境配置和有用链接以及FAQ留个之后看到这个网页以及遇到问题的人，所以如果是有问题需要解决可以先看看结尾。</font></li>
+<li><font color=yellow><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YW411h7Pk/?spm_id_from=333.337.search-card.all.click&vd_source=c8c7f6103570a31005f12d5a33a60b47" >morphine <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 先来一剂Green Day 牌吗啡！<br>在结尾处，准备总结一下实验的一些基本环境配置和有用链接以及FAQ留个之后看到这个网页以及遇到问题的人，所以如果是有问题需要解决可以先看看结尾。保证可以复现乐 : ) </font></li>
 <li><a class="link"   target="_blank" rel="noopener" href="https://cmake.org/cmake/help/latest/guide/tutorial/A%20Basic%20Starting%20Point.html" >Cmake <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><font color=yellow>熟悉cmake 的常见函数或命令以及了解下makefile 的原理 有点搞笑 我们的这个prefix 的路径似乎不能使用 ~ 而必须使用绝对路径 </font></li>
 <li><a href="/doc/%E5%B9%B6%E8%A1%8C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AF%BC%E8%AE%BA.pdf">OpenMP</a><font color=yellow>OpenMP</font><ul>
 <li><font color=lightgreen>首先，我们知道对于floyd算法的三层for循环中 ,最外层k 是无法并行化的，因为每一个k的路径比较依赖于已有的路径，需要顺序进行更新，但是内层i,j循环在src dest一定时，k 可以按照任何顺序选取所以是可并行的。因此private(i,j).</font></li>
 <li><font color=lightgreen>OpenMP 原理 就是启用多线程，具体运行的时候可以跑在多核上，并行运算。底层就是pthread 实现的</font></li>
 <li><font color=lightgreen>平衡负载，我采用的是dynamic ，不过可以多试试看看，static guide 都可以尝试，默认的也可以，感觉每次迭代的计算量似乎是随机的但是总体是均匀的 感觉static 应该就可以，dynamic 还是用在计算量会增加的比较好</font></li>
 <li><font color=lightgreen>线程数的设置，过多会增大合并开销，同时还存在内存分配问题，降低效率，数量过少会导致并行度不够，根据我的猜想，看CUDA简介的经验，使用一个和迭代数以及某些硬件属性数的倍数或者因子书。32 64 之类的。问题不大，实践是检验真理的唯一方式，多试试就可以了，试了再来补充。</font></li>
-<li><font color=lightgreen>编译器优化猜想，首先就是编译器可能帮我做了loop unrolling ,估计是fully peel the loop有可能。 然后就是寻址方式，依照CSAPP 上的，对于一个定长二维数组，确定一些基指针，然后使用定长进行改变。减少访存。</font></li>
-<li><font color=lightgreen></font></li>
-<li><font color=lightgreen></font></li>
-<li><font color=lightgreen></font></li>
-<li><font color=lightgreen></font></li>
+<li><font color=lightgreen>编译器优化猜想，首先就是编译器可能帮我做了loop unrolling ,估计是fully peel the loop有可能。 然后就是寻址方式，依照CSAPP 上的，对于一个定长二维数组，确定一些基指针，然后使用定长进行改变。减少访存。然后就是使用局部变量来保存一些结果减少内存访问。</font></li>
+<li><font color=lightgreen><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/omp.png"
+                     
+                ></font></li>
+<li><font color=lightgreen>这个只是使用了最基本的for 内层循环并行，和负载动态分配</font></li>
+<li><font color=lightgreen><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/simd_omp.png"
+                     
+                ></font></li>
+<li><font color=lightgreen>这个比较客观，在第一次基础上使用了omp的 simd优化最内层循环。4096的加速比接近baseline的100倍，当然我这里选择的是64线程数 使用128线程差距不大。不过我个人感觉没有找到更好的方法进行线程数的调参。不知道有没有除了顺序试错外更高效准确的判断方法，还待我考察，欢迎学长指教。</font></li>
 <li><font color=lightgreen></font></li>
 </ul>
 </li>
@@ -589,8 +599,25 @@
 </ul>
 </li>
 <li><p><font color=pink><a class="link"   target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/transinf/E95.D/12/E95.D_2759/_pdf" >BFW <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>(算法优化——Blocked Floyd Algorithm</font></p>
+<ul>
+<li><font color=lightgreen>查找了一下资料，似乎这个可以提高数据的局部性，当然需要设置好所分的矩阵块的大小，使处理一个数据块的工作集内存大概等于 L2 cache .但是感觉实现这个算法本身加速比不是很明显，然后分块的话额外内存开销较多。（还有就是懒:) 所以就没有进行应用。</font></li>
+</ul>
 </li>
-<li><p><font color=pink></font></p>
+<li><p><font color=pink>Pthread接口实现多线程</font></p>
+<ul>
+<li><font color=lightgreen>可以，今天用pthread把内层两个循环并行处理了一下，加速比大概500倍。跑4096的图用了13s左右，我自己设置的线程数为<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Re1.png"
+                     
+                >这个时候文件夹还没改名，当然但就算法运行时间大概11s左右</font></li>
+<li><font color=lightgreen>使用局部变量优化了一下 大概8s 多一点<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Re3.png"
+                     
+                ></font></li>
+</ul>
 </li>
 <li><p><font color=pink></font></p>
 </li>
