@@ -1381,10 +1381,26 @@
 <p><font color=lightgreen>模板推断，也就是实例化是编译器的工作。理解实例化，只有实际调用或者是定义时才会实例化。并且不同实例的函数或者类是独立的。同时模板定义一般写在头文件里面。class 和 typename 是相同的含义。模板具有默认类型参数，所以平时看定义的时候注意一下</font></p>
 <div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="type">unsigned</span> N,<span class="type">unsigned</span> M&gt; <span class="built_in">compare</span>(<span class="built_in">char</span> (&amp;a)[N],<span class="built_in">char</span> (&amp;b)[M]);	<span class="comment">// 非类型实参</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T,<span class="keyword">typename</span> F=less&lt;T&gt;&gt;<span class="type">int</span> <span class="built_in">compare</span>(<span class="type">const</span> T&amp;v1,<span class="type">const</span> T&amp;v2,F f=<span class="built_in">F</span>());</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>=<span class="type">int</span>&gt; <span class="keyword">class</span> Numbers&#123;&#125;;</span><br><span class="line">Numbers &lt;&gt; b; <span class="comment">// 使用默认参数 任何时候&lt;&gt;都不能省略</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Debugdelete</span>&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;<span class="function"><span class="type">void</span> <span class="title">operator</span><span class="params">()</span><span class="params">(T*p)</span><span class="type">const</span></span>&#123;<span class="keyword">delete</span> p;&#125;	<span class="comment">// 之所以有const的原因是const保护的是删除器的成员，区分清楚保护的对象 p 是外来的</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Debugdelete</span>()(); <span class="comment">//在一个临时对象上调用operator()</span></span><br><span class="line"><span class="function">unique_ptr&lt;<span class="type">int</span>,Debugdelete&gt; <span class="title">ptr</span><span class="params">(<span class="keyword">new</span> <span class="type">int</span>,Debugdelete())</span></span>; <span class="comment">// 这里可以窥见删除器的本质就是一个可调用对象，这是一个简洁而深刻的概念 全新的 这是常见的用法</span></span><br><span class="line"><span class="function">unique_ptr&lt;<span class="type">int</span>, <span class="title">decltype</span><span class="params">(compareIntfunction)</span>*&gt; <span class="title">ptr2</span><span class="params">(<span class="keyword">new</span> <span class="type">int</span> ,compareIntfunction)</span></span>; <span class="comment">// 类似的 具体原理就是指针调用析构函数时会是使用删除器</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">check</span><span class="params">(size_type i,<span class="type">const</span> std::string &amp; msg)</span><span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123; <span class="keyword">if</span>(i&gt;=data-&gt;<span class="built_in">size</span>())</span><br><span class="line">    <span class="keyword">throw</span> std::<span class="built_in">out_of_range</span>(msg);&#125;<span class="comment">// 这个工厂函数写得很好！！！</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div></li>
 </ul>
-<p>template<typename T><br>  class A{<br>      template<typename It>A(It b,Ite);<br>  };</p>
-<p>  template<typename T><br>  template<typename It><br>      A<T>::A(It b,It e):data(make_shared&lt;std::vector<T>&gt;(b,e)){}<br>  <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">  </span><br><span class="line">* &lt;font color=violet&gt;类模板的成员模板&lt;/font&gt;</span><br><span class="line"></span><br><span class="line">  &lt;font color=violet&gt;正是依靠这个实现迭代器构造函数.——一个问题，由于实例化时，每一个独立的源文件都需要一份实例，可能存在重复的性能消耗，所以我们可以显示控制实例化 extern 声明一个具体的类型参数的模板，然后必须在某一文件里有定义 template 开始。最后记得链接在一起。定义其实也就是一句话，对于类模板来说这会使得所有成员都实例化，这点注意哦&lt;br&gt;这里也有一个有趣的问题就是shared_ptr 与 unique_ptr 删除器的实现方式。shared_ptr 可以随时reset 改变删除器所以实际是将删除器作为成员保存，指针形式保存，析构时大概就是 del? del(p): delete p; 而 unique_ptr 只允许定义时传入作为模板参数，所以就是编译时绑定效率更高，但是不能任意改变。&lt;/font&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* &lt;font color=yellow&gt;异常处理&lt;/font&gt;</span><br><span class="line"></span><br><span class="line">  &lt;font color=cornsilk&gt;异常处理包含两个过程，异常捕获和异常处理。捕获依靠throw 表达式，处理依靠try catch 语句块。 注意想要被catch 捕获需要使用try 存在 try 的多重嵌套，依照调用链反向寻找所有层次的catch 语句直到匹配，如果一个都不匹配则terminate直接终止。有一些标准库定义的错误类，有些需要初始化const char[]。 .what()方法可以查看字符串内容 栈展开其实就是。 展开过程会销毁对象，依照局部对象的销毁原则。&lt;br&gt;异常对象可以是标准库定义，也可以自己定义，完全类型有可访问的析构与构造函数，同时如果在throw 语句中解引用指针，如果是一个派生对象，基类指针则抛出的部分只有其基类的部分&lt;/font&gt;</span><br><span class="line"></span><br><span class="line">* &lt;font color=cyan&gt;随机数&lt;/font&gt;</span><br><span class="line"></span><br><span class="line">  &lt;font color=lightgreen&gt;随机数使用，包含两个部分，一个部分是随机数引擎，另一个是随机数分布。引擎生成一系列unsigned ，分布完成我们的需求生成所需的指定类型给定范围，满足特定概率分布的随机数 。引擎需要种子，否则也是固定的伪随机 ,default_random_engine 其实是系统预定义的最佳引擎，具体有三个。然后分布种类是模板，需要指定类型别名。调用的方法类似 u(e) 。 u是分布种类。 e 是对象。&lt;/font&gt;</span><br></pre></td></tr></table></figure></div></p>
+<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line">  <span class="keyword">class</span> <span class="title class_">A</span>&#123;</span><br><span class="line">      <span class="keyword">template</span>&lt;<span class="keyword">typename</span> It&gt;<span class="built_in">A</span>(It b,Ite);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line">  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> It&gt;</span><br><span class="line">  	A&lt;T&gt;::<span class="built_in">A</span>(It b,It e):<span class="built_in">data</span>(make_shared&lt;std::vector&lt;T&gt;&gt;(b,e))&#123;&#125;</span><br></pre></td></tr></table></figure></div>
+
 <ul>
-<li><font color=salmon>5G555 多谐振荡器 产生脉冲</font></li>
+<li><p><font color=violet>类模板的成员模板</font></p>
+<p><font color=violet>正是依靠这个实现迭代器构造函数.——一个问题，由于实例化时，每一个独立的源文件都需要一份实例，可能存在重复的性能消耗，所以我们可以显示控制实例化 extern 声明一个具体的类型参数的模板，然后必须在某一文件里有定义 template 开始。最后记得链接在一起。定义其实也就是一句话，对于类模板来说这会使得所有成员都实例化，这点注意哦<br>这里也有一个有趣的问题就是shared_ptr 与 unique_ptr 删除器的实现方式。shared_ptr 可以随时reset 改变删除器所以实际是将删除器作为成员保存，指针形式保存，析构时大概就是 del? del(p): delete p; 而 unique_ptr 只允许定义时传入作为模板参数，所以就是编译时绑定效率更高，但是不能任意改变。</font></p>
+</li>
+<li><p><font color=yellow>异常处理</font></p>
+<p><font color=cornsilk>异常处理包含两个过程，异常捕获和异常处理。捕获依靠throw 表达式，处理依靠try catch 语句块。 注意想要被catch 捕获需要使用try 存在 try 的多重嵌套，依照调用链反向寻找所有层次的catch 语句直到匹配，如果一个都不匹配则terminate直接终止。有一些标准库定义的错误类，有些需要初始化const char[]。 .what()方法可以查看字符串内容 栈展开其实就是。 展开过程会销毁对象，依照局部对象的销毁原则。<br>异常对象可以是标准库定义，也可以自己定义，完全类型有可访问的析构与构造函数，同时如果在throw 语句中解引用指针，如果是一个派生对象，基类指针则抛出的部分只有其基类的部分</font></p>
+</li>
+<li><p><font color=cyan>随机数</font></p>
+<p><font color=lightgreen>随机数使用，包含两个部分，一个部分是随机数引擎，另一个是随机数分布。引擎生成一系列unsigned ，分布完成我们的需求生成所需的指定类型给定范围，满足特定概率分布的随机数 。引擎需要种子，否则也是固定的伪随机 ,default_random_engine 其实是系统预定义的最佳引擎，具体有三个。然后分布种类是模板，需要指定类型别名。调用的方法类似 u(e) 。 u是分布种类。 e 是对象。</font></p>
+</li>
+<li><p><font color=salmon>5G555 多谐振荡器 产生脉冲</font></p>
+</li>
+<li><h2 id="数字电路要义"><a href="#数字电路要义" class="headerlink" title="数字电路要义"></a><font color=pink>数字电路要义</font></h2><ul>
+<li><p><font color=lightgreen>逻辑函数</font></p>
+<p>使用与非门来建立所有三种逻辑门，实现电路的统一。异或可以用于奇偶校验 奇数个变量为1 结果就是1 偶数个为0  对偶函数就是0 1 也要互换记得和反演一样 同或就相反  与或表达式就是先与后或 区别最小项最大项的方法 就是 最小项之和 最大项之积<br>卡诺图注意最小项在图中对应的顺序 卡诺图中每个圈至少需要一个一个独立 的1（最小项）</p>
+</li>
+</ul>
+</li>
 </ul>
 ]]></content>
       <tags>
@@ -2699,6 +2715,14 @@ int write();
 ]]></content>
       <tags>
         <tag>hpc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>环形物语</title>
+    <url>/2023/12/19/%E7%8E%AF%E5%BD%A2%E7%89%A9%E8%AF%AD/</url>
+    <content><![CDATA[<h1 id="Tales-from-the-Loop"><a href="#Tales-from-the-Loop" class="headerlink" title="Tales from  the Loop"></a><font color=deepskyblue>Tales from  the Loop</font></h1><h1 id="环形物语"><a href="#环形物语" class="headerlink" title="环形物语 "></a><font color=pink>环形物语</font> <br></h1><h2 id="环就在你心中"><a href="#环就在你心中" class="headerlink" title="环就在你心中"></a><font color=lightgreen>环就在你心中</font></h2>]]></content>
+      <tags>
+        <tag>自然</tag>
       </tags>
   </entry>
 </search>
