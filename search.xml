@@ -2725,4 +2725,24 @@ int write();
         <tag>自然</tag>
       </tags>
   </entry>
+  <entry>
+    <title>New_Life</title>
+    <url>/2024/01/01/New-Life/</url>
+    <content><![CDATA[<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/cowboy.gif"
+                     
+                ></p>
+<h1 id="I-can-fix-that"><a href="#I-can-fix-that" class="headerlink" title="I can fix that"></a>I can fix that</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/ww.jpg"
+                     
+                ></p>
+]]></content>
+      <tags>
+        <tag>自然</tag>
+      </tags>
+  </entry>
 </search>
