@@ -6,7 +6,7 @@
   <link href="https://spikeihg.github.io/atom.xml" rel="self"/>
   
   <link href="https://spikeihg.github.io/"/>
-  <updated>2024-03-02T10:44:56.315Z</updated>
+  <updated>2024-03-05T08:06:47.109Z</updated>
   <id>https://spikeihg.github.io/</id>
   
   <author>
@@ -17,19 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>GoMars</title>
+    <link href="https://spikeihg.github.io/2024/03/05/GoMars/"/>
+    <id>https://spikeihg.github.io/2024/03/05/GoMars/</id>
+    <published>2024-03-05T00:37:12.000Z</published>
+    <updated>2024-03-05T08:06:47.109Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="GoMars"><a href="#GoMars" class="headerlink" title="GoMars"></a>GoMars</h1><h2 id="Prerequisite"><a href="#Prerequisite" class="headerlink" title="Prerequisite"></a>Prerequisite</h2><ul><li>fortran syntax __ % like dot . in c++</li><li>isend 必须使用wait 以为我们需要保证这个已经完成communicte isend + wait  &#x3D; send  sendres就是两个的简单集合</li><li>vscode 可以使用这个alt+left right 进行trace back and forth</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;GoMars&quot;&gt;&lt;a href=&quot;#GoMars&quot; class=&quot;headerlink&quot; title=&quot;GoMars&quot;&gt;&lt;/a&gt;GoMars&lt;/h1&gt;&lt;h2 id=&quot;Prerequisite&quot;&gt;&lt;a href=&quot;#Prerequisite&quot; class=&quot;head</summary>
+      
+    
+    
+    
+    
+    <category term="HPC" scheme="https://spikeihg.github.io/tags/HPC/"/>
+    
+  </entry>
+  
+  <entry>
     <title>6.S081</title>
     <link href="https://spikeihg.github.io/2024/02/29/6-S081/"/>
     <id>https://spikeihg.github.io/2024/02/29/6-S081/</id>
     <published>2024-02-29T11:32:09.000Z</published>
-    <updated>2024-03-02T10:44:56.315Z</updated>
+    <updated>2024-03-08T13:38:51.589Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Operating-System"><a href="#Operating-System" class="headerlink" title="Operating System"></a>Operating System</h1><ul><li>退出qemu ctrl x a . 注意还有一个点号！！！</li><li>在google中使用ctrl shift q 使用google scholar!。</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="Operating-System"><a href="#Operating-System" class="headerlink" title="Operating System"></a>Operating System</h1><ul><li><p>退出qemu ctrl x a . 注意还有一个点号！！！</p></li><li><p>在google中使用ctrl shift q 使用google scholar!。</p></li><li><p><font color=lavender>需要永久改变vim的配置 可以修改 ~&#x2F;.vimrc 文件</font></p></li><li><p><font color=orange>Spack 是一个包管理系统 主要用于很多科学专业的计算使用  $foo is a variable while $(foo) is a result of a command 变量名可以用{} 包围着 <br> 脚本中常见的if 中对文件使用的短句命令 -d foo 如果foo 存在且为目录 -e 如果存在 -f 如果存在且为普通文件  pushd 指令就是在程序执行的时候对所在的目录位置存在一个栈 ，pushd 后这个目录就位于top位置同时也变成现在的工作目录 功能和cd 类似的 但是在连续多步骤跳跃的时候很有用，这是cd可能需要多次连续使用</font></p></li><li><p>还有一招可以切换桌面 就是win 然后触摸板使用四个指同时滑动。</p></li><li><ul><li>一般來説，我们的这个page有一个高为的全为0  的 guard page in threre  这个保护页没有相应的PTE 所以一旦超过了这个范围就会导致一个page fault<ul><li>所以实际上这个映射是很复杂的 可以是多对多 也可以是多对一 一对多 所有的这些编程技巧都是通OS 实现的</li></ul></li><li>np 代表这个进程的数量</li><li>id 是在process mod 里面确定</li><li>ids ide  是在 mesh里初始化的 大小似乎就是点的个数</li></ul></li><li><p>学习了几个奇淫巧计 </p></li><li><p>tmux 打开窗口 然后可以Ctrl+b c create the new windows and the ctrl+b % to split the window 拆分窗口 ctrl+b “ 水平拆分 ctrl + b o 来回切换 注意这里的一个使用方法就是先点击 ctrl + b 然后在点击其余的按键</p></li></ul>]]></content>
     
     
       
       
     <summary type="html">&lt;h1 id=&quot;Operating-System&quot;&gt;&lt;a href=&quot;#Operating-System&quot; class=&quot;headerlink&quot; title=&quot;Operating System&quot;&gt;&lt;/a&gt;Operating System&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;退出qemu c</summary>
+&lt;li&gt;&lt;p&gt;退出qem</summary>
       
     
     
@@ -182,9 +204,9 @@
     <link href="https://spikeihg.github.io/2023/10/29/%E4%BD%A9%E7%B4%A2%E5%91%80/"/>
     <id>https://spikeihg.github.io/2023/10/29/%E4%BD%A9%E7%B4%A2%E5%91%80/</id>
     <published>2023-10-29T08:04:14.000Z</published>
-    <updated>2024-03-01T10:00:19.435Z</updated>
+    <updated>2024-03-04T13:43:19.240Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Darling-I-‘m-getting-older-亲爱的，我原来也会变老"><a href="#Darling-I-‘m-getting-older-亲爱的，我原来也会变老" class="headerlink" title="Darling . I ‘m getting older. (亲爱的，我原来也会变老)"></a>Darling . I ‘m getting older. (亲爱的，我原来也会变老)</h3><ul><li><p>Everyday poetry.</p></li><li><p><a class="link"   href="https://poets.us20.list-manage.com/track/click?u=e329a0cb6f08842f08a05d822&id=50cda6fc43&e=dce612a19d" >Sippokni Sia <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p><a href="https://poets.us20.list-manage.com/track/click?u=e329a0cb6f08842f08a05d822&id=a7f92fa877&e=dce612a19d"><strong>Winnie Lewis Gravitt</strong></a></p><p>I am old, Sippokni sia. Before my eyes run many years, Like panting runners in a race. Like a weary runner, the years lag; Eyes grow dim, blind with wood smoke; A handkerchief binds my head, For I am old. Sippokni sia.Hands, once quick to weave and spin; Strong to fan the tanchi; Fingers patient to shape dirt bowls; Loving to sew hunting shirt; Now, like oak twigs twisted. I sit and rock my grandson. I am old. Sippokni sia.Feet swift as wind o’er young cane shoots; Like stirring leaves in ta falla dance; Slim like rabbits in leather shoes; Now moves like winter snows, Like melting snows on the Cavanaugh. In the door I sit, my feet in spring water. I am old. Sippokni sia.Black like crow’s feather, my hair. Long and straight like hanging rope; My people proud and young. Now like hickory ashes in my hair, Like ashes of old camp fire in rain. Much civilization bow my people; Sorrow, grief and trouble sit like blackbirds on fence. I am old. Sippokni sia hoke.</p><ul><li>我不知道人们所说的衰老是什么样子的，也许是透过镜子发现曾经的皮肤已经松弛下垂，也许当他们发现他们跑不过一个最小的孩子，但我感觉衰老是发生在一瞬间，仅仅一瞬间，就像过了一辈子，只是从前漫长的岁月从未被老去的忧伤笼罩，就像山顶的雾终于散去，时间失去了从前的神秘。</li><li>告别，寻找告别</li><li>春天总是一去不返</li><li>无法思考，无法摆脱，3点，神秘力量，是她吗……</li></ul></li><li><p>Amy Lowell</p><ul><li><p>A enthralling person with all her persistence, intelligence , energy and fecundity.  “ The god made me  a business woman , but I made myself a poet .”</p></li><li><h1 id="The-Garden-by-Moonlight"><a href="#The-Garden-by-Moonlight" class="headerlink" title="The Garden by Moonlight"></a>The Garden by Moonlight</h1><p>BY <a class="link"   href="https://www.poetryfoundation.org/poets/amy-lowell" >AMY LOWELL <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>A black cat among roses,</p><p>Phlox, lilac-misted under a first-quarter moon,</p><p>The sweet smells of heliotrope and night-scented stock.</p><p>The garden is very still,  </p><p>It is dazed with moonlight,</p><p>Contented with perfume,</p><p>Dreaming the opium dreams of its folded poppies.</p><p>Firefly lights open and vanish  </p><p>High as the tip buds of the golden glow</p><p>Low as the sweet alyssum flowers at my feet.</p><p>Moon-shimmer on leaves and trellises,</p><p>Moon-spikes shafting through the snow ball bush.  </p><p>Only the little faces of the ladies’ delight are alert and staring,</p><p>Only the cat, padding between the roses,</p><p>Shakes a branch and breaks the chequered pattern</p><p>As water is broken by the falling of a leaf.</p><p>Then you come,</p><p>And you are quiet like the garden,</p><p>And white like the alyssum flowers,  </p><p>And beautiful as the silent sparks of the fireflies.</p><p>Ah, Beloved, do you see those orange lilies?</p><p>They knew my mother,</p><p>But who belonging to me will they know</p><p>When I am gone.</p></li></ul></li><li><p>A imagist poet as Pound .  Some intellectual game when you read some volume of her you just feel like .</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<h3 id="Darling-I-‘m-getting-older-亲爱的，我原来也会变老"><a href="#Darling-I-‘m-getting-older-亲爱的，我原来也会变老" class="headerlink" title="Darling . I ‘m getting older. (亲爱的，我原来也会变老)"></a>Darling . I ‘m getting older. (亲爱的，我原来也会变老)</h3><ul><li><p>Everyday poetry.</p></li><li><p><a class="link"   href="https://poets.us20.list-manage.com/track/click?u=e329a0cb6f08842f08a05d822&id=50cda6fc43&e=dce612a19d" >Sippokni Sia <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p><a href="https://poets.us20.list-manage.com/track/click?u=e329a0cb6f08842f08a05d822&id=a7f92fa877&e=dce612a19d"><strong>Winnie Lewis Gravitt</strong></a></p><p>I am old, Sippokni sia. Before my eyes run many years, Like panting runners in a race. Like a weary runner, the years lag; Eyes grow dim, blind with wood smoke; A handkerchief binds my head, For I am old. Sippokni sia.Hands, once quick to weave and spin; Strong to fan the tanchi; Fingers patient to shape dirt bowls; Loving to sew hunting shirt; Now, like oak twigs twisted. I sit and rock my grandson. I am old. Sippokni sia.Feet swift as wind o’er young cane shoots; Like stirring leaves in ta falla dance; Slim like rabbits in leather shoes; Now moves like winter snows, Like melting snows on the Cavanaugh. In the door I sit, my feet in spring water. I am old. Sippokni sia.Black like crow’s feather, my hair. Long and straight like hanging rope; My people proud and young. Now like hickory ashes in my hair, Like ashes of old camp fire in rain. Much civilization bow my people; Sorrow, grief and trouble sit like blackbirds on fence. I am old. Sippokni sia hoke.</p><ul><li>我不知道人们所说的衰老是什么样子的，也许是透过镜子发现曾经的皮肤已经松弛下垂，也许当他们发现他们跑不过一个最小的孩子，但我感觉衰老是发生在一瞬间，仅仅一瞬间，就像过了一辈子，只是从前漫长的岁月从未被老去的忧伤笼罩，就像山顶的雾终于散去，时间失去了从前的神秘。</li><li>告别，寻找告别</li><li>春天总是一去不返</li><li>无法思考，无法摆脱，3点，神秘力量，是她吗……</li></ul></li><li><p>Amy Lowell</p><ul><li><p>A enthralling person with all her persistence, intelligence , energy and fecundity.  “ The god made me  a business woman , but I made myself a poet .”</p></li><li><h1 id="The-Garden-by-Moonlight"><a href="#The-Garden-by-Moonlight" class="headerlink" title="The Garden by Moonlight"></a>The Garden by Moonlight</h1><p>BY <a class="link"   href="https://www.poetryfoundation.org/poets/amy-lowell" >AMY LOWELL <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>A black cat among roses,</p><p>Phlox, lilac-misted under a first-quarter moon,</p><p>The sweet smells of heliotrope and night-scented stock.</p><p>The garden is very still,  </p><p>It is dazed with moonlight,</p><p>Contented with perfume,</p><p>Dreaming the opium dreams of its folded poppies.</p><p>Firefly lights open and vanish  </p><p>High as the tip buds of the golden glow</p><p>Low as the sweet alyssum flowers at my feet.</p><p>Moon-shimmer on leaves and trellises,</p><p>Moon-spikes shafting through the snow ball bush.  </p><p>Only the little faces of the ladies’ delight are alert and staring,</p><p>Only the cat, padding between the roses,</p><p>Shakes a branch and breaks the chequered pattern</p><p>As water is broken by the falling of a leaf.</p><p>Then you come,</p><p>And you are quiet like the garden,</p><p>And white like the alyssum flowers,  </p><p>And beautiful as the silent sparks of the fireflies.</p><p>Ah, Beloved, do you see those orange lilies?</p><p>They knew my mother,</p><p>But who belonging to me will they know</p><p>When I am gone.</p></li></ul></li><li><p>A imagist poet as Pound .  Some intellectual game when you read some volume of her you just feel like .</p></li></ul><h1 id="Sylvia-Plath"><a href="#Sylvia-Plath" class="headerlink" title="Sylvia Plath"></a>Sylvia Plath</h1><ul><li>At her most articulate, meditating on the nature of poetic inspiration, [Plath] is a controlled voice for cynicism, plainly delineating the boundaries of hope and reality. At her brutal best—and Plath is a brutal poet—she taps a source of power that transforms her poetic voice into a raving avenger of womanhood and innocence.</li></ul><h2 id="When-I-am-dead-my-dearest"><a href="#When-I-am-dead-my-dearest" class="headerlink" title="When I am dead , my dearest."></a>When I am dead , my dearest.</h2><p>When I am dead, my dearest,</p><p>Sing no sad songs for me;</p><p>Plant thou no roses at my head,</p><p>Nor shady cypress tree:</p><p>Be the green grass above me</p><p>With showers and dewdrops wet;</p><p>And if thou wilt, remember,</p><p>And if thou wilt, forget.</p><p>I shall not see the shadows,</p><p>I shall not feel the rain;</p><p>I shall not hear the nightingale</p><p>Sing on, as if in pain:</p><p>And dreaming through the twilight</p><p>That doth not rise nor set,</p><p>Haply I may remember,</p><p>And haply may forget.</p><ul><li><p>徐志摩的翻译也很美，似乎也是他有首诗的foutainhead.</p></li><li><p>Not a red rose or a satin heart.</p></li></ul><h2 id="Valentine"><a href="#Valentine" class="headerlink" title="Valentine"></a>Valentine</h2><p>I give you an onion.<br>It is a moon wrapped in brown paper.<br>It promises light<br>like the careful undressing of love.</p><p>Here.<br>It will blind you with tears<br>like a lover.<br>It will make your reflection<br>a wobbling photo of grief.</p><p>I am trying to be truthful.</p><p>Not a cute card or a kissogram.</p><p>I give you an onion.<br>Its fierce kiss will stay on your lips,<br>possessive and faithful<br>as we are,<br>for as long as we are.</p><p>Take it.<br>Its platinum loops shrink to a wedding ring,<br>if you like.<br>Lethal.<br>Its scent will cling to your fingers,<br>cling to your knife.</p>]]></content>
     
     
       
@@ -446,28 +468,6 @@
     
     
     <category term="组成原理" scheme="https://spikeihg.github.io/tags/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cmake</title>
-    <link href="https://spikeihg.github.io/2023/09/12/Cmake/"/>
-    <id>https://spikeihg.github.io/2023/09/12/Cmake/</id>
-    <published>2023-09-12T09:11:06.000Z</published>
-    <updated>2023-12-06T16:14:46.172Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="可以开始了解CMake"><a href="#可以开始了解CMake" class="headerlink" title="可以开始了解CMake"></a>可以开始了解CMake</h2><p><em><strong>只是简单得贴一个网址</strong></em></p><p><em><strong>[CMAKE](<a class="link"   href="https://cmake.org/cmake/help/latest/guide/tutorial/index.html" >CMake Tutorial — CMake 3.27.4 Documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>)</strong></em></p><p><em><strong><a class="link"   href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/naming/" >CPPformal <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></em></p><p><a class="link"   href="https://github.com/nlohmann/json" >json <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p>[redfiredoc](<a class="link"   href="https://redefine-docs.ohevan.com/getting-started" >快速开始 - Redefine Docs (ohevan.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>)</p><p>Cmake</p><ul><li><font color=salmon>需要设置最小要求版本</font></li><li><font color=salmon>一个术语  source of truth 就是可以用来指一个权威数据来源 大概就是一些重要常量或者是预定义宏 </font></li><li><font color=salmon></font></li><li><font color=salmon></font></li><li><font color=salmon></font></li><li><font color=salmon></font></li><li><font color=salmon></font></li></ul><h2 id="C-review-with-the-tinyrender"><a href="#C-review-with-the-tinyrender" class="headerlink" title="C++ review with the tinyrender"></a><font color=teal>C++ review with the tinyrender</font></h2><ul><li><h3 id="Oriented-object-programming"><a href="#Oriented-object-programming" class="headerlink" title="Oriented-object programming"></a><strong><font color=pink>Oriented-object programming</font></strong></h3><ul><li><p><strong><font color=pink>用户。类的用户就是使用类的程序(员)。这是通常情况。与程序的用户不一样。</font></strong></p></li><li><p><strong><font color=pink>inline 最好写在外面的定义处</font></strong></p></li><li><p><strong><font color=pink>mutable 可变数据成员 永远可以改变 具体例子就是外面想要设计一个计数器来统计这个类的实例次数 无论是作为const还是非const都要计数</font></strong></p></li><li><p><strong><font color=pink>类内初始化只能用花括号和等号 这里区分下圆括号和花括号 两者本身都是一样的调用构造函数只是有些区别 一花括号不允许隐式转换；二花括号才能用在类内三花括号才能默认构造函数</font></strong></p></li><li><p><strong><font color=pink>const成员重载 显然只用底层const才能重载通常会借用一个共有的const功能函数</font></strong></p></li><li><p><strong><font color=pink>尽量多些工厂函数</font></strong></p></li><li><p><strong><font color=pink>友元类，类中所有的函数都可以访问原来的函数的所有成员</font></strong></p></li><li><p><strong><font color=pink>volatlile 就是告诉编译器不能优化的意思。基本语法限制和const完全一样。也存在底层顶层，也存在数组对象。两者可以同时叠加的。</font></strong></p></li><li><p><strong><font color=pink>constexpr 由数据类型和初始值同时决定。const 字面量。关键判断就是能不能在编译的时候就知道是不是能求值。constexpr 函数</font></strong></p></li><li><p><strong><font color=pink>默认形参永远符合位置解析。所以需要进行覆盖的话必须要满足位置。这是一个比较大的限制，默认形参声明在函数声明里面，并且函数可以多次声明，对于已经声明过默认形参的形参，下一次声明时，直接省略就好，不能重复声明。在定义函数的时候也可以写默认形参，但是依然不能重写已经存在的。同时默认形参的初始值，可以是除了局部变量外的所有值，求值发生在运行阶段</font></strong></p></li><li><p>**<font color=pink>字面值类型——算术，指针，引用&#x2F;  而io 类之类就不是字面值类型。 constexpr 函数形参返回值都是字面值类型。同时有且只有一个return 语句在函数体里面 函数调用的时候编译器会将此类函数转换为对应字面值。同时返回的表达式不一定是常量。看函数调用情况。 constexpr int scale(int size){return new_fun()<em>size} 假如new 是一个constexpr func 若size是常量返回就是常量表达式</font></em>*</p></li><li><p><strong><font color=pink>函数参数传递，理解的关键就是要知道形参对象和局部变量一样都会申请堆的空间然后自动销毁。所以就明白了引用传参和拷贝传参。传参相当于初始化。初始化const当然是不是const都无所谓 重载的时候 顶层是无法区分形参的，因为适用的参数都相同，所以不能区分重载。只有底层才能重载，因为此时的 const不能转换为其他类型。</font></strong></p></li><li><p><strong><font color=pink>只有const_cast&lt;T*&gt; 可以改变，同时也只能改变变量的底层const 属性</font></strong></p></li><li><p><strong><font color=pink>函数定义中没有命名的参数，其实可以有，只要函数体没有使用就可以的。例如 ++ 运算符的使用情况。static_cast 本质就是覆盖编译器的类型检查，因为大多数类型检查都是根据静态类型进行的</font></strong></p></li><li><p><strong><font color=pink>位域 不能取地址的，通常定义为无符号类型 只能整型和枚举类型 通常包含一些二进制运算和枚举常量枚举类似于 类 有class就是限定作用域的 没class就是不限定 同时可以同时定义对象变量 类似class  const对象必须定义时候初始化 枚举看似不用的原因是不提供初始值的情况下是从0开始的</font></strong></p></li><li><p><strong><font color=pink>对于多重继承首先，用虚继承解决菱形继承问题。然后对于虚继承只会改变派生类的派生类的情况。并且在构造的时候顺序是按照派生列表顺序找到所有的虚基类然后按同样顺序初始化所有的非虚基类。默认的是默认构造函数，所以要保证默认构造函数存在。派生列表不允许多次出现同一个基类，但是实际继承没有什么限制，但是虚基类的问题只在继承时有关系，对于类中存在的变量不会有关系！！</font></strong></p></li><li><p><strong><font color=pink></font></strong></p></li></ul></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;可以开始了解CMake&quot;&gt;&lt;a href=&quot;#可以开始了解CMake&quot; class=&quot;headerlink&quot; title=&quot;可以开始了解CMake&quot;&gt;&lt;/a&gt;可以开始了解CMake&lt;/h2&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;只是简单得贴一个网址&lt;/strong&gt;&lt;/e</summary>
-      
-    
-    
-    
-    
-    <category term="Cmake" scheme="https://spikeihg.github.io/tags/Cmake/"/>
     
   </entry>
   

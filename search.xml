@@ -2409,6 +2409,37 @@ int write();
 <li><p>A imagist poet as Pound .  Some intellectual game when you read some volume of her you just feel like .</p>
 </li>
 </ul>
+<h1 id="Sylvia-Plath"><a href="#Sylvia-Plath" class="headerlink" title="Sylvia Plath"></a>Sylvia Plath</h1><ul>
+<li>At her most articulate, meditating on the nature of poetic inspiration, [Plath] is a controlled voice for cynicism, plainly delineating the boundaries of hope and reality. At her brutal best—and Plath is a brutal poet—she taps a source of power that transforms her poetic voice into a raving avenger of womanhood and innocence.</li>
+</ul>
+<h2 id="When-I-am-dead-my-dearest"><a href="#When-I-am-dead-my-dearest" class="headerlink" title="When I am dead , my dearest."></a>When I am dead , my dearest.</h2><p>When I am dead, my dearest,</p>
+<p>Sing no sad songs for me;</p>
+<p>Plant thou no roses at my head,</p>
+<p>Nor shady cypress tree:</p>
+<p>Be the green grass above me</p>
+<p>With showers and dewdrops wet;</p>
+<p>And if thou wilt, remember,</p>
+<p>And if thou wilt, forget.</p>
+<p>I shall not see the shadows,</p>
+<p>I shall not feel the rain;</p>
+<p>I shall not hear the nightingale</p>
+<p>Sing on, as if in pain:</p>
+<p>And dreaming through the twilight</p>
+<p>That doth not rise nor set,</p>
+<p>Haply I may remember,</p>
+<p>And haply may forget.</p>
+<ul>
+<li><p>徐志摩的翻译也很美，似乎也是他有首诗的foutainhead.</p>
+</li>
+<li><p>Not a red rose or a satin heart.</p>
+</li>
+</ul>
+<h2 id="Valentine"><a href="#Valentine" class="headerlink" title="Valentine"></a>Valentine</h2><p>I give you an onion.<br>It is a moon wrapped in brown paper.<br>It promises light<br>like the careful undressing of love.</p>
+<p>Here.<br>It will blind you with tears<br>like a lover.<br>It will make your reflection<br>a wobbling photo of grief.</p>
+<p>I am trying to be truthful.</p>
+<p>Not a cute card or a kissogram.</p>
+<p>I give you an onion.<br>Its fierce kiss will stay on your lips,<br>possessive and faithful<br>as we are,<br>for as long as we are.</p>
+<p>Take it.<br>Its platinum loops shrink to a wedding ring,<br>if you like.<br>Lethal.<br>Its scent will cling to your fingers,<br>cling to your knife.</p>
 ]]></content>
       <tags>
         <tag>自然</tag>
@@ -2791,12 +2822,47 @@ int write();
     <title>6.S081</title>
     <url>/2024/02/29/6-S081/</url>
     <content><![CDATA[<h1 id="Operating-System"><a href="#Operating-System" class="headerlink" title="Operating System"></a>Operating System</h1><ul>
-<li>退出qemu ctrl x a . 注意还有一个点号！！！</li>
-<li>在google中使用ctrl shift q 使用google scholar!。</li>
+<li><p>退出qemu ctrl x a . 注意还有一个点号！！！</p>
+</li>
+<li><p>在google中使用ctrl shift q 使用google scholar!。</p>
+</li>
+<li><p><font color=lavender>需要永久改变vim的配置 可以修改 ~&#x2F;.vimrc 文件</font></p>
+</li>
+<li><p><font color=orange>Spack 是一个包管理系统 主要用于很多科学专业的计算使用  $foo is a variable while $(foo) is a result of a command 变量名可以用{} 包围着 <br> 脚本中常见的if 中对文件使用的短句命令 -d foo 如果foo 存在且为目录 -e 如果存在 -f 如果存在且为普通文件  pushd 指令就是在程序执行的时候对所在的目录位置存在一个栈 ，pushd 后这个目录就位于top位置同时也变成现在的工作目录 功能和cd 类似的 但是在连续多步骤跳跃的时候很有用，这是cd可能需要多次连续使用</font></p>
+</li>
+<li><p>还有一招可以切换桌面 就是win 然后触摸板使用四个指同时滑动。</p>
+</li>
+<li><ul>
+<li>一般來説，我们的这个page有一个高为的全为0  的 guard page in threre  这个保护页没有相应的PTE 所以一旦超过了这个范围就会导致一个page fault<ul>
+<li>所以实际上这个映射是很复杂的 可以是多对多 也可以是多对一 一对多 所有的这些编程技巧都是通OS 实现的</li>
+</ul>
+</li>
+<li>np 代表这个进程的数量</li>
+<li>id 是在process mod 里面确定</li>
+<li>ids ide  是在 mesh里初始化的 大小似乎就是点的个数</li>
+</ul>
+</li>
+<li><p>学习了几个奇淫巧计 </p>
+</li>
+<li><p>tmux 打开窗口 然后可以Ctrl+b c create the new windows and the ctrl+b % to split the window 拆分窗口 ctrl+b “ 水平拆分 ctrl + b o 来回切换 注意这里的一个使用方法就是先点击 ctrl + b 然后在点击其余的按键</p>
+</li>
 </ul>
 ]]></content>
       <tags>
         <tag>OS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GoMars</title>
+    <url>/2024/03/05/GoMars/</url>
+    <content><![CDATA[<h1 id="GoMars"><a href="#GoMars" class="headerlink" title="GoMars"></a>GoMars</h1><h2 id="Prerequisite"><a href="#Prerequisite" class="headerlink" title="Prerequisite"></a>Prerequisite</h2><ul>
+<li>fortran syntax __ % like dot . in c++</li>
+<li>isend 必须使用wait 以为我们需要保证这个已经完成communicte isend + wait  &#x3D; send  sendres就是两个的简单集合</li>
+<li>vscode 可以使用这个alt+left right 进行trace back and forth</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>HPC</tag>
       </tags>
   </entry>
 </search>
