@@ -522,8 +522,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2024-03-13 20:57:54</span>
-            <span class="mobile">2024-03-13 20:57</span>
+            <span class="pc">2024-03-31 21:52:36</span>
+            <span class="mobile">2024-03-31 21:52</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -545,12 +545,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>505 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.2k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>4 Mins</span>
         </span>
     
     
@@ -596,6 +596,46 @@
 <li><p>首先咱们使用的命令是 gdb-multiarch 注意中间的横线一定不能少</p>
 </li>
 <li><p>然后就是上面的网址里写的</p>
+</li>
+<li><p>回顾一下gdb的基本用法</p>
+</li>
+<li><p>tmux 的一些用法 prefix &amp; 关闭当前的windows </p>
+</li>
+<li><p>tmux attach 进入最近使用的session  </p>
+</li>
+<li><p>prefix 数字 进入对应的windows</p>
+</li>
+<li><p>find -name {} 方便查找文件</p>
+</li>
+<li><p>总结而言 一般我们先在一个windows运行 gdb qemu 然后一个新的window split 分为 gdb 和源码</p>
+</li>
+<li><p>prefix o 是在不同 pane 间移动</p>
+</li>
+<li><p>注意启动gdb 后需要使用 target remote localhost:26000来关联上</p>
+</li>
+<li><p>在 gdb 中我们使用 layout split 来同时显示源码和汇编</p>
+</li>
+<li><p>在vim 里面也可以拆分 : split 然后 ctrl + w+w 连按两次 w 来移动窗口 垂直是vsplit  在内部打开另一个文件就是使用 open + filename 注意文件路径</p>
+</li>
+<li><p>qemu 可以使用这个监视模式 ctlr a c</p>
+</li>
+</ul>
+<h3 id="Trap"><a href="#Trap" class="headerlink" title="Trap"></a>Trap</h3><ul>
+<li><p>为了在用户代码与内核间思华切换 隔离安全性。</p>
+</li>
+<li><p>mode 管理员模式其实只是能够读写一些控制控制急寄存器 然后是以哦个PTE中没有PTE_U 的模式位的页表条目</p>
+</li>
+<li><p>ecall 开始经过trampoline 的两个中间函数 然后使用sys_call 指c函数看跳转表 感觉中间的两个函数是进行一个硬件准备 然后都是 使用汇编语言写的 感觉这些中间工作差不多就是一些内存上下文保存  还有虚拟地址映射的切换之类的</p>
+</li>
+<li><p>系统调用指令 ecall 与普通的call 指令相似 传入的调用参数使用通用寄存器 riscv 就是a0 a1 a2 之类的 </p>
+</li>
+<li><p>两个额外的标记位 一个是a 表似乎是否是被读过 一个是d 表示是否是被写过 也许后面驱逐页的时候就需要</p>
+</li>
+<li><p>感觉目前接触的最终要的一个感觉就是riscv 尽可能的简单 从而能够给予操作系统设计者最大的自由发挥的空间 ecall实际上只完成三件事 一件事是保存pc 第二就是读取trampoline 到 pc 第三件事就是变换mode 从user到管理员模式 同时很多指令行为的考虑没有一个通用的模式 例如保存在tramframe只是因为假设可能存在没有普通函数栈的情况</p>
+</li>
+<li><p>所以我们抽象地来看其实内核模式与用户模式就是简单地在于虚拟空间以及内部使用的指令的不同 还有就是具体的位不同 通过几个底层的东西我们就可以抽象出如此美妙的东西 ！ </p>
+</li>
+<li><p>trampoline在用户和内核的虚拟页表都是相同的映射所以可以实现无缝切换</p>
 </li>
 </ul>
 
@@ -723,7 +763,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">6.S081</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Operating-System"><span class="nav-text">Operating System</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Operating-System"><span class="nav-text">Operating System</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Trap"><span class="nav-text">Trap</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>
