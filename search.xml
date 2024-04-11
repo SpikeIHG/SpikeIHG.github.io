@@ -2475,6 +2475,12 @@ int write();
 <ul>
 <li>一切终将逝去，如苹果花丛中的薄雾，金色的树叶堆满心间，我已不再是青春少年。 			打算试着翻译一些诗歌 : )</li>
 </ul>
+<h2 id="无论是什么-我都必须不断地进行探索存在"><a href="#无论是什么-我都必须不断地进行探索存在" class="headerlink" title="无论是什么 我都必须不断地进行探索存在"></a>无论是什么 我都必须不断地进行探索存在</h2><ul>
+<li>环也许是存在的，但是并不妨碍探索本身。！！！！ 思考，想象力，好奇。</li>
+</ul>
+<h2 id="为什么Cowboy-Bebop-是伟大的-于我而言"><a href="#为什么Cowboy-Bebop-是伟大的-于我而言" class="headerlink" title="为什么Cowboy Bebop 是伟大的 于我而言"></a>为什么Cowboy Bebop 是伟大的 于我而言</h2><ul>
+<li>因为有的只有最纯粹的故事。仅此而已，再无其他。</li>
+</ul>
 ]]></content>
       <tags>
         <tag>自然</tag>
@@ -2910,23 +2916,16 @@ int write();
 <li><p>qemu 可以使用这个监视模式 ctlr a c</p>
 </li>
 </ul>
-<h3 id="Trap"><a href="#Trap" class="headerlink" title="Trap"></a>Trap</h3><ul>
-<li><p>为了在用户代码与内核间思华切换 隔离安全性。</p>
-</li>
-<li><p>mode 管理员模式其实只是能够读写一些控制控制急寄存器 然后是以哦个PTE中没有PTE_U 的模式位的页表条目</p>
-</li>
-<li><p>ecall 开始经过trampoline 的两个中间函数 然后使用sys_call 指c函数看跳转表 感觉中间的两个函数是进行一个硬件准备 然后都是 使用汇编语言写的 感觉这些中间工作差不多就是一些内存上下文保存  还有虚拟地址映射的切换之类的</p>
-</li>
-<li><p>系统调用指令 ecall 与普通的call 指令相似 传入的调用参数使用通用寄存器 riscv 就是a0 a1 a2 之类的 </p>
-</li>
-<li><p>两个额外的标记位 一个是a 表似乎是否是被读过 一个是d 表示是否是被写过 也许后面驱逐页的时候就需要</p>
-</li>
-<li><p>感觉目前接触的最终要的一个感觉就是riscv 尽可能的简单 从而能够给予操作系统设计者最大的自由发挥的空间 ecall实际上只完成三件事 一件事是保存pc 第二就是读取trampoline 到 pc 第三件事就是变换mode 从user到管理员模式 同时很多指令行为的考虑没有一个通用的模式 例如保存在tramframe只是因为假设可能存在没有普通函数栈的情况</p>
-</li>
-<li><p>所以我们抽象地来看其实内核模式与用户模式就是简单地在于虚拟空间以及内部使用的指令的不同 还有就是具体的位不同 通过几个底层的东西我们就可以抽象出如此美妙的东西 ！ </p>
-</li>
-<li><p>trampoline在用户和内核的虚拟页表都是相同的映射所以可以实现无缝切换</p>
-</li>
+<h2 id="Trap"><a href="#Trap" class="headerlink" title="Trap"></a>Trap</h2><ul>
+<li>为了在用户代码与内核间思华切换 隔离安全性。</li>
+<li>mode 管理员模式其实只是能够读写一些控制控制急寄存器 然后是以哦个PTE中没有PTE_U 的模式位的页表条目</li>
+<li>ecall 开始经过trampoline 的两个中间函数 然后使用sys_call 指c函数看跳转表 感觉中间的两个函数是进行一个硬件准备 然后都是 使用汇编语言写的 感觉这些中间工作差不多就是一些内存上下文保存  还有虚拟地址映射的切换之类的</li>
+<li>系统调用指令 ecall 与普通的call 指令相似 传入的调用参数使用通用寄存器 riscv 就是a0 a1 a2 之类的 </li>
+<li>两个额外的标记位 一个是a 表似乎是否是被读过 一个是d 表示是否是被写过 也许后面驱逐页的时候就需要</li>
+<li>感觉目前接触的最终要的一个感觉就是riscv 尽可能的简单 从而能够给予操作系统设计者最大的自由发挥的空间 ecall实际上只完成三件事 一件事是保存pc 第二就是读取trampoline 到 pc 第三件事就是变换mode 从user到管理员模式 同时很多指令行为的考虑没有一个通用的模式 例如保存在tramframe只是因为假设可能存在没有普通函数栈的情况</li>
+<li>所以我们抽象地来看其实内核模式与用户模式就是简单地在于虚拟空间以及内部使用的指令的不同 还有就是具体的位不同 通过几个底层的东西我们就可以抽象出如此美妙的东西 ！ </li>
+<li>trampoline在用户和内核的虚拟页表都是相同的映射所以可以实现无缝切换</li>
+<li>数据库 本身也是一种建立在集合运算上 的一种简洁的抽象。</li>
 </ul>
 ]]></content>
       <tags>
@@ -2946,6 +2945,103 @@ int write();
 ]]></content>
       <tags>
         <tag>HPC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Bash</title>
+    <url>/2024/04/11/Bash/</url>
+    <content><![CDATA[<h1 id="Bash-脚本总结"><a href="#Bash-脚本总结" class="headerlink" title="Bash 脚本总结"></a>Bash 脚本总结</h1><h2 id="命令总结"><a href="#命令总结" class="headerlink" title="命令总结"></a>命令总结</h2><ul>
+<li><p>多命令执行 ; 顺序执行 &amp;&amp; ，前面执行成功后后面才会执行， || 前面错误后面才会执行</p>
+</li>
+<li><p>*拓展0个或者多个字符， ? 拓展一个任意字符 [] 匹配里面任意的字符 &gt; 重定向 &gt;&gt; 接着后面键加入 &lt; 作为命令的输入</p>
+</li>
+<li><p>readonly 关键字 来声明变量 让变量作为一个只读变量 unset可以删除变量</p>
+</li>
+<li><p>printenv 和 env都可以查看环境变量</p>
+</li>
+<li><p>$0   $1  $2  $3 0 代表的是脚本的名字 1 2 3 分别代表说输入到命令行 的参数名</p>
+</li>
+<li><p>read  read varg 命令可以读取对应的的和终端输入并存入对应的变量中</p>
+</li>
+<li><p>关系比较符号 -eq -ne -lt -gt -ge -le ! &amp;&amp;</p>
+</li>
+<li><p>算术表达式 $(()) $ 这个就是用来引用值的</p>
+</li>
+<li><p>条件控制语句 就是使用 if [] ; then  注意一定还有一个 fi 作为结束 </p>
+</li>
+<li><p>for循环 注意一样的 还是有一个done作为一个结束的标志</p>
+</li>
+<li><p>#!&#x2F;bin&#x2F;bash</p>
+<p>for i in {1..5}; do<br>if [ $i -eq 3 ]; then<br>    continue<br>fi<br>echo “循环次数：$i”<br>if [ $i -eq 4 ]; then<br>    break<br>fi<br>done</p>
+</li>
+<li><p>还有一个函数 有需求再去学习</p>
+</li>
+</ul>
+<h2 id="感觉还是应该需求为导向-想要是实现什么功能的-时候就去看一看"><a href="#感觉还是应该需求为导向-想要是实现什么功能的-时候就去看一看" class="headerlink" title="感觉还是应该需求为导向 想要是实现什么功能的 时候就去看一看"></a><font color=salmon>感觉还是应该需求为导向 想要是实现什么功能的 时候就去看一看</font></h2>]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Fine_Tuning</title>
+    <url>/2024/03/25/Fine-Tuning/</url>
+    <content><![CDATA[<h1 id="Fine-tuning-practice"><a href="#Fine-tuning-practice" class="headerlink" title="Fine_tuning practice"></a>Fine_tuning practice</h1><ul>
+<li><p>找点事做，算是。哎，道路曲折。</p>
+</li>
+<li><p><font color=salmon>主机huggingface password iW7GHBpZ</font></p>
+</li>
+<li><p>现在基本上是使用一个预训练模型加上一个prompt 或者是fine tuning</p>
+</li>
+<li><p>transformer 一个生态系列 很多的库 Lora </p>
+</li>
+<li><p>使用的是miniconda</p>
+</li>
+<li><p>后运行job的指令 第一个就是末尾加&amp; 第二个就是ctrl+z stop他和current job然后使用一个bg 指令 jobs 显示当前进行i的job 然后还有 fg指令前台化</p>
+</li>
+<li><p>pip 或者整个虚拟环境的 一个原理就是每个包所具有的依赖都是存在于对应的包里面 然后下载的时候要确定对应的 解释器</p>
+</li>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/pipi.png"
+                     
+                ></p>
+</li>
+<li><p>离线下载就是下载好了文件 然后scp然后AutoModel.from_pretrained()里面写文件夹的名字</p>
+</li>
+<li><p>三个数据集合 </p>
+</li>
+<li><p>training set 用于训练更新参数的</p>
+</li>
+<li><p>test set 用于最终评价的 不用于 改变参数</p>
+</li>
+<li><p>validation set 可以理解为中间的一个模拟测试 来反馈我们的超参数设置情况。</p>
+</li>
+<li><p>数据集的加载 使用的是dataset 这个包</p>
+</li>
+<li><p>数据集的划分 train_test_split 按照比例划分</p>
+</li>
+<li><p>选取 用 select 过滤用 filter加lamda 函数</p>
+</li>
+<li><p>预处理 使用map 方法 结合tokenizer </p>
+</li>
+<li><p>存放就是 load and save</p>
+</li>
+<li><p>加载本地文件 ——  可以直接加载整个文件夹 对</p>
+</li>
+<li><p>很多方法 殊途同归 然后可以自己写脚本来</p>
+</li>
+<li><p>tokenizer 中 inputs_id 就是转换后的唯一id attentino_mask 就是判断改数字是否是填充padding type——id就是确定这个句子是第几个。</p>
+</li>
+</ul>
+<h2 id="显存优化"><a href="#显存优化" class="headerlink" title="显存优化"></a>显存优化</h2><h2 id="CSAPP-LAB-3-attack-lab"><a href="#CSAPP-LAB-3-attack-lab" class="headerlink" title="CSAPP LAB 3 attack lab"></a>CSAPP LAB 3 attack lab</h2><ul>
+<li>几个编译选项的意思 可以使用 man gcc进行查找 &#x2F;keyword n 就是到下一个匹配项， N上一个匹配项</li>
+<li>top 查看机器进程情况的时候 ， 可以使用 c 查看详细命令</li>
+<li>占个坑 想学一学基本的shell 脚本<a class="link"   href="https://blog.csdn.net/qq_29864051/article/details/132650005" > <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>DL</tag>
       </tags>
   </entry>
 </search>
