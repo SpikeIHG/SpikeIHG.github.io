@@ -372,7 +372,7 @@
   <entry>
     <title>Winter&#39;s blog</title>
     <url>/2023/03/16/Winter-s-blog/</url>
-    <content><![CDATA[<h2 id="For-Ms-Winter"><a href="#For-Ms-Winter" class="headerlink" title="For Ms.Winter"></a>For Ms.Winter</h2><h3 id="先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功"><a href="#先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功" class="headerlink" title="先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功"></a>先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功</h3><ul>
+    <content><![CDATA[<h2 id="For-Ms-Winter"><a href="#For-Ms-Winter" class="headerlink" title="For Ms.Winter"></a>For Ms.Winter</h2><h3 id="首先献给我的亲人朋友，希望他们永远健康快乐"><a href="#首先献给我的亲人朋友，希望他们永远健康快乐" class="headerlink" title="首先献给我的亲人朋友，希望他们永远健康快乐"></a><font color=lightgreen>首先献给我的亲人朋友，希望他们永远健康快乐</font></h3><h3 id="先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功"><a href="#先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功" class="headerlink" title="先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功"></a>先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功</h3><ul>
 <li><strong><font color=pink>emoji kitchen use ps to scale down and save in png and then port to QQ</font></strong></li>
 <li><strong><font color=pink>QQ music .first download music from the magic website and then open in the directory with QQ player. Note: when you download by qq you could easily get adapted in the app ! Good!</font></strong></li>
 </ul>
@@ -2977,7 +2977,11 @@ int write();
 <li><p>还有一个函数 有需求再去学习</p>
 </li>
 </ul>
-<h2 id="感觉还是应该需求为导向-想要是实现什么功能的-时候就去看一看"><a href="#感觉还是应该需求为导向-想要是实现什么功能的-时候就去看一看" class="headerlink" title="感觉还是应该需求为导向 想要是实现什么功能的 时候就去看一看"></a><font color=salmon>感觉还是应该需求为导向 想要是实现什么功能的 时候就去看一看</font></h2>]]></content>
+<h2 id="感觉还是应该需求为导向-想要是实现什么功能的-时候就去看一看"><a href="#感觉还是应该需求为导向-想要是实现什么功能的-时候就去看一看" class="headerlink" title="感觉还是应该需求为导向 想要是实现什么功能的 时候就去看一看"></a><font color=salmon>感觉还是应该需求为导向 想要是实现什么功能的 时候就去看一看</font></h2><ul>
+<li>awk 似乎是一个有趣的指令  来处理文本呢 男泵  seq 还有一个seq 流处理指令以及一些简单的文本处理指令   &amp;&gt; </li>
+<li>著名的这个垃圾桶位置 &#x2F;dev&#x2F;null</li>
+</ul>
+]]></content>
       <tags>
         <tag>Linux</tag>
       </tags>
@@ -3035,9 +3039,35 @@ int write();
 </li>
 </ul>
 <h2 id="显存优化"><a href="#显存优化" class="headerlink" title="显存优化"></a>显存优化</h2><h2 id="CSAPP-LAB-3-attack-lab"><a href="#CSAPP-LAB-3-attack-lab" class="headerlink" title="CSAPP LAB 3 attack lab"></a>CSAPP LAB 3 attack lab</h2><ul>
-<li>几个编译选项的意思 可以使用 man gcc进行查找 &#x2F;keyword n 就是到下一个匹配项， N上一个匹配项</li>
-<li>top 查看机器进程情况的时候 ， 可以使用 c 查看详细命令</li>
-<li>占个坑 想学一学基本的shell 脚本<a class="link"   href="https://blog.csdn.net/qq_29864051/article/details/132650005" > <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><p>几个编译选项的意思 可以使用 man gcc进行查找 &#x2F;keyword n 就是到下一个匹配项， N上一个匹配项</p>
+</li>
+<li><p>top 查看机器进程情况的时候 ， 可以使用 c 查看详细命令</p>
+</li>
+<li><p>占个坑 想学一学基本的shell 脚本<a class="link"   href="https://blog.csdn.net/qq_29864051/article/details/132650005" > <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</li>
+<li><p>解决requirement already satisfied 的方法就是使用target指定包的存放地址 一般再这个lib&#x2F;python3.x&#x2F;site-package里面</p>
+</li>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/eason.png"
+                     
+                ></p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>DL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AI_Singer</title>
+    <url>/2024/04/12/AI-Singer/</url>
+    <content><![CDATA[<h1 id="AI-SINGER"><a href="#AI-SINGER" class="headerlink" title="AI_SINGER"></a>AI_SINGER</h1><h2 id="Overall"><a href="#Overall" class="headerlink" title="Overall"></a>Overall</h2><p>罗列相关链接，总结一些FAQ</p>
+<ul>
+<li>训练的时候改一下保存模型的step间隔 400 或者600 也许可以 </li>
+<li>拼接音轨</li>
+<li>后期处理 bandlab 也许不错 melodyne 修音软件 似乎更好一点。可以学学</li>
 </ul>
 ]]></content>
       <tags>

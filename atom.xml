@@ -6,7 +6,7 @@
   <link href="https://spikeihg.github.io/atom.xml" rel="self"/>
   
   <link href="https://spikeihg.github.io/"/>
-  <updated>2024-04-11T08:33:55.513Z</updated>
+  <updated>2024-04-12T10:37:18.380Z</updated>
   <id>https://spikeihg.github.io/</id>
   
   <author>
@@ -17,13 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>AI_Singer</title>
+    <link href="https://spikeihg.github.io/2024/04/12/AI-Singer/"/>
+    <id>https://spikeihg.github.io/2024/04/12/AI-Singer/</id>
+    <published>2024-04-12T09:16:48.000Z</published>
+    <updated>2024-04-12T10:37:18.380Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="AI-SINGER"><a href="#AI-SINGER" class="headerlink" title="AI_SINGER"></a>AI_SINGER</h1><h2 id="Overall"><a href="#Overall" class="headerlink" title="Overall"></a>Overall</h2><p>罗列相关链接，总结一些FAQ</p><ul><li>训练的时候改一下保存模型的step间隔 400 或者600 也许可以 </li><li>拼接音轨</li><li>后期处理 bandlab 也许不错 melodyne 修音软件 似乎更好一点。可以学学</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;AI-SINGER&quot;&gt;&lt;a href=&quot;#AI-SINGER&quot; class=&quot;headerlink&quot; title=&quot;AI_SINGER&quot;&gt;&lt;/a&gt;AI_SINGER&lt;/h1&gt;&lt;h2 id=&quot;Overall&quot;&gt;&lt;a href=&quot;#Overall&quot; class=&quot;he</summary>
+      
+    
+    
+    
+    
+    <category term="DL" scheme="https://spikeihg.github.io/tags/DL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Bash</title>
     <link href="https://spikeihg.github.io/2024/04/11/Bash/"/>
     <id>https://spikeihg.github.io/2024/04/11/Bash/</id>
     <published>2024-04-11T08:08:31.000Z</published>
-    <updated>2024-04-11T08:33:55.513Z</updated>
+    <updated>2024-04-11T08:49:47.676Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Bash-脚本总结"><a href="#Bash-脚本总结" class="headerlink" title="Bash 脚本总结"></a>Bash 脚本总结</h1><h2 id="命令总结"><a href="#命令总结" class="headerlink" title="命令总结"></a>命令总结</h2><ul><li><p>多命令执行 ; 顺序执行 &amp;&amp; ，前面执行成功后后面才会执行， || 前面错误后面才会执行</p></li><li><p>*拓展0个或者多个字符， ? 拓展一个任意字符 [] 匹配里面任意的字符 &gt; 重定向 &gt;&gt; 接着后面键加入 &lt; 作为命令的输入</p></li><li><p>readonly 关键字 来声明变量 让变量作为一个只读变量 unset可以删除变量</p></li><li><p>printenv 和 env都可以查看环境变量</p></li><li><p>$0   $1  $2  $3 0 代表的是脚本的名字 1 2 3 分别代表说输入到命令行 的参数名</p></li><li><p>read  read varg 命令可以读取对应的的和终端输入并存入对应的变量中</p></li><li><p>关系比较符号 -eq -ne -lt -gt -ge -le ! &amp;&amp;</p></li><li><p>算术表达式 $(()) $ 这个就是用来引用值的</p></li><li><p>条件控制语句 就是使用 if [] ; then  注意一定还有一个 fi 作为结束 </p></li><li><p>for循环 注意一样的 还是有一个done作为一个结束的标志</p></li><li><p>#!&#x2F;bin&#x2F;bash</p><p>for i in {1..5}; do<br>if [ $i -eq 3 ]; then<br>    continue<br>fi<br>echo “循环次数：$i”<br>if [ $i -eq 4 ]; then<br>    break<br>fi<br>done</p></li><li><p>还有一个函数 有需求再去学习</p></li></ul><h2 id="感觉还是应该需求为导向-想要是实现什么功能的-时候就去看一看"><a href="#感觉还是应该需求为导向-想要是实现什么功能的-时候就去看一看" class="headerlink" title="感觉还是应该需求为导向 想要是实现什么功能的 时候就去看一看"></a><font color=salmon>感觉还是应该需求为导向 想要是实现什么功能的 时候就去看一看</font></h2>]]></content>
+    <content type="html"><![CDATA[<h1 id="Bash-脚本总结"><a href="#Bash-脚本总结" class="headerlink" title="Bash 脚本总结"></a>Bash 脚本总结</h1><h2 id="命令总结"><a href="#命令总结" class="headerlink" title="命令总结"></a>命令总结</h2><ul><li><p>多命令执行 ; 顺序执行 &amp;&amp; ，前面执行成功后后面才会执行， || 前面错误后面才会执行</p></li><li><p>*拓展0个或者多个字符， ? 拓展一个任意字符 [] 匹配里面任意的字符 &gt; 重定向 &gt;&gt; 接着后面键加入 &lt; 作为命令的输入</p></li><li><p>readonly 关键字 来声明变量 让变量作为一个只读变量 unset可以删除变量</p></li><li><p>printenv 和 env都可以查看环境变量</p></li><li><p>$0   $1  $2  $3 0 代表的是脚本的名字 1 2 3 分别代表说输入到命令行 的参数名</p></li><li><p>read  read varg 命令可以读取对应的的和终端输入并存入对应的变量中</p></li><li><p>关系比较符号 -eq -ne -lt -gt -ge -le ! &amp;&amp;</p></li><li><p>算术表达式 $(()) $ 这个就是用来引用值的</p></li><li><p>条件控制语句 就是使用 if [] ; then  注意一定还有一个 fi 作为结束 </p></li><li><p>for循环 注意一样的 还是有一个done作为一个结束的标志</p></li><li><p>#!&#x2F;bin&#x2F;bash</p><p>for i in {1..5}; do<br>if [ $i -eq 3 ]; then<br>    continue<br>fi<br>echo “循环次数：$i”<br>if [ $i -eq 4 ]; then<br>    break<br>fi<br>done</p></li><li><p>还有一个函数 有需求再去学习</p></li></ul><h2 id="感觉还是应该需求为导向-想要是实现什么功能的-时候就去看一看"><a href="#感觉还是应该需求为导向-想要是实现什么功能的-时候就去看一看" class="headerlink" title="感觉还是应该需求为导向 想要是实现什么功能的 时候就去看一看"></a><font color=salmon>感觉还是应该需求为导向 想要是实现什么功能的 时候就去看一看</font></h2><ul><li>awk 似乎是一个有趣的指令  来处理文本呢 男泵  seq 还有一个seq 流处理指令以及一些简单的文本处理指令   &amp;&gt; </li><li>著名的这个垃圾桶位置 &#x2F;dev&#x2F;null</li></ul>]]></content>
     
     
       
@@ -43,9 +65,9 @@
     <link href="https://spikeihg.github.io/2024/03/25/Fine-Tuning/"/>
     <id>https://spikeihg.github.io/2024/03/25/Fine-Tuning/</id>
     <published>2024-03-25T08:32:02.000Z</published>
-    <updated>2024-04-11T08:36:33.774Z</updated>
+    <updated>2024-04-11T12:43:48.241Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Fine-tuning-practice"><a href="#Fine-tuning-practice" class="headerlink" title="Fine_tuning practice"></a>Fine_tuning practice</h1><ul><li><p>找点事做，算是。哎，道路曲折。</p></li><li><p><font color=salmon>主机huggingface password iW7GHBpZ</font></p></li><li><p>现在基本上是使用一个预训练模型加上一个prompt 或者是fine tuning</p></li><li><p>transformer 一个生态系列 很多的库 Lora </p></li><li><p>使用的是miniconda</p></li><li><p>后运行job的指令 第一个就是末尾加&amp; 第二个就是ctrl+z stop他和current job然后使用一个bg 指令 jobs 显示当前进行i的job 然后还有 fg指令前台化</p></li><li><p>pip 或者整个虚拟环境的 一个原理就是每个包所具有的依赖都是存在于对应的包里面 然后下载的时候要确定对应的 解释器</p></li><li><p><img                       lazyload                     src="/images/loading.svg"                     data-src="/../images/pipi.png"                                     ></p></li><li><p>离线下载就是下载好了文件 然后scp然后AutoModel.from_pretrained()里面写文件夹的名字</p></li><li><p>三个数据集合 </p></li><li><p>training set 用于训练更新参数的</p></li><li><p>test set 用于最终评价的 不用于 改变参数</p></li><li><p>validation set 可以理解为中间的一个模拟测试 来反馈我们的超参数设置情况。</p></li><li><p>数据集的加载 使用的是dataset 这个包</p></li><li><p>数据集的划分 train_test_split 按照比例划分</p></li><li><p>选取 用 select 过滤用 filter加lamda 函数</p></li><li><p>预处理 使用map 方法 结合tokenizer </p></li><li><p>存放就是 load and save</p></li><li><p>加载本地文件 ——  可以直接加载整个文件夹 对</p></li><li><p>很多方法 殊途同归 然后可以自己写脚本来</p></li><li><p>tokenizer 中 inputs_id 就是转换后的唯一id attentino_mask 就是判断改数字是否是填充padding type——id就是确定这个句子是第几个。</p></li></ul><h2 id="显存优化"><a href="#显存优化" class="headerlink" title="显存优化"></a>显存优化</h2><h2 id="CSAPP-LAB-3-attack-lab"><a href="#CSAPP-LAB-3-attack-lab" class="headerlink" title="CSAPP LAB 3 attack lab"></a>CSAPP LAB 3 attack lab</h2><ul><li>几个编译选项的意思 可以使用 man gcc进行查找 &#x2F;keyword n 就是到下一个匹配项， N上一个匹配项</li><li>top 查看机器进程情况的时候 ， 可以使用 c 查看详细命令</li><li>占个坑 想学一学基本的shell 脚本<a class="link"   href="https://blog.csdn.net/qq_29864051/article/details/132650005" > <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="Fine-tuning-practice"><a href="#Fine-tuning-practice" class="headerlink" title="Fine_tuning practice"></a>Fine_tuning practice</h1><ul><li><p>找点事做，算是。哎，道路曲折。</p></li><li><p><font color=salmon>主机huggingface password iW7GHBpZ</font></p></li><li><p>现在基本上是使用一个预训练模型加上一个prompt 或者是fine tuning</p></li><li><p>transformer 一个生态系列 很多的库 Lora </p></li><li><p>使用的是miniconda</p></li><li><p>后运行job的指令 第一个就是末尾加&amp; 第二个就是ctrl+z stop他和current job然后使用一个bg 指令 jobs 显示当前进行i的job 然后还有 fg指令前台化</p></li><li><p>pip 或者整个虚拟环境的 一个原理就是每个包所具有的依赖都是存在于对应的包里面 然后下载的时候要确定对应的 解释器</p></li><li><p><img                       lazyload                     src="/images/loading.svg"                     data-src="/../images/pipi.png"                                     ></p></li><li><p>离线下载就是下载好了文件 然后scp然后AutoModel.from_pretrained()里面写文件夹的名字</p></li><li><p>三个数据集合 </p></li><li><p>training set 用于训练更新参数的</p></li><li><p>test set 用于最终评价的 不用于 改变参数</p></li><li><p>validation set 可以理解为中间的一个模拟测试 来反馈我们的超参数设置情况。</p></li><li><p>数据集的加载 使用的是dataset 这个包</p></li><li><p>数据集的划分 train_test_split 按照比例划分</p></li><li><p>选取 用 select 过滤用 filter加lamda 函数</p></li><li><p>预处理 使用map 方法 结合tokenizer </p></li><li><p>存放就是 load and save</p></li><li><p>加载本地文件 ——  可以直接加载整个文件夹 对</p></li><li><p>很多方法 殊途同归 然后可以自己写脚本来</p></li><li><p>tokenizer 中 inputs_id 就是转换后的唯一id attentino_mask 就是判断改数字是否是填充padding type——id就是确定这个句子是第几个。</p></li></ul><h2 id="显存优化"><a href="#显存优化" class="headerlink" title="显存优化"></a>显存优化</h2><h2 id="CSAPP-LAB-3-attack-lab"><a href="#CSAPP-LAB-3-attack-lab" class="headerlink" title="CSAPP LAB 3 attack lab"></a>CSAPP LAB 3 attack lab</h2><ul><li><p>几个编译选项的意思 可以使用 man gcc进行查找 &#x2F;keyword n 就是到下一个匹配项， N上一个匹配项</p></li><li><p>top 查看机器进程情况的时候 ， 可以使用 c 查看详细命令</p></li><li><p>占个坑 想学一学基本的shell 脚本<a class="link"   href="https://blog.csdn.net/qq_29864051/article/details/132650005" > <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></li><li><p>解决requirement already satisfied 的方法就是使用target指定包的存放地址 一般再这个lib&#x2F;python3.x&#x2F;site-package里面</p></li><li><p><img                       lazyload                     src="/images/loading.svg"                     data-src="/../images/eason.png"                                     ></p></li></ul>]]></content>
     
     
       
@@ -440,31 +462,6 @@
     
     
     <category term="signature" scheme="https://spikeihg.github.io/tags/signature/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TLCL@2</title>
-    <link href="https://spikeihg.github.io/2023/09/30/TLCL-2/"/>
-    <id>https://spikeihg.github.io/2023/09/30/TLCL-2/</id>
-    <published>2023-09-30T02:56:45.000Z</published>
-    <updated>2023-10-03T12:23:07.832Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="TLCL"><a href="#TLCL" class="headerlink" title="TLCL"></a>TLCL</h2><blockquote><p>新的开始 </p></blockquote><h4 id="今天怒创了两个用户-密码都是老密码alt-t-google-translate-x2F-the-search-box-alt-left-ctrl-shift-aalt-左右键是返回上一个页面-ctrl-tab-下一个标签-ctrl-shift-tab-上一个"><a href="#今天怒创了两个用户-密码都是老密码alt-t-google-translate-x2F-the-search-box-alt-left-ctrl-shift-aalt-左右键是返回上一个页面-ctrl-tab-下一个标签-ctrl-shift-tab-上一个" class="headerlink" title="今天怒创了两个用户 密码都是老密码alt t google translate &#x2F; the search box alt left   ctrl shift aalt 左右键是返回上一个页面 ctrl tab 下一个标签 ctrl shift tab 上一个 "></a><font color=aqua>今天怒创了两个用户 密码都是老密码<br>alt t google translate &#x2F; the search box alt left   ctrl shift a<br>alt 左右键是返回上一个页面 ctrl tab 下一个标签 ctrl shift tab 上一个 </font></h4><h3 id="发现两个有用的东西-google搜索栏使用小数字键盘的上下键可以查看推荐搜索-然后就是cmd中打开md-x2F-example-md-键入就可以-原来要运行可运行文件要在前面加上一个-x2F"><a href="#发现两个有用的东西-google搜索栏使用小数字键盘的上下键可以查看推荐搜索-然后就是cmd中打开md-x2F-example-md-键入就可以-原来要运行可运行文件要在前面加上一个-x2F" class="headerlink" title="发现两个有用的东西 google搜索栏使用小数字键盘的上下键可以查看推荐搜索 然后就是cmd中打开md .&#x2F;example.md 键入就可以 原来要运行可运行文件要在前面加上一个.&#x2F;"></a><font color=pink>发现两个有用的东西 google搜索栏使用小数字键盘的上下键可以查看推荐搜索 然后就是cmd中打开md .&#x2F;example.md 键入就可以 原来要运行可运行文件要在前面加上一个.&#x2F;</font></h3><h4 id="command-syntaxsyntax2syntax3q-amp-a"><a href="#command-syntaxsyntax2syntax3q-amp-a" class="headerlink" title="command syntaxsyntax2syntax3q&amp;a"></a><font color=seagreen><a class="link"   href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/command-line-syntax-key" >command syntax <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br><a class="link"   href="http://docopt.org/" >syntax2 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br><a class="link"   href="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html#tag_12_01" >syntax3 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br><a class="link"   href="https://stackoverflow.com/questions/9725675/is-there-a-standard-format-for-command-line-shell-help-text" >q&amp;a <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></font></h4><h3 id="键盘操作"><a href="#键盘操作" class="headerlink" title="键盘操作"></a>键盘操作</h3><p><img                       lazyload                     src="/images/loading.svg"                     data-src="/../images/history.png"                      title="历史的操作"                ></p><ul><li><h3 id="历史操作"><a href="#历史操作" class="headerlink" title="历史操作"></a>历史操作</h3><ul><li><em><strong>history 操作，history | less |grep tldr</strong></em></li></ul></li><li><h3 id="权限security"><a href="#权限security" class="headerlink" title="权限security"></a>权限security</h3><ul><li><em><strong>change the mode chmod cmd 改变rwx属性可以使用八进制数字来表示也可以用字符 <font color=red><a class="link"   href="http://billie66.github.io/TLCL/book/chap10.html" >chmod <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></font></strong></em></li><li><em><strong>su and sudo su 就是以另一个身份运行shell 而sudo是以另一个身份执行命令 最大的区别是su会重建一个设立了环境 而sudo不会</strong></em></li><li><em><strong>chown 改变用户权限 目前使用不是很多</strong></em></li><li><em><strong>passwd 命令用作更改i密码</strong></em></li><li><em><strong><font color=pink>good in wsl2 额可以touch 创建文件 同时可以code 编辑code似乎有许多有趣的指令</font></strong></em></li><li><em><strong><font color=red>想要切换用户 也就是一个全新的bash的话 用 su -l doudou .eg 退出的时候使用 exit就可以了</font></strong></em></li><li><em><strong><font color=blue>至于使用创建用户的命令就是adduser name 注意名字不能以大写字母开头 doudou</font></strong></em></li></ul></li><li><h3 id="核心概念-Process-进程link"><a href="#核心概念-Process-进程link" class="headerlink" title="核心概念 Process 进程link"></a>核心概念 Process 进程<a class="link"   href="http://billie66.github.io/TLCL/book/chap11.html" >link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h3><ul><li><em><strong>init kernel进行run&#x2F;etc里的script所以为什么可以更改的原因</strong></em></li><li><strong>ctrl + c 强制返回的一种方法</strong></li><li><em><strong><font color=pink>&#x2F;proc    &#x2F;sys 文件系统 可以查看相关硬件划分信息</font><br>备份文件的名字无关紧要，只要选择一个容易理解的文件名。扩展名 “.bak”、”.sav”、 “.old”和 “.orig” 都是用来指示备份文件的流行方法。哦，记住 cp 命令会默默地覆盖已经存在的同名文件。  bak stand for backup file</strong></em></li></ul></li><li><h3 id="Nano与其他文本编辑器"><a href="#Nano与其他文本编辑器" class="headerlink" title="Nano与其他文本编辑器"></a>Nano与其他<a class="link"   href="http://billie66.github.io/TLCL/book/chap12.html" >文本编辑器 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h3><ul><li><em><strong><font color=pink>之前学的很多bash的指令到很多编辑器里都是一样的</font></strong></em></li><li><em><strong><font color=pink>source .bashrc 生效指令</font></strong></em></li><li><em><strong><font color=pink>ctrl o in nano 保存</font></strong></em></li></ul></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;TLCL&quot;&gt;&lt;a href=&quot;#TLCL&quot; class=&quot;headerlink&quot; title=&quot;TLCL&quot;&gt;&lt;/a&gt;TLCL&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;新的开始 &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&quot;今天怒创了两个用户-密码都是老密码</summary>
-      
-    
-    
-    
-    
-    <category term="LINUX" scheme="https://spikeihg.github.io/tags/LINUX/"/>
     
   </entry>
   
