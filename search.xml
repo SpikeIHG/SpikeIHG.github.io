@@ -3092,7 +3092,13 @@ int write();
   <entry>
     <title>JSGKD</title>
     <url>/2024/04/28/JSGKD/</url>
-    <content><![CDATA[<h1 id="如果今天也是晴天"><a href="#如果今天也是晴天" class="headerlink" title="如果今天也是晴天"></a><font color=pink>如果今天也是晴天</font></h1>]]></content>
+    <content><![CDATA[<h1 id="如果今天也是晴天"><a href="#如果今天也是晴天" class="headerlink" title="如果今天也是晴天"></a><font color=pink>如果今天也是晴天</font></h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/20s.jpg"
+                     
+                ></p>
+]]></content>
       <tags>
         <tag>NATURE</tag>
       </tags>
