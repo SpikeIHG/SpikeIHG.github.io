@@ -490,9 +490,10 @@
         <div class="article-content-container">
 
             
-            
+                      
                 <div class="article-title">
-                    <h1 class="article-title-regular">AI_Singer</h1>
+                    <img src="/../images/sea.jpg" alt="AI_Singer" />
+                    <h1 class="article-title-cover">AI_Singer</h1>
                 </div>
             
                 
@@ -521,8 +522,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2024-04-12 18:37:18</span>
-            <span class="mobile">2024-04-12 18:37</span>
+            <span class="pc">2024-05-04 14:27:31</span>
+            <span class="mobile">2024-05-04 14:27</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -544,12 +545,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>64 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.1k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>4 Mins</span>
         </span>
     
     
@@ -571,7 +572,98 @@
 <li>拼接音轨</li>
 <li>后期处理 bandlab 也许不错 melodyne 修音软件 似乎更好一点。可以学学</li>
 </ul>
-
+<h2 id="PEFT-参数高效微调"><a href="#PEFT-参数高效微调" class="headerlink" title="PEFT 参数高效微调"></a>PEFT 参数高效微调</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a><font color=pink>背景</font></h3><ul>
+<li>深度学习的研究中出现了许多大型预训练模型，例如GPT-3、BERT等，这些模型可以在多种自然语言处理任务中取得优异的性能表现。然而，这些大型预训练模型的训练成本非常高昂，需要庞大的计算资源和大量的数据，一般人难以承受。这也导致了一些研究人员难以重复和验证先前的研究成果。为了解决这个问题，研究人员开始研究Parameter-Efficient Fine-Tuning (PEFT)技术。PEFT技术旨在通过最小化微调参数的数量和计算复杂度，来提高预训练模型在新任务上的性能，从而缓解大型预训练模型的训练成本。这样一来，即使计算资源受限，也可以利用预训练模型的知识来迅速适应新任务，实现高效的迁移学习。因此，PEFT技术可以在提高模型效果的同时，大大缩短模型训练时间和计算成本，让更多人能够参与到深度学习研究中来。</li>
+</ul>
+<h3 id="总览"><a href="#总览" class="headerlink" title="总览"></a><font color=pink>总览</font></h3><ul>
+<li>冻结预训练模型的某些层并仅微调特定于下游任务的最后几层</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/peft.png"
+                     
+                ></li>
+</ul>
+<h3 id="常见的几种方法的基本思想与原理简介"><a href="#常见的几种方法的基本思想与原理简介" class="headerlink" title="常见的几种方法的基本思想与原理简介"></a><font color=pink>常见的几种方法的基本思想与原理简介</font></h3><ul>
+<li><p>BitFit </p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/bitfit.png"
+                     
+                ></p>
+<p>优点：代码简单，原理简单。 缺点：优化效果不清楚，具体效果随着不同模型的参数规模变化较大，不具有太多的实际用处。</p>
+</li>
+<li><p>prefix tuning</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/prefix.png"
+                     
+                ></p>
+<p>Prefix Tuning方法由斯坦福的研究人员提出，与Full-finetuning更新所有参数的方式不同，该方法是在输入token之前构造一段任务相关的virtual tokens作为Prefix，然后训练的时候只更新Prefix部分的参数，而Transformer中的其他部分参数固定。同时，为了防止直接更新Prefix的参数导致训练不稳定的情况，他们在Prefix层前面加了MLP结构(相当于将Prefix分解为更小维度的Input与MLP的组合后输出的结果)，训练完成后，只保留Prefix的参数。</p>
+</li>
+<li><p>prompt tuning</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/prompt.png"
+                     
+                ></p>
+<p>该方法可以看作是Prefix Tuning的简化版本，只在输入层加入prompt tokens，并不需要加入MLP进行调整来解决难训练的问题。同时还有一个区别就是，prompt tuning只在输入层加入，而prefix 是在transformer计算的每一层都加入。同时，prompt tuning 又分为soft , hard prompt 两种，区别就是hard 通常初始化的prompt是明确指定了与下游任务有关的。soft可以理解为泛化的。同时prompt tuning 在参数规模增大时表现出的效果更加突出。</p>
+<ul>
+<li><p>p tuning<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/pt.png"
+                     
+                ></p>
+<p>用MLP+LSTM的方式来对prompt embedding进行一层处理</p>
+</li>
+</ul>
+</li>
+<li><p>Adapter tuning</p>
+<p>如下图所示的Adapter结构，将其嵌入Transformer的结构里面，在训练时，固定住原来预训练模型的参数不变，只对新增的Adapter结构进行微调。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/adap.png"
+                     
+                ></p>
+<p>存在一个问题，因为额外引入的一个adapter层，可能导致最终推理时长增加。</p>
+</li>
+<li><p>lora</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/lora.png"
+                     
+                ></p>
+<p>核心思想就是将权重更新的Δw分解为两个低秩小矩阵。 在训练时，我们同时走两条通路，一条Δw，另一条就是ab矩阵，最后优化时我们只更新ab矩阵，最后合并回去。具有推理时没有额外计算开销的优点。prompt系列会额外引入参数。</p>
+</li>
+<li><p>IA</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/ia.png"
+                     
+                ></p>
+<p>原理简言之，就是加入四个可学习向量处理原本transformer中的k,v,q,ffn 。 优化时只改变这几个可学习向量。最终也没有额外计算开销。</p>
+</li>
+</ul>
+<h3 id="效果总览"><a href="#效果总览" class="headerlink" title="效果总览"></a>效果总览</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/fitt.png"
+                     
+                ></p>
+<h3 id="工具使用"><a href="#工具使用" class="headerlink" title="工具使用"></a>工具使用</h3><p>目前使用最为广泛的peft的现成库是hugging face的peft，高度集成，调用方便，具体使用的时候查看相关的文档。</p>
+<h3 id="更多思考"><a href="#更多思考" class="headerlink" title="更多思考"></a>更多思考</h3><p>上述所有的方法，具体应用时存在的问题，以及超参数的选择都存在很大的调整空间，这里提供几个参考资料供想要深入探索的群友参考</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://arxiv.org/pdf/2303.15647" >更多的方法与更加具体的原理 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Y8411k7yD/?spm_id_from=333.788&vd_source=c8c7f6103570a31005f12d5a33a60b47" >一些方法的具体代码演示 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link"   href="https://link.zhihu.com/?target=https://github.com/huggingface/peft" >peft的代码实现 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://arxiv.org/pdf/1902.00751" >peft的起源 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="谢谢大家-：）"><a href="#谢谢大家-：）" class="headerlink" title="谢谢大家 ：）"></a>谢谢大家 ：）</h2>
             </div>
 
             
@@ -696,7 +788,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">AI_Singer</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AI-SINGER"><span class="nav-text">AI_SINGER</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Overall"><span class="nav-text">Overall</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AI-SINGER"><span class="nav-text">AI_SINGER</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Overall"><span class="nav-text">Overall</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PEFT-%E5%8F%82%E6%95%B0%E9%AB%98%E6%95%88%E5%BE%AE%E8%B0%83"><span class="nav-text">PEFT 参数高效微调</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E8%A7%88"><span class="nav-text">总览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3%E4%B8%8E%E5%8E%9F%E7%90%86%E7%AE%80%E4%BB%8B"><span class="nav-text">常见的几种方法的基本思想与原理简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%88%E6%9E%9C%E6%80%BB%E8%A7%88"><span class="nav-text">效果总览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8"><span class="nav-text">工具使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E5%A4%9A%E6%80%9D%E8%80%83"><span class="nav-text">更多思考</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B0%A2%E8%B0%A2%E5%A4%A7%E5%AE%B6-%EF%BC%9A%EF%BC%89"><span class="nav-text">谢谢大家 ：）</span></a></li></ol></li></ol>
 
     </div>
 </div>
