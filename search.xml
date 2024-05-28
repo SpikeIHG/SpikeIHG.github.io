@@ -2486,7 +2486,7 @@ int write();
 </li>
 <li><p><font color=pink>努力使得自己的思想变得对人类有价值，就如同化石对于考古学家，即使不能留下完整的骨骼，也要努力使自己的屎变成化石。 goooood 今天想出来的笑话。 :)</font></p>
 </li>
-<li><p>上述观点有些武断，谨个人观点。</p>
+<li><p>上述观点有些武断，谨个人观点。————再读，看来十分武断，以后表述应当加上前缀 我觉得， 避免将事物描述成一种法则，给读者产生一种生硬的强加感。</p>
 </li>
 </ul>
 <h2 id="村平"><a href="#村平" class="headerlink" title="村平"></a>村平</h2><ul>
@@ -2496,7 +2496,15 @@ int write();
 <li><p>未来是否是最不需要关心的。 专注于当下的一种思想观念。是否是我电影观的核心。那么我应该怎样使用我的镜头，故事，人，调度， 取景，台词剧本， 声音 ，感官</p>
 </li>
 </ul>
-<h2 id="lt-再见四月-gt-——-In-my-life-I-love-you-more-2024-4-30"><a href="#lt-再见四月-gt-——-In-my-life-I-love-you-more-2024-4-30" class="headerlink" title="&lt;再见四月&gt;—— In my life , I love you more - 2024.4.30"></a>&lt;再见四月&gt;—— In my life , I love you more - 2024.4.30</h2>]]></content>
+<h2 id="lt-再见四月-gt-——-In-my-life-I-love-you-more-2024-4-30"><a href="#lt-再见四月-gt-——-In-my-life-I-love-you-more-2024-4-30" class="headerlink" title="&lt;再见四月&gt;—— In my life , I love you more - 2024.4.30"></a>&lt;再见四月&gt;—— In my life , I love you more - 2024.4.30</h2><h1 id="May你好五月"><a href="#May你好五月" class="headerlink" title="May你好五月"></a>May你好五月</h1><ul>
+<li><p>五月关于三岛由纪夫，黑塞，列宁格勒牛仔和漫长的人生夏日</p>
+</li>
+<li><p>金阁寺  无时无刻拓展”美”的定义？ 或许美失去 褒义词的性质 应当成为一种更为广泛的性质    水手梦见陆地</p>
+</li>
+<li><p>西尔维娅 费尔南多 we make it simple 。</p>
+</li>
+</ul>
+]]></content>
       <tags>
         <tag>自然</tag>
       </tags>
@@ -3101,7 +3109,7 @@ int write();
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/../images/bitfit.png"
+                     data-src="https://github.com/SpikeIHG/SpikeIHG.github.io/blob/master/images/bitfit.png?raw=true"
                      
                 ></p>
 <p>优点：代码简单，原理简单。 缺点：优化效果不清楚，具体效果随着不同模型的参数规模变化较大，不具有太多的实际用处。</p>
@@ -3110,7 +3118,7 @@ int write();
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/../images/prefix.png"
+                     data-src="https://github.com/SpikeIHG/SpikeIHG.github.io/blob/master/images/prefix.png?raw=true"
                      
                 ></p>
 <p>Prefix Tuning方法由斯坦福的研究人员提出，与Full-finetuning更新所有参数的方式不同，该方法是在输入token之前构造一段任务相关的virtual tokens作为Prefix，然后训练的时候只更新Prefix部分的参数，而Transformer中的其他部分参数固定。同时，为了防止直接更新Prefix的参数导致训练不稳定的情况，他们在Prefix层前面加了MLP结构(相当于将Prefix分解为更小维度的Input与MLP的组合后输出的结果)，训练完成后，只保留Prefix的参数。</p>
@@ -3119,7 +3127,7 @@ int write();
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/../images/prompt.png"
+                     data-src="https://github.com/SpikeIHG/SpikeIHG.github.io/blob/master/images/prompt.png?raw=true"
                      
                 ></p>
 <p>该方法可以看作是Prefix Tuning的简化版本，只在输入层加入prompt tokens，并不需要加入MLP进行调整来解决难训练的问题。同时还有一个区别就是，prompt tuning只在输入层加入，而prefix 是在transformer计算的每一层都加入。同时，prompt tuning 又分为soft , hard prompt 两种，区别就是hard 通常初始化的prompt是明确指定了与下游任务有关的。soft可以理解为泛化的。同时prompt tuning 在参数规模增大时表现出的效果更加突出。</p>
@@ -3127,7 +3135,7 @@ int write();
 <li><p>p tuning<br><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/../images/pt.png"
+                     data-src="https://github.com/SpikeIHG/SpikeIHG.github.io/blob/master/images/pt.png?raw=true"
                      
                 ></p>
 <p>用MLP+LSTM的方式来对prompt embedding进行一层处理</p>
@@ -3139,7 +3147,7 @@ int write();
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/../images/adap.png"
+                     data-src="https://github.com/SpikeIHG/SpikeIHG.github.io/blob/master/images/adap.png?raw=true"
                      
                 ></p>
 <p>存在一个问题，因为额外引入的一个adapter层，可能导致最终推理时长增加。</p>
@@ -3148,7 +3156,7 @@ int write();
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/../images/lora.png"
+                     data-src="https://github.com/SpikeIHG/SpikeIHG.github.io/blob/master/images/lora.png?raw=true"
                      
                 ></p>
 <p>核心思想就是将权重更新的Δw分解为两个低秩小矩阵。 在训练时，我们同时走两条通路，一条Δw，另一条就是ab矩阵，最后优化时我们只更新ab矩阵，最后合并回去。具有推理时没有额外计算开销的优点。prompt系列会额外引入参数。</p>
@@ -3157,7 +3165,7 @@ int write();
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/../images/ia.png"
+                     data-src="https://github.com/SpikeIHG/SpikeIHG.github.io/blob/master/images/ia.png?raw=true"
                      
                 ></p>
 <p>原理简言之，就是加入四个可学习向量处理原本transformer中的k,v,q,ffn 。 优化时只改变这几个可学习向量。最终也没有额外计算开销。</p>
@@ -3166,7 +3174,7 @@ int write();
 <h3 id="效果总览"><a href="#效果总览" class="headerlink" title="效果总览"></a>效果总览</h3><p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/../images/fitt.png"
+                     data-src="https://github.com/SpikeIHG/SpikeIHG.github.io/blob/master/images/fitt.png?raw=true"
                      
                 ></p>
 <h3 id="工具使用"><a href="#工具使用" class="headerlink" title="工具使用"></a>工具使用</h3><p>目前使用最为广泛的peft的现成库是hugging face的peft，高度集成，调用方便，具体使用的时候查看相关的文档。</p>
@@ -3175,7 +3183,10 @@ int write();
 <p><a class="link"   href="https://www.bilibili.com/video/BV1Y8411k7yD/?spm_id_from=333.788&vd_source=c8c7f6103570a31005f12d5a33a60b47" >一些方法的具体代码演示 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p><a class="link"   href="https://link.zhihu.com/?target=https://github.com/huggingface/peft" >peft的代码实现 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p><a class="link"   href="https://arxiv.org/pdf/1902.00751" >peft的起源 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h2 id="谢谢大家-：）"><a href="#谢谢大家-：）" class="headerlink" title="谢谢大家 ：）"></a>谢谢大家 ：）</h2>]]></content>
+<h2 id="谢谢大家-：）"><a href="#谢谢大家-：）" class="headerlink" title="谢谢大家 ：）"></a>谢谢大家 ：）</h2><p>PS : 上次没有解答的关于lora 为什么分解成两个矩阵可以优化</p>
+<p><a class="link"   href="https://arxiv.org/pdf/2106.09685" >https://arxiv.org/pdf/2106.09685 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>总结一下就是：是将Δw矩阵分解，但是是一个向低维空间投射，也就是说降秩。也就是说lora有一个假设的前提就是我们微调一个矩阵降秩后的矩阵也可以达到接近的效果。</p>
+]]></content>
       <tags>
         <tag>DL</tag>
       </tags>

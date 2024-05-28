@@ -522,8 +522,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2024-05-04 14:27:31</span>
-            <span class="mobile">2024-05-04 14:27</span>
+            <span class="pc">2024-05-11 16:05:16</span>
+            <span class="mobile">2024-05-11 16:05</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -545,7 +545,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.1k Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.2k Words</span>
         </span>
     
     
@@ -589,7 +589,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/../images/bitfit.png"
+                     data-src="https://github.com/SpikeIHG/SpikeIHG.github.io/blob/master/images/bitfit.png?raw=true"
                      
                 ></p>
 <p>优点：代码简单，原理简单。 缺点：优化效果不清楚，具体效果随着不同模型的参数规模变化较大，不具有太多的实际用处。</p>
@@ -598,7 +598,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/../images/prefix.png"
+                     data-src="https://github.com/SpikeIHG/SpikeIHG.github.io/blob/master/images/prefix.png?raw=true"
                      
                 ></p>
 <p>Prefix Tuning方法由斯坦福的研究人员提出，与Full-finetuning更新所有参数的方式不同，该方法是在输入token之前构造一段任务相关的virtual tokens作为Prefix，然后训练的时候只更新Prefix部分的参数，而Transformer中的其他部分参数固定。同时，为了防止直接更新Prefix的参数导致训练不稳定的情况，他们在Prefix层前面加了MLP结构(相当于将Prefix分解为更小维度的Input与MLP的组合后输出的结果)，训练完成后，只保留Prefix的参数。</p>
@@ -607,7 +607,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/../images/prompt.png"
+                     data-src="https://github.com/SpikeIHG/SpikeIHG.github.io/blob/master/images/prompt.png?raw=true"
                      
                 ></p>
 <p>该方法可以看作是Prefix Tuning的简化版本，只在输入层加入prompt tokens，并不需要加入MLP进行调整来解决难训练的问题。同时还有一个区别就是，prompt tuning只在输入层加入，而prefix 是在transformer计算的每一层都加入。同时，prompt tuning 又分为soft , hard prompt 两种，区别就是hard 通常初始化的prompt是明确指定了与下游任务有关的。soft可以理解为泛化的。同时prompt tuning 在参数规模增大时表现出的效果更加突出。</p>
@@ -615,7 +615,7 @@
 <li><p>p tuning<br><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/../images/pt.png"
+                     data-src="https://github.com/SpikeIHG/SpikeIHG.github.io/blob/master/images/pt.png?raw=true"
                      
                 ></p>
 <p>用MLP+LSTM的方式来对prompt embedding进行一层处理</p>
@@ -627,7 +627,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/../images/adap.png"
+                     data-src="https://github.com/SpikeIHG/SpikeIHG.github.io/blob/master/images/adap.png?raw=true"
                      
                 ></p>
 <p>存在一个问题，因为额外引入的一个adapter层，可能导致最终推理时长增加。</p>
@@ -636,7 +636,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/../images/lora.png"
+                     data-src="https://github.com/SpikeIHG/SpikeIHG.github.io/blob/master/images/lora.png?raw=true"
                      
                 ></p>
 <p>核心思想就是将权重更新的Δw分解为两个低秩小矩阵。 在训练时，我们同时走两条通路，一条Δw，另一条就是ab矩阵，最后优化时我们只更新ab矩阵，最后合并回去。具有推理时没有额外计算开销的优点。prompt系列会额外引入参数。</p>
@@ -645,7 +645,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/../images/ia.png"
+                     data-src="https://github.com/SpikeIHG/SpikeIHG.github.io/blob/master/images/ia.png?raw=true"
                      
                 ></p>
 <p>原理简言之，就是加入四个可学习向量处理原本transformer中的k,v,q,ffn 。 优化时只改变这几个可学习向量。最终也没有额外计算开销。</p>
@@ -654,7 +654,7 @@
 <h3 id="效果总览"><a href="#效果总览" class="headerlink" title="效果总览"></a>效果总览</h3><p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/../images/fitt.png"
+                     data-src="https://github.com/SpikeIHG/SpikeIHG.github.io/blob/master/images/fitt.png?raw=true"
                      
                 ></p>
 <h3 id="工具使用"><a href="#工具使用" class="headerlink" title="工具使用"></a>工具使用</h3><p>目前使用最为广泛的peft的现成库是hugging face的peft，高度集成，调用方便，具体使用的时候查看相关的文档。</p>
@@ -663,7 +663,10 @@
 <p><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Y8411k7yD/?spm_id_from=333.788&vd_source=c8c7f6103570a31005f12d5a33a60b47" >一些方法的具体代码演示 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p><a class="link"   href="https://link.zhihu.com/?target=https://github.com/huggingface/peft" >peft的代码实现 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://arxiv.org/pdf/1902.00751" >peft的起源 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h2 id="谢谢大家-：）"><a href="#谢谢大家-：）" class="headerlink" title="谢谢大家 ：）"></a>谢谢大家 ：）</h2>
+<h2 id="谢谢大家-：）"><a href="#谢谢大家-：）" class="headerlink" title="谢谢大家 ：）"></a>谢谢大家 ：）</h2><p>PS : 上次没有解答的关于lora 为什么分解成两个矩阵可以优化</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://arxiv.org/pdf/2106.09685" >https://arxiv.org/pdf/2106.09685 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>总结一下就是：是将Δw矩阵分解，但是是一个向低维空间投射，也就是说降秩。也就是说lora有一个假设的前提就是我们微调一个矩阵降秩后的矩阵也可以达到接近的效果。</p>
+
             </div>
 
             
@@ -737,46 +740,47 @@
 
             
                 <div class="comment-container">
-                    <div class="comments-container">
-    <div id="comment-anchor"></div>
-    <div class="comment-area-title">
-        <i class="fa-solid fa-comments"></i>&nbsp;Comments
-    </div>
-    
+                    if (hexo-config('comment.enable') == true && hexo-config('comment.use') != "") {
+  if (hexo-config('comment.use') == "waline") {
+    @require "./waline.styl"
 
-        
-            
- 
-    <div id="waline"></div>
-    <script type="module"  data-pjax>
-        import { init } from 'https://evan.beee.top/js/waline.mjs';
+  } else if (hexo-config('comment.use') == "gitalk") {
+    @require "./gitalk.styl"
 
-        function loadWaline() {
-            init({
-                el: '#waline',
-                serverURL: 'https://new-waline-comments-9d83i0l0o-spikeihg.vercel.app/',
-                lang: 'zh-CN',
-                dark: 'body[class~="dark-mode"]',
-                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
-            });
-        }
+  } else if (hexo-config('comment.use') == "twikoo") {
+    @require "./twikoo.styl"
+  }
+}
 
-        if ('true') {
-            const loadWalineTimeout = setTimeout(() => {
-                loadWaline();
-                clearTimeout(loadWalineTimeout);
-            }, 1000);
-        } else {
-            window.addEventListener('DOMContentLoaded', loadWaline);
-        }
-        
-    </script>
+.comments-container {
+  display inline-block
+  margin-top $spacing-unit
+  width 100%
 
+  #comment-anchor {
+    width 100%
+    height 10px
+  }
 
+  .comment-area-title {
+    width 100%
+    margin 10px 0
+    font-size 1.38rem
+    color var(--default-text-color)
+    font-family "Noto Sans", "Noto Sans SC",sans-serif
+    font-weight bold
 
-        
-    
-</div>
+    i {
+      color var(--default-text-color)
+    }
+
+    +redefine-tablet() {
+      margin 5px 0
+      font-size 1.2rem
+    }
+  }
+
+}
 
                 </div>
             

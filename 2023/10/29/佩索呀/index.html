@@ -522,8 +522,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2024-04-30 11:27:14</span>
-            <span class="mobile">2024-04-30 11:27</span>
+            <span class="pc">2024-05-28 11:46:03</span>
+            <span class="mobile">2024-05-28 11:46</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -545,12 +545,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.7k Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.9k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>8 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>9 Mins</span>
         </span>
     
     
@@ -691,7 +691,7 @@
 </li>
 <li><p><font color=pink>努力使得自己的思想变得对人类有价值，就如同化石对于考古学家，即使不能留下完整的骨骼，也要努力使自己的屎变成化石。 goooood 今天想出来的笑话。 :)</font></p>
 </li>
-<li><p>上述观点有些武断，谨个人观点。</p>
+<li><p>上述观点有些武断，谨个人观点。————再读，看来十分武断，以后表述应当加上前缀 我觉得， 避免将事物描述成一种法则，给读者产生一种生硬的强加感。</p>
 </li>
 </ul>
 <h2 id="村平"><a href="#村平" class="headerlink" title="村平"></a>村平</h2><ul>
@@ -701,7 +701,15 @@
 <li><p>未来是否是最不需要关心的。 专注于当下的一种思想观念。是否是我电影观的核心。那么我应该怎样使用我的镜头，故事，人，调度， 取景，台词剧本， 声音 ，感官</p>
 </li>
 </ul>
-<h2 id="lt-再见四月-gt-——-In-my-life-I-love-you-more-2024-4-30"><a href="#lt-再见四月-gt-——-In-my-life-I-love-you-more-2024-4-30" class="headerlink" title="&lt;再见四月&gt;—— In my life , I love you more - 2024.4.30"></a>&lt;再见四月&gt;—— In my life , I love you more - 2024.4.30</h2>
+<h2 id="lt-再见四月-gt-——-In-my-life-I-love-you-more-2024-4-30"><a href="#lt-再见四月-gt-——-In-my-life-I-love-you-more-2024-4-30" class="headerlink" title="&lt;再见四月&gt;—— In my life , I love you more - 2024.4.30"></a>&lt;再见四月&gt;—— In my life , I love you more - 2024.4.30</h2><h1 id="May你好五月"><a href="#May你好五月" class="headerlink" title="May你好五月"></a>May你好五月</h1><ul>
+<li><p>五月关于三岛由纪夫，黑塞，列宁格勒牛仔和漫长的人生夏日</p>
+</li>
+<li><p>金阁寺  无时无刻拓展”美”的定义？ 或许美失去 褒义词的性质 应当成为一种更为广泛的性质    水手梦见陆地</p>
+</li>
+<li><p>西尔维娅 费尔南多 we make it simple 。</p>
+</li>
+</ul>
+
             </div>
 
             
@@ -775,46 +783,47 @@
 
             
                 <div class="comment-container">
-                    <div class="comments-container">
-    <div id="comment-anchor"></div>
-    <div class="comment-area-title">
-        <i class="fa-solid fa-comments"></i>&nbsp;Comments
-    </div>
-    
+                    if (hexo-config('comment.enable') == true && hexo-config('comment.use') != "") {
+  if (hexo-config('comment.use') == "waline") {
+    @require "./waline.styl"
 
-        
-            
- 
-    <div id="waline"></div>
-    <script type="module"  data-pjax>
-        import { init } from 'https://evan.beee.top/js/waline.mjs';
+  } else if (hexo-config('comment.use') == "gitalk") {
+    @require "./gitalk.styl"
 
-        function loadWaline() {
-            init({
-                el: '#waline',
-                serverURL: 'https://new-waline-comments-9d83i0l0o-spikeihg.vercel.app/',
-                lang: 'zh-CN',
-                dark: 'body[class~="dark-mode"]',
-                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
-            });
-        }
+  } else if (hexo-config('comment.use') == "twikoo") {
+    @require "./twikoo.styl"
+  }
+}
 
-        if ('true') {
-            const loadWalineTimeout = setTimeout(() => {
-                loadWaline();
-                clearTimeout(loadWalineTimeout);
-            }, 1000);
-        } else {
-            window.addEventListener('DOMContentLoaded', loadWaline);
-        }
-        
-    </script>
+.comments-container {
+  display inline-block
+  margin-top $spacing-unit
+  width 100%
 
+  #comment-anchor {
+    width 100%
+    height 10px
+  }
 
+  .comment-area-title {
+    width 100%
+    margin 10px 0
+    font-size 1.38rem
+    color var(--default-text-color)
+    font-family "Noto Sans", "Noto Sans SC",sans-serif
+    font-weight bold
 
-        
-    
-</div>
+    i {
+      color var(--default-text-color)
+    }
+
+    +redefine-tablet() {
+      margin 5px 0
+      font-size 1.2rem
+    }
+  }
+
+}
 
                 </div>
             
@@ -826,7 +835,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">佩索呀</div>
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Darling-I-%E2%80%98m-getting-older-%E4%BA%B2%E7%88%B1%E7%9A%84%EF%BC%8C%E6%88%91%E5%8E%9F%E6%9D%A5%E4%B9%9F%E4%BC%9A%E5%8F%98%E8%80%81"><span class="nav-text">Darling . I ‘m getting older. (亲爱的，我原来也会变老)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-Garden-by-Moonlight"><span class="nav-text">The Garden by Moonlight</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sylvia-Plath"><span class="nav-text">Sylvia Plath</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#When-I-am-dead-my-dearest"><span class="nav-text">When I am dead , my dearest.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Valentine"><span class="nav-text">Valentine</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-More-Loving-One"><span class="nav-text">The More Loving One</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E6%9C%88"><span class="nav-text">四月</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sergey-Esenin-I-do-not-lament-call-out-or-cry%E2%80%A6"><span class="nav-text">Sergey Esenin I do not lament, call out, or cry…</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E8%AE%BA%E6%98%AF%E4%BB%80%E4%B9%88-%E6%88%91%E9%83%BD%E5%BF%85%E9%A1%BB%E4%B8%8D%E6%96%AD%E5%9C%B0%E8%BF%9B%E8%A1%8C%E6%8E%A2%E7%B4%A2%E5%AD%98%E5%9C%A8"><span class="nav-text">无论是什么 我都必须不断地进行探索存在</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88Cowboy-Bebop-%E6%98%AF%E4%BC%9F%E5%A4%A7%E7%9A%84-%E4%BA%8E%E6%88%91%E8%80%8C%E8%A8%80"><span class="nav-text">为什么Cowboy Bebop 是伟大的 于我而言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BD%95%E8%A5%BF%E8%AF%AD%E8%AF%97%E6%AD%8C%E5%A6%82%E6%AD%A4%E6%80%A7%E6%84%9F%E8%BF%B7%E4%BA%BA"><span class="nav-text">为何西语诗歌如此性感迷人</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%91%E5%B9%B3"><span class="nav-text">村平</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-%E5%86%8D%E8%A7%81%E5%9B%9B%E6%9C%88-gt-%E2%80%94%E2%80%94-In-my-life-I-love-you-more-2024-4-30"><span class="nav-text">&lt;再见四月&gt;—— In my life , I love you more - 2024.4.30</span></a>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Darling-I-%E2%80%98m-getting-older-%E4%BA%B2%E7%88%B1%E7%9A%84%EF%BC%8C%E6%88%91%E5%8E%9F%E6%9D%A5%E4%B9%9F%E4%BC%9A%E5%8F%98%E8%80%81"><span class="nav-text">Darling . I ‘m getting older. (亲爱的，我原来也会变老)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-Garden-by-Moonlight"><span class="nav-text">The Garden by Moonlight</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sylvia-Plath"><span class="nav-text">Sylvia Plath</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#When-I-am-dead-my-dearest"><span class="nav-text">When I am dead , my dearest.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Valentine"><span class="nav-text">Valentine</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-More-Loving-One"><span class="nav-text">The More Loving One</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E6%9C%88"><span class="nav-text">四月</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sergey-Esenin-I-do-not-lament-call-out-or-cry%E2%80%A6"><span class="nav-text">Sergey Esenin I do not lament, call out, or cry…</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E8%AE%BA%E6%98%AF%E4%BB%80%E4%B9%88-%E6%88%91%E9%83%BD%E5%BF%85%E9%A1%BB%E4%B8%8D%E6%96%AD%E5%9C%B0%E8%BF%9B%E8%A1%8C%E6%8E%A2%E7%B4%A2%E5%AD%98%E5%9C%A8"><span class="nav-text">无论是什么 我都必须不断地进行探索存在</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88Cowboy-Bebop-%E6%98%AF%E4%BC%9F%E5%A4%A7%E7%9A%84-%E4%BA%8E%E6%88%91%E8%80%8C%E8%A8%80"><span class="nav-text">为什么Cowboy Bebop 是伟大的 于我而言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BD%95%E8%A5%BF%E8%AF%AD%E8%AF%97%E6%AD%8C%E5%A6%82%E6%AD%A4%E6%80%A7%E6%84%9F%E8%BF%B7%E4%BA%BA"><span class="nav-text">为何西语诗歌如此性感迷人</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%91%E5%B9%B3"><span class="nav-text">村平</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-%E5%86%8D%E8%A7%81%E5%9B%9B%E6%9C%88-gt-%E2%80%94%E2%80%94-In-my-life-I-love-you-more-2024-4-30"><span class="nav-text">&lt;再见四月&gt;—— In my life , I love you more - 2024.4.30</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#May%E4%BD%A0%E5%A5%BD%E4%BA%94%E6%9C%88"><span class="nav-text">May你好五月</span></a>
 
     </div>
 </div>
