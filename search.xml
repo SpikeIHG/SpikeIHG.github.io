@@ -3210,11 +3210,6 @@ int write();
       </tags>
   </entry>
   <entry>
-    <title>FPA</title>
-    <url>/2024/09/02/FPA/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>仿生主人会梦见电子狗吗</title>
     <url>/2024/05/29/%E7%BB%84%E5%8E%9F/</url>
     <content><![CDATA[<h1 id="关于计算机组成原理的相关思考"><a href="#关于计算机组成原理的相关思考" class="headerlink" title="关于计算机组成原理的相关思考"></a>关于计算机组成原理的相关思考</h1><ul>
@@ -3289,6 +3284,29 @@ int write();
 ]]></content>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>云吖</title>
+    <url>/2024/09/02/%E4%BA%91%E5%90%96/</url>
+    <content><![CDATA[<h2 id="云吖"><a href="#云吖" class="headerlink" title="云吖"></a>云吖</h2><ul>
+<li><p>* 扉页 “献给我家的小狗，如果他也喜欢看云并且讨厌java的话（我指定咖啡，确信:-）” 最后发布的时候再说</p>
+</li>
+<li><h2 id="IMAO-To-my-puppy-if-he-loves-clouds-and-hates-java-I-mean-the-coffee-IMAO"><a href="#IMAO-To-my-puppy-if-he-loves-clouds-and-hates-java-I-mean-the-coffee-IMAO" class="headerlink" title="IMAO  To my puppy , if he loves clouds and hates java(I mean the coffee , IMAO : -)"></a>IMAO  To my puppy , if he loves clouds and hates java(I mean the coffee , IMAO : -)</h2></li>
+<li><p>郑重声明 首先上面的话只是笔者模仿一些文学作品的前言瞎写的，其次，这个应用程序的代码肯定漏洞百出，至于让谁维护，目前打算让我家狗来。最后，感谢与我一同编写代码的两位朋友以及一位看戏的朋友。</p>
+</li>
+<li><p>idea  创建虚拟人格 举个例子 用户自定义加入一个爱观测星空的特质 然后可能设置一个遗忘机制 如果超过多久的对话中没有提及这个特质  就是说 是的 我都很久没有观测星空了</p>
+</li>
+<li><p>github界面的搜索 就是 点击一下变量名就可以了 我去</p>
+</li>
+<li><p>alt + enter 键解决导包 自动导包</p>
+</li>
+<li><p>desc 降序 或者 描述缩写</p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>JAVA</tag>
       </tags>
   </entry>
 </search>

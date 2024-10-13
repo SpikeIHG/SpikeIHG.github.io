@@ -6,7 +6,7 @@
   <link href="https://spikeihg.github.io/atom.xml" rel="self"/>
   
   <link href="https://spikeihg.github.io/"/>
-  <updated>2024-10-13T16:13:30.527Z</updated>
+  <updated>2024-10-13T16:29:42.869Z</updated>
   <id>https://spikeihg.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://spikeihg.github.io/2024/10/14/%E6%B8%A1%E5%8F%A3%E7%89%9B%E4%BB%94/"/>
     <id>https://spikeihg.github.io/2024/10/14/%E6%B8%A1%E5%8F%A3%E7%89%9B%E4%BB%94/</id>
     <published>2024-10-13T16:05:40.000Z</published>
-    <updated>2024-10-13T16:13:30.527Z</updated>
+    <updated>2024-10-13T16:29:42.869Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Space-Cowboy"><a href="#Space-Cowboy" class="headerlink" title="Space Cowboy"></a>Space Cowboy</h2><p><img                       lazyload                     src="/images/loading.svg"                     data-src="D:\github.1.0\My_blog_hexo\source\images\cowboy2.png"                                     ></p><h2 id="感谢SpaceX的所有人，让我离成为太空牛仔又近了一步-TT"><a href="#感谢SpaceX的所有人，让我离成为太空牛仔又近了一步-TT" class="headerlink" title="感谢SpaceX的所有人，让我离成为太空牛仔又近了一步 TT"></a><font color =pink>感谢SpaceX的所有人，让我离成为太空牛仔又近了一步 TT</font></h2>]]></content>
     
@@ -40,15 +40,26 @@
   </entry>
   
   <entry>
-    <title>FPA</title>
-    <link href="https://spikeihg.github.io/2024/09/02/FPA/"/>
-    <id>https://spikeihg.github.io/2024/09/02/FPA/</id>
+    <title>云吖</title>
+    <link href="https://spikeihg.github.io/2024/09/02/%E4%BA%91%E5%90%96/"/>
+    <id>https://spikeihg.github.io/2024/09/02/%E4%BA%91%E5%90%96/</id>
     <published>2024-09-02T07:41:08.000Z</published>
-    <updated>2024-09-02T07:41:08.506Z</updated>
+    <updated>2024-10-13T16:30:24.663Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="云吖"><a href="#云吖" class="headerlink" title="云吖"></a>云吖</h2><ul><li><p>* 扉页 “献给我家的小狗，如果他也喜欢看云并且讨厌java的话（我指定咖啡，确信:-）” 最后发布的时候再说</p></li><li><h2 id="IMAO-To-my-puppy-if-he-loves-clouds-and-hates-java-I-mean-the-coffee-IMAO"><a href="#IMAO-To-my-puppy-if-he-loves-clouds-and-hates-java-I-mean-the-coffee-IMAO" class="headerlink" title="IMAO  To my puppy , if he loves clouds and hates java(I mean the coffee , IMAO : -)"></a>IMAO  To my puppy , if he loves clouds and hates java(I mean the coffee , IMAO : -)</h2></li><li><p>郑重声明 首先上面的话只是笔者模仿一些文学作品的前言瞎写的，其次，这个应用程序的代码肯定漏洞百出，至于让谁维护，目前打算让我家狗来。最后，感谢与我一同编写代码的两位朋友以及一位看戏的朋友。</p></li><li><p>idea  创建虚拟人格 举个例子 用户自定义加入一个爱观测星空的特质 然后可能设置一个遗忘机制 如果超过多久的对话中没有提及这个特质  就是说 是的 我都很久没有观测星空了</p></li><li><p>github界面的搜索 就是 点击一下变量名就可以了 我去</p></li><li><p>alt + enter 键解决导包 自动导包</p></li><li><p>desc 降序 或者 描述缩写</p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;云吖&quot;&gt;&lt;a href=&quot;#云吖&quot; class=&quot;headerlink&quot; title=&quot;云吖&quot;&gt;&lt;/a&gt;云吖&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;* 扉页 “献给我家的小狗，如果他也喜欢看云并且讨厌java的话（我指定咖啡，确信:-）” 最后发布的时候再说&lt;/p&gt;
+&lt;</summary>
+      
     
     
     
     
+    <category term="JAVA" scheme="https://spikeihg.github.io/tags/JAVA/"/>
     
   </entry>
   
