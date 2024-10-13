@@ -3209,4 +3209,86 @@ int write();
         <tag>NATURE</tag>
       </tags>
   </entry>
+  <entry>
+    <title>FPA</title>
+    <url>/2024/09/02/FPA/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>仿生主人会梦见电子狗吗</title>
+    <url>/2024/05/29/%E7%BB%84%E5%8E%9F/</url>
+    <content><![CDATA[<h1 id="关于计算机组成原理的相关思考"><a href="#关于计算机组成原理的相关思考" class="headerlink" title="关于计算机组成原理的相关思考"></a>关于计算机组成原理的相关思考</h1><ul>
+<li><font color=pink>想到一个故事，想到一个名字，借用仿生人会梦见电子羊吗——仿生主人会梦见电子狗吗。 大概就是通过一个人设计一个电子狗来简单地串联起计算机组成，尽可能自然地从逻辑上推理出计算机的组成，为什么有这些部件，为什么这样设计，问题都能够通过一种比喻的形式得到解答。</font></li>
+</ul>
+<h2 id="码距"><a href="#码距" class="headerlink" title="码距"></a><font color=salmon>码距</font></h2><ul>
+<li><font color=pink>Diane使用的是从废品点淘来的机械零件，大多来自于第二废世战争的遗留。所以，这些古董零件不可避免具有很大的出错率，为了能过保证绝大多数情况下的成功传送，更近一步，甚至能够定位每一次传送中的错误并且相应地进行修改，Diane研究了传送的条文，提出加入冗余的信息，这就是校验码的提出。 本质 增加码距。利用1的个数，如果我们出错位数大多数都只是1位的情况下的话。多重奇偶校验，构建一个矩阵的思想 </font></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>自然</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>渡口牛仔</title>
+    <url>/2024/10/14/%E6%B8%A1%E5%8F%A3%E7%89%9B%E4%BB%94/</url>
+    <content><![CDATA[<h2 id="Space-Cowboy"><a href="#Space-Cowboy" class="headerlink" title="Space Cowboy"></a>Space Cowboy</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="D:\github.1.0\My_blog_hexo\source\images\cowboy2.png"
+                     
+                ></p>
+<h2 id="感谢SpaceX的所有人，让我离成为太空牛仔又近了一步-TT"><a href="#感谢SpaceX的所有人，让我离成为太空牛仔又近了一步-TT" class="headerlink" title="感谢SpaceX的所有人，让我离成为太空牛仔又近了一步 TT"></a><font color =pink>感谢SpaceX的所有人，让我离成为太空牛仔又近了一步 TT</font></h2>]]></content>
+      <tags>
+        <tag>职业规划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于计算机操作系统的一些思考</title>
+    <url>/2024/05/11/%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="OS"><a href="#OS" class="headerlink" title="OS"></a><font color=pink>OS</font></h1><ul>
+<li><font color=skyblue>最近正好在复习计算机系基础，这里就总结一些一些东西，同时记下我自己关于计算机系统学习的一点思考和体会，当然这个也是对CSAPP的再次回顾。</font></li>
+<li><font color=salmon>发现一个奇巧的东西，先按ctrl然后按tab可以实现整个段的tab</font></li>
+</ul>
+<h2 id="补码横空出世"><a href="#补码横空出世" class="headerlink" title="补码横空出世"></a>补码横空出世</h2><ul>
+<li><font color=yellow>简化了底层电路运算的设计，加减统一了，实现运算器的时候只需要根据加还是减法的标记位进行减数的取反。</font></li>
+<li><font color=yellow>注意，对于无符号数和有符号数，他们的最大位为1其他位全0的数互为相反数。这种特殊情况值得注意一下。</font></li>
+<li><font color=yellow>如果同时存在有符号数和无符号数，一个表达式里，会讲有符号提升为无符号，至于编译器确定字面值时，根据范围去确定有无符号，有点奇巧。但是最新标准中是符合直觉的</font></li>
+<li><font color=yellow>浮点数的设计很巧妙，具体记住几个关键点就可以了。尾数省略了一个1，阶数一个bias，等于2^(k-1) -1k&#x3D;8&#x2F;12两种精度下的取值，同时全0和最大是非规格数 ，阶码为0 用于表示0。 以及首位为0的数保证一个平滑地过渡。阶码最大就是NaN 和无穷大的表示。同时 符号位决定这个异常是否通知。1通知 符号位1是负数，注意小数部分的转换成二进制的方法。乘基取余，然后顺序从上至下。 总算知道为什么忽略1可以提高表示范围了，因为一个二进制数的第一位一定是1。 知道一个ascii 中数字刚好对应十六进制表示的30H 开始</font></li>
+<li><font color=yellow>注意按位运算 ~ 和逻辑运算 !</font></li>
+<li><font color=yellow>基于位运算的认识，以及补码，无符号有符号运算的认识，我们可以设计加法器，这个也正式引入一些控制信号，ZF CF OF SF。在汇编语言中我们也会再次见到 这四个标志位的设置非常简洁巧妙</font></li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/ZF.png"
+                     
+                ></li>
+<li><font color=yellow>浮点运算 对阶，检查阶数是否正确。总结一下，布尔代数的完整性和数学上的正确性，保证了计算机数据运算的合理，我们只需要做的就是从工程上实现布尔代数。 这一部分可以作为了解，锻炼思考能力，不用强行记忆。</font></li>
+</ul>
+<h2 id="汇编与机器指令"><a href="#汇编与机器指令" class="headerlink" title="汇编与机器指令"></a>汇编与机器指令</h2><ul>
+<li><font color=yellow>今天才知道解释器是逐行翻译运行，微程序其实与机器指令也存在一种对应关系，具体就是指令的操作码相当于微程序的序号，操作数相当于参数 有点类似一种伪函数调用过程</font></li>
+</ul>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><ul>
+<li><font color=yellow>链接是一个相对新奇的东西，在我第一次接触的时候。现在回想一遍，感觉主要思考一个关于重定位的问题。以及最后的加载执行问题就可以了。不过感觉要想真正的完整的认识链接，还是需要在理解了虚拟内存的基础上。</font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+<li><font color=yellow></font></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
 </search>

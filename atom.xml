@@ -6,7 +6,7 @@
   <link href="https://spikeihg.github.io/atom.xml" rel="self"/>
   
   <link href="https://spikeihg.github.io/"/>
-  <updated>2024-04-30T03:22:05.005Z</updated>
+  <updated>2024-10-13T16:13:30.527Z</updated>
   <id>https://spikeihg.github.io/</id>
   
   <author>
@@ -15,6 +15,88 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>渡口牛仔</title>
+    <link href="https://spikeihg.github.io/2024/10/14/%E6%B8%A1%E5%8F%A3%E7%89%9B%E4%BB%94/"/>
+    <id>https://spikeihg.github.io/2024/10/14/%E6%B8%A1%E5%8F%A3%E7%89%9B%E4%BB%94/</id>
+    <published>2024-10-13T16:05:40.000Z</published>
+    <updated>2024-10-13T16:13:30.527Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Space-Cowboy"><a href="#Space-Cowboy" class="headerlink" title="Space Cowboy"></a>Space Cowboy</h2><p><img                       lazyload                     src="/images/loading.svg"                     data-src="D:\github.1.0\My_blog_hexo\source\images\cowboy2.png"                                     ></p><h2 id="感谢SpaceX的所有人，让我离成为太空牛仔又近了一步-TT"><a href="#感谢SpaceX的所有人，让我离成为太空牛仔又近了一步-TT" class="headerlink" title="感谢SpaceX的所有人，让我离成为太空牛仔又近了一步 TT"></a><font color =pink>感谢SpaceX的所有人，让我离成为太空牛仔又近了一步 TT</font></h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Space-Cowboy&quot;&gt;&lt;a href=&quot;#Space-Cowboy&quot; class=&quot;headerlink&quot; title=&quot;Space Cowboy&quot;&gt;&lt;/a&gt;Space Cowboy&lt;/h2&gt;&lt;p&gt;&lt;img  
+                     la</summary>
+      
+    
+    
+    
+    
+    <category term="职业规划" scheme="https://spikeihg.github.io/tags/%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FPA</title>
+    <link href="https://spikeihg.github.io/2024/09/02/FPA/"/>
+    <id>https://spikeihg.github.io/2024/09/02/FPA/</id>
+    <published>2024-09-02T07:41:08.000Z</published>
+    <updated>2024-09-02T07:41:08.506Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>仿生主人会梦见电子狗吗</title>
+    <link href="https://spikeihg.github.io/2024/05/29/%E7%BB%84%E5%8E%9F/"/>
+    <id>https://spikeihg.github.io/2024/05/29/%E7%BB%84%E5%8E%9F/</id>
+    <published>2024-05-29T03:29:24.000Z</published>
+    <updated>2024-06-03T14:55:28.695Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="关于计算机组成原理的相关思考"><a href="#关于计算机组成原理的相关思考" class="headerlink" title="关于计算机组成原理的相关思考"></a>关于计算机组成原理的相关思考</h1><ul><li><font color=pink>想到一个故事，想到一个名字，借用仿生人会梦见电子羊吗——仿生主人会梦见电子狗吗。 大概就是通过一个人设计一个电子狗来简单地串联起计算机组成，尽可能自然地从逻辑上推理出计算机的组成，为什么有这些部件，为什么这样设计，问题都能够通过一种比喻的形式得到解答。</font></li></ul><h2 id="码距"><a href="#码距" class="headerlink" title="码距"></a><font color=salmon>码距</font></h2><ul><li><font color=pink>Diane使用的是从废品点淘来的机械零件，大多来自于第二废世战争的遗留。所以，这些古董零件不可避免具有很大的出错率，为了能过保证绝大多数情况下的成功传送，更近一步，甚至能够定位每一次传送中的错误并且相应地进行修改，Diane研究了传送的条文，提出加入冗余的信息，这就是校验码的提出。 本质 增加码距。利用1的个数，如果我们出错位数大多数都只是1位的情况下的话。多重奇偶校验，构建一个矩阵的思想 </font></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;关于计算机组成原理的相关思考&quot;&gt;&lt;a href=&quot;#关于计算机组成原理的相关思考&quot; class=&quot;headerlink&quot; title=&quot;关于计算机组成原理的相关思考&quot;&gt;&lt;/a&gt;关于计算机组成原理的相关思考&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;font color=pink</summary>
+      
+    
+    
+    
+    
+    <category term="自然" scheme="https://spikeihg.github.io/tags/%E8%87%AA%E7%84%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于计算机操作系统的一些思考</title>
+    <link href="https://spikeihg.github.io/2024/05/11/%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/"/>
+    <id>https://spikeihg.github.io/2024/05/11/%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/</id>
+    <published>2024-05-11T08:28:43.000Z</published>
+    <updated>2024-10-13T16:14:12.362Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="OS"><a href="#OS" class="headerlink" title="OS"></a><font color=pink>OS</font></h1><ul><li><font color=skyblue>最近正好在复习计算机系基础，这里就总结一些一些东西，同时记下我自己关于计算机系统学习的一点思考和体会，当然这个也是对CSAPP的再次回顾。</font></li><li><font color=salmon>发现一个奇巧的东西，先按ctrl然后按tab可以实现整个段的tab</font></li></ul><h2 id="补码横空出世"><a href="#补码横空出世" class="headerlink" title="补码横空出世"></a>补码横空出世</h2><ul><li><font color=yellow>简化了底层电路运算的设计，加减统一了，实现运算器的时候只需要根据加还是减法的标记位进行减数的取反。</font></li><li><font color=yellow>注意，对于无符号数和有符号数，他们的最大位为1其他位全0的数互为相反数。这种特殊情况值得注意一下。</font></li><li><font color=yellow>如果同时存在有符号数和无符号数，一个表达式里，会讲有符号提升为无符号，至于编译器确定字面值时，根据范围去确定有无符号，有点奇巧。但是最新标准中是符合直觉的</font></li><li><font color=yellow>浮点数的设计很巧妙，具体记住几个关键点就可以了。尾数省略了一个1，阶数一个bias，等于2^(k-1) -1k&#x3D;8&#x2F;12两种精度下的取值，同时全0和最大是非规格数 ，阶码为0 用于表示0。 以及首位为0的数保证一个平滑地过渡。阶码最大就是NaN 和无穷大的表示。同时 符号位决定这个异常是否通知。1通知 符号位1是负数，注意小数部分的转换成二进制的方法。乘基取余，然后顺序从上至下。 总算知道为什么忽略1可以提高表示范围了，因为一个二进制数的第一位一定是1。 知道一个ascii 中数字刚好对应十六进制表示的30H 开始</font></li><li><font color=yellow>注意按位运算 ~ 和逻辑运算 !</font></li><li><font color=yellow>基于位运算的认识，以及补码，无符号有符号运算的认识，我们可以设计加法器，这个也正式引入一些控制信号，ZF CF OF SF。在汇编语言中我们也会再次见到 这四个标志位的设置非常简洁巧妙</font></li><li><img                       lazyload                     src="/images/loading.svg"                     data-src="/../images/ZF.png"                                     ></li><li><font color=yellow>浮点运算 对阶，检查阶数是否正确。总结一下，布尔代数的完整性和数学上的正确性，保证了计算机数据运算的合理，我们只需要做的就是从工程上实现布尔代数。 这一部分可以作为了解，锻炼思考能力，不用强行记忆。</font></li></ul><h2 id="汇编与机器指令"><a href="#汇编与机器指令" class="headerlink" title="汇编与机器指令"></a>汇编与机器指令</h2><ul><li><font color=yellow>今天才知道解释器是逐行翻译运行，微程序其实与机器指令也存在一种对应关系，具体就是指令的操作码相当于微程序的序号，操作数相当于参数 有点类似一种伪函数调用过程</font></li></ul><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><ul><li><font color=yellow>链接是一个相对新奇的东西，在我第一次接触的时候。现在回想一遍，感觉主要思考一个关于重定位的问题。以及最后的加载执行问题就可以了。不过感觉要想真正的完整的认识链接，还是需要在理解了虚拟内存的基础上。</font></li><li><font color=yellow></font></li><li><font color=yellow></font></li><li><font color=yellow></font></li><li><font color=yellow></font></li><li><font color=yellow></font></li><li><font color=yellow></font></li><li><font color=yellow></font></li><li><font color=yellow></font></li><li><font color=yellow></font></li><li><font color=yellow></font></li><li><font color=yellow></font></li><li><font color=yellow></font></li><li><font color=yellow></font></li><li><font color=yellow></font></li><li><font color=yellow></font></li><li><font color=yellow></font></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;OS&quot;&gt;&lt;a href=&quot;#OS&quot; class=&quot;headerlink&quot; title=&quot;OS&quot;&gt;&lt;/a&gt;&lt;font color=pink&gt;OS&lt;/font&gt;&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;font color=skyblue&gt;最近正好在复习计算机系基础，这里就总结一</summary>
+      
+    
+    
+    
+    
+    <category term="Linux" scheme="https://spikeihg.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>JSGKD</title>
@@ -375,94 +457,6 @@
     
     
     <category term="自然" scheme="https://spikeihg.github.io/tags/%E8%87%AA%E7%84%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Parallel-Programming</title>
-    <link href="https://spikeihg.github.io/2023/10/12/Parallel-Programming/"/>
-    <id>https://spikeihg.github.io/2023/10/12/Parallel-Programming/</id>
-    <published>2023-10-12T09:07:24.000Z</published>
-    <updated>2023-10-21T04:29:06.691Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="HPC-Parallel-Programming、"><a href="#HPC-Parallel-Programming、" class="headerlink" title="HPC - Parallel-Programming、"></a>HPC - Parallel-Programming、</h3><h3 id="重大发现就是我们的这个触摸板-可以做到切换-多个手指同时下滑-就可以显示桌面-左右滑动就可以实现-alt-的切换功能-然后还有就是-f11-对于我们的网页-也可以进行全屏显示-f12-进行监测-同时-还可以触摸屏左右两指滑动进行返回前进历史返回-发现一个巨大的新东西就是我们使用两个手指左右滑动是历史前进后退-使用三个手指是alt功能-使用四个手指是windows桌面切换-还有一个就是-ctrl-e-时搜索url框"><a href="#重大发现就是我们的这个触摸板-可以做到切换-多个手指同时下滑-就可以显示桌面-左右滑动就可以实现-alt-的切换功能-然后还有就是-f11-对于我们的网页-也可以进行全屏显示-f12-进行监测-同时-还可以触摸屏左右两指滑动进行返回前进历史返回-发现一个巨大的新东西就是我们使用两个手指左右滑动是历史前进后退-使用三个手指是alt功能-使用四个手指是windows桌面切换-还有一个就是-ctrl-e-时搜索url框" class="headerlink" title="重大发现就是我们的这个触摸板 可以做到切换 多个手指同时下滑 就可以显示桌面 左右滑动就可以实现 alt 的切换功能 然后还有就是 f11 对于我们的网页 也可以进行全屏显示 f12 进行监测 同时 还可以触摸屏左右两指滑动进行返回前进历史返回 发现一个巨大的新东西就是我们使用两个手指左右滑动是历史前进后退 使用三个手指是alt功能 使用四个手指是windows桌面切换 还有一个就是 ctrl + e 时搜索url框"></a><font color=pink>重大发现就是我们的这个触摸板 可以做到切换 多个手指同时下滑 就可以显示桌面 左右滑动就可以实现 alt 的切换功能 然后还有就是 f11 对于我们的网页 也可以进行全屏显示 f12 进行监测 同时 还可以触摸屏左右两指滑动进行返回前进历史返回 发现一个巨大的新东西就是我们使用两个手指左右滑动是历史前进后退 使用三个手指是alt功能 使用四个手指是windows桌面切换 <br>还有一个就是 ctrl + e 时搜索url框</font></h3><ol><li><h3 id="并行程序设计入门开始"><a href="#并行程序设计入门开始" class="headerlink" title="并行程序设计入门开始"></a><font color=seablue>并行程序设计入门开始</font></h3><ol><li><strong><a class="link"   href="https://heptagonhust.github.io/HPC-roadmap/" >RoadMap <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>来自七边形</strong></li><li><em><strong>这里文件<a href="/doc/%E5%B9%B6%E8%A1%8C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AF%BC%E8%AE%BA.pdf">并行设计</a></strong></em></li><li><strong><a class="link"   href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html" >Nvidia cuda guidance <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></li><li><em><strong>MPI<a class="link"   href="https://www.netlib.org/utk/papers/mpi-book/mpi-book.html" >tutorial <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></em></li><li>MPI<a class="link"   href="https://mpitutorial.com/tutorials/mpi-introduction/" >manual <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li><li><a class="link"   href="https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#optimizing-cuda-applications" >nvidia <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li><li><font color=violet>下载了几个nvidia的的samples在happyplace&#x2F;0a 里面 可以make一下</font></li><li></li><li><em><strong>这里保存几个markdown的颜色</strong></em></li></ol><p><img                       lazyload                     src="/images/loading.svg"                     data-src="/../images/ee1.png"                                     ></p></li></ol><p><img                       lazyload                     src="/images/loading.svg"                     data-src="/../images/ee2.png"                                     ></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="/../images/ee3.png"                                     ></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="/../images/ee4.png"                                     ></p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="/../images/ee5.png"                                     ></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;HPC-Parallel-Programming、&quot;&gt;&lt;a href=&quot;#HPC-Parallel-Programming、&quot; class=&quot;headerlink&quot; title=&quot;HPC - Parallel-Programming、&quot;&gt;&lt;/a&gt;HPC - Par</summary>
-      
-    
-    
-    
-    
-    <category term="HPC" scheme="https://spikeihg.github.io/tags/HPC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>逻辑电路/c++</title>
-    <link href="https://spikeihg.github.io/2023/10/11/%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF/"/>
-    <id>https://spikeihg.github.io/2023/10/11/%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF/</id>
-    <published>2023-10-11T12:15:48.000Z</published>
-    <updated>2024-04-13T16:50:20.251Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="大爱逻辑电路，简洁是美的灵魂"><a href="#大爱逻辑电路，简洁是美的灵魂" class="headerlink" title="大爱逻辑电路，简洁是美的灵魂"></a><font color=pink>大爱逻辑电路，简洁是美的灵魂</font></h3><ul><li><h2 id="My-Efficient-c-想不到吧"><a href="#My-Efficient-c-想不到吧" class="headerlink" title="My Efficient c ++ (想不到吧)"></a><font color=deepskyblue>My Efficient c ++ (想不到吧)</font></h2><p><font color=salmon>同时，我觉得既然是总结，咱们就换一种视角串联整个c ++ 知识点。</font></p></li><li><p><font color=pink>模板</font></p><p><font color=lightgreen>模板推断，也就是实例化是编译器的工作。理解实例化，只有实际调用或者是定义时才会实例化。并且不同实例的函数或者类是独立的。同时模板定义一般写在头文件里面。class 和 typename 是相同的含义。模板具有默认类型参数，所以平时看定义的时候注意一下</font></p><div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="type">unsigned</span> N,<span class="type">unsigned</span> M&gt; <span class="built_in">compare</span>(<span class="built_in">char</span> (&amp;a)[N],<span class="built_in">char</span> (&amp;b)[M]);<span class="comment">// 非类型实参</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T,<span class="keyword">typename</span> F=less&lt;T&gt;&gt;<span class="type">int</span> <span class="built_in">compare</span>(<span class="type">const</span> T&amp;v1,<span class="type">const</span> T&amp;v2,F f=<span class="built_in">F</span>());</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>=<span class="type">int</span>&gt; <span class="keyword">class</span> Numbers&#123;&#125;;</span><br><span class="line">Numbers &lt;&gt; b; <span class="comment">// 使用默认参数 任何时候&lt;&gt;都不能省略</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Debugdelete</span>&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;<span class="function"><span class="type">void</span> <span class="title">operator</span><span class="params">()</span><span class="params">(T*p)</span><span class="type">const</span></span>&#123;<span class="keyword">delete</span> p;&#125;<span class="comment">// 之所以有const的原因是const保护的是删除器的成员，区分清楚保护的对象 p 是外来的</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Debugdelete</span>()(); <span class="comment">//在一个临时对象上调用operator()</span></span><br><span class="line"><span class="function">unique_ptr&lt;<span class="type">int</span>,Debugdelete&gt; <span class="title">ptr</span><span class="params">(<span class="keyword">new</span> <span class="type">int</span>,Debugdelete())</span></span>; <span class="comment">// 这里可以窥见删除器的本质就是一个可调用对象，这是一个简洁而深刻的概念 全新的 这是常见的用法</span></span><br><span class="line"><span class="function">unique_ptr&lt;<span class="type">int</span>, <span class="title">decltype</span><span class="params">(compareIntfunction)</span>*&gt; <span class="title">ptr2</span><span class="params">(<span class="keyword">new</span> <span class="type">int</span> ,compareIntfunction)</span></span>; <span class="comment">// 类似的 具体原理就是指针调用析构函数时会是使用删除器</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">check</span><span class="params">(size_type i,<span class="type">const</span> std::string &amp; msg)</span><span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123; <span class="keyword">if</span>(i&gt;=data-&gt;<span class="built_in">size</span>())</span><br><span class="line">    <span class="keyword">throw</span> std::<span class="built_in">out_of_range</span>(msg);&#125;<span class="comment">// 这个工厂函数写得很好！！！</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div></li></ul><div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line">  <span class="keyword">class</span> <span class="title class_">A</span>&#123;</span><br><span class="line">      <span class="keyword">template</span>&lt;<span class="keyword">typename</span> It&gt;<span class="built_in">A</span>(It b,Ite);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line">  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> It&gt;</span><br><span class="line">  A&lt;T&gt;::<span class="built_in">A</span>(It b,It e):<span class="built_in">data</span>(make_shared&lt;std::vector&lt;T&gt;&gt;(b,e))&#123;&#125;</span><br></pre></td></tr></table></figure></div><ul><li><p><font color=violet>类模板的成员模板</font></p><p><font color=violet>正是依靠这个实现迭代器构造函数.——一个问题，由于实例化时，每一个独立的源文件都需要一份实例，可能存在重复的性能消耗，所以我们可以显示控制实例化 extern 声明一个具体的类型参数的模板，然后必须在某一文件里有定义 template 开始。最后记得链接在一起。定义其实也就是一句话，对于类模板来说这会使得所有成员都实例化，这点注意哦<br>这里也有一个有趣的问题就是shared_ptr 与 unique_ptr 删除器的实现方式。shared_ptr 可以随时reset 改变删除器所以实际是将删除器作为成员保存，指针形式保存，析构时大概就是 del? del(p): delete p; 而 unique_ptr 只允许定义时传入作为模板参数，所以就是编译时绑定效率更高，但是不能任意改变。</font></p></li><li><p><font color=yellow>异常处理</font></p><p><font color=cornsilk>异常处理包含两个过程，异常捕获和异常处理。捕获依靠throw 表达式，处理依靠try catch 语句块。 注意想要被catch 捕获需要使用try 存在 try 的多重嵌套，依照调用链反向寻找所有层次的catch 语句直到匹配，如果一个都不匹配则terminate直接终止。有一些标准库定义的错误类，有些需要初始化const char[]。 .what()方法可以查看字符串内容 栈展开其实就是。 展开过程会销毁对象，依照局部对象的销毁原则。<br>异常对象可以是标准库定义，也可以自己定义，完全类型有可访问的析构与构造函数，同时如果在throw 语句中解引用指针，如果是一个派生对象，基类指针则抛出的部分只有其基类的部分</font></p></li><li><p><font color=cyan>随机数</font></p><p><font color=lightgreen>随机数使用，包含两个部分，一个部分是随机数引擎，另一个是随机数分布。引擎生成一系列unsigned ，分布完成我们的需求生成所需的指定类型给定范围，满足特定概率分布的随机数 。引擎需要种子，否则也是固定的伪随机 ,default_random_engine 其实是系统预定义的最佳引擎，具体有三个。然后分布种类是模板，需要指定类型别名。调用的方法类似 u(e) 。 u是分布种类。 e 是对象。</font></p></li><li><p><font color=salmon>5G555 多谐振荡器 产生脉冲</font></p></li><li><h2 id="数字电路要义"><a href="#数字电路要义" class="headerlink" title="数字电路要义"></a><font color=pink>数字电路要义</font></h2><ul><li><p><font color=lightgreen>逻辑函数</font></p><p>使用与非门来建立所有三种逻辑门，实现电路的统一。异或可以用于奇偶校验 奇数个变量为1 结果就是1 偶数个为0  对偶函数就是0 1 也要互换记得和反演一样 同或就相反  与或表达式就是先与后或 区别最小项最大项的方法 就是 最小项之和 最大项之积<br>卡诺图注意最小项在图中对应的顺序 卡诺图中每个圈至少需要一个一个独立 的1（最小项）</p></li></ul></li></ul><h3 id="先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功"><a href="#先记录一下一个找图片地址的好地方-进入NASA官网直接copy-image-address-也可以在google里面使用-但是可能无法成功" class="headerlink" title="先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功"></a>先记录一下一个找图片地址的好地方 进入NASA官网直接copy image address 也可以在google里面使用 但是可能无法成功</h3><ul><li><strong><font color=pink>emoji kitchen use ps to scale down and save in png and then port to QQ</font></strong></li><li><strong><font color=pink>QQ music .first download music from the magic website and then open in the directory with QQ player. Note: when you download by qq you could easily get adapted in the app ! Good!</font></strong></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;大爱逻辑电路，简洁是美的灵魂&quot;&gt;&lt;a href=&quot;#大爱逻辑电路，简洁是美的灵魂&quot; class=&quot;headerlink&quot; title=&quot;大爱逻辑电路，简洁是美的灵魂&quot;&gt;&lt;/a&gt;&lt;font color=pink&gt;大爱逻辑电路，简洁是美的灵魂&lt;/font&gt;&lt;/h3&gt;&lt;</summary>
-      
-    
-    
-    
-    
-    <category term="计算机组成原理" scheme="https://spikeihg.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BombLab</title>
-    <link href="https://spikeihg.github.io/2023/10/07/BombLab/"/>
-    <id>https://spikeihg.github.io/2023/10/07/BombLab/</id>
-    <published>2023-10-07T11:36:16.000Z</published>
-    <updated>2023-11-23T08:28:14.968Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="血淋淋的教训啊-关bash的时候一起关了-直接没保存-全部没了-😫"><a href="#血淋淋的教训啊-关bash的时候一起关了-直接没保存-全部没了-😫" class="headerlink" title="血淋淋的教训啊 关bash的时候一起关了 直接没保存 全部没了 😫"></a><font color=pink>血淋淋的教训啊 关bash的时候一起关了 直接没保存 全部没了 😫</font></h3><ul><li><h2 id="离散有趣知识点"><a href="#离散有趣知识点" class="headerlink" title="离散有趣知识点"></a><font color=lightgreen>离散有趣知识点</font></h2><p><font color=orange>离散马上要结课了，里面很多还是很有趣的，这里就零散记载一些有趣或者是有用的知识点</font></p></li><li><p>析取是或者，合取是与。蕴含命题就是条件语句。逆否等价于原来的条件语句。 p仅当q等价于p-&gt;q。也就是等价于如果p则q 将命题用于语句翻译可以简化原理。常见的等价式子以及德摩根定律。</p></li><li><p>合取范式，析取范式，可满足问题，数独。极大项，极小项。极大项与极小项的关系就是取反。注意规定的真值不同，极小项是合取，使式子为真，极大项是析取，使得式子为假 主析取范式，主合取范式就是每一项是极大（小）项 求主析取范式 主析取范式和住合取范式下标是互补的</p></li><li><p>谓词就是形容词 函数 量词就是全称存在 唯一性量词</p></li><li><p>量词的否定 嵌套量词的否定就是移动否定就可以了连续移动 条件语句和量词组合 不能分发</p></li><li><p>归谬法似乎是将需要证明的结论的反命题作为前提引入，然后根据所有前提得到一个a^~a 的情况 </p></li><li><p>而反证法 是这样 我们要证明 p -&gt; q ,那么我们可以证明其等价的逆否命题， ~q -&gt; ~p 这样来得到原命题成立</p></li><li><p>归谬证明法 就是通过 得到<del>p -&gt; (r^</del>r) 这样的式子为真 然后得到 p 为真，一般就是一个命题 p 而不是条件语句 条件语句的证明需要假设p,<del>q 然后得到 ~p ，p; q,</del>q 两组矛盾式得到其中一组即可</p></li><li><p>直接证明 反正法 归谬证明</p></li><li><p>鸽巢原理 鸽巢原理注意实际应用 找到什么是盒子 什么是物品 </p></li><li><p>排列和组合</p></li><li><p>环排列需要除以环中的元素数量</p></li><li><p>很多组合恒等式可以通过建模，运用一种组合场景来进行证明</p></li><li><p>范德蒙德恒等式 挺有用的 也挺好理解 变形</p></li><li><p>重复排列的问题 就是平方 组合就稍微复杂</p></li><li><p>递推关系式 求解 就是一个特解组合上一个伴随解</p></li><li><p>递推关系的寻找  本事是寻找当前问题能不能由子问题或者说是先前状态转换而来。</p></li><li><p>目前我的理解中生成函数的使用图景并不是很多 目前有一个就是求解计数问题。 生成函数还可以求解递推关系</p></li><li><p>容斥原理</p></li><li><p>容斥原理 公式里面的加减是交替的 并且肯定显然从 加法开始</p></li><li><p>容斥原理配合组合数来使用</p></li><li><p>容斥原理求解映上函数 这个其实可以单独抽象成一个标准模型 成为许多问题的解决的原理 而且这种模型如果直接求解很容易出现问题 重复求解</p></li><li><p>限制条件可以考虑求全部情况 然后减去互斥的情况</p></li><li><p>模运算 有同余恒等式 满足加或者乘法的运算律</p></li><li><p>求模运算得到的结果始终是正值 计算被模的数是负数</p></li><li><p>模指数运算 二进制转换指数 然后每算一项都模一次</p></li><li><p>gcd 欧几里得算法 裴树算法可以用来证明一些等式</p></li><li><p>ab mod m&#x3D;amod m b mod m</p></li><li><p>求模的逆 运用欧几里得算法 就是求贝祖系数</p></li><li><p>求解线性同余式的方法就是运用欧几里得算法求出逆 而逆其实就是求解 贝祖系数 对了还有一个前提就是 a 与 m要满足互素 但是即使不互素 满足一定条件就可以求解</p></li><li><p>中国剩余定理 求解线性同余方程组的一种方法 原理同上 然后就是类似的一种叫做反向替代的方法</p></li><li><p>费马小定理 用来求解整数模指数运算</p></li><li><p>原根和离散对数 是一些密码学的基础</p></li><li><p>费马小定理的推广 欧拉函数和欧拉定理 勤奋的欧拉哈哈哈哈哈</p></li><li><p>RSA 的原理 凯撒加密加三模26移位密码 移位数k就是密钥 仿射密码求解的关键就是求同余方程</p></li><li></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;血淋淋的教训啊-关bash的时候一起关了-直接没保存-全部没了-😫&quot;&gt;&lt;a href=&quot;#血淋淋的教训啊-关bash的时候一起关了-直接没保存-全部没了-😫&quot; class=&quot;headerlink&quot; title=&quot;血淋淋的教训啊 关bash的时候一起关了 直接没</summary>
-      
-    
-    
-    
-    
-    <category term="LINUX" scheme="https://spikeihg.github.io/tags/LINUX/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TLCL@3</title>
-    <link href="https://spikeihg.github.io/2023/10/04/TLCL-3/"/>
-    <id>https://spikeihg.github.io/2023/10/04/TLCL-3/</id>
-    <published>2023-10-04T09:48:31.000Z</published>
-    <updated>2023-12-07T09:32:44.310Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="TLCL-chapter-3"><a href="#TLCL-chapter-3" class="headerlink" title="TLCL chapter 3"></a>TLCL chapter 3</h2><h3 id="GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf"><a href="#GOOOOOOOOOOOOOOD-解决了上传静态文件的-问题-在markdown里面变成-download-images-file-normal-pdf" class="headerlink" title="GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)"></a><font color=pink>GOOOOOOOOOOOOOOD 解决了上传静态文件的 问题 在markdown里面变成 [download](\..\images\file\normal.pdf)</font></h3><ul><li><h3 id="发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记"><a href="#发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记" class="headerlink" title="发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记"></a><font color=aqua>发现一个很妙的事就是分屏可以将鼠标与键盘控制分开很适合边看边写笔记</font></h3></li><li><p>#<font color=yellow>我是真的有病 注意更改 .bashrc 文件之前要保存一下原有配置</font></p></li><li><h2 id="Cmake-and-Makefile"><a href="#Cmake-and-Makefile" class="headerlink" title="Cmake and Makefile"></a><font color=salmon>Cmake and Makefile</font></h2><ul><li>export PATH&#x3D;”$PATH:&#x2F;usr&#x2F;bin”注意规范 前面没有$</li></ul></li><li><h3 id="文件操作here"><a href="#文件操作here" class="headerlink" title="文件操作here"></a>文件操作<a class="link"   href="http://billie66.github.io/TLCL/book/chap16.html" >here <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h3><ul><li>设计很多底层硬件，由于wsl与虚拟机文件差别较大暂时skip read</li></ul></li><li><h3 id="网络葵花宝典下载"><a href="#网络葵花宝典下载" class="headerlink" title="网络葵花宝典下载"></a>网络<a href="/doc/%E8%91%B5%E8%8A%B1%E5%AE%9D%E5%85%B8.pdf">葵花宝典下载</a></h3><ul><li>netstat 指令</li><li>ftp指令</li><li>telnet指令 都是可以直接使用相关协议</li><li>ftp lftp都可以下载文件</li><li><em><strong><font color=pink>wget指令直接下载界面 可行男泵</font></strong></em></li></ul></li><li><h3 id="SSH-secure-shell"><a href="#SSH-secure-shell" class="headerlink" title="SSH secure shell"></a>SSH secure shell</h3><ul><li><strong>这是一个协议 port number22</strong></li><li><strong><a class="link"   href="https://phoenixnap.com/kb/ssh-to-connect-to-remote-server-linux-or-windows#:~:text=Open%20the%20terminal%20on%20the,ssh%20localhost%20and%20hit%20enter." >一个sshlocalhost教程 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></li><li><strong>最近ssh遇到很多问题这里集中总结一下</strong><ul><li><strong>关于启动服务器<a class="link"   href="https://askubuntu.com/questions/1379425/system-has-not-been-booted-with-systemd-as-init-system-pid-1-cant-operate" > <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> <br><font color=red> sudo service ssh restart 这个命令有作用 类似的还有 sudo service ssh status 关键就是 service 操作具体可见tldr service</font></strong></li></ul></li></ul></li><li><h3 id="locate-amp-find"><a href="#locate-amp-find" class="headerlink" title="locate &amp; find"></a>locate &amp; find</h3><ul><li><em><strong><font color=pink>我是真的有病，又一次忘记保存全部没了</font></strong></em></li><li><img                       lazyload                     src="/images/loading.svg"                     data-src="D:\github.1.0\My_blog_hexo\source\images\tests.png"                                     ></li></ul></li><li><p><img                       lazyload                     src="/images/loading.svg"                     data-src="D:\github.1.0\My_blog_hexo\source\images\lo.png"                                     ></p><ul><li><p><strong>注意可以进行执行自己的操作 -exec cmd ‘{}’ ‘;’ 注意 {} ； 必不可少 {} 代表的是当前路径 ； 代表命令的结束 要引用起来 因为都是特殊涵义的字符 可以用+ 这样就是全部执行 而不是每次都执行一次 同时可以用-ok 指令代替我们的-exec 这样每次都会进行一下询问 ！！！！</strong></p></li><li><p><strong><font color=green>压缩文件</font></strong></p><ul><li><em><strong>gzip and gunzip</strong></em></li><li><em><strong>gzip + file 注意没有中间选项 此时是原始文件 但是可以对一压缩的文件进行选项查看</strong></em></li><li><em><strong>gunzip -c file.gz 查看压缩文件的内容</strong></em></li><li><em><strong>bzip2 也是一个类似于 gzip的命令 压缩程度更高 gzip -d 就相当于解压缩了</strong></em></li></ul></li><li><p><strong><font color=blue>归档文件 archiving !!!!</font></strong></p><ul><li><strong>tar tape archive 备份归档 一组独立的文件或者几个目录 或者两者兼有 通常后缀 为.tar h或者 .tgz 表示 gzip压缩过的归档包</strong></li><li><strong>四个模式 注意先写模式 再写选项</strong></li><li><strong>cf czf 都是创建 tvf 列举查看 xf xvf 就是复原 注意路径名格式</strong></li><li><img                       lazyload                     src="/images/loading.svg"                     data-src="/../images/tar.png"                                     ></li><li><em><strong>zip unzip 与tar和gzip的结合  类似 但是更多用于 与windows交互</strong></em></li></ul></li><li><p><em><strong>同步<a class="link"   href="http://billie66.github.io/TLCL/book/chap19.html" >可以看看但是似乎目前用的不多 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></em></p></li><li><p><em><strong><font color=pink>中间暂时跳过了文本处理和正则来个比较重要的make</font></strong></em></p><ul><li>脚本语言不需要编译 而是直接执行 例如 shell脚本 python PHP perl ruby</li><li>tar tzvf tarfile | head — 检查指令</li><li>通过这个可以看到一些标准版本源代码的组织形式 其中有一些大写的如README INSTALL 等介绍文件 同时 还有configure文件用于 配置的 同时就是各种头文件和源文件</li><li><em><strong><font color=red>系统的源码通常维护再&#x2F;usr&#x2F;src 中 供多个用户试用的源码通常再&#x2F;usr&#x2F;local&#x2F;src 中</font></strong></em></li><li>构建通常两步 .&#x2F;configure make</li><li>.&#x2F;configure 主要配置相关的需要的环境和依赖项同时创建makefile</li><li>sudo make install 对于一些包装良好的库 可以直接执行此命令安装成功</li></ul></li><li><p><em><strong><font color=pink>LINUX小子第二步——Shell脚本</font></strong></em></p><ul><li>编写脚本三步</li><li><em><strong>写一个脚本</strong></em></li><li><em><strong>让其可执行 chomod 755 file 对所有人都可执行 700只有拥有者可以执行</strong></em></li><li><em><strong>放在一个shell能找到的位置 配置PATH 这个原理就是对于可执行文件 如果直接输入名字 shell会在环境变量的path路径中寻找 因此对于通常自己的没有位于相关路径的脚本是找不到的所以需要文件路径通常我们使用相对路径 .&#x2F;prog</strong></em></li></ul></li><li><p><em><strong><font color=green>安装chrome成功 还得是微软教程但是有乱码的问题同时除了搜索以为ia其他时候都很慢</font></strong></em></p></li><li><p><em><strong><font color=green>Good 现在查看html文件就直接google-chrome + 文件路径</font></strong></em></p></li><li><h3 id="脚本编写"><a href="#脚本编写" class="headerlink" title="脚本编写"></a><font color=blue>脚本编写</font></h3><ul><li><em><strong>注意通常而言在脚本里面 全大写代表常量 小写代表变量</strong></em></li><li><em><strong>一定要正确的书写变量名 在命令行内也可以直接进行变量使用 不需要提前声明 declare -r TITLE 强制命令常量</strong></em></li><li><em><strong>变量名展开的几种形式</strong></em></li><li><img src="/../images/vara.png" alt="../images/vara.png"></li><li><em><strong><font color =red>还有一种高级的操作叫作 here document <img                       lazyload                     src="/images/loading.svg"                     data-src="/../images/here.png"                                     ></font></strong></em></li><li><em><strong>shell函数</strong></em><ul><li>function name{} &#x2F; name(){}两种</li><li>先定义在使用 return语句控制权</li><li>局部变量在内部</li><li>定义方式 local var eg local foo foo&#x3D;0 外部不存在</li><li>完全可以用脚本函数 直接写道 .bashrc中 来代替别名</li></ul></li><li><strong>分支控制</strong><ul><li>$? 检测最近的一个指令执行退出情况 0为成功</li><li>上述的这个正是if控制实现的底层原理</li><li>格式就是if cmd;the cmd; fi 可以借[elif]<ul><li>还有各种文件比较操作<a class="link"   href="http://billie66.github.io/TLCL/book/chap28.html" >逆天 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li><li>通常是if [expression]</li></ul></li></ul></li></ul></li><li><p><font color=MediumSpringGreen>Df -h 指令 查看所有磁盘情况 不错的指令</font></p></li><li><p><strong><font color=cornsilk>su -l usrname    alt+n &#x2F;p 历史命令搜索  tar xvf 提取 gpg 一种内置的加密程序 gpg –verify gpg –recv-keys  gpg–fingerprint etc.</font></strong></p></li><li><p><strong><font color=cornsilk>今天遇到了实际很多会是链接的问题需要文件夹而非可执行文件的问题 JAVA_HOME 还有就是 wget 真方便 然后需要检查是不是一个tgz 可恶哩</font></strong></p></li><li><p><strong><font color=pink>export PATH&#x3D;~&#x2F;bin:”$PATH”类似的命令记住了</font></strong></p></li><li><p><strong><font color=cornsilk>. .bashrc 激活注意  每次修改环境变量时都要激活一下</font></strong></p></li><li><p><strong><font color=cornsilk>issu 解决 sudo usermod –append –group sudo &lt;username&gt; 就可以加权限了 </font></strong></p></li><li><p>sudo useradd </p></li><li><p><strong><font color=cornsilk>ssh 问题解决历程目前还没解决 10&#x2F;31 <a class="link"   href="https://www.hanselman.com/blog/how-to-ssh-into-wsl2-on-windows-10-from-an-external-machine" >port forwarding <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br><a class="link"   href="https://superuser.com/questions/571196/port-forwarding-to-a-vmware-workstation-virtual-machine#:~:text=On%20Windows%2C%20you%20can%20access,setup%20on%20a%20typical%20router." >port forwarding in vmware <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br><a class="link"   href="https://www.tutorialspoint.com/hadoop/hadoop_multi_node_clust" >hadoop manual <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br></font></strong></p></li></ul></li><li><h2 id="更多键盘操作"><a href="#更多键盘操作" class="headerlink" title="更多键盘操作"></a><font color=aqua><a class="link"   href="https://stackoverflow.com/questions/9679776/how-do-i-clear-delete-the-current-line-in-terminal" >更多键盘操作 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></font></h2></li><li><p>ctrl + u 删除当前行（命令）</p></li><li><p><font color=maroon>注意 git clone 最后在url后面加一个.<font color=blue>git</font></font></p></li><li><p><font color=cyan>deb 有统一的包管理所以可能下载安装更见简单 有内置命令来解决   runfile 通常是脚本完成</font></p></li><li><h2 id="apt-对于终端用户更加友好-相当于一个集合-集合很多命令的东西-然后就是apt-get-更加底层-有"><a href="#apt-对于终端用户更加友好-相当于一个集合-集合很多命令的东西-然后就是apt-get-更加底层-有" class="headerlink" title="apt 对于终端用户更加友好 相当于一个集合 集合很多命令的东西 然后就是apt-get 更加底层 有"></a><font color=pink>apt 对于终端用户更加友好 相当于一个集合 集合很多命令的东西 然后就是apt-get 更加底层 有</font></h2></li><li><h2 id="sudo-apt-get-autoremove-这是一个安全的指令用来-clean-you-system-没事就可以输入一下-原理就是清楚不再被任何应用使用的依赖-lib-stackoverflow-上面似乎还有一些其他工具可以-但是目前-这个命令就可以了"><a href="#sudo-apt-get-autoremove-这是一个安全的指令用来-clean-you-system-没事就可以输入一下-原理就是清楚不再被任何应用使用的依赖-lib-stackoverflow-上面似乎还有一些其他工具可以-但是目前-这个命令就可以了" class="headerlink" title="sudo apt-get autoremove 这是一个安全的指令用来 clean you system  没事就可以输入一下 原理就是清楚不再被任何应用使用的依赖 lib !!!! stackoverflow 上面似乎还有一些其他工具可以 但是目前 这个命令就可以了"></a><font color=yellow>sudo apt-get autoremove 这是一个安全的指令用来 clean you system  没事就可以输入一下 原理就是清楚不再被任何应用使用的依赖 lib !!!! stackoverflow 上面似乎还有一些其他工具可以 但是目前 这个命令就可以了</font></h2></li><li><p><font color=green>非登录就是不需要输入用户和密码 echo $0 查看 如果是-bash  就是登录 bash 就是非登录 主要区别就在于载入相关启动文件</font></p></li><li><p>cat -n </p></li><li><p>power9 是一个超级电脑的架构流式处理器</p></li><li><p>expansion 尤其是 brace expansion 还有 quoting 引用就是 “” ‘’</p></li><li><h2 id="root-开机自启项和sysmecl"><a href="#root-开机自启项和sysmecl" class="headerlink" title="root 开机自启项和sysmecl"></a><a class="link"   href="https://learn.microsoft.com/en-us/windows/wsl/wsl-config" >root 开机自启项和sysmecl <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h2></li><li><p>rm -r删除非空文件夹 rmdir rm -d删除空文件夹</p></li><li><p>descend into directory 就是问是否同时删除里面的文件 yes即可 但是这首会一个一个出现 所以最好还是不要-i当文件很多的时候</p></li></ul><h2 id="真的不好说-autoremove-把我mpi删了-乐！！！"><a href="#真的不好说-autoremove-把我mpi删了-乐！！！" class="headerlink" title="真的不好说 autoremove 把我mpi删了 乐！！！"></a><strong><font color=red>真的不好说 autoremove 把我mpi删了 乐！！！</font></strong></h2><ul><li><p><font color=pink>ssh passphrase 我的同样的通用密码</font></p></li><li><p><a class="link"   href="https://www.strongdm.com/blog/ssh-passwordless-login" >ssh passwordless <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></li><li><p><font color=orange>who指令可以查看其他用户在本机的使用情况。注意理解 linux 是一个多用户多任务的操作系统。而windows 是一个单用户假多任务的操作系统</font></p></li><li><p>useradd 添加用户 但是没有提示 userdel 删除用户</p></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;TLCL-chapter-3&quot;&gt;&lt;a href=&quot;#TLCL-chapter-3&quot; class=&quot;headerlink&quot; title=&quot;TLCL chapter 3&quot;&gt;&lt;/a&gt;TLCL chapter 3&lt;/h2&gt;&lt;h3 id=&quot;GOOOOOOOOOOOOOOD-</summary>
-      
-    
-    
-    
-    
-    <category term="LINUX" scheme="https://spikeihg.github.io/tags/LINUX/"/>
     
   </entry>
   
